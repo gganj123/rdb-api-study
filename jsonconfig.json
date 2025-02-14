@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    "checkJs": true,
+    "strict": true,
+    "target": "ES2020",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "allowJs": true,
+    "noEmit": true,
+    "baseUrl": ".",
+    "paths": {
+      "*": [
+        "*",
+        "types/*"
+      ]
+    },
+    "strictNullChecks": false,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "alwaysStrict": true,
+    "noImplicitAny": false,
+    "allowUmdGlobalAccess": true,
+    "noImplicitThis": false,
+    "strictPropertyInitialization": false
+  },
+  "include": [
+    "**/*.js",
+    "**/*.jsx"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "build",
+    "coverage"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "ignore": [
+    "node_modules",
+    "logs",
+    "public"
+  ],
+  "ext": "js,json",
+  "exec": "node app.js"
+}
