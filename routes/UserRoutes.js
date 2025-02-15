@@ -1,5 +1,6 @@
 import { Router } from "express";
 import { UserController } from "../modules/user/UserController.js";
+import { jwtAuth } from "../util/Middlewares.js";
 
 /**
  * 유저 라우터
@@ -13,6 +14,10 @@ export function userRoutes(app) {
 
   router.post("/join", userController.join);
   router.get("/users", userController.findAllUsers);
+  router.get("/users/Id", jwtAuth, userController.findById);
+  router.get("/users/email", userController.findByEmail);
+  router.post("/users/update", jwtAuth, userController.updateUser);
+  router.delete("users/", jwtAuth, userController.deleteUser);
 
   app.use("/users", router);
 }

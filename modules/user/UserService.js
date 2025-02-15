@@ -42,10 +42,52 @@ class _UserService {
 
   /**
    * 1. 특정 아이디로 유저 찾기
-   *
+   * @param {Number} userId
+   * @returns {Promise<UserMst>}
    */
-}
 
+  async findById(userId) {
+    const user = await this.userMapper.findById(userId);
+    return user;
+  }
+
+  /**
+   * 2. 특정 이메일로 유저 찾기
+   * @param {string} email
+   * @returns {Promise<UserMst>}
+   */
+
+  async findByEmail(email) {
+    const user = await this.userMapper.findByEmail(email);
+    return user;
+  }
+
+  /**
+   *3. 유저 정보 수정
+   * @param {number} userId
+   * @param {string} email
+   * @param {string} name
+   * @returns {Promise<number>}
+   */
+  async updateUser(userId, email, name) {
+    if (!email.includes("@")) {
+      throw new Error("유효하지 않은 이메일 형식입니다.");
+    }
+    const trimName = name.trim();
+
+    const result = await this.userMapper.updateUser(userId, email, trimName);
+    return result;
+  }
+  /**
+   *4. 회원 탈퇴
+   * @param {number} userId
+   * @returns {Promise<number>}
+   */
+  async deleteUser(userId) {
+    const deletedUser = await this.userMapper.deleteUser(userId);
+    return deletedUser;
+  }
+}
 /**
  *  @type {typeof _UserService}
  *  @description 트랜잭션 프록시를 적용한 UserService
