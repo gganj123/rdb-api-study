@@ -30,18 +30,7 @@ export class UserMapper extends BaseMapper {
   }
 
   /**
-   * 1. 특정 이메일로 유저 찾기
-   * @param {string} email
-   * @returns {Promise<UserMst>}
-   */
-  findByEmail(email) {
-    return this.exec(async (query) =>
-      query.SELECT("*").FROM("user_mst").WHERE("email", "=", email).findOne()
-    );
-  }
-
-  /**
-   * 2. 특정 아이디로 유저 찾기
+   * 1. 특정 아이디로 유저 찾기
    * @param {number} userId
    * @returns {Promise<UserMst>}
    */
@@ -50,5 +39,21 @@ export class UserMapper extends BaseMapper {
       query.SELECT("*").FROM("user_mst").WHERE("index", "=", userId).findOne()
     );
   }
-  
+
+  /**
+   * 2. 특정 아이디와 이메일로 유저 찾기
+   * @param {number} userId
+   * @param {string} email
+   * @returns {Promise<UserMst>}
+   */
+  findByIdAndEmail(userId, email) {
+    return this.exec(async (query) =>
+      query
+        .SELECT("*")
+        .FROM("user_mst")
+        .WHERE("index", "=", userId)
+        .OR("email", "=", email)
+        .findOne()
+    );
+  }
 }

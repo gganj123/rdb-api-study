@@ -1,19 +1,18 @@
-import { Router } from 'express'
-import { UserController } from '../modules/user/UserController.js'
-
-
+import { Router } from "express";
+import { UserController } from "../modules/user/UserController.js";
 
 /**
  * 유저 라우터
  *
  * @export
- * @param {Router} app 
+ * @param {Router} app
  */
 export function userRoutes(app) {
-  const router = Router()
-  const userController = new UserController()
+  const router = Router();
+  const userController = new UserController();
 
-  router.post('/join', userController.join)
+  router.post("/join", userController.join);
+  router.get("/users", userController.findAllUsers);
 
-  app.use('/users', router)
+  app.use("/users", router);
 }
