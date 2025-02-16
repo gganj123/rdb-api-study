@@ -5,6 +5,7 @@ import { logRequest } from "./Logger.js";
 import { UnauthorizedError } from "./types/Error.js";
 import { ResponseData } from "./types/ResponseData.js";
 import { ResponseMessage } from "./types/ResponseMessage.js";
+import { generateJwt } from "./Jwt.js";
 const { TokenExpiredError } = jwt;
 
 /**
@@ -65,7 +66,14 @@ export const localAuth = (req, res, next) =>
       }
 
       if (user) {
-        const response = ResponseData.data(user);
+        //로그인 성공 시 토큰 제공하기
+        const token = generateJwt(user.userId);
+        const response = ResponseData.fromData({
+          userId: user.userId,
+          email: user.email,
+          token: token,
+          message: "로그인 되었습니다.",
+        });
         sendResponse(res, response);
         return;
       }

@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { UserController } from "../modules/user/UserController.js";
-import { jwtAuth } from "../util/Middlewares.js";
+import { jwtAuth, localAuth } from "../util/Middlewares.js";
 
 /**
  * 유저 라우터
@@ -19,6 +19,7 @@ export function userRoutes(app) {
   router.post("/users/update", jwtAuth, userController.updateUser);
   router.delete("/users", jwtAuth, userController.deleteUser);
   router.get("/users/exist", jwtAuth, userController.existUserById);
+  router.post("/users/login", localAuth);
 
   app.use("/users", router);
 }
