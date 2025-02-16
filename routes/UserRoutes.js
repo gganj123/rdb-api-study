@@ -13,13 +13,13 @@ export function userRoutes(app) {
   const userController = new UserController();
 
   router.post("/join", userController.join);
-  router.get("/users", userController.findAllUsers);
-  router.get("/users/Id", jwtAuth, userController.findById);
-  router.get("/users/email", userController.findByEmail);
-  router.post("/users/update", jwtAuth, userController.updateUser);
-  router.delete("/users", jwtAuth, userController.deleteUser);
-  router.get("/users/exist", jwtAuth, userController.existUserById);
-  router.post("/users/login", localAuth);
+  router.get("/", userController.findAllUsers);
+  router.get("/Id", jwtAuth, userController.findById);
+  router.get("/email", userController.findByEmail);
+  router.post("/update", jwtAuth, userController.updateUser);
+  router.delete("/", jwtAuth, userController.deleteUser);
+  router.get("/exist", jwtAuth, userController.existUserById);
+  router.post("/login", localAuth);
 
   app.use("/users", router);
 }

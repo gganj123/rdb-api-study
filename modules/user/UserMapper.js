@@ -28,7 +28,7 @@ export class UserMapper extends BaseMapper {
   }
 
   /**
-   * 1. 특정 아이디로 유저 찾기
+   * 특정 아이디로 유저 찾기
    * @param {number} userId
    * @returns {Promise<UserMst>}
    */
@@ -37,7 +37,7 @@ export class UserMapper extends BaseMapper {
   }
 
   /**
-   * 2. 특정 이메일로 유저 찾기 => README에 보면 id와 email 두가지를 넣고
+   * 특정 이메일로 유저 찾기 => README에 보면 id와 email 두가지를 넣고
    * 특정 조건을 만족하는 데이터를 찾는다 나오는데, 고유한 이메일만으로도 찾을 수 있는데
    * 혹시 ID도 같이 넣는것에 이유가 있는지 질문하기.
    *
@@ -48,7 +48,7 @@ export class UserMapper extends BaseMapper {
     return this.exec(async (query) => query.SELECT("*").FROM("user_mst").WHERE("email", "=", email).findOne());
   }
   /**
-   *3. 유저 정보 수정
+   * 유저 정보 수정
    * @param {number} userId
    * @param {string} email
    * @param {string} name
@@ -60,7 +60,7 @@ export class UserMapper extends BaseMapper {
     );
   }
   /**
-   *4. 회원 탈퇴
+   * 회원 탈퇴
    * @param {number} userId
    * @returns {Promise<number>}
    */
@@ -68,7 +68,7 @@ export class UserMapper extends BaseMapper {
     return this.exec(async (query) => query.DELETE().FROM("user_mst").WHERE("index", "=", userId));
   }
   /**
-   * 5. 유저 존재 여부 확인
+   * 유저 존재 여부 확인
    * 회원탈퇴나 유저정보수정 시 존재여부 확인으로 확실한 에러메세지를 보낼 수 있다.
    * @param {number} userId
    * @returns {Promise<boolean>}
@@ -81,4 +81,10 @@ export class UserMapper extends BaseMapper {
       return result.exists || false;
     });
   }
+
+  // changePassword(userId, hashPassword) {
+  //   return this.exec(async (query) => {
+  //     query.UPDATE("user_mst").SET({ password: hashPassword }).WHERE("index", "=", userId);
+  //   });
+  // }
 }

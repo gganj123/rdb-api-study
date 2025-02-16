@@ -97,6 +97,7 @@ class _UserService {
     return result;
   }
 }
+
 /**
  *  @type {typeof _UserService}
  *  @description 트랜잭션 프록시를 적용한 UserService
