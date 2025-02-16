@@ -13,6 +13,7 @@ export function postRoutes(app) {
   const postController = new PostController();
 
   router.get("/", postController.findAllPosts);
+  router.get("/:postId", postController.findPostById);
 
   app.use("/posts", router);
 }

@@ -30,4 +30,21 @@ export class PostController {
       sendErrorResponse(res, error);
     }
   };
+
+  findPostById = async (req, res) => {
+    try {
+      const postId = req.params;
+      if (!postId || isNaN(Number(postId))) {
+        return sendErrorResponse(res, new Error("postId를 확인해주세요."));
+      }
+      const post = this.postService.findPostById(postId);
+
+      if (!post) {
+        return sendErrorResponse(res, new Error(`${postId}를 찾을 수 없습니다.`));
+      }
+      sendResponse(res, post);
+    } catch (error) {
+      sendErrorResponse(res, error);
+    }
+  };
 }

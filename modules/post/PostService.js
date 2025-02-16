@@ -19,6 +19,11 @@ class _PostService {
     const posts = await this.postMapper.findAllPosts();
     return posts;
   }
+
+  async findPostById(postId) {
+    const post = await this.postMapper.findPostById(postId);
+    return post;
+  }
 }
 
 /**
