@@ -87,6 +87,15 @@ class _UserService {
     const deletedUser = await this.userMapper.deleteUser(userId);
     return deletedUser;
   }
+  /**
+   *5. 유저 존재 여부
+   * @param {number} userId
+   * @returns {Promise<boolean>}
+   */
+  async existUserById(userId) {
+    const result = await this.userMapper.existUserById(userId);
+    return result;
+  }
 }
 /**
  *  @type {typeof _UserService}

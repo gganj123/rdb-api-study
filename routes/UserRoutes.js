@@ -17,7 +17,8 @@ export function userRoutes(app) {
   router.get("/users/Id", jwtAuth, userController.findById);
   router.get("/users/email", userController.findByEmail);
   router.post("/users/update", jwtAuth, userController.updateUser);
-  router.delete("users/", jwtAuth, userController.deleteUser);
+  router.delete("/users", jwtAuth, userController.deleteUser);
+  router.get("/users/exist", jwtAuth, userController.existUserById);
 
   app.use("/users", router);
 }

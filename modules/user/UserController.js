@@ -56,7 +56,7 @@ export class UserController {
 
   findById = async (req, res) => {
     try {
-      const { userId } = req.user?.userId;
+      const userId = req.user?.userId;
       if (!userId || isNaN(Number(userId))) {
         throw new ValidationError({ message: "userId를 확인해주세요" });
       }
@@ -90,10 +90,15 @@ export class UserController {
 
   updateUser = async (req, res) => {
     try {
-      const { userId } = req.user?.userId;
+      const userId = req.user?.userId;
       const { email, name } = req.body;
       if (!email | !name) {
         return sendErrorResponse(res, new Error("이름과 이메일을 모두 입력해주세요."));
+      }
+
+      const existUser = await this.userService.existUserById(userId);
+      if (!existUser) {
+        return sendErrorResponse(res, new Error("존재하지 않는 유저입니다."));
       }
 
       const updateCount = await this.userService.updateUser(userId, email, name);
@@ -115,11 +120,18 @@ export class UserController {
 
   deleteUser = async (req, res) => {
     try {
-      const { userId } = req.user?.userId;
+      const userId = req.user?.userId;
 
       if (!userId || isNaN(Number(userId))) {
         return sendErrorResponse(res, new Error("userId를 확인해주세요."));
       }
+
+      //유효성 검사 강화
+      const existUser = await this.userService.existUserById(userId);
+      if (!existUser) {
+        return sendErrorResponse(res, new Error("존재하지 않는 유저입니다."));
+      }
+
       const deletedUser = await this.userService.deleteUser(userId);
 
       if (deletedUser > 0) {
@@ -131,6 +143,19 @@ export class UserController {
       } else {
         sendErrorResponse(res, new Error("탈퇴에 실패하였습니다."));
       }
+    } catch (error) {
+      sendErrorResponse(res, error);
+    }
+  };
+
+  existUserById = async (req, res) => {
+    try {
+      const userId = req.user?.userId;
+      if (!userId || isNaN(Number(userId))) {
+        return sendErrorResponse(res, new Error("userId를 확인해주세요."));
+      }
+      const existUser = await this.userService.existUserById(userId);
+      sendResponse(res, existUser);
     } catch (error) {
       sendErrorResponse(res, error);
     }

@@ -67,4 +67,18 @@ export class UserMapper extends BaseMapper {
   deleteUser(userId) {
     return this.exec(async (query) => query.DELETE().FROM("user_mst").WHERE("index", "=", userId));
   }
+  /**
+   * 5. 유저 존재 여부 확인
+   * 회원탈퇴나 유저정보수정 시 존재여부 확인으로 확실한 에러메세지를 보낼 수 있다.
+   * @param {number} userId
+   * @returns {Promise<boolean>}
+   */
+  existUserById(userId) {
+    return this.exec(async (query) => {
+      const result = await query.oneOrNone(`SELECT EXISTS(SELECT 1 FROM user_mst WHERE index= $1) AS "exists"`, [
+        userId,
+      ]);
+      return result.exists || false;
+    });
+  }
 }
