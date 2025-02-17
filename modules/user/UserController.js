@@ -56,7 +56,7 @@ export class UserController {
 
   findById = async (req, res) => {
     try {
-      const userId = req.user?.userId;
+      const userId = req.params.userId;
       if (!userId || isNaN(Number(userId))) {
         throw new ValidationError({ message: "userId를 확인해주세요" });
       }
@@ -73,8 +73,8 @@ export class UserController {
 
   findByEmail = async (req, res) => {
     try {
-      const { email } = req.query;
-      if (!email || typeof email !== "string") {
+      const email = req.params.email;
+      if (!email) {
         throw new ValidationError({ message: "email을 확인해주세요" });
       }
       const user = await this.userService.findByEmail(email);
@@ -90,18 +90,24 @@ export class UserController {
 
   updateUser = async (req, res) => {
     try {
-      const userId = req.user?.userId;
+      const userId = req.user?.index;
+      console.log("컨트롤러 수정:", userId);
       const { email, name } = req.body;
-      if (!email | !name) {
+      console.log("컨트롤러 이메일,네임", email, name);
+      if (!email || !name) {
         return sendErrorResponse(res, new Error("이름과 이메일을 모두 입력해주세요."));
       }
 
-      const existUser = await this.userService.existUserById(userId);
-      if (!existUser) {
-        return sendErrorResponse(res, new Error("존재하지 않는 유저입니다."));
-      }
+      // const existUser = await this.userService.existUserById(userId);
+      // if (!existUser) {
+      //   return sendErrorResponse(res, new Error("존재하지 않는 유저입니다."));
+      // }
 
-      const updateCount = await this.userService.updateUser(userId, email, name);
+      const updateCount = await this.userService.updateUser({ userId, email, name });
+      //객체로 안묶는 실수..
+      console.log("서비스로 전달:", { userId, email, name });
+
+      console.log("updateCount", updateCount);
       if (updateCount > 0) {
         const response = ResponseData.data({
           userId,

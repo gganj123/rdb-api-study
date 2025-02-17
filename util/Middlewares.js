@@ -98,6 +98,7 @@ export const jwtAuth = (req, res, next) =>
      * @type {passport.AuthenticateCallback}
      */
     (err, user, info, status) => {
+      console.log("미들웨어user", user);
       if (err) {
         return next(err);
       }

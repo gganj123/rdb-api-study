@@ -1,0 +1,2696 @@
+[ 2025-02-18 12:00:02 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": "1"
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 12:00:02 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    "1"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 12:04:33 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": "1"
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 12:04:33 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    "1"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 12:07:08 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 1
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 12:07:08 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    1
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 12:08:26 AM ] [ Test Server ]  -  undefined
+[ 2025-02-18 12:09:00 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 1
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 12:09:00 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    1
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 12:10:10 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 1
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 12:10:10 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    1
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 12:12:30 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 1
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 12:12:30 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    1
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 12:13:11 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 1
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 12:13:11 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    1
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 12:14:39 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": "1"
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 12:14:39 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    "1"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 12:14:39 AM ] [ Test Server ]  -  Error:  해당 userId의 사용자가 없습니다. 
+{
+  "stack": "Error: 해당 userId의 사용자가 없습니다.\n    at findById (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:65:39)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-18 12:14:39 AM ] [ Test Server ]  -  Response /api/users/id/1 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "해당 userId의 사용자가 없습니다.",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "해당 userId의 사용자가 없습니다.",
+    "stack": "Error: 해당 userId의 사용자가 없습니다.\n    at findById (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:65:39)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-18 12:14:55 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": "12"
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 12:14:55 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    "12"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 12:14:55 AM ] [ Test Server ]  -  Response /api/users/id/12 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 12,
+      "name": "Doni",
+      "email": "zwol11@naver.com",
+      "password": "$2a$10$XzKtoTFS5vw4NHdJ8V8j5uCbxCtdna4obRlfVRduzW3LE8oA3R6CG",
+      "createdTime": "2025-02-17 22:36:43",
+      "updateTime": null
+    }
+  ],
+  "error": null
+}
+[ 2025-02-18 12:17:41 AM ] [ Test Server ]  -  Response /api/users/login 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "email": "user@example.com",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxIiwiaWF0IjoxNzM5ODA1NDYxLCJleHAiOjE3Mzk4OTE4NjEsImF1ZCI6ImF1ZGllbmNlIiwiaXNzIjoiaXNzdWVyIn0.exviay66uNAHpCGS4ywnLGhMPcXxZpFBDQe0Ir1J3uo",
+      "message": "로그인 되었습니다."
+    }
+  ],
+  "error": null
+}
+[ 2025-02-18 12:18:01 AM ] [ Test Server ]  -  Response /api/users/login 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "userId": "1",
+      "email": "user@example.com",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxIiwiaWF0IjoxNzM5ODA1NDgxLCJleHAiOjE3Mzk4OTE4ODEsImF1ZCI6ImF1ZGllbmNlIiwiaXNzIjoiaXNzdWVyIn0.4PgTUTNHIASAD8H5WeWMtEYVmTl9KBi6-trqMJv_sPs",
+      "message": "로그인 되었습니다."
+    }
+  ],
+  "error": null
+}
+[ 2025-02-18 12:28:58 AM ] [ Test Server ]  -  Response /api/users/login 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "userId": "12",
+      "email": "user@example.com",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxMiIsImlhdCI6MTczOTgwNjEzOCwiZXhwIjoxNzM5ODkyNTM4LCJhdWQiOiJhdWRpZW5jZSIsImlzcyI6Imlzc3VlciJ9.WwRso0tddpKu-EpJUajuUlbUqm9uQq3sPS3kVO_34Yo",
+      "message": "로그인 되었습니다."
+    }
+  ],
+  "error": null
+}
+[ 2025-02-18 12:29:03 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 1
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 12:29:03 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    1
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 12:29:17 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 12
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 12:29:17 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    12
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 12:29:17 AM ] [ Test Server ]  -  undefined
+[ 2025-02-18 12:29:17 AM ] [ Test Server ]  -  Error:  query.oneOrNone is not a function 
+{
+  "stack": "TypeError: query.oneOrNone is not a function\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:83:34\n    at UserMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:20)\n    at UserMapper.existUserById (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:82:17)\n    at _UserService.existUserById (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserService.js:96:42)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:58\n    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:34\n    at transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:99:25)"
+}
+[Body]
+undefined
+[ 2025-02-18 12:29:17 AM ] [ Test Server ]  -  Response /api/users/update 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "query.oneOrNone is not a function",
+  "data": null,
+  "error": {
+    "name": "TypeError",
+    "message": "query.oneOrNone is not a function",
+    "stack": "TypeError: query.oneOrNone is not a function\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:83:34\n    at UserMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:20)\n    at UserMapper.existUserById (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:82:17)\n    at _UserService.existUserById (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserService.js:96:42)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:58\n    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:34\n    at transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:99:25)"
+  }
+}
+[ 2025-02-18 12:31:00 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 12
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 12:31:00 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    12
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 12:31:00 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT EXISTS(SELECT 1 FROM user_mst WHERE index = $1) AS \"exists\"",
+  "values": [
+    null
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 12:31:00 AM ] [ Test Server ]  -  Error:  존재하지 않는 유저입니다. 
+{
+  "stack": "Error: 존재하지 않는 유저입니다.\n    at updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:101:39)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-18 12:31:00 AM ] [ Test Server ]  -  Response /api/users/update 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "존재하지 않는 유저입니다.",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "존재하지 않는 유저입니다.",
+    "stack": "Error: 존재하지 않는 유저입니다.\n    at updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:101:39)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-18 12:31:41 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 12
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 12:31:41 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    12
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 12:31:41 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT EXISTS(SELECT 1 FROM user_mst WHERE index = $1) AS \"exists\"",
+  "values": [
+    null
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 12:31:41 AM ] [ Test Server ]  -  Error:  존재하지 않는 유저입니다. 
+{
+  "stack": "Error: 존재하지 않는 유저입니다.\n    at updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:101:39)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-18 12:31:41 AM ] [ Test Server ]  -  Response /api/users/update 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "존재하지 않는 유저입니다.",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "존재하지 않는 유저입니다.",
+    "stack": "Error: 존재하지 않는 유저입니다.\n    at updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:101:39)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-18 12:33:46 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 12
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 12:33:46 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    12
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 12:33:46 AM ] [ Test Server ]  -  Error:  Cannot read properties of undefined (reading 'includes') 
+{
+  "stack": "TypeError: Cannot read properties of undefined (reading 'includes')\n    at _UserService.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserService.js:73:16)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:58\n    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:34\n    at transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:104:27)"
+}
+[Body]
+undefined
+[ 2025-02-18 12:33:46 AM ] [ Test Server ]  -  Response /api/users/update 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "Cannot read properties of undefined (reading 'includes')",
+  "data": null,
+  "error": {
+    "name": "TypeError",
+    "message": "Cannot read properties of undefined (reading 'includes')",
+    "stack": "TypeError: Cannot read properties of undefined (reading 'includes')\n    at _UserService.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserService.js:73:16)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:58\n    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:34\n    at transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:104:27)"
+  }
+}
+[ 2025-02-18 12:34:44 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 12
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 12:34:44 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    12
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 12:34:44 AM ] [ Test Server ]  -  Error:  Cannot read properties of undefined (reading 'trim') 
+{
+  "stack": "TypeError: Cannot read properties of undefined (reading 'trim')\n    at _UserService.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserService.js:73:27)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:58\n    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:34\n    at transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:104:27)"
+}
+[Body]
+undefined
+[ 2025-02-18 12:34:44 AM ] [ Test Server ]  -  Response /api/users/update 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "Cannot read properties of undefined (reading 'trim')",
+  "data": null,
+  "error": {
+    "name": "TypeError",
+    "message": "Cannot read properties of undefined (reading 'trim')",
+    "stack": "TypeError: Cannot read properties of undefined (reading 'trim')\n    at _UserService.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserService.js:73:27)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:58\n    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:34\n    at transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:104:27)"
+  }
+}
+[ 2025-02-18 12:34:53 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 12
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 12:34:53 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    12
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 12:34:53 AM ] [ Test Server ]  -  Error:  trimName is not defined 
+{
+  "stack": "ReferenceError: trimName is not defined\n    at _UserService.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserService.js:73:68)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:58\n    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:34\n    at transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:104:27)"
+}
+[Body]
+undefined
+[ 2025-02-18 12:34:53 AM ] [ Test Server ]  -  Response /api/users/update 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "trimName is not defined",
+  "data": null,
+  "error": {
+    "name": "ReferenceError",
+    "message": "trimName is not defined",
+    "stack": "ReferenceError: trimName is not defined\n    at _UserService.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserService.js:73:68)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:58\n    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:34\n    at transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:104:27)"
+  }
+}
+[ 2025-02-18 12:35:06 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 12
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 12:35:06 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    12
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 12:35:06 AM ] [ Test Server ]  -  undefined
+[ 2025-02-18 12:35:06 AM ] [ Test Server ]  -  Error:  query.UPDATE(...).SET is not a function 
+{
+  "stack": "TypeError: query.UPDATE(...).SET is not a function\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:64:32\n    at UserMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:20)\n    at UserMapper.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:63:17)\n    at _UserService.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserService.js:73:42)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:58\n    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:34\n    at transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:104:27)"
+}
+[Body]
+undefined
+[ 2025-02-18 12:35:06 AM ] [ Test Server ]  -  Response /api/users/update 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "query.UPDATE(...).SET is not a function",
+  "data": null,
+  "error": {
+    "name": "TypeError",
+    "message": "query.UPDATE(...).SET is not a function",
+    "stack": "TypeError: query.UPDATE(...).SET is not a function\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:64:32\n    at UserMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:20)\n    at UserMapper.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:63:17)\n    at _UserService.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserService.js:73:42)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:58\n    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:34\n    at transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:104:27)"
+  }
+}
+[ 2025-02-18 12:37:35 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 12
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 12:37:35 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    12
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 12:37:35 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " UPDATE user_mst SET email = $2, name = $3 WHERE index = $1",
+  "values": [
+    null,
+    null,
+    null
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 12:37:35 AM ] [ Test Server ]  -  Error:  정보 수정을 실패하였습니다. 
+{
+  "stack": "Error: 정보 수정을 실패하였습니다.\n    at updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:114:39)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-18 12:37:35 AM ] [ Test Server ]  -  Response /api/users/update 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "정보 수정을 실패하였습니다.",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "정보 수정을 실패하였습니다.",
+    "stack": "Error: 정보 수정을 실패하였습니다.\n    at updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:114:39)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-18 12:42:19 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 12
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 12:42:19 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    12
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 12:42:19 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " UPDATE user_mst SET email = $2, name = $3 WHERE index = $1",
+  "values": [
+    null,
+    null,
+    null
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 12:42:19 AM ] [ Test Server ]  -  Error:  정보 수정을 실패하였습니다. 
+{
+  "stack": "Error: 정보 수정을 실패하였습니다.\n    at updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:115:39)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-18 12:42:19 AM ] [ Test Server ]  -  Response /api/users/update 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "정보 수정을 실패하였습니다.",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "정보 수정을 실패하였습니다.",
+    "stack": "Error: 정보 수정을 실패하였습니다.\n    at updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:115:39)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-18 12:45:40 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 12
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 12:45:40 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    12
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 12:45:40 AM ] [ Test Server ]  -  undefined
+[ 2025-02-18 12:45:40 AM ] [ Test Server ]  -  Error:  Invalid param: email cannot be null or undefined 
+{
+  "stack": "Error: Invalid param: email cannot be null or undefined\n    at PgQueryBuilder.addParam (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:195:13)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:66:10\n    at UserMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:20)\n    at UserMapper.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:63:17)\n    at _UserService.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserService.js:73:42)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:58\n    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:34\n    at transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-18 12:45:40 AM ] [ Test Server ]  -  Response /api/users/update 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "Invalid param: email cannot be null or undefined",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "Invalid param: email cannot be null or undefined",
+    "stack": "Error: Invalid param: email cannot be null or undefined\n    at PgQueryBuilder.addParam (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:195:13)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:66:10\n    at UserMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:20)\n    at UserMapper.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:63:17)\n    at _UserService.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserService.js:73:42)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:58\n    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:34\n    at transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-18 12:45:59 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 12
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 12:45:59 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    12
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 12:45:59 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " UPDATE user_mst SET email = $2, name = $3 WHERE index = $1",
+  "values": [
+    null,
+    null,
+    null
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 12:46:00 AM ] [ Test Server ]  -  Error:  정보 수정을 실패하였습니다. 
+{
+  "stack": "Error: 정보 수정을 실패하였습니다.\n    at updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:115:39)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-18 12:46:00 AM ] [ Test Server ]  -  Response /api/users/update 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "정보 수정을 실패하였습니다.",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "정보 수정을 실패하였습니다.",
+    "stack": "Error: 정보 수정을 실패하였습니다.\n    at updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:115:39)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-18 12:46:18 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 12
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 12:46:18 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    12
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 12:46:18 AM ] [ Test Server ]  -  undefined
+[ 2025-02-18 12:46:18 AM ] [ Test Server ]  -  Error:  Invalid param: email cannot be null or undefined 
+{
+  "stack": "Error: Invalid param: email cannot be null or undefined\n    at PgQueryBuilder.addParam (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:195:13)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:66:10\n    at UserMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:20)\n    at UserMapper.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:63:17)\n    at _UserService.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserService.js:73:42)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:58\n    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:34\n    at transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-18 12:46:18 AM ] [ Test Server ]  -  Response /api/users/update 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "Invalid param: email cannot be null or undefined",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "Invalid param: email cannot be null or undefined",
+    "stack": "Error: Invalid param: email cannot be null or undefined\n    at PgQueryBuilder.addParam (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:195:13)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:66:10\n    at UserMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:20)\n    at UserMapper.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:63:17)\n    at _UserService.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserService.js:73:42)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:58\n    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:34\n    at transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-18 12:46:46 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 12
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 12:46:46 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    12
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 12:46:46 AM ] [ Test Server ]  -  undefined
+[ 2025-02-18 12:46:46 AM ] [ Test Server ]  -  Error:  Invalid param: email cannot be null or undefined 
+{
+  "stack": "Error: Invalid param: email cannot be null or undefined\n    at PgQueryBuilder.addParam (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:195:13)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:66:10\n    at UserMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:20)\n    at UserMapper.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:63:17)\n    at _UserService.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserService.js:73:42)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:58\n    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:34\n    at transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-18 12:46:46 AM ] [ Test Server ]  -  Response /api/users/update 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "Invalid param: email cannot be null or undefined",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "Invalid param: email cannot be null or undefined",
+    "stack": "Error: Invalid param: email cannot be null or undefined\n    at PgQueryBuilder.addParam (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:195:13)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:66:10\n    at UserMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:20)\n    at UserMapper.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:63:17)\n    at _UserService.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserService.js:73:42)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:58\n    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:34\n    at transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-18 12:46:48 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 12
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 12:46:48 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    12
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 12:46:48 AM ] [ Test Server ]  -  undefined
+[ 2025-02-18 12:46:49 AM ] [ Test Server ]  -  Error:  Invalid param: email cannot be null or undefined 
+{
+  "stack": "Error: Invalid param: email cannot be null or undefined\n    at PgQueryBuilder.addParam (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:195:13)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:66:10\n    at UserMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:20)\n    at UserMapper.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:63:17)\n    at _UserService.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserService.js:73:42)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:58\n    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:34\n    at transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-18 12:46:49 AM ] [ Test Server ]  -  Response /api/users/update 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "Invalid param: email cannot be null or undefined",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "Invalid param: email cannot be null or undefined",
+    "stack": "Error: Invalid param: email cannot be null or undefined\n    at PgQueryBuilder.addParam (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:195:13)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:66:10\n    at UserMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:20)\n    at UserMapper.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:63:17)\n    at _UserService.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserService.js:73:42)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:58\n    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:34\n    at transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-18 12:46:54 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 12
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 12:46:54 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    12
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 12:46:54 AM ] [ Test Server ]  -  undefined
+[ 2025-02-18 12:46:54 AM ] [ Test Server ]  -  Error:  Invalid param: email cannot be null or undefined 
+{
+  "stack": "Error: Invalid param: email cannot be null or undefined\n    at PgQueryBuilder.addParam (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:195:13)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:66:10\n    at UserMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:20)\n    at UserMapper.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:63:17)\n    at _UserService.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserService.js:73:42)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:58\n    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:34\n    at transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-18 12:46:54 AM ] [ Test Server ]  -  Response /api/users/update 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "Invalid param: email cannot be null or undefined",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "Invalid param: email cannot be null or undefined",
+    "stack": "Error: Invalid param: email cannot be null or undefined\n    at PgQueryBuilder.addParam (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:195:13)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:66:10\n    at UserMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:20)\n    at UserMapper.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:63:17)\n    at _UserService.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserService.js:73:42)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:58\n    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:34\n    at transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-18 12:48:25 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 12
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 12:48:25 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    12
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 12:48:25 AM ] [ Test Server ]  -  undefined
+[ 2025-02-18 12:48:25 AM ] [ Test Server ]  -  Error:  Invalid param: email cannot be null or undefined 
+{
+  "stack": "Error: Invalid param: email cannot be null or undefined\n    at PgQueryBuilder.addParam (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:195:13)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:66:10\n    at UserMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:20)\n    at UserMapper.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:63:17)\n    at _UserService.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserService.js:73:42)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:58\n    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:34\n    at transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-18 12:48:25 AM ] [ Test Server ]  -  Response /api/users/update 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "Invalid param: email cannot be null or undefined",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "Invalid param: email cannot be null or undefined",
+    "stack": "Error: Invalid param: email cannot be null or undefined\n    at PgQueryBuilder.addParam (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:195:13)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:66:10\n    at UserMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:20)\n    at UserMapper.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:63:17)\n    at _UserService.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserService.js:73:42)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:58\n    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:34\n    at transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-18 12:48:29 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 12
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 12:48:29 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    12
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 12:48:29 AM ] [ Test Server ]  -  undefined
+[ 2025-02-18 12:48:29 AM ] [ Test Server ]  -  Error:  Invalid param: email cannot be null or undefined 
+{
+  "stack": "Error: Invalid param: email cannot be null or undefined\n    at PgQueryBuilder.addParam (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:195:13)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:66:10\n    at UserMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:20)\n    at UserMapper.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:63:17)\n    at _UserService.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserService.js:73:42)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:58\n    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:34\n    at transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-18 12:48:29 AM ] [ Test Server ]  -  Response /api/users/update 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "Invalid param: email cannot be null or undefined",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "Invalid param: email cannot be null or undefined",
+    "stack": "Error: Invalid param: email cannot be null or undefined\n    at PgQueryBuilder.addParam (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:195:13)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:66:10\n    at UserMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:20)\n    at UserMapper.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:63:17)\n    at _UserService.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserService.js:73:42)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:58\n    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:34\n    at transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-18 12:49:05 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 12
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 12:49:05 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    12
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 12:49:05 AM ] [ Test Server ]  -  undefined
+[ 2025-02-18 12:49:05 AM ] [ Test Server ]  -  Error:  Invalid param: email cannot be null or undefined 
+{
+  "stack": "Error: Invalid param: email cannot be null or undefined\n    at PgQueryBuilder.addParam (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:195:13)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:66:10\n    at UserMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:20)\n    at UserMapper.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:63:17)\n    at _UserService.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserService.js:73:42)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:58\n    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:34\n    at transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-18 12:49:05 AM ] [ Test Server ]  -  Response /api/users/update 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "Invalid param: email cannot be null or undefined",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "Invalid param: email cannot be null or undefined",
+    "stack": "Error: Invalid param: email cannot be null or undefined\n    at PgQueryBuilder.addParam (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:195:13)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:66:10\n    at UserMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:20)\n    at UserMapper.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:63:17)\n    at _UserService.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserService.js:73:42)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:58\n    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:34\n    at transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-18 12:52:58 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 12
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 12:52:58 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    12
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 12:52:58 AM ] [ Test Server ]  -  undefined
+[ 2025-02-18 12:52:58 AM ] [ Test Server ]  -  Error:  Invalid param: email cannot be null or undefined 
+{
+  "stack": "Error: Invalid param: email cannot be null or undefined\n    at PgQueryBuilder.addParam (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:195:13)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:66:10\n    at UserMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:20)\n    at UserMapper.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:63:17)\n    at _UserService.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserService.js:73:42)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:58\n    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:34\n    at transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-18 12:52:58 AM ] [ Test Server ]  -  Response /api/users/update 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "Invalid param: email cannot be null or undefined",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "Invalid param: email cannot be null or undefined",
+    "stack": "Error: Invalid param: email cannot be null or undefined\n    at PgQueryBuilder.addParam (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:195:13)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:66:10\n    at UserMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:20)\n    at UserMapper.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:63:17)\n    at _UserService.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserService.js:73:42)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:58\n    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:34\n    at transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-18 12:53:00 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 12
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 12:53:00 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    12
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 12:53:00 AM ] [ Test Server ]  -  undefined
+[ 2025-02-18 12:53:00 AM ] [ Test Server ]  -  Error:  Invalid param: email cannot be null or undefined 
+{
+  "stack": "Error: Invalid param: email cannot be null or undefined\n    at PgQueryBuilder.addParam (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:195:13)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:66:10\n    at UserMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:20)\n    at UserMapper.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:63:17)\n    at _UserService.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserService.js:73:42)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:58\n    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:34\n    at transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-18 12:53:00 AM ] [ Test Server ]  -  Response /api/users/update 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "Invalid param: email cannot be null or undefined",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "Invalid param: email cannot be null or undefined",
+    "stack": "Error: Invalid param: email cannot be null or undefined\n    at PgQueryBuilder.addParam (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:195:13)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:66:10\n    at UserMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:20)\n    at UserMapper.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:63:17)\n    at _UserService.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserService.js:73:42)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:58\n    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:34\n    at transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-18 12:53:01 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 12
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 12:53:01 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    12
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 12:53:01 AM ] [ Test Server ]  -  undefined
+[ 2025-02-18 12:53:01 AM ] [ Test Server ]  -  Error:  Invalid param: email cannot be null or undefined 
+{
+  "stack": "Error: Invalid param: email cannot be null or undefined\n    at PgQueryBuilder.addParam (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:195:13)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:66:10\n    at UserMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:20)\n    at UserMapper.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:63:17)\n    at _UserService.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserService.js:73:42)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:58\n    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:34\n    at transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-18 12:53:01 AM ] [ Test Server ]  -  Response /api/users/update 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "Invalid param: email cannot be null or undefined",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "Invalid param: email cannot be null or undefined",
+    "stack": "Error: Invalid param: email cannot be null or undefined\n    at PgQueryBuilder.addParam (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:195:13)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:66:10\n    at UserMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:20)\n    at UserMapper.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:63:17)\n    at _UserService.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserService.js:73:42)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:58\n    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:34\n    at transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-18 12:55:43 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 12
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 12:55:43 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    12
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 12:55:43 AM ] [ Test Server ]  -  undefined
+[ 2025-02-18 12:55:43 AM ] [ Test Server ]  -  Error:  Invalid param: email cannot be null or undefined 
+{
+  "stack": "Error: Invalid param: email cannot be null or undefined\n    at PgQueryBuilder.addParam (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:195:13)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:66:10\n    at UserMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:20)\n    at UserMapper.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:63:17)\n    at _UserService.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserService.js:73:42)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:58\n    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:34\n    at transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-18 12:55:43 AM ] [ Test Server ]  -  Response /api/users/update 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "Invalid param: email cannot be null or undefined",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "Invalid param: email cannot be null or undefined",
+    "stack": "Error: Invalid param: email cannot be null or undefined\n    at PgQueryBuilder.addParam (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:195:13)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:66:10\n    at UserMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:20)\n    at UserMapper.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:63:17)\n    at _UserService.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserService.js:73:42)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:58\n    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:34\n    at transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-18 12:57:39 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 12
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 12:57:39 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    12
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 12:57:39 AM ] [ Test Server ]  -  undefined
+[ 2025-02-18 12:57:39 AM ] [ Test Server ]  -  Error:  Invalid param: email cannot be null or undefined 
+{
+  "stack": "Error: Invalid param: email cannot be null or undefined\n    at PgQueryBuilder.addParam (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:195:13)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:66:10\n    at UserMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:20)\n    at UserMapper.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:63:17)\n    at _UserService.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserService.js:73:42)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:58\n    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:34\n    at transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-18 12:57:39 AM ] [ Test Server ]  -  Response /api/users/update 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "Invalid param: email cannot be null or undefined",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "Invalid param: email cannot be null or undefined",
+    "stack": "Error: Invalid param: email cannot be null or undefined\n    at PgQueryBuilder.addParam (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:195:13)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:66:10\n    at UserMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:20)\n    at UserMapper.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:63:17)\n    at _UserService.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserService.js:73:42)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:58\n    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:34\n    at transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-18 12:57:40 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 12
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 12:57:40 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    12
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 12:57:40 AM ] [ Test Server ]  -  undefined
+[ 2025-02-18 12:57:40 AM ] [ Test Server ]  -  Error:  Invalid param: email cannot be null or undefined 
+{
+  "stack": "Error: Invalid param: email cannot be null or undefined\n    at PgQueryBuilder.addParam (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:195:13)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:66:10\n    at UserMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:20)\n    at UserMapper.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:63:17)\n    at _UserService.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserService.js:73:42)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:58\n    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:34\n    at transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-18 12:57:40 AM ] [ Test Server ]  -  Response /api/users/update 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "Invalid param: email cannot be null or undefined",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "Invalid param: email cannot be null or undefined",
+    "stack": "Error: Invalid param: email cannot be null or undefined\n    at PgQueryBuilder.addParam (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:195:13)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:66:10\n    at UserMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:20)\n    at UserMapper.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:63:17)\n    at _UserService.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserService.js:73:42)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:58\n    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:34\n    at transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-18 12:59:03 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": null
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 12:59:03 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    null
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 12:59:03 AM ] [ Test Server ]  -  undefined 
+{
+  "length": 146,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe"
+}
+[Body]
+undefined
+[ 2025-02-18 01:02:42 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": null
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 01:02:42 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    null
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 01:02:42 AM ] [ Test Server ]  -  undefined 
+{
+  "length": 146,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe"
+}
+[Body]
+undefined
+[ 2025-02-18 01:03:33 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": null
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 01:03:33 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    null
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 01:03:33 AM ] [ Test Server ]  -  undefined 
+{
+  "length": 146,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe"
+}
+[Body]
+undefined
+[ 2025-02-18 01:04:54 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": null
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 01:04:54 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    null
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 01:04:54 AM ] [ Test Server ]  -  undefined 
+{
+  "length": 146,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe"
+}
+[Body]
+undefined
+[ 2025-02-18 01:05:14 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": null
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 01:05:14 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    null
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 01:05:14 AM ] [ Test Server ]  -  undefined 
+{
+  "length": 146,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe"
+}
+[Body]
+undefined
+[ 2025-02-18 01:05:25 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": null
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 01:05:25 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    null
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 01:05:25 AM ] [ Test Server ]  -  undefined 
+{
+  "length": 146,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe"
+}
+[Body]
+undefined
+[ 2025-02-18 01:06:31 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": null
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 01:06:31 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    null
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 01:06:31 AM ] [ Test Server ]  -  undefined 
+{
+  "length": 146,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe"
+}
+[Body]
+undefined
+[ 2025-02-18 01:08:09 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": null
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 01:08:09 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    null
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 01:08:09 AM ] [ Test Server ]  -  undefined 
+{
+  "length": 146,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe"
+}
+[Body]
+undefined
+[ 2025-02-18 01:08:34 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": null
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 01:08:34 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    null
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 01:08:34 AM ] [ Test Server ]  -  undefined 
+{
+  "length": 146,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe"
+}
+[Body]
+undefined
+[ 2025-02-18 01:11:17 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": null
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 01:11:17 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    null
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 01:11:17 AM ] [ Test Server ]  -  undefined 
+{
+  "length": 146,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe"
+}
+[Body]
+undefined
+[ 2025-02-18 01:12:07 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 12
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 01:12:07 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    12
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 01:12:07 AM ] [ Test Server ]  -  undefined
+[ 2025-02-18 01:12:07 AM ] [ Test Server ]  -  Error:  Invalid param: email cannot be null or undefined 
+{
+  "stack": "Error: Invalid param: email cannot be null or undefined\n    at PgQueryBuilder.addParam (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:195:13)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:66:10\n    at UserMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:20)\n    at UserMapper.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:63:17)\n    at _UserService.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserService.js:73:42)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:58\n    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:34\n    at transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-18 01:12:07 AM ] [ Test Server ]  -  Response /api/users/update 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "Invalid param: email cannot be null or undefined",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "Invalid param: email cannot be null or undefined",
+    "stack": "Error: Invalid param: email cannot be null or undefined\n    at PgQueryBuilder.addParam (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:195:13)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:66:10\n    at UserMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:20)\n    at UserMapper.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:63:17)\n    at _UserService.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserService.js:73:42)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:58\n    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:34\n    at transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-18 01:13:07 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 12
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 01:13:07 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    12
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 01:13:07 AM ] [ Test Server ]  -  undefined
+[ 2025-02-18 01:13:07 AM ] [ Test Server ]  -  Error:  Invalid param: email cannot be null or undefined 
+{
+  "stack": "Error: Invalid param: email cannot be null or undefined\n    at PgQueryBuilder.addParam (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:195:13)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:66:10\n    at UserMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:20)\n    at UserMapper.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:63:17)\n    at _UserService.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserService.js:73:42)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:58\n    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:34\n    at transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-18 01:13:07 AM ] [ Test Server ]  -  Response /api/users/update 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "Invalid param: email cannot be null or undefined",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "Invalid param: email cannot be null or undefined",
+    "stack": "Error: Invalid param: email cannot be null or undefined\n    at PgQueryBuilder.addParam (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:195:13)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:66:10\n    at UserMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:20)\n    at UserMapper.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:63:17)\n    at _UserService.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserService.js:73:42)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:58\n    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:34\n    at transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-18 01:15:41 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 12
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 01:15:41 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    12
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 01:15:41 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " UPDATE user_mst SET email = $1, name = $2 WHERE index = $3",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-18 01:15:41 AM ] [ Test Server ]  -  undefined 
+{
+  "length": 94,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "42P02",
+  "position": "58",
+  "file": "parse_expr.c",
+  "line": "864",
+  "routine": "transformParamRef"
+}
+[Body]
+undefined
+[ 2025-02-18 01:15:41 AM ] [ Test Server ]  -  Error:  there is no parameter $3 
+{
+  "length": 94,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "42P02",
+  "position": "58",
+  "file": "parse_expr.c",
+  "line": "864",
+  "routine": "transformParamRef",
+  "stack": "error: there is no parameter $3\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.rawExec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:279:32)\n    at async UserMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _UserService.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserService.js:73:20)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:106:27)"
+}
+[Body]
+undefined
+[ 2025-02-18 01:15:41 AM ] [ Test Server ]  -  Response /api/users/update 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "there is no parameter $3",
+  "data": null,
+  "error": {
+    "name": "error",
+    "message": "there is no parameter $3",
+    "stack": "error: there is no parameter $3\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.rawExec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:279:32)\n    at async UserMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _UserService.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserService.js:73:20)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:106:27)"
+  }
+}
+[ 2025-02-18 01:17:31 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 12
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 01:17:31 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    12
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 01:17:31 AM ] [ Test Server ]  -  undefined
+[ 2025-02-18 01:17:31 AM ] [ Test Server ]  -  Error:  Invalid param: email cannot be null or undefined 
+{
+  "stack": "Error: Invalid param: email cannot be null or undefined\n    at PgQueryBuilder.addParam (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:195:13)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:66:10\n    at UserMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:20)\n    at UserMapper.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:63:17)\n    at _UserService.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserService.js:73:42)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:58\n    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:34\n    at transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-18 01:17:31 AM ] [ Test Server ]  -  Response /api/users/update 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "Invalid param: email cannot be null or undefined",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "Invalid param: email cannot be null or undefined",
+    "stack": "Error: Invalid param: email cannot be null or undefined\n    at PgQueryBuilder.addParam (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:195:13)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:66:10\n    at UserMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:20)\n    at UserMapper.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:63:17)\n    at _UserService.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserService.js:73:42)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:58\n    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:34\n    at transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-18 01:18:31 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 12
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 01:18:31 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    12
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 01:18:31 AM ] [ Test Server ]  -  undefined
+[ 2025-02-18 01:18:31 AM ] [ Test Server ]  -  Error:  Invalid param: email cannot be null or undefined 
+{
+  "stack": "Error: Invalid param: email cannot be null or undefined\n    at PgQueryBuilder.addParam (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:195:13)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:67:10\n    at UserMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:20)\n    at UserMapper.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:64:17)\n    at _UserService.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserService.js:73:42)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:58\n    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:34\n    at transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-18 01:18:31 AM ] [ Test Server ]  -  Response /api/users/update 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "Invalid param: email cannot be null or undefined",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "Invalid param: email cannot be null or undefined",
+    "stack": "Error: Invalid param: email cannot be null or undefined\n    at PgQueryBuilder.addParam (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:195:13)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:67:10\n    at UserMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:20)\n    at UserMapper.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:64:17)\n    at _UserService.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserService.js:73:42)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:58\n    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:34\n    at transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-18 01:20:14 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 12
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 01:20:14 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    12
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 01:20:14 AM ] [ Test Server ]  -  undefined
+[ 2025-02-18 01:20:14 AM ] [ Test Server ]  -  Error:  Invalid param: email cannot be null or undefined 
+{
+  "stack": "Error: Invalid param: email cannot be null or undefined\n    at PgQueryBuilder.addParam (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:195:13)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:67:10\n    at UserMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:20)\n    at UserMapper.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:64:17)\n    at _UserService.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserService.js:74:42)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:58\n    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:34\n    at transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-18 01:20:14 AM ] [ Test Server ]  -  Response /api/users/update 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "Invalid param: email cannot be null or undefined",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "Invalid param: email cannot be null or undefined",
+    "stack": "Error: Invalid param: email cannot be null or undefined\n    at PgQueryBuilder.addParam (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:195:13)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:67:10\n    at UserMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:20)\n    at UserMapper.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:64:17)\n    at _UserService.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserService.js:74:42)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:58\n    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:34\n    at transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-18 01:21:33 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 12
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 01:21:33 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    12
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 01:21:33 AM ] [ Test Server ]  -  undefined
+[ 2025-02-18 01:21:33 AM ] [ Test Server ]  -  Error:  Invalid param: email cannot be null or undefined 
+{
+  "stack": "Error: Invalid param: email cannot be null or undefined\n    at PgQueryBuilder.addParam (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:195:13)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:67:10\n    at UserMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:20)\n    at UserMapper.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:64:17)\n    at _UserService.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserService.js:74:42)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:58\n    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:34\n    at transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-18 01:21:33 AM ] [ Test Server ]  -  Response /api/users/update 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "Invalid param: email cannot be null or undefined",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "Invalid param: email cannot be null or undefined",
+    "stack": "Error: Invalid param: email cannot be null or undefined\n    at PgQueryBuilder.addParam (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:195:13)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:67:10\n    at UserMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:20)\n    at UserMapper.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:64:17)\n    at _UserService.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserService.js:74:42)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:58\n    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:34\n    at transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-18 01:21:53 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 12
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 01:21:53 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    12
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 01:21:53 AM ] [ Test Server ]  -  undefined
+[ 2025-02-18 01:21:53 AM ] [ Test Server ]  -  Error:  Invalid param: email cannot be null or undefined 
+{
+  "stack": "Error: Invalid param: email cannot be null or undefined\n    at PgQueryBuilder.addParam (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:195:13)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:67:10\n    at UserMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:20)\n    at UserMapper.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:64:17)\n    at _UserService.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserService.js:74:42)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:58\n    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:34\n    at transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-18 01:21:53 AM ] [ Test Server ]  -  Response /api/users/update 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "Invalid param: email cannot be null or undefined",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "Invalid param: email cannot be null or undefined",
+    "stack": "Error: Invalid param: email cannot be null or undefined\n    at PgQueryBuilder.addParam (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:195:13)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:67:10\n    at UserMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:20)\n    at UserMapper.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:64:17)\n    at _UserService.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserService.js:74:42)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:58\n    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:34\n    at transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-18 01:24:05 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 12
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 01:24:05 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    12
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 01:24:05 AM ] [ Test Server ]  -  undefined
+[ 2025-02-18 01:24:05 AM ] [ Test Server ]  -  Error:  Invalid param: email cannot be null or undefined 
+{
+  "stack": "Error: Invalid param: email cannot be null or undefined\n    at PgQueryBuilder.addParam (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:195:13)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:67:10\n    at UserMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:20)\n    at UserMapper.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:64:17)\n    at _UserService.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserService.js:74:42)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:58\n    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:34\n    at transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-18 01:24:05 AM ] [ Test Server ]  -  Response /api/users/update 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "Invalid param: email cannot be null or undefined",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "Invalid param: email cannot be null or undefined",
+    "stack": "Error: Invalid param: email cannot be null or undefined\n    at PgQueryBuilder.addParam (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:195:13)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:67:10\n    at UserMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:20)\n    at UserMapper.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:64:17)\n    at _UserService.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserService.js:74:42)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:58\n    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:34\n    at transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-18 01:24:45 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 12
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 01:24:45 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    12
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 01:24:45 AM ] [ Test Server ]  -  undefined
+[ 2025-02-18 01:24:45 AM ] [ Test Server ]  -  Error:  Invalid param: email cannot be null or undefined 
+{
+  "stack": "Error: Invalid param: email cannot be null or undefined\n    at PgQueryBuilder.addParam (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:195:13)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:67:10\n    at UserMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:20)\n    at UserMapper.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:64:17)\n    at _UserService.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserService.js:74:42)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:58\n    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:34\n    at transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-18 01:24:45 AM ] [ Test Server ]  -  Response /api/users/update 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "Invalid param: email cannot be null or undefined",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "Invalid param: email cannot be null or undefined",
+    "stack": "Error: Invalid param: email cannot be null or undefined\n    at PgQueryBuilder.addParam (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:195:13)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:67:10\n    at UserMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:20)\n    at UserMapper.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:64:17)\n    at _UserService.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserService.js:74:42)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:58\n    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:34\n    at transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-18 01:24:54 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 12
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 01:24:54 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    12
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 01:24:54 AM ] [ Test Server ]  -  undefined
+[ 2025-02-18 01:24:54 AM ] [ Test Server ]  -  Error:  Invalid param: email cannot be null or undefined 
+{
+  "stack": "Error: Invalid param: email cannot be null or undefined\n    at PgQueryBuilder.addParam (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:195:13)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:67:10\n    at UserMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:20)\n    at UserMapper.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:64:17)\n    at _UserService.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserService.js:74:42)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:58\n    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:34\n    at transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-18 01:24:54 AM ] [ Test Server ]  -  Response /api/users/update 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "Invalid param: email cannot be null or undefined",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "Invalid param: email cannot be null or undefined",
+    "stack": "Error: Invalid param: email cannot be null or undefined\n    at PgQueryBuilder.addParam (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:195:13)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:67:10\n    at UserMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:20)\n    at UserMapper.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:64:17)\n    at _UserService.updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserService.js:74:42)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:58\n    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:34\n    at transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-18 01:25:37 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 12
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 01:25:37 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    12
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 01:25:37 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " UPDATE user_mst SET email = $2, name = $3 WHERE index = $1",
+  "values": [
+    12,
+    "user@example.com",
+    "John Do"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 01:25:37 AM ] [ Test Server ]  -  Error:  정보 수정을 실패하였습니다. 
+{
+  "stack": "Error: 정보 수정을 실패하였습니다.\n    at updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:119:39)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-18 01:25:37 AM ] [ Test Server ]  -  Response /api/users/update 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "정보 수정을 실패하였습니다.",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "정보 수정을 실패하였습니다.",
+    "stack": "Error: 정보 수정을 실패하였습니다.\n    at updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:119:39)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-18 01:27:54 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 12
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 01:27:54 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    12
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 01:27:54 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " UPDATE user_mst SET email = $2, name = $3 WHERE index = $1",
+  "values": [
+    12,
+    "user@example.com",
+    "John Do"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 01:27:54 AM ] [ Test Server ]  -  Error:  정보 수정을 실패하였습니다. 
+{
+  "stack": "Error: 정보 수정을 실패하였습니다.\n    at updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:120:39)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-18 01:27:54 AM ] [ Test Server ]  -  Response /api/users/update 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "정보 수정을 실패하였습니다.",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "정보 수정을 실패하였습니다.",
+    "stack": "Error: 정보 수정을 실패하였습니다.\n    at updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:120:39)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-18 01:29:40 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 12
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 01:29:40 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    12
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 01:29:40 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " UPDATE user_mst SET email = $2, name = $3 WHERE index = $1",
+  "values": [
+    12,
+    "user@example.com",
+    "John Do"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 01:29:40 AM ] [ Test Server ]  -  Error:  정보 수정을 실패하였습니다. 
+{
+  "stack": "Error: 정보 수정을 실패하였습니다.\n    at updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:120:39)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-18 01:29:40 AM ] [ Test Server ]  -  Response /api/users/update 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "정보 수정을 실패하였습니다.",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "정보 수정을 실패하였습니다.",
+    "stack": "Error: 정보 수정을 실패하였습니다.\n    at updateUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:120:39)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-18 01:33:33 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 12
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 01:33:33 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    12
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 01:33:33 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " UPDATE user_mst SET email = $2, name = $3 WHERE index = $1",
+  "values": [
+    12,
+    "user@example.com",
+    "John Do"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 01:33:33 AM ] [ Test Server ]  -  Response /api/users/update 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "userId": 12,
+      "email": "user@example.com",
+      "name": "John Do",
+      "message": "정보가 수정되었습니다."
+    }
+  ],
+  "error": null
+}
+[ 2025-02-18 01:33:50 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-18 01:33:50 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-18 01:33:50 AM ] [ Test Server ]  -  Response /api/users/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 7,
+      "name": "이름3",
+      "email": "daehyeon3@heredotcorp.com",
+      "password": "$2a$10$q7aX5wwpjiKPqKiBMw2fqehpzKWv1FJlwhZGiYVhchER38tKEzmvy",
+      "createdTime": "2025-02-14 12:56:47",
+      "updateTime": null
+    },
+    {
+      "index": 8,
+      "name": "이름3",
+      "email": "daehyeon3@heredotcorp.com",
+      "password": "$2a$10$gP70kkRxZiiLix.PKyNBCeZom84z11QGU55AdG4jpyapddviHdqnq",
+      "createdTime": "2025-02-14 13:36:37",
+      "updateTime": null
+    },
+    {
+      "index": 9,
+      "name": "John Doe",
+      "email": "user@example.com",
+      "password": "$2a$10$MioTCLc/u1rtvvOU5TG0muyF.WEeNfMpujkEp2AqgRuE6JdBf2/ei",
+      "createdTime": "2025-02-17 19:43:54",
+      "updateTime": null
+    },
+    {
+      "index": 10,
+      "name": "John Doe",
+      "email": "user@example.com",
+      "password": "$2a$10$Ye2dgEzPKoOupk9w7IH4hO1k/BYAsrDCFsNawCUQ.MMvq5vpjqkmi",
+      "createdTime": "2025-02-17 19:44:10",
+      "updateTime": null
+    },
+    {
+      "index": 11,
+      "name": "Doni",
+      "email": "zwol10@naver.com",
+      "password": "$2a$10$zwn2YEN4cLURUoW0JnfWVOZaF7ikxD39Q0p/1AjOerLJ/etkv9EUu",
+      "createdTime": "2025-02-17 19:50:31",
+      "updateTime": null
+    },
+    {
+      "index": 13,
+      "name": "Doni",
+      "email": "zwol12@naver.com",
+      "password": "$2a$10$T6VVJqOiPBlz0gOvEyG8WO6YVXthGmW31ILU0fVikhWjtwckhMO16",
+      "createdTime": "2025-02-17 22:42:28",
+      "updateTime": null
+    },
+    {
+      "index": 14,
+      "name": "zodi",
+      "email": "gganj123@naver.com",
+      "password": "$2a$10$GAJchwHOlISLn3Rua.cJsuklcW2vj4pmqs35.j/lJRR88NuNu8ZUq",
+      "createdTime": "2025-02-17 22:49:54",
+      "updateTime": null
+    },
+    {
+      "index": 15,
+      "name": "zodi",
+      "email": "gganj1234@naver.com",
+      "password": "$2a$10$L.cUH/b9C8/asI6FdpIDlOp/kH7GsAKIk5HEDAL8slWFe5RXvplOu",
+      "createdTime": "2025-02-17 22:52:21",
+      "updateTime": null
+    },
+    {
+      "index": 16,
+      "name": "zodi",
+      "email": "gg1234@naver.com",
+      "password": "$2a$10$zfkp3m8wlP8CTz/rXIAGVuR0J4N9GdDWj9UGesLBtuAJe2jtZ972e",
+      "createdTime": "2025-02-17 22:55:30",
+      "updateTime": null
+    },
+    {
+      "index": 17,
+      "name": "zodi",
+      "email": "gg1234@naver.com",
+      "password": "$2a$10$ROQwEs5XgSUJiT5PeclJwOinYjclznS5wwjyHU5ONhaYBgMUDRsR.",
+      "createdTime": "2025-02-17 23:00:40",
+      "updateTime": null
+    },
+    {
+      "index": 18,
+      "name": "zodi",
+      "email": "gg1234@naver.com",
+      "password": "$2a$10$9nS7.Y1Y6o2iVJ5HqiL8Uun4PqV4MThX1Gd7y8b0e4yvROp.5yFb6",
+      "createdTime": "2025-02-17 23:00:44",
+      "updateTime": null
+    },
+    {
+      "index": 19,
+      "name": "zodi",
+      "email": "gg12345@naver.com",
+      "password": "$2a$10$jo1kZNxSF66kbL70EouG9uD66vfoWQdauIj.TSM.hSktl2J/yDlwK",
+      "createdTime": "2025-02-17 23:00:51",
+      "updateTime": null
+    },
+    {
+      "index": 12,
+      "name": "John Do",
+      "email": "user@example.com",
+      "password": "$2a$10$XzKtoTFS5vw4NHdJ8V8j5uCbxCtdna4obRlfVRduzW3LE8oA3R6CG",
+      "createdTime": "2025-02-17 22:36:43",
+      "updateTime": null
+    }
+  ],
+  "error": null
+}
+[ 2025-02-18 01:33:58 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-18 01:33:58 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-18 01:33:58 AM ] [ Test Server ]  -  Response /api/users/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 7,
+      "name": "이름3",
+      "email": "daehyeon3@heredotcorp.com",
+      "password": "$2a$10$q7aX5wwpjiKPqKiBMw2fqehpzKWv1FJlwhZGiYVhchER38tKEzmvy",
+      "createdTime": "2025-02-14 12:56:47",
+      "updateTime": null
+    },
+    {
+      "index": 8,
+      "name": "이름3",
+      "email": "daehyeon3@heredotcorp.com",
+      "password": "$2a$10$gP70kkRxZiiLix.PKyNBCeZom84z11QGU55AdG4jpyapddviHdqnq",
+      "createdTime": "2025-02-14 13:36:37",
+      "updateTime": null
+    },
+    {
+      "index": 9,
+      "name": "John Doe",
+      "email": "user@example.com",
+      "password": "$2a$10$MioTCLc/u1rtvvOU5TG0muyF.WEeNfMpujkEp2AqgRuE6JdBf2/ei",
+      "createdTime": "2025-02-17 19:43:54",
+      "updateTime": null
+    },
+    {
+      "index": 10,
+      "name": "John Doe",
+      "email": "user@example.com",
+      "password": "$2a$10$Ye2dgEzPKoOupk9w7IH4hO1k/BYAsrDCFsNawCUQ.MMvq5vpjqkmi",
+      "createdTime": "2025-02-17 19:44:10",
+      "updateTime": null
+    },
+    {
+      "index": 11,
+      "name": "Doni",
+      "email": "zwol10@naver.com",
+      "password": "$2a$10$zwn2YEN4cLURUoW0JnfWVOZaF7ikxD39Q0p/1AjOerLJ/etkv9EUu",
+      "createdTime": "2025-02-17 19:50:31",
+      "updateTime": null
+    },
+    {
+      "index": 13,
+      "name": "Doni",
+      "email": "zwol12@naver.com",
+      "password": "$2a$10$T6VVJqOiPBlz0gOvEyG8WO6YVXthGmW31ILU0fVikhWjtwckhMO16",
+      "createdTime": "2025-02-17 22:42:28",
+      "updateTime": null
+    },
+    {
+      "index": 14,
+      "name": "zodi",
+      "email": "gganj123@naver.com",
+      "password": "$2a$10$GAJchwHOlISLn3Rua.cJsuklcW2vj4pmqs35.j/lJRR88NuNu8ZUq",
+      "createdTime": "2025-02-17 22:49:54",
+      "updateTime": null
+    },
+    {
+      "index": 15,
+      "name": "zodi",
+      "email": "gganj1234@naver.com",
+      "password": "$2a$10$L.cUH/b9C8/asI6FdpIDlOp/kH7GsAKIk5HEDAL8slWFe5RXvplOu",
+      "createdTime": "2025-02-17 22:52:21",
+      "updateTime": null
+    },
+    {
+      "index": 16,
+      "name": "zodi",
+      "email": "gg1234@naver.com",
+      "password": "$2a$10$zfkp3m8wlP8CTz/rXIAGVuR0J4N9GdDWj9UGesLBtuAJe2jtZ972e",
+      "createdTime": "2025-02-17 22:55:30",
+      "updateTime": null
+    },
+    {
+      "index": 17,
+      "name": "zodi",
+      "email": "gg1234@naver.com",
+      "password": "$2a$10$ROQwEs5XgSUJiT5PeclJwOinYjclznS5wwjyHU5ONhaYBgMUDRsR.",
+      "createdTime": "2025-02-17 23:00:40",
+      "updateTime": null
+    },
+    {
+      "index": 18,
+      "name": "zodi",
+      "email": "gg1234@naver.com",
+      "password": "$2a$10$9nS7.Y1Y6o2iVJ5HqiL8Uun4PqV4MThX1Gd7y8b0e4yvROp.5yFb6",
+      "createdTime": "2025-02-17 23:00:44",
+      "updateTime": null
+    },
+    {
+      "index": 19,
+      "name": "zodi",
+      "email": "gg12345@naver.com",
+      "password": "$2a$10$jo1kZNxSF66kbL70EouG9uD66vfoWQdauIj.TSM.hSktl2J/yDlwK",
+      "createdTime": "2025-02-17 23:00:51",
+      "updateTime": null
+    },
+    {
+      "index": 12,
+      "name": "John Do",
+      "email": "user@example.com",
+      "password": "$2a$10$XzKtoTFS5vw4NHdJ8V8j5uCbxCtdna4obRlfVRduzW3LE8oA3R6CG",
+      "createdTime": "2025-02-17 22:36:43",
+      "updateTime": null
+    }
+  ],
+  "error": null
+}

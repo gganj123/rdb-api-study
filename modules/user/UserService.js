@@ -69,13 +69,9 @@ class _UserService {
    * @param {string} name
    * @returns {Promise<number>}
    */
-  async updateUser(userId, email, name) {
-    if (!email.includes("@")) {
-      throw new Error("유효하지 않은 이메일 형식입니다.");
-    }
-    const trimName = name.trim();
-
-    const result = await this.userMapper.updateUser(userId, email, trimName);
+  async updateUser({ userId, email, name }) {
+    console.log("서비스", userId, email, name);
+    const result = await this.userMapper.updateUser(userId, email, name);
     return result;
   }
   /**

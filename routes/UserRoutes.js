@@ -14,8 +14,8 @@ export function userRoutes(app) {
 
   router.post("/join", userController.join);
   router.get("/", userController.findAllUsers);
-  router.get("/Id", jwtAuth, userController.findById);
-  router.get("/email", userController.findByEmail);
+  router.get("/id/:userId", userController.findById);
+  router.get("/email/:email", userController.findByEmail);
   router.post("/update", jwtAuth, userController.updateUser);
   router.delete("/", jwtAuth, userController.deleteUser);
   router.get("/exist", jwtAuth, userController.existUserById);

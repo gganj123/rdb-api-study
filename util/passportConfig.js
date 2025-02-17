@@ -1,16 +1,17 @@
 import passport from "passport";
 import { Strategy as LocalStrategy } from "passport-local";
 import bcrypt from "bcryptjs";
+import { jwtStrategy } from "./Jwt.js";
 
 // 예제 사용자 DB
 const users = [
   {
-    userId: "1",
+    userId: "12",
     email: "user@example.com",
     password: bcrypt.hashSync("securePassword123!", 10),
   },
 ];
-
+passport.use(jwtStrategy);
 // localStrategy 정의 및 등록
 passport.use(
   new LocalStrategy(

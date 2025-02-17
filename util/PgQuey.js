@@ -1,16 +1,14 @@
-import { camelToSnake, snakeToCamel } from './Functions.js'
-import { logger } from './Logger.js'
-import { AbstractQuery } from './types/AbstractQuery.js'
+import { camelToSnake, snakeToCamel } from "./Functions.js";
+import { logger } from "./Logger.js";
+import { AbstractQuery } from "./types/AbstractQuery.js";
 
 /**
  * @description PgQueryBuilder
  * @extends {AbstractQuery}
  */
 export class PgQueryBuilder extends AbstractQuery {
-
   /** @type {import('pg').PoolClient} @private */
-  client
-
+  client;
 
   /**
    * Creates an instance of PgQueryBuilder.
@@ -19,151 +17,152 @@ export class PgQueryBuilder extends AbstractQuery {
    * @param {import('pg').PoolClient} client
    */
   constructor(client) {
-    super()
+    super();
 
     if (!client) {
-      throw new Error('Client is required')
+      throw new Error("Client is required");
     }
 
-    this.client = client
+    this.client = client;
   }
 
   build() {
-    let query = ''
+    let query = "";
 
     // 쿼리 타입에 따라 쿼리 작성
     switch (this.query.type) {
-      case 'SELECT':
-        query = `SELECT ${this.query.selectFields.join(', ')} FROM ${this.query.table}`
-        break
+      case "SELECT":
+        query = `SELECT ${this.query.selectFields.join(", ")} FROM ${this.query.table}`;
+        break;
 
-      case 'INSERT':
-        let values
+      case "INSERT":
+        let values;
         if (Array.isArray(this.query.values[0])) {
-          values = this.query.values.map(value => `(${value.map(v => `'${v}'`).join(', ')})`).join(', ')
+          values = this.query.values.map((value) => `(${value.map((v) => `'${v}'`).join(", ")})`).join(", ");
         } else {
-          values = `(${this.query.values.map(v => `'${v}'`).join(', ')})`
+          values = `(${this.query.values.map((v) => `'${v}'`).join(", ")})`;
         }
-        query = `INSERT INTO ${this.query.table} (${this.query.insertFields.join(', ')}) VALUES ${values}`
-        break
+        query = `INSERT INTO ${this.query.table} (${this.query.insertFields.join(", ")}) VALUES ${values}`;
+        break;
 
-      case 'UPDATE':
-        let sets = Object.entries(this.query.updateSets).map(([key, value]) => `${camelToSnake(key)} = '${value}'`).join(', ')
-        query = `UPDATE ${this.query.table} SET ${sets}`
-        break
+      case "UPDATE":
+        let sets = Object.entries(this.query.updateSets)
+          .map(([key, value]) => `${camelToSnake(key)} = '${value}'`)
+          .join(", ");
+        query = `UPDATE ${this.query.table} SET ${sets}`;
+        break;
 
-      case 'DELETE':
-        query = `DELETE FROM ${this.query.table}`
-        break
+      case "DELETE":
+        query = `DELETE FROM ${this.query.table}`;
+        break;
 
       default:
-        throw new Error('Invalid query type')
+        throw new Error("Invalid query type");
     }
 
     // Join 조건 추가
     for (const join of this.query.joins) {
-      query += `${join.type} JOIN ${join.table} ON ${join.on}`
+      query += `${join.type} JOIN ${join.table} ON ${join.on}`;
     }
 
     // Where 조건 추가
     if (this.query.where.length > 0) {
-      query += ` WHERE ${this.query.where.join(' ')}`
+      query += ` WHERE ${this.query.where.join(" ")}`;
     }
 
     // group by 조건 추가
     if (this.query.groupBy.length > 0) {
-      query += ` GROUP BY ${this.query.groupBy.join(', ')}`
+      query += ` GROUP BY ${this.query.groupBy.join(", ")}`;
     }
 
     // having 조건 추가
     if (this.query.having.length > 0) {
-      query += ` HAVING ${this.query.having.join(' ')}`
+      query += ` HAVING ${this.query.having.join(" ")}`;
     }
 
     // order by 조건 추가
     if (this.query.orderBy.length > 0) {
-      query += ` ORDER BY ${this.query.orderBy.join(', ')}`
+      query += ` ORDER BY ${this.query.orderBy.join(", ")}`;
     }
 
     // limit 조건 추가
     if (this.query.limit) {
-      query += ` LIMIT ${this.query.limit}`
+      query += ` LIMIT ${this.query.limit}`;
     }
 
     // limit 조건 추가
     if (this.query.limit) {
-      query += ` LIMIT ${this.query.limit}`
+      query += ` LIMIT ${this.query.limit}`;
     }
 
     // limit절 추가
     if (this.query.limit) {
-      query += ` LIMIT ${this.query.limit}`
+      query += ` LIMIT ${this.query.limit}`;
     }
 
     // offset 조건 추가
     if (this.query.offset) {
-      query += ` OFFSET ${this.query.offset}`
+      query += ` OFFSET ${this.query.offset}`;
     }
 
     // returning 조건 추가
     if (this.query.returning) {
-      query += ` RETURNING ${this.query.returningFields.join(', ')}`
+      query += ` RETURNING ${this.query.returningFields.join(", ")}`;
     }
 
-    query += ';'
+    query += ";";
 
-    const values = []
-    const paramList = Object.keys(this.query.params).sort((a, b) => b.length - a.length)
-    let index = 1
-    logger.debug(`Query: ${this.name}`, { query, params: this.query.params })
-    paramList.forEach(key => {
-      const newSql = query.replace(new RegExp(`:${key}`, 'g'), `$${index}`)
+    const values = [];
+    const paramList = Object.keys(this.query.params).sort((a, b) => b.length - a.length);
+    let index = 1;
+    logger.debug(`Query: ${this.name}`, { query, params: this.query.params });
+    paramList.forEach((key) => {
+      const newSql = query.replace(new RegExp(`:${key}`, "g"), `$${index}`);
 
       if (newSql !== query) {
-        query = newSql
-        values.push(this.query.params[key])
-        index++
+        query = newSql;
+        values.push(this.query.params[key]);
+        index++;
       }
-    })
+    });
 
     /** @type {import('pg').QueryConfig} */
     const result = {
       text: query,
       values: values,
-    }
+    };
 
-    logger.debug(`Raw Query: ${this.name}`, result)
+    logger.debug(`Raw Query: ${this.name}`, result);
 
-    return result
+    return result;
   }
 
   rawQueryBuild() {
-    let query = this._rawQuery
-    const paramList = Object.keys(this.query.params).sort((a, b) => b.length - a.length)
-    let index = 1
+    let query = this._rawQuery;
+    const paramList = Object.keys(this.query.params).sort((a, b) => b.length - a.length);
+    let index = 1;
 
-    const values = []
-    paramList.forEach(key => {
-      const newSql = query.replace(new RegExp(`:${key}`, 'g'), `$${index}`)
+    const values = [];
+    paramList.forEach((key) => {
+      const newSql = query.replace(new RegExp(`:${key}`, "g"), `$${index}`);
 
       if (newSql !== query) {
-        query = newSql
-        values.push(this.query.params[key])
-        index++
+        query = newSql;
+        values.push(this.query.params[key]);
+        index++;
       }
-    })
+    });
 
     /** @type {import('pg').QueryConfig} */
     const result = {
       text: query,
       values: values,
-    }
+    };
 
-    logger.debug(`Raw Query: ${this.name}`, result)
+    logger.debug(`Raw Query: ${this.name}`, result);
 
-    return result
+    return result;
   }
-
 
   /**
    * 많은 데이터를 조회하는 쿼리
@@ -172,16 +171,32 @@ export class PgQueryBuilder extends AbstractQuery {
    * @returns {Promise<T[] | null>}
    */
   async findMany() {
-    const query = this.build()
-    const { rows, rowCount } = await this.client.query(query)
+    const query = this.build();
+    const { rows, rowCount } = await this.client.query(query);
 
     if (rowCount === 0) {
-      return null
+      return null;
     }
 
-    return snakeToCamel(rows)
+    return snakeToCamel(rows);
   }
 
+  /**
+   * 파라미터를 추가하는 메서드
+   * @param {string} key
+   * @param {any} value
+   * @returns {PgQueryBuilder}
+   */
+  addParam(key, value) {
+    if (!this.query.hasOwnProperty("params") || !this.query.params) {
+      this.query.params = {};
+    }
+    if (value === undefined || value === null) {
+      throw new Error(`Invalid param: ${key} cannot be null or undefined`);
+    }
+    this.query.params[key] = value;
+    return this;
+  }
 
   /**
    * 하나의 데이터를 조회하는 쿼리
@@ -190,14 +205,14 @@ export class PgQueryBuilder extends AbstractQuery {
    * @returns {Promise<T | null>}
    */
   async findOne() {
-    const query = this.build()
-    const { rows, rowCount } = await this.client.query(query)
+    const query = this.build();
+    const { rows, rowCount } = await this.client.query(query);
 
     if (rowCount === 0) {
-      return null
+      return null;
     }
 
-    return snakeToCamel(rows[0])
+    return snakeToCamel(rows[0]);
   }
 
   /**
@@ -207,18 +222,17 @@ export class PgQueryBuilder extends AbstractQuery {
    * @returns {Promise<T | null>}
    */
   async exec() {
-    const query = this.build()
-    const { rows, rowCount } = await this.client.query(query)
+    const query = this.build();
+    const { rows, rowCount } = await this.client.query(query);
 
     if (rowCount > 1) {
-      return snakeToCamel(rows)
+      return snakeToCamel(rows);
     } else if (rowCount === 1) {
-      return snakeToCamel(rows[0])
+      return snakeToCamel(rows[0]);
     }
 
-    return
+    return;
   }
-
 
   /**
    * 많은 데이터를 조회하는 쿼리
@@ -227,14 +241,14 @@ export class PgQueryBuilder extends AbstractQuery {
    * @returns {Promise<T[] | null>}
    */
   async rawFindMany() {
-    const query = this.rawQueryBuild()
-    const { rows, rowCount } = await this.client.query(query)
+    const query = this.rawQueryBuild();
+    const { rows, rowCount } = await this.client.query(query);
 
     if (rowCount === 0) {
-      return null
+      return null;
     }
 
-    return snakeToCamel(rows)
+    return snakeToCamel(rows);
   }
 
   /**
@@ -244,14 +258,14 @@ export class PgQueryBuilder extends AbstractQuery {
    * @returns {Promise<T | null>}
    */
   async rawFindOne() {
-    const query = this.rawQueryBuild()
-    const { rows, rowCount } = await this.client.query(query)
+    const query = this.rawQueryBuild();
+    const { rows, rowCount } = await this.client.query(query);
 
     if (rowCount === 0) {
-      return null
+      return null;
     }
 
-    return snakeToCamel(rows[0])
+    return snakeToCamel(rows[0]);
   }
 
   /**
@@ -261,17 +275,17 @@ export class PgQueryBuilder extends AbstractQuery {
    * @returns {Promise<T | null>}
    */
   async rawExec() {
-    const query = this.rawQueryBuild()
-    const { rows, rowCount } = await this.client.query(query)
+    const query = this.rawQueryBuild();
+    const { rows, rowCount } = await this.client.query(query);
 
-    if (rowCount > 1) {
-      return snakeToCamel(rows)
-    } else if (rowCount === 1) {
-      return snakeToCamel(rows[0])
-    }
+    // if (rowCount > 1) {
+    //   return snakeToCamel(rows);
+    // } else if (rowCount === 1) {
+    //   return snakeToCamel(rows[0]);
+    // }
+    console.log("🛠 [rawExec] SQL 실행 결과:", { rowCount, rows });
 
-    return
+    // rowCount 반환 (UPDATE/DELETE 시 필요)
+    return rowCount;
   }
 }
-
-

@@ -698,3 +698,1669 @@ undefined
   ],
   "error": null
 }
+[ 2025-02-17 08:23:56 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE email;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-17 08:23:56 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE email;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-17 08:23:56 PM ] [ Test Server ]  -  undefined 
+{
+  "length": 126,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "42804",
+  "position": "30",
+  "file": "parse_coerce.c",
+  "line": "1176",
+  "routine": "coerce_to_boolean"
+}
+[Body]
+undefined
+[ 2025-02-17 08:26:29 PM ] [ Test Server ]  -  undefined
+[ 2025-02-17 08:27:50 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE email;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-17 08:27:50 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE email;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-17 08:27:50 PM ] [ Test Server ]  -  undefined 
+{
+  "length": 126,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "42804",
+  "position": "30",
+  "file": "parse_coerce.c",
+  "line": "1176",
+  "routine": "coerce_to_boolean"
+}
+[Body]
+undefined
+[ 2025-02-17 08:28:28 PM ] [ Test Server ]  -  undefined
+[ 2025-02-17 08:37:17 PM ] [ Test Server ]  -  undefined
+[ 2025-02-17 08:42:44 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE email;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-17 08:42:44 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE email;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-17 08:42:44 PM ] [ Test Server ]  -  undefined 
+{
+  "length": 126,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "42804",
+  "position": "30",
+  "file": "parse_coerce.c",
+  "line": "1176",
+  "routine": "coerce_to_boolean"
+}
+[Body]
+undefined
+[ 2025-02-17 08:45:40 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE email;",
+  "params": {
+    "email": "1"
+  }
+}
+[Body]
+undefined
+[ 2025-02-17 08:45:40 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE email;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-17 08:45:40 PM ] [ Test Server ]  -  undefined 
+{
+  "length": 126,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "42804",
+  "position": "30",
+  "file": "parse_coerce.c",
+  "line": "1176",
+  "routine": "coerce_to_boolean"
+}
+[Body]
+undefined
+[ 2025-02-17 08:46:53 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE email = :email;",
+  "params": {
+    "email": "1"
+  }
+}
+[Body]
+undefined
+[ 2025-02-17 08:46:53 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE email = $1;",
+  "values": [
+    "1"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-17 08:49:03 PM ] [ Test Server ]  -  Response /api/users/login 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "userId": "1",
+      "email": "user@example.com",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxIiwiaWF0IjoxNzM5NzkyOTQzLCJleHAiOjE3Mzk4NzkzNDMsImF1ZCI6ImF1ZGllbmNlIiwiaXNzIjoiaXNzdWVyIn0.3va7jcHdo65EZ4vFL8t8FHCDk_PdtTelAtq-KQVQDBo",
+      "message": "로그인 되었습니다."
+    }
+  ],
+  "error": null
+}
+[ 2025-02-17 08:49:12 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE email = :email;",
+  "params": {
+    "email": "1"
+  }
+}
+[Body]
+undefined
+[ 2025-02-17 08:49:12 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE email = $1;",
+  "values": [
+    "1"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-17 08:55:19 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE email = :email;",
+  "params": {
+    "email": "1"
+  }
+}
+[Body]
+undefined
+[ 2025-02-17 08:55:19 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE email = $1;",
+  "values": [
+    "1"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-17 09:01:25 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-17 09:01:25 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-17 09:01:25 PM ] [ Test Server ]  -  Response /api/users/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 7,
+      "name": "이름3",
+      "email": "daehyeon3@heredotcorp.com",
+      "password": "$2a$10$q7aX5wwpjiKPqKiBMw2fqehpzKWv1FJlwhZGiYVhchER38tKEzmvy",
+      "createdTime": "2025-02-14 12:56:47",
+      "updateTime": null
+    },
+    {
+      "index": 8,
+      "name": "이름3",
+      "email": "daehyeon3@heredotcorp.com",
+      "password": "$2a$10$gP70kkRxZiiLix.PKyNBCeZom84z11QGU55AdG4jpyapddviHdqnq",
+      "createdTime": "2025-02-14 13:36:37",
+      "updateTime": null
+    },
+    {
+      "index": 9,
+      "name": "John Doe",
+      "email": "user@example.com",
+      "password": "$2a$10$MioTCLc/u1rtvvOU5TG0muyF.WEeNfMpujkEp2AqgRuE6JdBf2/ei",
+      "createdTime": "2025-02-17 19:43:54",
+      "updateTime": null
+    },
+    {
+      "index": 10,
+      "name": "John Doe",
+      "email": "user@example.com",
+      "password": "$2a$10$Ye2dgEzPKoOupk9w7IH4hO1k/BYAsrDCFsNawCUQ.MMvq5vpjqkmi",
+      "createdTime": "2025-02-17 19:44:10",
+      "updateTime": null
+    },
+    {
+      "index": 11,
+      "name": "Doni",
+      "email": "zwol10@naver.com",
+      "password": "$2a$10$zwn2YEN4cLURUoW0JnfWVOZaF7ikxD39Q0p/1AjOerLJ/etkv9EUu",
+      "createdTime": "2025-02-17 19:50:31",
+      "updateTime": null
+    }
+  ],
+  "error": null
+}
+[ 2025-02-17 09:01:29 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE email = :email;",
+  "params": {
+    "email": "1"
+  }
+}
+[Body]
+undefined
+[ 2025-02-17 09:01:29 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE email = $1;",
+  "values": [
+    "1"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-17 09:02:06 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE email = :email;",
+  "params": {
+    "email": "1"
+  }
+}
+[Body]
+undefined
+[ 2025-02-17 09:02:06 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE email = $1;",
+  "values": [
+    "1"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-17 09:08:22 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE email = :email;",
+  "params": {
+    "email": "1"
+  }
+}
+[Body]
+undefined
+[ 2025-02-17 09:08:22 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE email = $1;",
+  "values": [
+    "1"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-17 09:12:29 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE email = :email;",
+  "params": {
+    "email": "1"
+  }
+}
+[Body]
+undefined
+[ 2025-02-17 09:12:29 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE email = $1;",
+  "values": [
+    "1"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-17 10:32:42 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE email = :email;",
+  "params": {
+    "email": "1"
+  }
+}
+[Body]
+undefined
+[ 2025-02-17 10:32:42 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE email = $1;",
+  "values": [
+    "1"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-17 10:33:16 PM ] [ Test Server ]  -  Response /api/users/login 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 401,
+  "message": "fail",
+  "data": null,
+  "error": {
+    "name": "UnauthorizedError",
+    "message": "로그인에 실패했습니다.",
+    "stack": "UnauthorizedError: fail\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/util/Middlewares.js:58:25\n    at allFailed (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:110:18)\n    at attempt (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:183:28)\n    at strategy.fail (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:314:9)\n    at verified (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport-local/lib/strategy.js:82:30)\n    at Strategy._verify (file:///Users/gganj123/Desktop/study/rdb-api-study/util/passportConfig.js:26:27)\n    at Strategy.authenticate (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport-local/lib/strategy.js:90:12)\n    at attempt (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:378:16)\n    at authenticate (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:379:7)\n    at localAuth (file:///Users/gganj123/Desktop/study/rdb-api-study/util/Middlewares.js:83:4)"
+  }
+}
+[ 2025-02-17 10:36:23 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-17 10:36:23 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-17 10:36:23 PM ] [ Test Server ]  -  Response /api/users/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 7,
+      "name": "이름3",
+      "email": "daehyeon3@heredotcorp.com",
+      "password": "$2a$10$q7aX5wwpjiKPqKiBMw2fqehpzKWv1FJlwhZGiYVhchER38tKEzmvy",
+      "createdTime": "2025-02-14 12:56:47",
+      "updateTime": null
+    },
+    {
+      "index": 8,
+      "name": "이름3",
+      "email": "daehyeon3@heredotcorp.com",
+      "password": "$2a$10$gP70kkRxZiiLix.PKyNBCeZom84z11QGU55AdG4jpyapddviHdqnq",
+      "createdTime": "2025-02-14 13:36:37",
+      "updateTime": null
+    },
+    {
+      "index": 9,
+      "name": "John Doe",
+      "email": "user@example.com",
+      "password": "$2a$10$MioTCLc/u1rtvvOU5TG0muyF.WEeNfMpujkEp2AqgRuE6JdBf2/ei",
+      "createdTime": "2025-02-17 19:43:54",
+      "updateTime": null
+    },
+    {
+      "index": 10,
+      "name": "John Doe",
+      "email": "user@example.com",
+      "password": "$2a$10$Ye2dgEzPKoOupk9w7IH4hO1k/BYAsrDCFsNawCUQ.MMvq5vpjqkmi",
+      "createdTime": "2025-02-17 19:44:10",
+      "updateTime": null
+    },
+    {
+      "index": 11,
+      "name": "Doni",
+      "email": "zwol10@naver.com",
+      "password": "$2a$10$zwn2YEN4cLURUoW0JnfWVOZaF7ikxD39Q0p/1AjOerLJ/etkv9EUu",
+      "createdTime": "2025-02-17 19:50:31",
+      "updateTime": null
+    }
+  ],
+  "error": null
+}
+[ 2025-02-17 10:36:41 PM ] [ Test Server ]  -  Query: Create User 
+{
+  "query": "INSERT INTO public.user_mst (email, password, name) VALUES ('zwol11@naver.com', '$2a$10$XzKtoTFS5vw4NHdJ8V8j5uCbxCtdna4obRlfVRduzW3LE8oA3R6CG', 'Doni') RETURNING *;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-17 10:36:41 PM ] [ Test Server ]  -  Raw Query: Create User 
+{
+  "text": "INSERT INTO public.user_mst (email, password, name) VALUES ('zwol11@naver.com', '$2a$10$XzKtoTFS5vw4NHdJ8V8j5uCbxCtdna4obRlfVRduzW3LE8oA3R6CG', 'Doni') RETURNING *;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-17 10:36:41 PM ] [ Test Server ]  -  Response /api/users/join 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 12,
+      "email": "zwol11@naver.com",
+      "name": "Doni",
+      "createdTime": "2025-02-17T13:36:43.000Z",
+      "updateTime": null
+    }
+  ],
+  "error": null
+}
+[ 2025-02-17 10:36:50 PM ] [ Test Server ]  -  Response /api/users/login 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 401,
+  "message": "fail",
+  "data": null,
+  "error": {
+    "name": "UnauthorizedError",
+    "message": "로그인에 실패했습니다.",
+    "stack": "UnauthorizedError: fail\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/util/Middlewares.js:58:25\n    at allFailed (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:110:18)\n    at attempt (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:183:28)\n    at strategy.fail (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:314:9)\n    at verified (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport-local/lib/strategy.js:82:30)\n    at Strategy._verify (file:///Users/gganj123/Desktop/study/rdb-api-study/util/passportConfig.js:26:27)\n    at Strategy.authenticate (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport-local/lib/strategy.js:90:12)\n    at attempt (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:378:16)\n    at authenticate (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:379:7)\n    at localAuth (file:///Users/gganj123/Desktop/study/rdb-api-study/util/Middlewares.js:83:4)"
+  }
+}
+[ 2025-02-17 10:36:56 PM ] [ Test Server ]  -  Response /api/users/login 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 401,
+  "message": "fail",
+  "data": null,
+  "error": {
+    "name": "UnauthorizedError",
+    "message": "로그인에 실패했습니다.",
+    "stack": "UnauthorizedError: fail\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/util/Middlewares.js:58:25\n    at allFailed (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:110:18)\n    at attempt (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:183:28)\n    at strategy.fail (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:314:9)\n    at verified (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport-local/lib/strategy.js:82:30)\n    at Strategy._verify (file:///Users/gganj123/Desktop/study/rdb-api-study/util/passportConfig.js:26:27)\n    at Strategy.authenticate (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport-local/lib/strategy.js:90:12)\n    at attempt (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:378:16)\n    at authenticate (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:379:7)\n    at localAuth (file:///Users/gganj123/Desktop/study/rdb-api-study/util/Middlewares.js:83:4)"
+  }
+}
+[ 2025-02-17 10:37:55 PM ] [ Test Server ]  -  Response /api/users/login 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 401,
+  "message": "fail",
+  "data": null,
+  "error": {
+    "name": "UnauthorizedError",
+    "message": "로그인에 실패했습니다.",
+    "stack": "UnauthorizedError: fail\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/util/Middlewares.js:58:25\n    at allFailed (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:110:18)\n    at attempt (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:183:28)\n    at strategy.fail (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:314:9)\n    at verified (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport-local/lib/strategy.js:82:30)\n    at Strategy._verify (file:///Users/gganj123/Desktop/study/rdb-api-study/util/passportConfig.js:26:27)\n    at Strategy.authenticate (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport-local/lib/strategy.js:90:12)\n    at attempt (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:378:16)\n    at authenticate (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:379:7)\n    at localAuth (file:///Users/gganj123/Desktop/study/rdb-api-study/util/Middlewares.js:83:4)"
+  }
+}
+[ 2025-02-17 10:38:00 PM ] [ Test Server ]  -  Response /api/users/login 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 401,
+  "message": "fail",
+  "data": null,
+  "error": {
+    "name": "UnauthorizedError",
+    "message": "로그인에 실패했습니다.",
+    "stack": "UnauthorizedError: fail\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/util/Middlewares.js:58:25\n    at allFailed (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:110:18)\n    at attempt (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:183:28)\n    at strategy.fail (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:314:9)\n    at verified (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport-local/lib/strategy.js:82:30)\n    at Strategy._verify (file:///Users/gganj123/Desktop/study/rdb-api-study/util/passportConfig.js:26:27)\n    at Strategy.authenticate (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport-local/lib/strategy.js:90:12)\n    at attempt (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:378:16)\n    at authenticate (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:379:7)\n    at localAuth (file:///Users/gganj123/Desktop/study/rdb-api-study/util/Middlewares.js:83:4)"
+  }
+}
+[ 2025-02-17 10:38:07 PM ] [ Test Server ]  -  Response /api/users/login 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 401,
+  "message": "fail",
+  "data": null,
+  "error": {
+    "name": "UnauthorizedError",
+    "message": "로그인에 실패했습니다.",
+    "stack": "UnauthorizedError: fail\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/util/Middlewares.js:58:25\n    at allFailed (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:110:18)\n    at attempt (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:183:28)\n    at strategy.fail (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:314:9)\n    at verified (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport-local/lib/strategy.js:82:30)\n    at Strategy._verify (file:///Users/gganj123/Desktop/study/rdb-api-study/util/passportConfig.js:26:27)\n    at Strategy.authenticate (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport-local/lib/strategy.js:90:12)\n    at attempt (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:378:16)\n    at authenticate (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:379:7)\n    at localAuth (file:///Users/gganj123/Desktop/study/rdb-api-study/util/Middlewares.js:83:4)"
+  }
+}
+[ 2025-02-17 10:42:04 PM ] [ Test Server ]  -  Response /api/users/login 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "userId": "1",
+      "email": "user@example.com",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxIiwiaWF0IjoxNzM5Nzk5NzI0LCJleHAiOjE3Mzk4ODYxMjQsImF1ZCI6ImF1ZGllbmNlIiwiaXNzIjoiaXNzdWVyIn0.tWiuo3sCJxhDeGKuFpl9l828CmEqBndGh-aCxPKDAAg",
+      "message": "로그인 되었습니다."
+    }
+  ],
+  "error": null
+}
+[ 2025-02-17 10:42:27 PM ] [ Test Server ]  -  Query: Create User 
+{
+  "query": "INSERT INTO public.user_mst (email, password, name) VALUES ('zwol12@naver.com', '$2a$10$T6VVJqOiPBlz0gOvEyG8WO6YVXthGmW31ILU0fVikhWjtwckhMO16', 'Doni') RETURNING *;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-17 10:42:27 PM ] [ Test Server ]  -  Raw Query: Create User 
+{
+  "text": "INSERT INTO public.user_mst (email, password, name) VALUES ('zwol12@naver.com', '$2a$10$T6VVJqOiPBlz0gOvEyG8WO6YVXthGmW31ILU0fVikhWjtwckhMO16', 'Doni') RETURNING *;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-17 10:42:27 PM ] [ Test Server ]  -  Response /api/users/join 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 13,
+      "email": "zwol12@naver.com",
+      "name": "Doni",
+      "createdTime": "2025-02-17T13:42:28.000Z",
+      "updateTime": null
+    }
+  ],
+  "error": null
+}
+[ 2025-02-17 10:42:38 PM ] [ Test Server ]  -  Response /api/users/login 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 401,
+  "message": "fail",
+  "data": null,
+  "error": {
+    "name": "UnauthorizedError",
+    "message": "로그인에 실패했습니다.",
+    "stack": "UnauthorizedError: fail\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/util/Middlewares.js:58:25\n    at allFailed (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:110:18)\n    at attempt (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:183:28)\n    at strategy.fail (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:314:9)\n    at verified (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport-local/lib/strategy.js:82:30)\n    at Strategy._verify (file:///Users/gganj123/Desktop/study/rdb-api-study/util/passportConfig.js:26:27)\n    at Strategy.authenticate (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport-local/lib/strategy.js:90:12)\n    at attempt (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:378:16)\n    at authenticate (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:379:7)\n    at localAuth (file:///Users/gganj123/Desktop/study/rdb-api-study/util/Middlewares.js:83:4)"
+  }
+}
+[ 2025-02-17 10:43:47 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-17 10:43:47 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-17 10:43:47 PM ] [ Test Server ]  -  Response /api/users/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 7,
+      "name": "이름3",
+      "email": "daehyeon3@heredotcorp.com",
+      "password": "$2a$10$q7aX5wwpjiKPqKiBMw2fqehpzKWv1FJlwhZGiYVhchER38tKEzmvy",
+      "createdTime": "2025-02-14 12:56:47",
+      "updateTime": null
+    },
+    {
+      "index": 8,
+      "name": "이름3",
+      "email": "daehyeon3@heredotcorp.com",
+      "password": "$2a$10$gP70kkRxZiiLix.PKyNBCeZom84z11QGU55AdG4jpyapddviHdqnq",
+      "createdTime": "2025-02-14 13:36:37",
+      "updateTime": null
+    },
+    {
+      "index": 9,
+      "name": "John Doe",
+      "email": "user@example.com",
+      "password": "$2a$10$MioTCLc/u1rtvvOU5TG0muyF.WEeNfMpujkEp2AqgRuE6JdBf2/ei",
+      "createdTime": "2025-02-17 19:43:54",
+      "updateTime": null
+    },
+    {
+      "index": 10,
+      "name": "John Doe",
+      "email": "user@example.com",
+      "password": "$2a$10$Ye2dgEzPKoOupk9w7IH4hO1k/BYAsrDCFsNawCUQ.MMvq5vpjqkmi",
+      "createdTime": "2025-02-17 19:44:10",
+      "updateTime": null
+    },
+    {
+      "index": 11,
+      "name": "Doni",
+      "email": "zwol10@naver.com",
+      "password": "$2a$10$zwn2YEN4cLURUoW0JnfWVOZaF7ikxD39Q0p/1AjOerLJ/etkv9EUu",
+      "createdTime": "2025-02-17 19:50:31",
+      "updateTime": null
+    },
+    {
+      "index": 12,
+      "name": "Doni",
+      "email": "zwol11@naver.com",
+      "password": "$2a$10$XzKtoTFS5vw4NHdJ8V8j5uCbxCtdna4obRlfVRduzW3LE8oA3R6CG",
+      "createdTime": "2025-02-17 22:36:43",
+      "updateTime": null
+    },
+    {
+      "index": 13,
+      "name": "Doni",
+      "email": "zwol12@naver.com",
+      "password": "$2a$10$T6VVJqOiPBlz0gOvEyG8WO6YVXthGmW31ILU0fVikhWjtwckhMO16",
+      "createdTime": "2025-02-17 22:42:28",
+      "updateTime": null
+    }
+  ],
+  "error": null
+}
+[ 2025-02-17 10:43:53 PM ] [ Test Server ]  -  Response /api/users/login 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 401,
+  "message": "fail",
+  "data": null,
+  "error": {
+    "name": "UnauthorizedError",
+    "message": "로그인에 실패했습니다.",
+    "stack": "UnauthorizedError: fail\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/util/Middlewares.js:58:25\n    at allFailed (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:110:18)\n    at attempt (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:183:28)\n    at strategy.fail (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:314:9)\n    at verified (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport-local/lib/strategy.js:82:30)\n    at Strategy._verify (file:///Users/gganj123/Desktop/study/rdb-api-study/util/passportConfig.js:26:27)\n    at Strategy.authenticate (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport-local/lib/strategy.js:90:12)\n    at attempt (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:378:16)\n    at authenticate (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:379:7)\n    at localAuth (file:///Users/gganj123/Desktop/study/rdb-api-study/util/Middlewares.js:83:4)"
+  }
+}
+[ 2025-02-17 10:49:32 PM ] [ Test Server ]  -  Response /api/users/login 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 401,
+  "message": "fail",
+  "data": null,
+  "error": {
+    "name": "UnauthorizedError",
+    "message": "로그인에 실패했습니다.",
+    "stack": "UnauthorizedError: fail\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/util/Middlewares.js:58:25\n    at allFailed (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:110:18)\n    at attempt (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:183:28)\n    at strategy.fail (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:314:9)\n    at verified (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport-local/lib/strategy.js:82:30)\n    at Strategy._verify (file:///Users/gganj123/Desktop/study/rdb-api-study/util/passportConfig.js:26:27)\n    at Strategy.authenticate (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport-local/lib/strategy.js:90:12)\n    at attempt (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:378:16)\n    at authenticate (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:379:7)\n    at localAuth (file:///Users/gganj123/Desktop/study/rdb-api-study/util/Middlewares.js:83:4)"
+  }
+}
+[ 2025-02-17 10:49:52 PM ] [ Test Server ]  -  Query: Create User 
+{
+  "query": "INSERT INTO public.user_mst (email, password, name) VALUES ('gganj123@naver.com', '$2a$10$GAJchwHOlISLn3Rua.cJsuklcW2vj4pmqs35.j/lJRR88NuNu8ZUq', 'zodi') RETURNING *;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-17 10:49:52 PM ] [ Test Server ]  -  Raw Query: Create User 
+{
+  "text": "INSERT INTO public.user_mst (email, password, name) VALUES ('gganj123@naver.com', '$2a$10$GAJchwHOlISLn3Rua.cJsuklcW2vj4pmqs35.j/lJRR88NuNu8ZUq', 'zodi') RETURNING *;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-17 10:49:52 PM ] [ Test Server ]  -  Response /api/users/join 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 14,
+      "email": "gganj123@naver.com",
+      "name": "zodi",
+      "createdTime": "2025-02-17T13:49:54.000Z",
+      "updateTime": null
+    }
+  ],
+  "error": null
+}
+[ 2025-02-17 10:50:09 PM ] [ Test Server ]  -  Response /api/users/login 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 401,
+  "message": "fail",
+  "data": null,
+  "error": {
+    "name": "UnauthorizedError",
+    "message": "로그인에 실패했습니다.",
+    "stack": "UnauthorizedError: fail\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/util/Middlewares.js:58:25\n    at allFailed (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:110:18)\n    at attempt (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:183:28)\n    at strategy.fail (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:314:9)\n    at verified (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport-local/lib/strategy.js:82:30)\n    at Strategy._verify (file:///Users/gganj123/Desktop/study/rdb-api-study/util/passportConfig.js:26:27)\n    at Strategy.authenticate (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport-local/lib/strategy.js:90:12)\n    at attempt (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:378:16)\n    at authenticate (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:379:7)\n    at localAuth (file:///Users/gganj123/Desktop/study/rdb-api-study/util/Middlewares.js:83:4)"
+  }
+}
+[ 2025-02-17 10:52:20 PM ] [ Test Server ]  -  Query: Create User 
+{
+  "query": "INSERT INTO public.user_mst (email, password, name) VALUES ('gganj1234@naver.com', '$2a$10$L.cUH/b9C8/asI6FdpIDlOp/kH7GsAKIk5HEDAL8slWFe5RXvplOu', 'zodi') RETURNING *;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-17 10:52:20 PM ] [ Test Server ]  -  Raw Query: Create User 
+{
+  "text": "INSERT INTO public.user_mst (email, password, name) VALUES ('gganj1234@naver.com', '$2a$10$L.cUH/b9C8/asI6FdpIDlOp/kH7GsAKIk5HEDAL8slWFe5RXvplOu', 'zodi') RETURNING *;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-17 10:52:20 PM ] [ Test Server ]  -  Response /api/users/join 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 15,
+      "email": "gganj1234@naver.com",
+      "name": "zodi",
+      "createdTime": "2025-02-17T13:52:21.000Z",
+      "updateTime": null
+    }
+  ],
+  "error": null
+}
+[ 2025-02-17 10:54:44 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-17 10:54:44 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-17 10:54:44 PM ] [ Test Server ]  -  Response /api/users/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 7,
+      "name": "이름3",
+      "email": "daehyeon3@heredotcorp.com",
+      "password": "$2a$10$q7aX5wwpjiKPqKiBMw2fqehpzKWv1FJlwhZGiYVhchER38tKEzmvy",
+      "createdTime": "2025-02-14 12:56:47",
+      "updateTime": null
+    },
+    {
+      "index": 8,
+      "name": "이름3",
+      "email": "daehyeon3@heredotcorp.com",
+      "password": "$2a$10$gP70kkRxZiiLix.PKyNBCeZom84z11QGU55AdG4jpyapddviHdqnq",
+      "createdTime": "2025-02-14 13:36:37",
+      "updateTime": null
+    },
+    {
+      "index": 9,
+      "name": "John Doe",
+      "email": "user@example.com",
+      "password": "$2a$10$MioTCLc/u1rtvvOU5TG0muyF.WEeNfMpujkEp2AqgRuE6JdBf2/ei",
+      "createdTime": "2025-02-17 19:43:54",
+      "updateTime": null
+    },
+    {
+      "index": 10,
+      "name": "John Doe",
+      "email": "user@example.com",
+      "password": "$2a$10$Ye2dgEzPKoOupk9w7IH4hO1k/BYAsrDCFsNawCUQ.MMvq5vpjqkmi",
+      "createdTime": "2025-02-17 19:44:10",
+      "updateTime": null
+    },
+    {
+      "index": 11,
+      "name": "Doni",
+      "email": "zwol10@naver.com",
+      "password": "$2a$10$zwn2YEN4cLURUoW0JnfWVOZaF7ikxD39Q0p/1AjOerLJ/etkv9EUu",
+      "createdTime": "2025-02-17 19:50:31",
+      "updateTime": null
+    },
+    {
+      "index": 12,
+      "name": "Doni",
+      "email": "zwol11@naver.com",
+      "password": "$2a$10$XzKtoTFS5vw4NHdJ8V8j5uCbxCtdna4obRlfVRduzW3LE8oA3R6CG",
+      "createdTime": "2025-02-17 22:36:43",
+      "updateTime": null
+    },
+    {
+      "index": 13,
+      "name": "Doni",
+      "email": "zwol12@naver.com",
+      "password": "$2a$10$T6VVJqOiPBlz0gOvEyG8WO6YVXthGmW31ILU0fVikhWjtwckhMO16",
+      "createdTime": "2025-02-17 22:42:28",
+      "updateTime": null
+    },
+    {
+      "index": 14,
+      "name": "zodi",
+      "email": "gganj123@naver.com",
+      "password": "$2a$10$GAJchwHOlISLn3Rua.cJsuklcW2vj4pmqs35.j/lJRR88NuNu8ZUq",
+      "createdTime": "2025-02-17 22:49:54",
+      "updateTime": null
+    },
+    {
+      "index": 15,
+      "name": "zodi",
+      "email": "gganj1234@naver.com",
+      "password": "$2a$10$L.cUH/b9C8/asI6FdpIDlOp/kH7GsAKIk5HEDAL8slWFe5RXvplOu",
+      "createdTime": "2025-02-17 22:52:21",
+      "updateTime": null
+    }
+  ],
+  "error": null
+}
+[ 2025-02-17 10:55:28 PM ] [ Test Server ]  -  Query: Create User 
+{
+  "query": "INSERT INTO public.user_mst (email, password, name) VALUES ('gg1234@naver.com', '$2a$10$zfkp3m8wlP8CTz/rXIAGVuR0J4N9GdDWj9UGesLBtuAJe2jtZ972e', 'zodi') RETURNING *;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-17 10:55:28 PM ] [ Test Server ]  -  Raw Query: Create User 
+{
+  "text": "INSERT INTO public.user_mst (email, password, name) VALUES ('gg1234@naver.com', '$2a$10$zfkp3m8wlP8CTz/rXIAGVuR0J4N9GdDWj9UGesLBtuAJe2jtZ972e', 'zodi') RETURNING *;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-17 10:55:28 PM ] [ Test Server ]  -  Response /api/users/join 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 16,
+      "email": "gg1234@naver.com",
+      "name": "zodi",
+      "createdTime": "2025-02-17T13:55:30.000Z",
+      "updateTime": null
+    }
+  ],
+  "error": null
+}
+[ 2025-02-17 10:55:56 PM ] [ Test Server ]  -  Response /api/users/login 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 401,
+  "message": "fail",
+  "data": null,
+  "error": {
+    "name": "UnauthorizedError",
+    "message": "로그인에 실패했습니다.",
+    "stack": "UnauthorizedError: fail\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/util/Middlewares.js:58:25\n    at allFailed (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:110:18)\n    at attempt (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:183:28)\n    at strategy.fail (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:314:9)\n    at verified (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport-local/lib/strategy.js:82:30)\n    at Strategy._verify (file:///Users/gganj123/Desktop/study/rdb-api-study/util/passportConfig.js:26:27)\n    at Strategy.authenticate (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport-local/lib/strategy.js:90:12)\n    at attempt (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:378:16)\n    at authenticate (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:379:7)\n    at localAuth (file:///Users/gganj123/Desktop/study/rdb-api-study/util/Middlewares.js:83:4)"
+  }
+}
+[ 2025-02-17 11:00:38 PM ] [ Test Server ]  -  Query: Create User 
+{
+  "query": "INSERT INTO public.user_mst (email, password, name) VALUES ('gg1234@naver.com', '$2a$10$ROQwEs5XgSUJiT5PeclJwOinYjclznS5wwjyHU5ONhaYBgMUDRsR.', 'zodi') RETURNING *;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-17 11:00:38 PM ] [ Test Server ]  -  Raw Query: Create User 
+{
+  "text": "INSERT INTO public.user_mst (email, password, name) VALUES ('gg1234@naver.com', '$2a$10$ROQwEs5XgSUJiT5PeclJwOinYjclznS5wwjyHU5ONhaYBgMUDRsR.', 'zodi') RETURNING *;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-17 11:00:38 PM ] [ Test Server ]  -  Response /api/users/join 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 17,
+      "email": "gg1234@naver.com",
+      "name": "zodi",
+      "createdTime": "2025-02-17T14:00:40.000Z",
+      "updateTime": null
+    }
+  ],
+  "error": null
+}
+[ 2025-02-17 11:00:42 PM ] [ Test Server ]  -  Query: Create User 
+{
+  "query": "INSERT INTO public.user_mst (email, password, name) VALUES ('gg1234@naver.com', '$2a$10$9nS7.Y1Y6o2iVJ5HqiL8Uun4PqV4MThX1Gd7y8b0e4yvROp.5yFb6', 'zodi') RETURNING *;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-17 11:00:42 PM ] [ Test Server ]  -  Raw Query: Create User 
+{
+  "text": "INSERT INTO public.user_mst (email, password, name) VALUES ('gg1234@naver.com', '$2a$10$9nS7.Y1Y6o2iVJ5HqiL8Uun4PqV4MThX1Gd7y8b0e4yvROp.5yFb6', 'zodi') RETURNING *;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-17 11:00:42 PM ] [ Test Server ]  -  Response /api/users/join 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 18,
+      "email": "gg1234@naver.com",
+      "name": "zodi",
+      "createdTime": "2025-02-17T14:00:44.000Z",
+      "updateTime": null
+    }
+  ],
+  "error": null
+}
+[ 2025-02-17 11:00:50 PM ] [ Test Server ]  -  Query: Create User 
+{
+  "query": "INSERT INTO public.user_mst (email, password, name) VALUES ('gg12345@naver.com', '$2a$10$jo1kZNxSF66kbL70EouG9uD66vfoWQdauIj.TSM.hSktl2J/yDlwK', 'zodi') RETURNING *;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-17 11:00:50 PM ] [ Test Server ]  -  Raw Query: Create User 
+{
+  "text": "INSERT INTO public.user_mst (email, password, name) VALUES ('gg12345@naver.com', '$2a$10$jo1kZNxSF66kbL70EouG9uD66vfoWQdauIj.TSM.hSktl2J/yDlwK', 'zodi') RETURNING *;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-17 11:00:50 PM ] [ Test Server ]  -  Response /api/users/join 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 19,
+      "email": "gg12345@naver.com",
+      "name": "zodi",
+      "createdTime": "2025-02-17T14:00:51.000Z",
+      "updateTime": null
+    }
+  ],
+  "error": null
+}
+[ 2025-02-17 11:01:05 PM ] [ Test Server ]  -  Response /api/users/login 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 401,
+  "message": "fail",
+  "data": null,
+  "error": {
+    "name": "UnauthorizedError",
+    "message": "로그인에 실패했습니다.",
+    "stack": "UnauthorizedError: fail\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/util/Middlewares.js:58:25\n    at allFailed (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:110:18)\n    at attempt (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:183:28)\n    at strategy.fail (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:314:9)\n    at verified (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport-local/lib/strategy.js:82:30)\n    at Strategy._verify (file:///Users/gganj123/Desktop/study/rdb-api-study/util/passportConfig.js:26:27)\n    at Strategy.authenticate (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport-local/lib/strategy.js:90:12)\n    at attempt (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:378:16)\n    at authenticate (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:379:7)\n    at localAuth (file:///Users/gganj123/Desktop/study/rdb-api-study/util/Middlewares.js:83:4)"
+  }
+}
+[ 2025-02-17 11:01:06 PM ] [ Test Server ]  -  Response /api/users/login 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 401,
+  "message": "fail",
+  "data": null,
+  "error": {
+    "name": "UnauthorizedError",
+    "message": "로그인에 실패했습니다.",
+    "stack": "UnauthorizedError: fail\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/util/Middlewares.js:58:25\n    at allFailed (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:110:18)\n    at attempt (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:183:28)\n    at strategy.fail (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:314:9)\n    at verified (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport-local/lib/strategy.js:82:30)\n    at Strategy._verify (file:///Users/gganj123/Desktop/study/rdb-api-study/util/passportConfig.js:26:27)\n    at Strategy.authenticate (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport-local/lib/strategy.js:90:12)\n    at attempt (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:378:16)\n    at authenticate (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:379:7)\n    at localAuth (file:///Users/gganj123/Desktop/study/rdb-api-study/util/Middlewares.js:83:4)"
+  }
+}
+[ 2025-02-17 11:37:19 PM ] [ Test Server ]  -  Response /api/users/login 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "userId": "1",
+      "email": "user@example.com",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxIiwiaWF0IjoxNzM5ODAzMDM5LCJleHAiOjE3Mzk4ODk0MzksImF1ZCI6ImF1ZGllbmNlIiwiaXNzIjoiaXNzdWVyIn0.ZLwbCN2jSgrAH1-OdmDJNSDve5ulnafLDjqI0O9GkCI",
+      "message": "로그인 되었습니다."
+    }
+  ],
+  "error": null
+}
+[ 2025-02-17 11:46:01 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": "1"
+  }
+}
+[Body]
+undefined
+[ 2025-02-17 11:46:01 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    "1"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-17 11:46:01 PM ] [ Test Server ]  -  Error:  해당 userId의 사용자가 없습니다. 
+{
+  "stack": "Error: 해당 userId의 사용자가 없습니다.\n    at findById (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:65:39)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-17 11:46:01 PM ] [ Test Server ]  -  Response /api/users/1 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "해당 userId의 사용자가 없습니다.",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "해당 userId의 사용자가 없습니다.",
+    "stack": "Error: 해당 userId의 사용자가 없습니다.\n    at findById (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:65:39)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-17 11:46:09 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": "2"
+  }
+}
+[Body]
+undefined
+[ 2025-02-17 11:46:09 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    "2"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-17 11:46:09 PM ] [ Test Server ]  -  Error:  해당 userId의 사용자가 없습니다. 
+{
+  "stack": "Error: 해당 userId의 사용자가 없습니다.\n    at findById (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:65:39)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-17 11:46:09 PM ] [ Test Server ]  -  Response /api/users/2 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "해당 userId의 사용자가 없습니다.",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "해당 userId의 사용자가 없습니다.",
+    "stack": "Error: 해당 userId의 사용자가 없습니다.\n    at findById (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:65:39)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-17 11:46:12 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": "7"
+  }
+}
+[Body]
+undefined
+[ 2025-02-17 11:46:12 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    "7"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-17 11:46:12 PM ] [ Test Server ]  -  Response /api/users/7 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 7,
+      "name": "이름3",
+      "email": "daehyeon3@heredotcorp.com",
+      "password": "$2a$10$q7aX5wwpjiKPqKiBMw2fqehpzKWv1FJlwhZGiYVhchER38tKEzmvy",
+      "createdTime": "2025-02-14 12:56:47",
+      "updateTime": null
+    }
+  ],
+  "error": null
+}
+[ 2025-02-17 11:46:16 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": "12"
+  }
+}
+[Body]
+undefined
+[ 2025-02-17 11:46:16 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    "12"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-17 11:46:16 PM ] [ Test Server ]  -  Response /api/users/12 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 12,
+      "name": "Doni",
+      "email": "zwol11@naver.com",
+      "password": "$2a$10$XzKtoTFS5vw4NHdJ8V8j5uCbxCtdna4obRlfVRduzW3LE8oA3R6CG",
+      "createdTime": "2025-02-17 22:36:43",
+      "updateTime": null
+    }
+  ],
+  "error": null
+}
+[ 2025-02-17 11:47:39 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": "12"
+  }
+}
+[Body]
+undefined
+[ 2025-02-17 11:47:39 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    "12"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-17 11:47:39 PM ] [ Test Server ]  -  Response /api/users/id/12 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 12,
+      "name": "Doni",
+      "email": "zwol11@naver.com",
+      "password": "$2a$10$XzKtoTFS5vw4NHdJ8V8j5uCbxCtdna4obRlfVRduzW3LE8oA3R6CG",
+      "createdTime": "2025-02-17 22:36:43",
+      "updateTime": null
+    }
+  ],
+  "error": null
+}
+[ 2025-02-17 11:47:56 PM ] [ Test Server ]  -  Error:  email을 확인해주세요 
+{
+  "statusCode": 400,
+  "customMessage": "",
+  "name": "ValidationError",
+  "stack": "ValidationError: email을 확인해주세요\n    at findByEmail (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:78:15)\n    at Layer.handle [as handle_request] (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/route.js:149:13)\n    at Route.dispatch (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/route.js:119:3)\n    at Layer.handle [as handle_request] (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/layer.js:95:5)\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:284:15\n    at param (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:365:14)\n    at param (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:376:14)\n    at Function.process_params (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:421:3)\n    at next (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:280:10)"
+}
+[Body]
+undefined
+[ 2025-02-17 11:47:56 PM ] [ Test Server ]  -  Response /api/users/email/zwol10@naver.com 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 400,
+  "message": "email을 확인해주세요",
+  "data": null,
+  "error": {
+    "name": "ValidationError",
+    "message": "",
+    "stack": "ValidationError: email을 확인해주세요\n    at findByEmail (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:78:15)\n    at Layer.handle [as handle_request] (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/route.js:149:13)\n    at Route.dispatch (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/route.js:119:3)\n    at Layer.handle [as handle_request] (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/layer.js:95:5)\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:284:15\n    at param (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:365:14)\n    at param (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:376:14)\n    at Function.process_params (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:421:3)\n    at next (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:280:10)"
+  }
+}
+[ 2025-02-17 11:48:13 PM ] [ Test Server ]  -  Error:  email을 확인해주세요 
+{
+  "statusCode": 400,
+  "customMessage": "",
+  "name": "ValidationError",
+  "stack": "ValidationError: email을 확인해주세요\n    at findByEmail (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:78:15)\n    at Layer.handle [as handle_request] (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/route.js:149:13)\n    at Route.dispatch (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/route.js:119:3)\n    at Layer.handle [as handle_request] (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/layer.js:95:5)\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:284:15\n    at param (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:365:14)\n    at param (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:376:14)\n    at Function.process_params (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:421:3)\n    at next (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:280:10)"
+}
+[Body]
+undefined
+[ 2025-02-17 11:48:13 PM ] [ Test Server ]  -  Response /api/users/email/zwol11@naver.com 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 400,
+  "message": "email을 확인해주세요",
+  "data": null,
+  "error": {
+    "name": "ValidationError",
+    "message": "",
+    "stack": "ValidationError: email을 확인해주세요\n    at findByEmail (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:78:15)\n    at Layer.handle [as handle_request] (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/route.js:149:13)\n    at Route.dispatch (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/route.js:119:3)\n    at Layer.handle [as handle_request] (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/layer.js:95:5)\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:284:15\n    at param (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:365:14)\n    at param (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:376:14)\n    at Function.process_params (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:421:3)\n    at next (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:280:10)"
+  }
+}
+[ 2025-02-17 11:48:23 PM ] [ Test Server ]  -  Error:  email을 확인해주세요 
+{
+  "statusCode": 400,
+  "customMessage": "",
+  "name": "ValidationError",
+  "stack": "ValidationError: email을 확인해주세요\n    at findByEmail (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:78:15)\n    at Layer.handle [as handle_request] (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/route.js:149:13)\n    at Route.dispatch (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/route.js:119:3)\n    at Layer.handle [as handle_request] (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/layer.js:95:5)\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:284:15\n    at param (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:365:14)\n    at param (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:376:14)\n    at Function.process_params (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:421:3)\n    at next (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:280:10)"
+}
+[Body]
+undefined
+[ 2025-02-17 11:48:23 PM ] [ Test Server ]  -  Response /api/users/email/daehyeon3@heredotcorp.com 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 400,
+  "message": "email을 확인해주세요",
+  "data": null,
+  "error": {
+    "name": "ValidationError",
+    "message": "",
+    "stack": "ValidationError: email을 확인해주세요\n    at findByEmail (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:78:15)\n    at Layer.handle [as handle_request] (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/route.js:149:13)\n    at Route.dispatch (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/route.js:119:3)\n    at Layer.handle [as handle_request] (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/layer.js:95:5)\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:284:15\n    at param (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:365:14)\n    at param (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:376:14)\n    at Function.process_params (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:421:3)\n    at next (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:280:10)"
+  }
+}
+[ 2025-02-17 11:48:25 PM ] [ Test Server ]  -  Error:  email을 확인해주세요 
+{
+  "statusCode": 400,
+  "customMessage": "",
+  "name": "ValidationError",
+  "stack": "ValidationError: email을 확인해주세요\n    at findByEmail (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:78:15)\n    at Layer.handle [as handle_request] (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/route.js:149:13)\n    at Route.dispatch (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/route.js:119:3)\n    at Layer.handle [as handle_request] (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/layer.js:95:5)\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:284:15\n    at param (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:365:14)\n    at param (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:376:14)\n    at Function.process_params (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:421:3)\n    at next (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:280:10)"
+}
+[Body]
+undefined
+[ 2025-02-17 11:48:25 PM ] [ Test Server ]  -  Response /api/users/email/daehyeon3@heredotcorp.com 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 400,
+  "message": "email을 확인해주세요",
+  "data": null,
+  "error": {
+    "name": "ValidationError",
+    "message": "",
+    "stack": "ValidationError: email을 확인해주세요\n    at findByEmail (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:78:15)\n    at Layer.handle [as handle_request] (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/route.js:149:13)\n    at Route.dispatch (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/route.js:119:3)\n    at Layer.handle [as handle_request] (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/layer.js:95:5)\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:284:15\n    at param (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:365:14)\n    at param (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:376:14)\n    at Function.process_params (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:421:3)\n    at next (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:280:10)"
+  }
+}
+[ 2025-02-17 11:51:54 PM ] [ Test Server ]  -  Error:  email을 확인해주세요 
+{
+  "statusCode": 400,
+  "customMessage": "",
+  "name": "ValidationError",
+  "stack": "ValidationError: email을 확인해주세요\n    at findByEmail (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:78:15)\n    at Layer.handle [as handle_request] (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/route.js:149:13)\n    at Route.dispatch (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/route.js:119:3)\n    at Layer.handle [as handle_request] (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/layer.js:95:5)\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:284:15\n    at param (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:365:14)\n    at param (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:376:14)\n    at Function.process_params (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:421:3)\n    at next (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:280:10)"
+}
+[Body]
+undefined
+[ 2025-02-17 11:51:54 PM ] [ Test Server ]  -  Response /api/users/email/daehyeon3@heredotcorp.com 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 400,
+  "message": "email을 확인해주세요",
+  "data": null,
+  "error": {
+    "name": "ValidationError",
+    "message": "",
+    "stack": "ValidationError: email을 확인해주세요\n    at findByEmail (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:78:15)\n    at Layer.handle [as handle_request] (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/route.js:149:13)\n    at Route.dispatch (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/route.js:119:3)\n    at Layer.handle [as handle_request] (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/layer.js:95:5)\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:284:15\n    at param (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:365:14)\n    at param (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:376:14)\n    at Function.process_params (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:421:3)\n    at next (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:280:10)"
+  }
+}
+[ 2025-02-17 11:53:23 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE email = :email;",
+  "params": {
+    "email": "daehyeon3@heredotcorp.com"
+  }
+}
+[Body]
+undefined
+[ 2025-02-17 11:53:23 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE email = $1;",
+  "values": [
+    "daehyeon3@heredotcorp.com"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-17 11:53:23 PM ] [ Test Server ]  -  Response /api/users/email/daehyeon3@heredotcorp.com 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 7,
+      "name": "이름3",
+      "email": "daehyeon3@heredotcorp.com",
+      "password": "$2a$10$q7aX5wwpjiKPqKiBMw2fqehpzKWv1FJlwhZGiYVhchER38tKEzmvy",
+      "createdTime": "2025-02-14 12:56:47",
+      "updateTime": null
+    }
+  ],
+  "error": null
+}
+[ 2025-02-17 11:53:39 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE email = :email;",
+  "params": {
+    "email": "zwol11@naver.com"
+  }
+}
+[Body]
+undefined
+[ 2025-02-17 11:53:39 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE email = $1;",
+  "values": [
+    "zwol11@naver.com"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-17 11:53:39 PM ] [ Test Server ]  -  Response /api/users/email/zwol11@naver.com 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 12,
+      "name": "Doni",
+      "email": "zwol11@naver.com",
+      "password": "$2a$10$XzKtoTFS5vw4NHdJ8V8j5uCbxCtdna4obRlfVRduzW3LE8oA3R6CG",
+      "createdTime": "2025-02-17 22:36:43",
+      "updateTime": null
+    }
+  ],
+  "error": null
+}
+[ 2025-02-17 11:55:41 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE email = :email;",
+  "params": {
+    "email": "1"
+  }
+}
+[Body]
+undefined
+[ 2025-02-17 11:55:41 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE email = $1;",
+  "values": [
+    "1"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-17 11:56:34 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE email = :email;",
+  "params": {
+    "email": "1"
+  }
+}
+[Body]
+undefined
+[ 2025-02-17 11:56:34 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE email = $1;",
+  "values": [
+    "1"
+  ]
+}
+[Body]
+undefined
