@@ -419,3 +419,282 @@ undefined
   ],
   "error": null
 }
+[ 2025-02-17 07:38:17 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-17 07:38:17 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-17 07:38:17 PM ] [ Test Server ]  -  Response /api/users/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 7,
+      "name": "이름3",
+      "email": "daehyeon3@heredotcorp.com",
+      "password": "$2a$10$q7aX5wwpjiKPqKiBMw2fqehpzKWv1FJlwhZGiYVhchER38tKEzmvy",
+      "createdTime": "2025-02-14 12:56:47",
+      "updateTime": null
+    },
+    {
+      "index": 8,
+      "name": "이름3",
+      "email": "daehyeon3@heredotcorp.com",
+      "password": "$2a$10$gP70kkRxZiiLix.PKyNBCeZom84z11QGU55AdG4jpyapddviHdqnq",
+      "createdTime": "2025-02-14 13:36:37",
+      "updateTime": null
+    }
+  ],
+  "error": null
+}
+[ 2025-02-17 07:38:24 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-17 07:38:24 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-17 07:38:25 PM ] [ Test Server ]  -  Response /api/users/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 7,
+      "name": "이름3",
+      "email": "daehyeon3@heredotcorp.com",
+      "password": "$2a$10$q7aX5wwpjiKPqKiBMw2fqehpzKWv1FJlwhZGiYVhchER38tKEzmvy",
+      "createdTime": "2025-02-14 12:56:47",
+      "updateTime": null
+    },
+    {
+      "index": 8,
+      "name": "이름3",
+      "email": "daehyeon3@heredotcorp.com",
+      "password": "$2a$10$gP70kkRxZiiLix.PKyNBCeZom84z11QGU55AdG4jpyapddviHdqnq",
+      "createdTime": "2025-02-14 13:36:37",
+      "updateTime": null
+    }
+  ],
+  "error": null
+}
+[ 2025-02-17 07:43:53 PM ] [ Test Server ]  -  Query: Create User 
+{
+  "query": "INSERT INTO public.user_mst (email, password, name) VALUES ('user@example.com', '$2a$10$MioTCLc/u1rtvvOU5TG0muyF.WEeNfMpujkEp2AqgRuE6JdBf2/ei', 'John Doe') RETURNING *;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-17 07:43:53 PM ] [ Test Server ]  -  Raw Query: Create User 
+{
+  "text": "INSERT INTO public.user_mst (email, password, name) VALUES ('user@example.com', '$2a$10$MioTCLc/u1rtvvOU5TG0muyF.WEeNfMpujkEp2AqgRuE6JdBf2/ei', 'John Doe') RETURNING *;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-17 07:43:53 PM ] [ Test Server ]  -  Response /api/users/join 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 9,
+      "email": "user@example.com",
+      "name": "John Doe",
+      "createdTime": "2025-02-17T10:43:54.000Z",
+      "updateTime": null
+    }
+  ],
+  "error": null
+}
+[ 2025-02-17 07:43:57 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-17 07:43:57 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-17 07:43:57 PM ] [ Test Server ]  -  Response /api/users/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 7,
+      "name": "이름3",
+      "email": "daehyeon3@heredotcorp.com",
+      "password": "$2a$10$q7aX5wwpjiKPqKiBMw2fqehpzKWv1FJlwhZGiYVhchER38tKEzmvy",
+      "createdTime": "2025-02-14 12:56:47",
+      "updateTime": null
+    },
+    {
+      "index": 8,
+      "name": "이름3",
+      "email": "daehyeon3@heredotcorp.com",
+      "password": "$2a$10$gP70kkRxZiiLix.PKyNBCeZom84z11QGU55AdG4jpyapddviHdqnq",
+      "createdTime": "2025-02-14 13:36:37",
+      "updateTime": null
+    },
+    {
+      "index": 9,
+      "name": "John Doe",
+      "email": "user@example.com",
+      "password": "$2a$10$MioTCLc/u1rtvvOU5TG0muyF.WEeNfMpujkEp2AqgRuE6JdBf2/ei",
+      "createdTime": "2025-02-17 19:43:54",
+      "updateTime": null
+    }
+  ],
+  "error": null
+}
+[ 2025-02-17 07:44:09 PM ] [ Test Server ]  -  Query: Create User 
+{
+  "query": "INSERT INTO public.user_mst (email, password, name) VALUES ('user@example.com', '$2a$10$Ye2dgEzPKoOupk9w7IH4hO1k/BYAsrDCFsNawCUQ.MMvq5vpjqkmi', 'John Doe') RETURNING *;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-17 07:44:09 PM ] [ Test Server ]  -  Raw Query: Create User 
+{
+  "text": "INSERT INTO public.user_mst (email, password, name) VALUES ('user@example.com', '$2a$10$Ye2dgEzPKoOupk9w7IH4hO1k/BYAsrDCFsNawCUQ.MMvq5vpjqkmi', 'John Doe') RETURNING *;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-17 07:44:09 PM ] [ Test Server ]  -  Response /api/users/join 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 10,
+      "email": "user@example.com",
+      "name": "John Doe",
+      "createdTime": "2025-02-17T10:44:10.000Z",
+      "updateTime": null
+    }
+  ],
+  "error": null
+}
+[ 2025-02-17 07:50:29 PM ] [ Test Server ]  -  Query: Create User 
+{
+  "query": "INSERT INTO public.user_mst (email, password, name) VALUES ('zwol10@naver.com', '$2a$10$zwn2YEN4cLURUoW0JnfWVOZaF7ikxD39Q0p/1AjOerLJ/etkv9EUu', 'Doni') RETURNING *;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-17 07:50:29 PM ] [ Test Server ]  -  Raw Query: Create User 
+{
+  "text": "INSERT INTO public.user_mst (email, password, name) VALUES ('zwol10@naver.com', '$2a$10$zwn2YEN4cLURUoW0JnfWVOZaF7ikxD39Q0p/1AjOerLJ/etkv9EUu', 'Doni') RETURNING *;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-17 07:50:29 PM ] [ Test Server ]  -  Response /api/users/join 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 11,
+      "email": "zwol10@naver.com",
+      "name": "Doni",
+      "createdTime": "2025-02-17T10:50:31.000Z",
+      "updateTime": null
+    }
+  ],
+  "error": null
+}
+[ 2025-02-17 08:10:42 PM ] [ Test Server ]  -  Response /api/users/login 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "userId": "1",
+      "email": "user@example.com",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxIiwiaWF0IjoxNzM5NzkwNjQyLCJleHAiOjE3Mzk4NzcwNDIsImF1ZCI6ImF1ZGllbmNlIiwiaXNzIjoiaXNzdWVyIn0._rvckLk5lLdL8yObnyYdaaZdb-eniQRjRRXSIQpiH9g",
+      "message": "로그인 되었습니다."
+    }
+  ],
+  "error": null
+}
