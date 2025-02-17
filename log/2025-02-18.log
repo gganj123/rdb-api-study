@@ -4208,3 +4208,1748 @@ undefined
   ],
   "error": null
 }
+[ 2025-02-18 08:05:09 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-18 08:05:09 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-18 08:05:09 AM ] [ Test Server ]  -  Response /api/users/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 7,
+      "name": "이름3",
+      "email": "daehyeon3@heredotcorp.com",
+      "password": "$2a$10$q7aX5wwpjiKPqKiBMw2fqehpzKWv1FJlwhZGiYVhchER38tKEzmvy",
+      "createdTime": "2025-02-14 12:56:47",
+      "updateTime": null
+    },
+    {
+      "index": 8,
+      "name": "이름3",
+      "email": "daehyeon3@heredotcorp.com",
+      "password": "$2a$10$gP70kkRxZiiLix.PKyNBCeZom84z11QGU55AdG4jpyapddviHdqnq",
+      "createdTime": "2025-02-14 13:36:37",
+      "updateTime": null
+    },
+    {
+      "index": 9,
+      "name": "John Doe",
+      "email": "user@example.com",
+      "password": "$2a$10$MioTCLc/u1rtvvOU5TG0muyF.WEeNfMpujkEp2AqgRuE6JdBf2/ei",
+      "createdTime": "2025-02-17 19:43:54",
+      "updateTime": null
+    },
+    {
+      "index": 10,
+      "name": "John Doe",
+      "email": "user@example.com",
+      "password": "$2a$10$Ye2dgEzPKoOupk9w7IH4hO1k/BYAsrDCFsNawCUQ.MMvq5vpjqkmi",
+      "createdTime": "2025-02-17 19:44:10",
+      "updateTime": null
+    },
+    {
+      "index": 11,
+      "name": "Doni",
+      "email": "zwol10@naver.com",
+      "password": "$2a$10$zwn2YEN4cLURUoW0JnfWVOZaF7ikxD39Q0p/1AjOerLJ/etkv9EUu",
+      "createdTime": "2025-02-17 19:50:31",
+      "updateTime": null
+    },
+    {
+      "index": 13,
+      "name": "Doni",
+      "email": "zwol12@naver.com",
+      "password": "$2a$10$T6VVJqOiPBlz0gOvEyG8WO6YVXthGmW31ILU0fVikhWjtwckhMO16",
+      "createdTime": "2025-02-17 22:42:28",
+      "updateTime": null
+    },
+    {
+      "index": 14,
+      "name": "zodi",
+      "email": "gganj123@naver.com",
+      "password": "$2a$10$GAJchwHOlISLn3Rua.cJsuklcW2vj4pmqs35.j/lJRR88NuNu8ZUq",
+      "createdTime": "2025-02-17 22:49:54",
+      "updateTime": null
+    },
+    {
+      "index": 15,
+      "name": "zodi",
+      "email": "gganj1234@naver.com",
+      "password": "$2a$10$L.cUH/b9C8/asI6FdpIDlOp/kH7GsAKIk5HEDAL8slWFe5RXvplOu",
+      "createdTime": "2025-02-17 22:52:21",
+      "updateTime": null
+    },
+    {
+      "index": 16,
+      "name": "zodi",
+      "email": "gg1234@naver.com",
+      "password": "$2a$10$zfkp3m8wlP8CTz/rXIAGVuR0J4N9GdDWj9UGesLBtuAJe2jtZ972e",
+      "createdTime": "2025-02-17 22:55:30",
+      "updateTime": null
+    },
+    {
+      "index": 12,
+      "name": "John Do",
+      "email": "user@example.com",
+      "password": "$2a$10$XzKtoTFS5vw4NHdJ8V8j5uCbxCtdna4obRlfVRduzW3LE8oA3R6CG",
+      "createdTime": "2025-02-17 22:36:43",
+      "updateTime": null
+    }
+  ],
+  "error": null
+}
+[ 2025-02-18 08:07:02 AM ] [ Test Server ]  -  Response /api/users/login 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "userId": "16",
+      "email": "user@example.com",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxNiIsImlhdCI6MTczOTgzMzYyMiwiZXhwIjoxNzM5OTIwMDIyLCJhdWQiOiJhdWRpZW5jZSIsImlzcyI6Imlzc3VlciJ9._2mOVX1VnNmJDZFWGbQ84zoRvWriGkaJ-HFbSIAyWCc",
+      "message": "로그인 되었습니다."
+    }
+  ],
+  "error": null
+}
+[ 2025-02-18 08:07:32 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 16
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 08:07:32 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    16
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 08:07:32 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT EXISTS(SELECT 1 FROM user_mst WHERE index = $1) AS \"exists\"",
+  "values": [
+    16
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 08:07:32 AM ] [ Test Server ]  -  Response /api/users/exist 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+true
+[ 2025-02-18 08:07:32 AM ] [ Test Server ]  -  Error:  Invalid status code: undefined 
+{
+  "code": "ERR_HTTP_INVALID_STATUS_CODE",
+  "stack": "RangeError [ERR_HTTP_INVALID_STATUS_CODE]: Invalid status code: undefined\n    at ServerResponse.writeHead (node:_http_server:358:11)\n    at ServerResponse._implicitHeader (node:_http_server:344:8)\n    at write_ (node:_http_outgoing:989:9)\n    at ServerResponse.end (node:_http_outgoing:1106:5)\n    at ServerResponse.send (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/response.js:232:10)\n    at ServerResponse.json (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/response.js:278:15)\n    at sendResponse (file:///Users/gganj123/Desktop/study/rdb-api-study/util/Functions.js:66:33)\n    at existUserById (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:165:7)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-18 08:07:32 AM ] [ Test Server ]  -  Response /api/users/exist 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*",
+    "content-type": "application/json; charset=utf-8",
+    "content-length": "6",
+    "etag": "W/\"6-saMAPF/r8JGBNn9zCwX9jPFxI3U\""
+  }
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "Invalid status code: undefined",
+  "data": null,
+  "error": {
+    "name": "RangeError",
+    "message": "Invalid status code: undefined",
+    "stack": "RangeError [ERR_HTTP_INVALID_STATUS_CODE]: Invalid status code: undefined\n    at ServerResponse.writeHead (node:_http_server:358:11)\n    at ServerResponse._implicitHeader (node:_http_server:344:8)\n    at write_ (node:_http_outgoing:989:9)\n    at ServerResponse.end (node:_http_outgoing:1106:5)\n    at ServerResponse.send (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/response.js:232:10)\n    at ServerResponse.json (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/response.js:278:15)\n    at sendResponse (file:///Users/gganj123/Desktop/study/rdb-api-study/util/Functions.js:66:33)\n    at existUserById (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:165:7)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-18 08:08:35 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 16
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 08:08:35 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    16
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 08:08:35 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT EXISTS(SELECT 1 FROM user_mst WHERE index = $1) AS \"exists\"",
+  "values": [
+    16
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 08:08:35 AM ] [ Test Server ]  -  Response /api/users/exist 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+true
+[ 2025-02-18 08:08:35 AM ] [ Test Server ]  -  Error:  Invalid status code: undefined 
+{
+  "code": "ERR_HTTP_INVALID_STATUS_CODE",
+  "stack": "RangeError [ERR_HTTP_INVALID_STATUS_CODE]: Invalid status code: undefined\n    at ServerResponse.writeHead (node:_http_server:358:11)\n    at ServerResponse._implicitHeader (node:_http_server:344:8)\n    at write_ (node:_http_outgoing:989:9)\n    at ServerResponse.end (node:_http_outgoing:1106:5)\n    at ServerResponse.send (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/response.js:232:10)\n    at ServerResponse.json (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/response.js:278:15)\n    at sendResponse (file:///Users/gganj123/Desktop/study/rdb-api-study/util/Functions.js:66:33)\n    at existUserById (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:166:7)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-18 08:08:35 AM ] [ Test Server ]  -  Response /api/users/exist 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*",
+    "content-type": "application/json; charset=utf-8",
+    "content-length": "6",
+    "etag": "W/\"6-saMAPF/r8JGBNn9zCwX9jPFxI3U\""
+  }
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "Invalid status code: undefined",
+  "data": null,
+  "error": {
+    "name": "RangeError",
+    "message": "Invalid status code: undefined",
+    "stack": "RangeError [ERR_HTTP_INVALID_STATUS_CODE]: Invalid status code: undefined\n    at ServerResponse.writeHead (node:_http_server:358:11)\n    at ServerResponse._implicitHeader (node:_http_server:344:8)\n    at write_ (node:_http_outgoing:989:9)\n    at ServerResponse.end (node:_http_outgoing:1106:5)\n    at ServerResponse.send (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/response.js:232:10)\n    at ServerResponse.json (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/response.js:278:15)\n    at sendResponse (file:///Users/gganj123/Desktop/study/rdb-api-study/util/Functions.js:66:33)\n    at existUserById (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:166:7)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-18 08:11:30 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 16
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 08:11:30 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    16
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 08:11:30 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT EXISTS(SELECT 1 FROM user_mst WHERE index = $1) AS \"exists\"",
+  "values": [
+    16
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 08:11:30 AM ] [ Test Server ]  -  Response /api/users/exist 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+200
+[ 2025-02-18 08:11:30 AM ] [ Test Server ]  -  Error:  Invalid status code: undefined 
+{
+  "code": "ERR_HTTP_INVALID_STATUS_CODE",
+  "stack": "RangeError [ERR_HTTP_INVALID_STATUS_CODE]: Invalid status code: undefined\n    at ServerResponse.writeHead (node:_http_server:358:11)\n    at ServerResponse._implicitHeader (node:_http_server:344:8)\n    at write_ (node:_http_outgoing:989:9)\n    at ServerResponse.end (node:_http_outgoing:1106:5)\n    at ServerResponse.send (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/response.js:232:10)\n    at ServerResponse.json (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/response.js:278:15)\n    at sendResponse (file:///Users/gganj123/Desktop/study/rdb-api-study/util/Functions.js:66:33)\n    at existUserById (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:167:9)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-18 08:11:30 AM ] [ Test Server ]  -  Response /api/users/exist 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*",
+    "content-type": "application/json; charset=utf-8",
+    "content-length": "5",
+    "etag": "W/\"5-S+8ioGagYSiq9VmF5Yo7++eFMzk\""
+  }
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "Invalid status code: undefined",
+  "data": null,
+  "error": {
+    "name": "RangeError",
+    "message": "Invalid status code: undefined",
+    "stack": "RangeError [ERR_HTTP_INVALID_STATUS_CODE]: Invalid status code: undefined\n    at ServerResponse.writeHead (node:_http_server:358:11)\n    at ServerResponse._implicitHeader (node:_http_server:344:8)\n    at write_ (node:_http_outgoing:989:9)\n    at ServerResponse.end (node:_http_outgoing:1106:5)\n    at ServerResponse.send (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/response.js:232:10)\n    at ServerResponse.json (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/response.js:278:15)\n    at sendResponse (file:///Users/gganj123/Desktop/study/rdb-api-study/util/Functions.js:66:33)\n    at existUserById (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:167:9)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-18 08:11:35 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 16
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 08:11:35 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    16
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 08:11:35 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT EXISTS(SELECT 1 FROM user_mst WHERE index = $1) AS \"exists\"",
+  "values": [
+    16
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 08:11:35 AM ] [ Test Server ]  -  Response /api/users/exist 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+200
+[ 2025-02-18 08:11:35 AM ] [ Test Server ]  -  Error:  Invalid status code: undefined 
+{
+  "code": "ERR_HTTP_INVALID_STATUS_CODE",
+  "stack": "RangeError [ERR_HTTP_INVALID_STATUS_CODE]: Invalid status code: undefined\n    at ServerResponse.writeHead (node:_http_server:358:11)\n    at ServerResponse._implicitHeader (node:_http_server:344:8)\n    at write_ (node:_http_outgoing:989:9)\n    at ServerResponse.end (node:_http_outgoing:1106:5)\n    at ServerResponse.send (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/response.js:232:10)\n    at ServerResponse.json (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/response.js:278:15)\n    at sendResponse (file:///Users/gganj123/Desktop/study/rdb-api-study/util/Functions.js:66:33)\n    at existUserById (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:167:9)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-18 08:11:35 AM ] [ Test Server ]  -  Response /api/users/exist 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*",
+    "content-type": "application/json; charset=utf-8",
+    "content-length": "5",
+    "etag": "W/\"5-S+8ioGagYSiq9VmF5Yo7++eFMzk\""
+  }
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "Invalid status code: undefined",
+  "data": null,
+  "error": {
+    "name": "RangeError",
+    "message": "Invalid status code: undefined",
+    "stack": "RangeError [ERR_HTTP_INVALID_STATUS_CODE]: Invalid status code: undefined\n    at ServerResponse.writeHead (node:_http_server:358:11)\n    at ServerResponse._implicitHeader (node:_http_server:344:8)\n    at write_ (node:_http_outgoing:989:9)\n    at ServerResponse.end (node:_http_outgoing:1106:5)\n    at ServerResponse.send (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/response.js:232:10)\n    at ServerResponse.json (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/response.js:278:15)\n    at sendResponse (file:///Users/gganj123/Desktop/study/rdb-api-study/util/Functions.js:66:33)\n    at existUserById (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:167:9)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-18 08:14:23 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 16
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 08:14:23 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    16
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 08:14:23 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT EXISTS(SELECT 1 FROM user_mst WHERE index = $1) AS \"exists\"",
+  "values": [
+    16
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 08:14:23 AM ] [ Test Server ]  -  Response /api/users/exist 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+200
+[ 2025-02-18 08:14:23 AM ] [ Test Server ]  -  Error:  Invalid status code: undefined 
+{
+  "code": "ERR_HTTP_INVALID_STATUS_CODE",
+  "stack": "RangeError [ERR_HTTP_INVALID_STATUS_CODE]: Invalid status code: undefined\n    at ServerResponse.writeHead (node:_http_server:358:11)\n    at ServerResponse._implicitHeader (node:_http_server:344:8)\n    at write_ (node:_http_outgoing:989:9)\n    at ServerResponse.end (node:_http_outgoing:1106:5)\n    at ServerResponse.send (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/response.js:232:10)\n    at ServerResponse.json (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/response.js:278:15)\n    at sendResponse (file:///Users/gganj123/Desktop/study/rdb-api-study/util/Functions.js:66:33)\n    at existUserById (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:167:9)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-18 08:14:23 AM ] [ Test Server ]  -  Response /api/users/exist 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*",
+    "content-type": "application/json; charset=utf-8",
+    "content-length": "5",
+    "etag": "W/\"5-S+8ioGagYSiq9VmF5Yo7++eFMzk\""
+  }
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "Invalid status code: undefined",
+  "data": null,
+  "error": {
+    "name": "RangeError",
+    "message": "Invalid status code: undefined",
+    "stack": "RangeError [ERR_HTTP_INVALID_STATUS_CODE]: Invalid status code: undefined\n    at ServerResponse.writeHead (node:_http_server:358:11)\n    at ServerResponse._implicitHeader (node:_http_server:344:8)\n    at write_ (node:_http_outgoing:989:9)\n    at ServerResponse.end (node:_http_outgoing:1106:5)\n    at ServerResponse.send (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/response.js:232:10)\n    at ServerResponse.json (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/response.js:278:15)\n    at sendResponse (file:///Users/gganj123/Desktop/study/rdb-api-study/util/Functions.js:66:33)\n    at existUserById (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:167:9)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-18 08:15:37 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 16
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 08:15:37 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    16
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 08:15:37 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT EXISTS(SELECT 1 FROM user_mst WHERE index = $1) AS \"exists\"",
+  "values": [
+    16
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 08:15:37 AM ] [ Test Server ]  -  Response /api/users/exist 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+true
+[ 2025-02-18 08:15:37 AM ] [ Test Server ]  -  Error:  Invalid status code: undefined 
+{
+  "code": "ERR_HTTP_INVALID_STATUS_CODE",
+  "stack": "RangeError [ERR_HTTP_INVALID_STATUS_CODE]: Invalid status code: undefined\n    at ServerResponse.writeHead (node:_http_server:358:11)\n    at ServerResponse._implicitHeader (node:_http_server:344:8)\n    at write_ (node:_http_outgoing:989:9)\n    at ServerResponse.end (node:_http_outgoing:1106:5)\n    at ServerResponse.send (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/response.js:232:10)\n    at ServerResponse.json (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/response.js:278:15)\n    at sendResponse (file:///Users/gganj123/Desktop/study/rdb-api-study/util/Functions.js:66:33)\n    at existUserById (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:166:14)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-18 08:15:37 AM ] [ Test Server ]  -  Response /api/users/exist 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*",
+    "content-type": "application/json; charset=utf-8",
+    "content-length": "6",
+    "etag": "W/\"6-saMAPF/r8JGBNn9zCwX9jPFxI3U\""
+  }
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "Invalid status code: undefined",
+  "data": null,
+  "error": {
+    "name": "RangeError",
+    "message": "Invalid status code: undefined",
+    "stack": "RangeError [ERR_HTTP_INVALID_STATUS_CODE]: Invalid status code: undefined\n    at ServerResponse.writeHead (node:_http_server:358:11)\n    at ServerResponse._implicitHeader (node:_http_server:344:8)\n    at write_ (node:_http_outgoing:989:9)\n    at ServerResponse.end (node:_http_outgoing:1106:5)\n    at ServerResponse.send (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/response.js:232:10)\n    at ServerResponse.json (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/response.js:278:15)\n    at sendResponse (file:///Users/gganj123/Desktop/study/rdb-api-study/util/Functions.js:66:33)\n    at existUserById (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:166:14)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-18 08:17:46 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 16
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 08:17:46 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    16
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 08:17:46 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT EXISTS(SELECT 1 FROM user_mst WHERE index = $1) AS \"exists\"",
+  "values": [
+    16
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 08:17:46 AM ] [ Test Server ]  -  Response /api/users/exist 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+true
+[ 2025-02-18 08:17:46 AM ] [ Test Server ]  -  Error:  Invalid status code: undefined 
+{
+  "code": "ERR_HTTP_INVALID_STATUS_CODE",
+  "stack": "RangeError [ERR_HTTP_INVALID_STATUS_CODE]: Invalid status code: undefined\n    at ServerResponse.writeHead (node:_http_server:358:11)\n    at ServerResponse._implicitHeader (node:_http_server:344:8)\n    at write_ (node:_http_outgoing:989:9)\n    at ServerResponse.end (node:_http_outgoing:1106:5)\n    at ServerResponse.send (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/response.js:232:10)\n    at ServerResponse.json (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/response.js:278:15)\n    at sendResponse (file:///Users/gganj123/Desktop/study/rdb-api-study/util/Functions.js:66:33)\n    at existUserById (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:166:7)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-18 08:17:46 AM ] [ Test Server ]  -  Response /api/users/exist 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*",
+    "content-type": "application/json; charset=utf-8",
+    "content-length": "6",
+    "etag": "W/\"6-saMAPF/r8JGBNn9zCwX9jPFxI3U\""
+  }
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "Invalid status code: undefined",
+  "data": null,
+  "error": {
+    "name": "RangeError",
+    "message": "Invalid status code: undefined",
+    "stack": "RangeError [ERR_HTTP_INVALID_STATUS_CODE]: Invalid status code: undefined\n    at ServerResponse.writeHead (node:_http_server:358:11)\n    at ServerResponse._implicitHeader (node:_http_server:344:8)\n    at write_ (node:_http_outgoing:989:9)\n    at ServerResponse.end (node:_http_outgoing:1106:5)\n    at ServerResponse.send (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/response.js:232:10)\n    at ServerResponse.json (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/response.js:278:15)\n    at sendResponse (file:///Users/gganj123/Desktop/study/rdb-api-study/util/Functions.js:66:33)\n    at existUserById (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:166:7)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-18 08:17:52 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 16
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 08:17:52 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    16
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 08:17:52 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT EXISTS(SELECT 1 FROM user_mst WHERE index = $1) AS \"exists\"",
+  "values": [
+    16
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 08:17:52 AM ] [ Test Server ]  -  Response /api/users/exist 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+true
+[ 2025-02-18 08:17:52 AM ] [ Test Server ]  -  Error:  Invalid status code: undefined 
+{
+  "code": "ERR_HTTP_INVALID_STATUS_CODE",
+  "stack": "RangeError [ERR_HTTP_INVALID_STATUS_CODE]: Invalid status code: undefined\n    at ServerResponse.writeHead (node:_http_server:358:11)\n    at ServerResponse._implicitHeader (node:_http_server:344:8)\n    at write_ (node:_http_outgoing:989:9)\n    at ServerResponse.end (node:_http_outgoing:1106:5)\n    at ServerResponse.send (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/response.js:232:10)\n    at ServerResponse.json (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/response.js:278:15)\n    at sendResponse (file:///Users/gganj123/Desktop/study/rdb-api-study/util/Functions.js:66:33)\n    at existUserById (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:166:7)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-18 08:17:52 AM ] [ Test Server ]  -  Response /api/users/exist 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*",
+    "content-type": "application/json; charset=utf-8",
+    "content-length": "6",
+    "etag": "W/\"6-saMAPF/r8JGBNn9zCwX9jPFxI3U\""
+  }
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "Invalid status code: undefined",
+  "data": null,
+  "error": {
+    "name": "RangeError",
+    "message": "Invalid status code: undefined",
+    "stack": "RangeError [ERR_HTTP_INVALID_STATUS_CODE]: Invalid status code: undefined\n    at ServerResponse.writeHead (node:_http_server:358:11)\n    at ServerResponse._implicitHeader (node:_http_server:344:8)\n    at write_ (node:_http_outgoing:989:9)\n    at ServerResponse.end (node:_http_outgoing:1106:5)\n    at ServerResponse.send (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/response.js:232:10)\n    at ServerResponse.json (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/response.js:278:15)\n    at sendResponse (file:///Users/gganj123/Desktop/study/rdb-api-study/util/Functions.js:66:33)\n    at existUserById (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:166:7)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-18 08:18:16 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 16
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 08:18:16 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    16
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 08:18:16 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT EXISTS(SELECT 1 FROM user_mst WHERE index = $1) AS \"exists\"",
+  "values": [
+    16
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 08:18:16 AM ] [ Test Server ]  -  Response /api/users/exist 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+200
+[ 2025-02-18 08:18:16 AM ] [ Test Server ]  -  Error:  Invalid status code: undefined 
+{
+  "code": "ERR_HTTP_INVALID_STATUS_CODE",
+  "stack": "RangeError [ERR_HTTP_INVALID_STATUS_CODE]: Invalid status code: undefined\n    at ServerResponse.writeHead (node:_http_server:358:11)\n    at ServerResponse._implicitHeader (node:_http_server:344:8)\n    at write_ (node:_http_outgoing:989:9)\n    at ServerResponse.end (node:_http_outgoing:1106:5)\n    at ServerResponse.send (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/response.js:232:10)\n    at ServerResponse.json (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/response.js:278:15)\n    at sendResponse (file:///Users/gganj123/Desktop/study/rdb-api-study/util/Functions.js:66:33)\n    at existUserById (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:166:7)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-18 08:18:16 AM ] [ Test Server ]  -  Response /api/users/exist 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*",
+    "content-type": "application/json; charset=utf-8",
+    "content-length": "5",
+    "etag": "W/\"5-S+8ioGagYSiq9VmF5Yo7++eFMzk\""
+  }
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "Invalid status code: undefined",
+  "data": null,
+  "error": {
+    "name": "RangeError",
+    "message": "Invalid status code: undefined",
+    "stack": "RangeError [ERR_HTTP_INVALID_STATUS_CODE]: Invalid status code: undefined\n    at ServerResponse.writeHead (node:_http_server:358:11)\n    at ServerResponse._implicitHeader (node:_http_server:344:8)\n    at write_ (node:_http_outgoing:989:9)\n    at ServerResponse.end (node:_http_outgoing:1106:5)\n    at ServerResponse.send (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/response.js:232:10)\n    at ServerResponse.json (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/response.js:278:15)\n    at sendResponse (file:///Users/gganj123/Desktop/study/rdb-api-study/util/Functions.js:66:33)\n    at existUserById (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:166:7)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-18 08:18:45 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 16
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 08:18:45 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    16
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 08:18:45 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT EXISTS(SELECT 1 FROM user_mst WHERE index = $1) AS \"exists\"",
+  "values": [
+    16
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 08:18:45 AM ] [ Test Server ]  -  Response /api/users/exist 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+200
+[ 2025-02-18 08:18:45 AM ] [ Test Server ]  -  Error:  Invalid status code: undefined 
+{
+  "code": "ERR_HTTP_INVALID_STATUS_CODE",
+  "stack": "RangeError [ERR_HTTP_INVALID_STATUS_CODE]: Invalid status code: undefined\n    at ServerResponse.writeHead (node:_http_server:358:11)\n    at ServerResponse._implicitHeader (node:_http_server:344:8)\n    at write_ (node:_http_outgoing:989:9)\n    at ServerResponse.end (node:_http_outgoing:1106:5)\n    at ServerResponse.send (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/response.js:232:10)\n    at ServerResponse.json (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/response.js:278:15)\n    at sendResponse (file:///Users/gganj123/Desktop/study/rdb-api-study/util/Functions.js:66:33)\n    at existUserById (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:166:7)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-18 08:18:45 AM ] [ Test Server ]  -  Response /api/users/exist 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*",
+    "content-type": "application/json; charset=utf-8",
+    "content-length": "5",
+    "etag": "W/\"5-S+8ioGagYSiq9VmF5Yo7++eFMzk\""
+  }
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "Invalid status code: undefined",
+  "data": null,
+  "error": {
+    "name": "RangeError",
+    "message": "Invalid status code: undefined",
+    "stack": "RangeError [ERR_HTTP_INVALID_STATUS_CODE]: Invalid status code: undefined\n    at ServerResponse.writeHead (node:_http_server:358:11)\n    at ServerResponse._implicitHeader (node:_http_server:344:8)\n    at write_ (node:_http_outgoing:989:9)\n    at ServerResponse.end (node:_http_outgoing:1106:5)\n    at ServerResponse.send (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/response.js:232:10)\n    at ServerResponse.json (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/response.js:278:15)\n    at sendResponse (file:///Users/gganj123/Desktop/study/rdb-api-study/util/Functions.js:66:33)\n    at existUserById (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:166:7)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-18 08:20:50 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 16
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 08:20:50 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    16
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 08:20:50 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT EXISTS(SELECT 1 FROM user_mst WHERE index = $1) AS \"exists\"",
+  "values": [
+    16
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 08:20:50 AM ] [ Test Server ]  -  Response /api/users/exist 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+200
+[ 2025-02-18 08:20:50 AM ] [ Test Server ]  -  Error:  Invalid status code: undefined 
+{
+  "code": "ERR_HTTP_INVALID_STATUS_CODE",
+  "stack": "RangeError [ERR_HTTP_INVALID_STATUS_CODE]: Invalid status code: undefined\n    at ServerResponse.writeHead (node:_http_server:358:11)\n    at ServerResponse._implicitHeader (node:_http_server:344:8)\n    at write_ (node:_http_outgoing:989:9)\n    at ServerResponse.end (node:_http_outgoing:1106:5)\n    at ServerResponse.send (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/response.js:232:10)\n    at ServerResponse.json (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/response.js:278:15)\n    at sendResponse (file:///Users/gganj123/Desktop/study/rdb-api-study/util/Functions.js:66:33)\n    at existUserById (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:166:7)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-18 08:20:50 AM ] [ Test Server ]  -  Response /api/users/exist 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*",
+    "content-type": "application/json; charset=utf-8",
+    "content-length": "5",
+    "etag": "W/\"5-S+8ioGagYSiq9VmF5Yo7++eFMzk\""
+  }
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "Invalid status code: undefined",
+  "data": null,
+  "error": {
+    "name": "RangeError",
+    "message": "Invalid status code: undefined",
+    "stack": "RangeError [ERR_HTTP_INVALID_STATUS_CODE]: Invalid status code: undefined\n    at ServerResponse.writeHead (node:_http_server:358:11)\n    at ServerResponse._implicitHeader (node:_http_server:344:8)\n    at write_ (node:_http_outgoing:989:9)\n    at ServerResponse.end (node:_http_outgoing:1106:5)\n    at ServerResponse.send (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/response.js:232:10)\n    at ServerResponse.json (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/response.js:278:15)\n    at sendResponse (file:///Users/gganj123/Desktop/study/rdb-api-study/util/Functions.js:66:33)\n    at existUserById (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:166:7)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-18 08:21:12 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 16
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 08:21:12 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    16
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 08:21:12 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT EXISTS(SELECT 1 FROM user_mst WHERE index = $1) AS \"exists\"",
+  "values": [
+    16
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 08:21:12 AM ] [ Test Server ]  -  Response /api/users/exist 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "exists": true
+}
+[ 2025-02-18 08:21:12 AM ] [ Test Server ]  -  Error:  Invalid status code: undefined 
+{
+  "code": "ERR_HTTP_INVALID_STATUS_CODE",
+  "stack": "RangeError [ERR_HTTP_INVALID_STATUS_CODE]: Invalid status code: undefined\n    at ServerResponse.writeHead (node:_http_server:358:11)\n    at ServerResponse._implicitHeader (node:_http_server:344:8)\n    at write_ (node:_http_outgoing:989:9)\n    at ServerResponse.end (node:_http_outgoing:1106:5)\n    at ServerResponse.send (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/response.js:232:10)\n    at ServerResponse.json (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/response.js:278:15)\n    at sendResponse (file:///Users/gganj123/Desktop/study/rdb-api-study/util/Functions.js:66:33)\n    at existUserById (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:166:7)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-18 08:21:12 AM ] [ Test Server ]  -  Response /api/users/exist 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*",
+    "content-type": "application/json; charset=utf-8",
+    "content-length": "17",
+    "etag": "W/\"11-tcm0b/PpxNJgkBMXCYd/RNgPdLI\""
+  }
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "Invalid status code: undefined",
+  "data": null,
+  "error": {
+    "name": "RangeError",
+    "message": "Invalid status code: undefined",
+    "stack": "RangeError [ERR_HTTP_INVALID_STATUS_CODE]: Invalid status code: undefined\n    at ServerResponse.writeHead (node:_http_server:358:11)\n    at ServerResponse._implicitHeader (node:_http_server:344:8)\n    at write_ (node:_http_outgoing:989:9)\n    at ServerResponse.end (node:_http_outgoing:1106:5)\n    at ServerResponse.send (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/response.js:232:10)\n    at ServerResponse.json (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/response.js:278:15)\n    at sendResponse (file:///Users/gganj123/Desktop/study/rdb-api-study/util/Functions.js:66:33)\n    at existUserById (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:166:7)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-18 08:24:01 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 16
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 08:24:01 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    16
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 08:24:01 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT EXISTS(SELECT 1 FROM user_mst WHERE index = $1) AS \"exists\"",
+  "values": [
+    16
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 08:24:01 AM ] [ Test Server ]  -  Response /api/users/exist 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "statusCode": 200,
+      "message": "사용자가 존재합니다.",
+      "data": {
+        "exists": true
+      }
+    }
+  ],
+  "error": null
+}
+[ 2025-02-18 08:24:23 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 16
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 08:24:23 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    16
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 08:24:23 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT EXISTS(SELECT 1 FROM user_mst WHERE index = $1) AS \"exists\"",
+  "values": [
+    16
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 08:24:23 AM ] [ Test Server ]  -  Response /api/users/exist 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "message": "사용자가 존재합니다.",
+      "data": {
+        "exists": true
+      }
+    }
+  ],
+  "error": null
+}
+[ 2025-02-18 08:25:46 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 16
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 08:25:46 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    16
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 08:25:46 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT EXISTS(SELECT 1 FROM user_mst WHERE index = $1) AS \"exists\"",
+  "values": [
+    16
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 08:25:46 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " DELETE FROM user_mst WHERE index = $1",
+  "values": [
+    16
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 08:25:46 AM ] [ Test Server ]  -  Error:  탈퇴에 실패하였습니다. 
+{
+  "stack": "Error: 탈퇴에 실패하였습니다.\n    at deleteUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:151:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-18 08:25:46 AM ] [ Test Server ]  -  Response /api/users/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "탈퇴에 실패하였습니다.",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "탈퇴에 실패하였습니다.",
+    "stack": "Error: 탈퇴에 실패하였습니다.\n    at deleteUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:151:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-18 08:26:00 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 16
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 08:26:00 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    16
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 08:26:08 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 16
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 08:26:08 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    16
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 08:27:06 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 16
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 08:27:06 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    16
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 08:27:07 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 16
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 08:27:07 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    16
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 08:27:11 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 16
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 08:27:11 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    16
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 08:30:08 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 16
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 08:30:08 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    16
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 08:31:33 AM ] [ Test Server ]  -  Response /api/users/login 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "userId": "15",
+      "email": "user@example.com",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxNSIsImlhdCI6MTczOTgzNTA5MywiZXhwIjoxNzM5OTIxNDkzLCJhdWQiOiJhdWRpZW5jZSIsImlzcyI6Imlzc3VlciJ9.wAozUKIMQolPZ74Lv8plO7a93ORoxgar_G_SiC9jT3M",
+      "message": "로그인 되었습니다."
+    }
+  ],
+  "error": null
+}
+[ 2025-02-18 08:31:50 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 15
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 08:31:50 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    15
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 08:31:50 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT EXISTS(SELECT 1 FROM user_mst WHERE index = $1) AS \"exists\"",
+  "values": [
+    15
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 08:31:51 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " DELETE FROM user_mst WHERE index = $1",
+  "values": [
+    15
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 08:31:51 AM ] [ Test Server ]  -  Error:  탈퇴에 실패하였습니다. 
+{
+  "stack": "Error: 탈퇴에 실패하였습니다.\n    at deleteUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:151:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-18 08:31:51 AM ] [ Test Server ]  -  Response /api/users/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "탈퇴에 실패하였습니다.",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "탈퇴에 실패하였습니다.",
+    "stack": "Error: 탈퇴에 실패하였습니다.\n    at deleteUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:151:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-18 08:33:04 AM ] [ Test Server ]  -  Response /api/users/login 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "userId": "14",
+      "email": "user@example.com",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxNCIsImlhdCI6MTczOTgzNTE4NCwiZXhwIjoxNzM5OTIxNTg0LCJhdWQiOiJhdWRpZW5jZSIsImlzcyI6Imlzc3VlciJ9.MoVHtrU9Bql2prBw-4zx5zDIs0eF52HuLzw8NUSZ5OI",
+      "message": "로그인 되었습니다."
+    }
+  ],
+  "error": null
+}
+[ 2025-02-18 08:33:18 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 14
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 08:33:18 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    14
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 08:33:18 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT EXISTS(SELECT 1 FROM user_mst WHERE index = $1) AS \"exists\"",
+  "values": [
+    14
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 08:33:18 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " DELETE FROM user_mst WHERE index = $1",
+  "values": [
+    14
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 08:33:18 AM ] [ Test Server ]  -  Error:  Cannot read properties of undefined (reading 'rowCount') 
+{
+  "stack": "TypeError: Cannot read properties of undefined (reading 'rowCount')\n    at deleteUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:144:23)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-18 08:33:18 AM ] [ Test Server ]  -  Response /api/users/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "Cannot read properties of undefined (reading 'rowCount')",
+  "data": null,
+  "error": {
+    "name": "TypeError",
+    "message": "Cannot read properties of undefined (reading 'rowCount')",
+    "stack": "TypeError: Cannot read properties of undefined (reading 'rowCount')\n    at deleteUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:144:23)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-18 08:34:17 AM ] [ Test Server ]  -  Response /api/users/login 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "userId": "13",
+      "email": "user@example.com",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxMyIsImlhdCI6MTczOTgzNTI1NywiZXhwIjoxNzM5OTIxNjU3LCJhdWQiOiJhdWRpZW5jZSIsImlzcyI6Imlzc3VlciJ9.c0n2RKCo35WBmqgUTddY7WJ4J0PTQELa-GBeUkg0j24",
+      "message": "로그인 되었습니다."
+    }
+  ],
+  "error": null
+}
+[ 2025-02-18 08:34:30 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 13
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 08:34:30 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    13
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 08:34:30 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT EXISTS(SELECT 1 FROM user_mst WHERE index = $1) AS \"exists\"",
+  "values": [
+    13
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 08:34:30 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " DELETE FROM user_mst WHERE index = $1",
+  "values": [
+    13
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 08:34:30 AM ] [ Test Server ]  -  Error:  탈퇴에 실패하였습니다. 
+{
+  "stack": "Error: 탈퇴에 실패하였습니다.\n    at deleteUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:151:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-18 08:34:30 AM ] [ Test Server ]  -  Response /api/users/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "탈퇴에 실패하였습니다.",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "탈퇴에 실패하였습니다.",
+    "stack": "Error: 탈퇴에 실패하였습니다.\n    at deleteUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:151:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-18 08:35:25 AM ] [ Test Server ]  -  Response /api/users/login 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "userId": "12",
+      "email": "user@example.com",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxMiIsImlhdCI6MTczOTgzNTMyNSwiZXhwIjoxNzM5OTIxNzI1LCJhdWQiOiJhdWRpZW5jZSIsImlzcyI6Imlzc3VlciJ9.bTGZ1QWErjcJz1EL3W0gb_0x4t_97yBbrkn3FGGb9G0",
+      "message": "로그인 되었습니다."
+    }
+  ],
+  "error": null
+}
+[ 2025-02-18 08:35:36 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 12
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 08:35:36 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    12
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 08:35:36 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT EXISTS(SELECT 1 FROM user_mst WHERE index = $1) AS \"exists\"",
+  "values": [
+    12
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 08:35:36 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " DELETE FROM user_mst WHERE index = $1",
+  "values": [
+    12
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 08:35:36 AM ] [ Test Server ]  -  Error:  탈퇴에 실패하였습니다. 
+{
+  "stack": "Error: 탈퇴에 실패하였습니다.\n    at deleteUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:151:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-18 08:35:36 AM ] [ Test Server ]  -  Response /api/users/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "탈퇴에 실패하였습니다.",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "탈퇴에 실패하였습니다.",
+    "stack": "Error: 탈퇴에 실패하였습니다.\n    at deleteUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:151:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-18 08:38:48 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-18 08:38:48 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-18 08:38:48 AM ] [ Test Server ]  -  Response /api/users/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 7,
+      "name": "이름3",
+      "email": "daehyeon3@heredotcorp.com",
+      "password": "$2a$10$q7aX5wwpjiKPqKiBMw2fqehpzKWv1FJlwhZGiYVhchER38tKEzmvy",
+      "createdTime": "2025-02-14 12:56:47",
+      "updateTime": null
+    },
+    {
+      "index": 8,
+      "name": "이름3",
+      "email": "daehyeon3@heredotcorp.com",
+      "password": "$2a$10$gP70kkRxZiiLix.PKyNBCeZom84z11QGU55AdG4jpyapddviHdqnq",
+      "createdTime": "2025-02-14 13:36:37",
+      "updateTime": null
+    },
+    {
+      "index": 9,
+      "name": "John Doe",
+      "email": "user@example.com",
+      "password": "$2a$10$MioTCLc/u1rtvvOU5TG0muyF.WEeNfMpujkEp2AqgRuE6JdBf2/ei",
+      "createdTime": "2025-02-17 19:43:54",
+      "updateTime": null
+    },
+    {
+      "index": 10,
+      "name": "John Doe",
+      "email": "user@example.com",
+      "password": "$2a$10$Ye2dgEzPKoOupk9w7IH4hO1k/BYAsrDCFsNawCUQ.MMvq5vpjqkmi",
+      "createdTime": "2025-02-17 19:44:10",
+      "updateTime": null
+    },
+    {
+      "index": 11,
+      "name": "Doni",
+      "email": "zwol10@naver.com",
+      "password": "$2a$10$zwn2YEN4cLURUoW0JnfWVOZaF7ikxD39Q0p/1AjOerLJ/etkv9EUu",
+      "createdTime": "2025-02-17 19:50:31",
+      "updateTime": null
+    }
+  ],
+  "error": null
+}
+[ 2025-02-18 08:39:01 AM ] [ Test Server ]  -  Response /api/users/login 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "userId": "11",
+      "email": "user@example.com",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxMSIsImlhdCI6MTczOTgzNTU0MSwiZXhwIjoxNzM5OTIxOTQxLCJhdWQiOiJhdWRpZW5jZSIsImlzcyI6Imlzc3VlciJ9.-joQ7P19Bfckx7klf_a5W6cGoryOdOWeVY0zn6jyzqM",
+      "message": "로그인 되었습니다."
+    }
+  ],
+  "error": null
+}
+[ 2025-02-18 08:39:14 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 11
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 08:39:14 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    11
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 08:39:14 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT EXISTS(SELECT 1 FROM user_mst WHERE index = $1) AS \"exists\"",
+  "values": [
+    11
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 08:39:14 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " DELETE FROM user_mst WHERE index = $1",
+  "values": [
+    11
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 08:39:14 AM ] [ Test Server ]  -  Error:  탈퇴에 실패하였습니다. 
+{
+  "stack": "Error: 탈퇴에 실패하였습니다.\n    at deleteUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:151:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-18 08:39:14 AM ] [ Test Server ]  -  Response /api/users/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "탈퇴에 실패하였습니다.",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "탈퇴에 실패하였습니다.",
+    "stack": "Error: 탈퇴에 실패하였습니다.\n    at deleteUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:151:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-18 08:39:50 AM ] [ Test Server ]  -  Response /api/users/login 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "userId": "10",
+      "email": "user@example.com",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxMCIsImlhdCI6MTczOTgzNTU5MCwiZXhwIjoxNzM5OTIxOTkwLCJhdWQiOiJhdWRpZW5jZSIsImlzcyI6Imlzc3VlciJ9._e09B-MXKAZ4z7805m_-stLIs15gpQXP93bbUe8mC9M",
+      "message": "로그인 되었습니다."
+    }
+  ],
+  "error": null
+}
+[ 2025-02-18 08:40:01 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 10
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 08:40:01 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    10
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 08:40:01 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT EXISTS(SELECT 1 FROM user_mst WHERE index = $1) AS \"exists\"",
+  "values": [
+    10
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 08:40:01 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " DELETE FROM user_mst WHERE index = $1",
+  "values": [
+    10
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 08:40:01 AM ] [ Test Server ]  -  Response /api/users/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "userId": 10,
+      "message": "회원이 탈퇴되었습니다."
+    }
+  ],
+  "error": null
+}

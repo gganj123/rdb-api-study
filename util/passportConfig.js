@@ -6,7 +6,7 @@ import { jwtStrategy } from "./Jwt.js";
 // 예제 사용자 DB
 const users = [
   {
-    userId: "17",
+    userId: "10",
     email: "user@example.com",
     password: bcrypt.hashSync("securePassword123!", 10),
   },

@@ -86,11 +86,9 @@ export class UserMapper extends BaseMapper {
         .rawQuery(`DELETE FROM user_mst WHERE index = :userId`)
         .addParam("userId", userId)
         .rawExec();
+      console.log("삭제 맵퍼 결과값", result);
 
-      if (result.rowCount === 1) {
-        console.log("삭제 맵퍼 결과값", result);
-        return result.rows[0]; // 삭제된 행의 정보를 반환
-      }
+      return result || 0;
     });
   }
   /**
@@ -106,8 +104,8 @@ export class UserMapper extends BaseMapper {
         .rawQuery(`SELECT EXISTS(SELECT 1 FROM user_mst WHERE index = :userId) AS "exists"`)
         .addParam("userId", userId)
         .rawFindOne();
-
-      return result?.exists || false;
+      console.log("exist mapper result", result);
+      return result;
     });
   }
 

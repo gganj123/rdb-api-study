@@ -140,7 +140,7 @@ export class UserController {
       }
 
       const deletedUser = await this.userService.deleteUser(userId);
-
+      console.log("컨트롤러 회원탈퇴값", deletedUser);
       if (deletedUser > 0) {
         const response = ResponseData.data({
           userId,
@@ -158,11 +158,16 @@ export class UserController {
   existUserById = async (req, res) => {
     try {
       const userId = req.user?.index;
+      console.log("exist컨트롤러", userId);
       if (!userId || isNaN(Number(userId))) {
         return sendErrorResponse(res, new Error("userId를 확인해주세요."));
       }
       const existUser = await this.userService.existUserById(userId);
-      sendResponse(res, existUser);
+      const response = existUser
+        ? ResponseData.data({ message: "사용자가 존재합니다.", data: existUser })
+        : ResponseData.data({ message: "존재하지 않는 사용자입니다.", data: null });
+
+      sendResponse(res, response);
     } catch (error) {
       sendErrorResponse(res, error);
     }
