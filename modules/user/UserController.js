@@ -126,7 +126,8 @@ export class UserController {
 
   deleteUser = async (req, res) => {
     try {
-      const userId = req.user?.userId;
+      const userId = req.user?.index;
+      console.log("딜리트 컨트롤러", userId);
 
       if (!userId || isNaN(Number(userId))) {
         return sendErrorResponse(res, new Error("userId를 확인해주세요."));
@@ -156,7 +157,7 @@ export class UserController {
 
   existUserById = async (req, res) => {
     try {
-      const userId = req.user?.userId;
+      const userId = req.user?.index;
       if (!userId || isNaN(Number(userId))) {
         return sendErrorResponse(res, new Error("userId를 확인해주세요."));
       }

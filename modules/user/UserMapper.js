@@ -81,7 +81,17 @@ export class UserMapper extends BaseMapper {
    * @returns {Promise<number>}
    */
   deleteUser(userId) {
-    return this.exec(async (query) => query.DELETE().FROM("user_mst").WHERE("index", "=", userId));
+    return this.exec(async (query) => {
+      const result = await query
+        .rawQuery(`DELETE FROM user_mst WHERE index = :userId`)
+        .addParam("userId", userId)
+        .rawExec();
+
+      if (result.rowCount === 1) {
+        console.log("삭제 맵퍼 결과값", result);
+        return result.rows[0]; // 삭제된 행의 정보를 반환
+      }
+    });
   }
   /**
    * 유저 존재 여부 확인

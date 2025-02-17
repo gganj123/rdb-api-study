@@ -2694,3 +2694,1517 @@ undefined
   ],
   "error": null
 }
+[ 2025-02-18 07:42:00 AM ] [ Test Server ]  -  Response /api/users/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 401,
+  "message": "token is invalid",
+  "data": null,
+  "error": null
+}
+[ 2025-02-18 07:43:44 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-18 07:43:44 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-18 07:43:44 AM ] [ Test Server ]  -  Response /api/users/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 7,
+      "name": "이름3",
+      "email": "daehyeon3@heredotcorp.com",
+      "password": "$2a$10$q7aX5wwpjiKPqKiBMw2fqehpzKWv1FJlwhZGiYVhchER38tKEzmvy",
+      "createdTime": "2025-02-14 12:56:47",
+      "updateTime": null
+    },
+    {
+      "index": 8,
+      "name": "이름3",
+      "email": "daehyeon3@heredotcorp.com",
+      "password": "$2a$10$gP70kkRxZiiLix.PKyNBCeZom84z11QGU55AdG4jpyapddviHdqnq",
+      "createdTime": "2025-02-14 13:36:37",
+      "updateTime": null
+    },
+    {
+      "index": 9,
+      "name": "John Doe",
+      "email": "user@example.com",
+      "password": "$2a$10$MioTCLc/u1rtvvOU5TG0muyF.WEeNfMpujkEp2AqgRuE6JdBf2/ei",
+      "createdTime": "2025-02-17 19:43:54",
+      "updateTime": null
+    },
+    {
+      "index": 10,
+      "name": "John Doe",
+      "email": "user@example.com",
+      "password": "$2a$10$Ye2dgEzPKoOupk9w7IH4hO1k/BYAsrDCFsNawCUQ.MMvq5vpjqkmi",
+      "createdTime": "2025-02-17 19:44:10",
+      "updateTime": null
+    },
+    {
+      "index": 11,
+      "name": "Doni",
+      "email": "zwol10@naver.com",
+      "password": "$2a$10$zwn2YEN4cLURUoW0JnfWVOZaF7ikxD39Q0p/1AjOerLJ/etkv9EUu",
+      "createdTime": "2025-02-17 19:50:31",
+      "updateTime": null
+    },
+    {
+      "index": 13,
+      "name": "Doni",
+      "email": "zwol12@naver.com",
+      "password": "$2a$10$T6VVJqOiPBlz0gOvEyG8WO6YVXthGmW31ILU0fVikhWjtwckhMO16",
+      "createdTime": "2025-02-17 22:42:28",
+      "updateTime": null
+    },
+    {
+      "index": 14,
+      "name": "zodi",
+      "email": "gganj123@naver.com",
+      "password": "$2a$10$GAJchwHOlISLn3Rua.cJsuklcW2vj4pmqs35.j/lJRR88NuNu8ZUq",
+      "createdTime": "2025-02-17 22:49:54",
+      "updateTime": null
+    },
+    {
+      "index": 15,
+      "name": "zodi",
+      "email": "gganj1234@naver.com",
+      "password": "$2a$10$L.cUH/b9C8/asI6FdpIDlOp/kH7GsAKIk5HEDAL8slWFe5RXvplOu",
+      "createdTime": "2025-02-17 22:52:21",
+      "updateTime": null
+    },
+    {
+      "index": 16,
+      "name": "zodi",
+      "email": "gg1234@naver.com",
+      "password": "$2a$10$zfkp3m8wlP8CTz/rXIAGVuR0J4N9GdDWj9UGesLBtuAJe2jtZ972e",
+      "createdTime": "2025-02-17 22:55:30",
+      "updateTime": null
+    },
+    {
+      "index": 17,
+      "name": "zodi",
+      "email": "gg1234@naver.com",
+      "password": "$2a$10$ROQwEs5XgSUJiT5PeclJwOinYjclznS5wwjyHU5ONhaYBgMUDRsR.",
+      "createdTime": "2025-02-17 23:00:40",
+      "updateTime": null
+    },
+    {
+      "index": 18,
+      "name": "zodi",
+      "email": "gg1234@naver.com",
+      "password": "$2a$10$9nS7.Y1Y6o2iVJ5HqiL8Uun4PqV4MThX1Gd7y8b0e4yvROp.5yFb6",
+      "createdTime": "2025-02-17 23:00:44",
+      "updateTime": null
+    },
+    {
+      "index": 19,
+      "name": "zodi",
+      "email": "gg12345@naver.com",
+      "password": "$2a$10$jo1kZNxSF66kbL70EouG9uD66vfoWQdauIj.TSM.hSktl2J/yDlwK",
+      "createdTime": "2025-02-17 23:00:51",
+      "updateTime": null
+    },
+    {
+      "index": 12,
+      "name": "John Do",
+      "email": "user@example.com",
+      "password": "$2a$10$XzKtoTFS5vw4NHdJ8V8j5uCbxCtdna4obRlfVRduzW3LE8oA3R6CG",
+      "createdTime": "2025-02-17 22:36:43",
+      "updateTime": null
+    }
+  ],
+  "error": null
+}
+[ 2025-02-18 07:44:02 AM ] [ Test Server ]  -  Response /api/users/login 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "userId": "19",
+      "email": "user@example.com",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxOSIsImlhdCI6MTczOTgzMjI0MiwiZXhwIjoxNzM5OTE4NjQyLCJhdWQiOiJhdWRpZW5jZSIsImlzcyI6Imlzc3VlciJ9.Sa_l8GSLXaD2xHhUZ3df9mQ-zLz_QMtkyA7W3pTK2tI",
+      "message": "로그인 되었습니다."
+    }
+  ],
+  "error": null
+}
+[ 2025-02-18 07:44:36 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 19
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 07:44:36 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    19
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 07:44:36 AM ] [ Test Server ]  -  Error:  userId를 확인해주세요. 
+{
+  "stack": "Error: userId를 확인해주세요.\n    at deleteUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:132:39)\n    at Layer.handle [as handle_request] (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/route.js:149:13)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/util/Middlewares.js:121:7\n    at strategy.success (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:222:18)\n    at verified (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport-jwt/lib/strategy.js:115:41)\n    at JwtStrategy._verify (file:///Users/gganj123/Desktop/study/rdb-api-study/util/Jwt.js:58:14)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-18 07:44:36 AM ] [ Test Server ]  -  Response /api/users/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "userId를 확인해주세요.",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "userId를 확인해주세요.",
+    "stack": "Error: userId를 확인해주세요.\n    at deleteUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:132:39)\n    at Layer.handle [as handle_request] (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/route.js:149:13)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/util/Middlewares.js:121:7\n    at strategy.success (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:222:18)\n    at verified (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport-jwt/lib/strategy.js:115:41)\n    at JwtStrategy._verify (file:///Users/gganj123/Desktop/study/rdb-api-study/util/Jwt.js:58:14)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-18 07:48:00 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 19
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 07:48:00 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    19
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 07:48:00 AM ] [ Test Server ]  -  Error:  userId를 확인해주세요. 
+{
+  "stack": "Error: userId를 확인해주세요.\n    at deleteUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:132:39)\n    at Layer.handle [as handle_request] (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/route.js:149:13)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/util/Middlewares.js:121:7\n    at strategy.success (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:222:18)\n    at verified (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport-jwt/lib/strategy.js:115:41)\n    at JwtStrategy._verify (file:///Users/gganj123/Desktop/study/rdb-api-study/util/Jwt.js:58:14)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-18 07:48:00 AM ] [ Test Server ]  -  Response /api/users/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "userId를 확인해주세요.",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "userId를 확인해주세요.",
+    "stack": "Error: userId를 확인해주세요.\n    at deleteUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:132:39)\n    at Layer.handle [as handle_request] (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/route.js:149:13)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/util/Middlewares.js:121:7\n    at strategy.success (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:222:18)\n    at verified (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport-jwt/lib/strategy.js:115:41)\n    at JwtStrategy._verify (file:///Users/gganj123/Desktop/study/rdb-api-study/util/Jwt.js:58:14)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-18 07:48:45 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 19
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 07:48:45 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    19
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 07:48:45 AM ] [ Test Server ]  -  Error:  userId를 확인해주세요. 
+{
+  "stack": "Error: userId를 확인해주세요.\n    at deleteUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:132:39)\n    at Layer.handle [as handle_request] (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/route.js:149:13)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/util/Middlewares.js:121:7\n    at strategy.success (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:222:18)\n    at verified (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport-jwt/lib/strategy.js:115:41)\n    at JwtStrategy._verify (file:///Users/gganj123/Desktop/study/rdb-api-study/util/Jwt.js:58:14)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-18 07:48:45 AM ] [ Test Server ]  -  Response /api/users/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "userId를 확인해주세요.",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "userId를 확인해주세요.",
+    "stack": "Error: userId를 확인해주세요.\n    at deleteUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:132:39)\n    at Layer.handle [as handle_request] (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/route.js:149:13)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/util/Middlewares.js:121:7\n    at strategy.success (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:222:18)\n    at verified (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport-jwt/lib/strategy.js:115:41)\n    at JwtStrategy._verify (file:///Users/gganj123/Desktop/study/rdb-api-study/util/Jwt.js:58:14)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-18 07:49:01 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 19
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 07:49:01 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    19
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 07:49:01 AM ] [ Test Server ]  -  Error:  userId를 확인해주세요. 
+{
+  "stack": "Error: userId를 확인해주세요.\n    at deleteUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:132:39)\n    at Layer.handle [as handle_request] (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/route.js:149:13)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/util/Middlewares.js:121:7\n    at strategy.success (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:222:18)\n    at verified (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport-jwt/lib/strategy.js:115:41)\n    at JwtStrategy._verify (file:///Users/gganj123/Desktop/study/rdb-api-study/util/Jwt.js:58:14)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-18 07:49:01 AM ] [ Test Server ]  -  Response /api/users/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "userId를 확인해주세요.",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "userId를 확인해주세요.",
+    "stack": "Error: userId를 확인해주세요.\n    at deleteUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:132:39)\n    at Layer.handle [as handle_request] (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/route.js:149:13)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/util/Middlewares.js:121:7\n    at strategy.success (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:222:18)\n    at verified (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport-jwt/lib/strategy.js:115:41)\n    at JwtStrategy._verify (file:///Users/gganj123/Desktop/study/rdb-api-study/util/Jwt.js:58:14)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-18 07:49:33 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 19
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 07:49:33 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    19
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 07:49:33 AM ] [ Test Server ]  -  Error:  userId를 확인해주세요. 
+{
+  "stack": "Error: userId를 확인해주세요.\n    at deleteUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:132:39)\n    at Layer.handle [as handle_request] (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/route.js:149:13)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/util/Middlewares.js:121:7\n    at strategy.success (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:222:18)\n    at verified (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport-jwt/lib/strategy.js:115:41)\n    at JwtStrategy._verify (file:///Users/gganj123/Desktop/study/rdb-api-study/util/Jwt.js:58:14)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-18 07:49:33 AM ] [ Test Server ]  -  Response /api/users/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "userId를 확인해주세요.",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "userId를 확인해주세요.",
+    "stack": "Error: userId를 확인해주세요.\n    at deleteUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:132:39)\n    at Layer.handle [as handle_request] (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/route.js:149:13)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/util/Middlewares.js:121:7\n    at strategy.success (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:222:18)\n    at verified (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport-jwt/lib/strategy.js:115:41)\n    at JwtStrategy._verify (file:///Users/gganj123/Desktop/study/rdb-api-study/util/Jwt.js:58:14)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-18 07:49:59 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 19
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 07:49:59 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    19
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 07:49:59 AM ] [ Test Server ]  -  Error:  userId를 확인해주세요. 
+{
+  "stack": "Error: userId를 확인해주세요.\n    at deleteUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:132:39)\n    at Layer.handle [as handle_request] (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/route.js:149:13)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/util/Middlewares.js:121:7\n    at strategy.success (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:222:18)\n    at verified (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport-jwt/lib/strategy.js:115:41)\n    at JwtStrategy._verify (file:///Users/gganj123/Desktop/study/rdb-api-study/util/Jwt.js:58:14)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-18 07:49:59 AM ] [ Test Server ]  -  Response /api/users/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "userId를 확인해주세요.",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "userId를 확인해주세요.",
+    "stack": "Error: userId를 확인해주세요.\n    at deleteUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:132:39)\n    at Layer.handle [as handle_request] (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/route.js:149:13)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/util/Middlewares.js:121:7\n    at strategy.success (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:222:18)\n    at verified (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport-jwt/lib/strategy.js:115:41)\n    at JwtStrategy._verify (file:///Users/gganj123/Desktop/study/rdb-api-study/util/Jwt.js:58:14)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-18 07:50:47 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 19
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 07:50:47 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    19
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 07:50:47 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT EXISTS(SELECT 1 FROM user_mst WHERE index = $1) AS \"exists\"",
+  "values": [
+    19
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 07:50:47 AM ] [ Test Server ]  -  Error:  탈퇴에 실패하였습니다. 
+{
+  "stack": "Error: 탈퇴에 실패하였습니다.\n    at deleteUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:150:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-18 07:50:47 AM ] [ Test Server ]  -  Response /api/users/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "탈퇴에 실패하였습니다.",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "탈퇴에 실패하였습니다.",
+    "stack": "Error: 탈퇴에 실패하였습니다.\n    at deleteUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:150:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-18 07:51:02 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 19
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 07:51:02 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    19
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 07:51:02 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT EXISTS(SELECT 1 FROM user_mst WHERE index = $1) AS \"exists\"",
+  "values": [
+    19
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 07:51:02 AM ] [ Test Server ]  -  Error:  탈퇴에 실패하였습니다. 
+{
+  "stack": "Error: 탈퇴에 실패하였습니다.\n    at deleteUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:151:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-18 07:51:02 AM ] [ Test Server ]  -  Response /api/users/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "탈퇴에 실패하였습니다.",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "탈퇴에 실패하였습니다.",
+    "stack": "Error: 탈퇴에 실패하였습니다.\n    at deleteUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:151:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-18 07:52:06 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 19
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 07:52:06 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    19
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 07:52:06 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT EXISTS(SELECT 1 FROM user_mst WHERE index = $1) AS \"exists\"",
+  "values": [
+    19
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 07:52:06 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " DELETE user_mst WHERE index = $1",
+  "values": [
+    19
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 07:52:06 AM ] [ Test Server ]  -  undefined 
+{
+  "length": 96,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "42601",
+  "position": "9",
+  "file": "scan.l",
+  "line": "1241",
+  "routine": "scanner_yyerror"
+}
+[Body]
+undefined
+[ 2025-02-18 07:52:06 AM ] [ Test Server ]  -  Error:  syntax error at or near "user_mst" 
+{
+  "length": 96,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "42601",
+  "position": "9",
+  "file": "scan.l",
+  "line": "1241",
+  "routine": "scanner_yyerror",
+  "stack": "error: syntax error at or near \"user_mst\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.rawExec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:279:32)\n    at async file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:85:22\n    at async UserMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _UserService.deleteUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserService.js:83:25)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async deleteUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:142:27)"
+}
+[Body]
+undefined
+[ 2025-02-18 07:52:06 AM ] [ Test Server ]  -  Response /api/users/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "syntax error at or near \"user_mst\"",
+  "data": null,
+  "error": {
+    "name": "error",
+    "message": "syntax error at or near \"user_mst\"",
+    "stack": "error: syntax error at or near \"user_mst\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.rawExec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:279:32)\n    at async file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserMapper.js:85:22\n    at async UserMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _UserService.deleteUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserService.js:83:25)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async deleteUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:142:27)"
+  }
+}
+[ 2025-02-18 07:55:00 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 19
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 07:55:00 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    19
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 07:55:00 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT EXISTS(SELECT 1 FROM user_mst WHERE index = $1) AS \"exists\"",
+  "values": [
+    19
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 07:55:00 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " DELETE FROM user_mst WHERE index = $1",
+  "values": [
+    19
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 07:55:00 AM ] [ Test Server ]  -  Error:  탈퇴에 실패하였습니다. 
+{
+  "stack": "Error: 탈퇴에 실패하였습니다.\n    at deleteUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:151:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-18 07:55:00 AM ] [ Test Server ]  -  Response /api/users/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "탈퇴에 실패하였습니다.",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "탈퇴에 실패하였습니다.",
+    "stack": "Error: 탈퇴에 실패하였습니다.\n    at deleteUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:151:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-18 07:56:52 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-18 07:56:52 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-18 07:56:52 AM ] [ Test Server ]  -  Response /api/users/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 7,
+      "name": "이름3",
+      "email": "daehyeon3@heredotcorp.com",
+      "password": "$2a$10$q7aX5wwpjiKPqKiBMw2fqehpzKWv1FJlwhZGiYVhchER38tKEzmvy",
+      "createdTime": "2025-02-14 12:56:47",
+      "updateTime": null
+    },
+    {
+      "index": 8,
+      "name": "이름3",
+      "email": "daehyeon3@heredotcorp.com",
+      "password": "$2a$10$gP70kkRxZiiLix.PKyNBCeZom84z11QGU55AdG4jpyapddviHdqnq",
+      "createdTime": "2025-02-14 13:36:37",
+      "updateTime": null
+    },
+    {
+      "index": 9,
+      "name": "John Doe",
+      "email": "user@example.com",
+      "password": "$2a$10$MioTCLc/u1rtvvOU5TG0muyF.WEeNfMpujkEp2AqgRuE6JdBf2/ei",
+      "createdTime": "2025-02-17 19:43:54",
+      "updateTime": null
+    },
+    {
+      "index": 10,
+      "name": "John Doe",
+      "email": "user@example.com",
+      "password": "$2a$10$Ye2dgEzPKoOupk9w7IH4hO1k/BYAsrDCFsNawCUQ.MMvq5vpjqkmi",
+      "createdTime": "2025-02-17 19:44:10",
+      "updateTime": null
+    },
+    {
+      "index": 11,
+      "name": "Doni",
+      "email": "zwol10@naver.com",
+      "password": "$2a$10$zwn2YEN4cLURUoW0JnfWVOZaF7ikxD39Q0p/1AjOerLJ/etkv9EUu",
+      "createdTime": "2025-02-17 19:50:31",
+      "updateTime": null
+    },
+    {
+      "index": 13,
+      "name": "Doni",
+      "email": "zwol12@naver.com",
+      "password": "$2a$10$T6VVJqOiPBlz0gOvEyG8WO6YVXthGmW31ILU0fVikhWjtwckhMO16",
+      "createdTime": "2025-02-17 22:42:28",
+      "updateTime": null
+    },
+    {
+      "index": 14,
+      "name": "zodi",
+      "email": "gganj123@naver.com",
+      "password": "$2a$10$GAJchwHOlISLn3Rua.cJsuklcW2vj4pmqs35.j/lJRR88NuNu8ZUq",
+      "createdTime": "2025-02-17 22:49:54",
+      "updateTime": null
+    },
+    {
+      "index": 15,
+      "name": "zodi",
+      "email": "gganj1234@naver.com",
+      "password": "$2a$10$L.cUH/b9C8/asI6FdpIDlOp/kH7GsAKIk5HEDAL8slWFe5RXvplOu",
+      "createdTime": "2025-02-17 22:52:21",
+      "updateTime": null
+    },
+    {
+      "index": 16,
+      "name": "zodi",
+      "email": "gg1234@naver.com",
+      "password": "$2a$10$zfkp3m8wlP8CTz/rXIAGVuR0J4N9GdDWj9UGesLBtuAJe2jtZ972e",
+      "createdTime": "2025-02-17 22:55:30",
+      "updateTime": null
+    },
+    {
+      "index": 17,
+      "name": "zodi",
+      "email": "gg1234@naver.com",
+      "password": "$2a$10$ROQwEs5XgSUJiT5PeclJwOinYjclznS5wwjyHU5ONhaYBgMUDRsR.",
+      "createdTime": "2025-02-17 23:00:40",
+      "updateTime": null
+    },
+    {
+      "index": 18,
+      "name": "zodi",
+      "email": "gg1234@naver.com",
+      "password": "$2a$10$9nS7.Y1Y6o2iVJ5HqiL8Uun4PqV4MThX1Gd7y8b0e4yvROp.5yFb6",
+      "createdTime": "2025-02-17 23:00:44",
+      "updateTime": null
+    },
+    {
+      "index": 12,
+      "name": "John Do",
+      "email": "user@example.com",
+      "password": "$2a$10$XzKtoTFS5vw4NHdJ8V8j5uCbxCtdna4obRlfVRduzW3LE8oA3R6CG",
+      "createdTime": "2025-02-17 22:36:43",
+      "updateTime": null
+    }
+  ],
+  "error": null
+}
+[ 2025-02-18 07:57:45 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 19
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 07:57:45 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    19
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 07:58:26 AM ] [ Test Server ]  -  Response /api/users/login 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "userId": "18",
+      "email": "user@example.com",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxOCIsImlhdCI6MTczOTgzMzEwNiwiZXhwIjoxNzM5OTE5NTA2LCJhdWQiOiJhdWRpZW5jZSIsImlzcyI6Imlzc3VlciJ9.KXA3T847l4yHiEcrhXhZ5CzkbIRI1kNloYnW4iplm_Q",
+      "message": "로그인 되었습니다."
+    }
+  ],
+  "error": null
+}
+[ 2025-02-18 07:58:41 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 18
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 07:58:41 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    18
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 07:58:41 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT EXISTS(SELECT 1 FROM user_mst WHERE index = $1) AS \"exists\"",
+  "values": [
+    18
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 07:58:41 AM ] [ Test Server ]  -  Error:  존재하지 않는 유저입니다. 
+{
+  "stack": "Error: 존재하지 않는 유저입니다.\n    at deleteUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:139:39)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-18 07:58:41 AM ] [ Test Server ]  -  Response /api/users/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "존재하지 않는 유저입니다.",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "존재하지 않는 유저입니다.",
+    "stack": "Error: 존재하지 않는 유저입니다.\n    at deleteUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:139:39)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-18 07:58:49 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 18
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 07:58:49 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    18
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 07:58:49 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT EXISTS(SELECT 1 FROM user_mst WHERE index = $1) AS \"exists\"",
+  "values": [
+    18
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 07:58:49 AM ] [ Test Server ]  -  Error:  존재하지 않는 유저입니다. 
+{
+  "stack": "Error: 존재하지 않는 유저입니다.\n    at deleteUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:139:39)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-18 07:58:49 AM ] [ Test Server ]  -  Response /api/users/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "존재하지 않는 유저입니다.",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "존재하지 않는 유저입니다.",
+    "stack": "Error: 존재하지 않는 유저입니다.\n    at deleteUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:139:39)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-18 07:59:05 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-18 07:59:05 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-18 07:59:05 AM ] [ Test Server ]  -  Response /api/users/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 7,
+      "name": "이름3",
+      "email": "daehyeon3@heredotcorp.com",
+      "password": "$2a$10$q7aX5wwpjiKPqKiBMw2fqehpzKWv1FJlwhZGiYVhchER38tKEzmvy",
+      "createdTime": "2025-02-14 12:56:47",
+      "updateTime": null
+    },
+    {
+      "index": 8,
+      "name": "이름3",
+      "email": "daehyeon3@heredotcorp.com",
+      "password": "$2a$10$gP70kkRxZiiLix.PKyNBCeZom84z11QGU55AdG4jpyapddviHdqnq",
+      "createdTime": "2025-02-14 13:36:37",
+      "updateTime": null
+    },
+    {
+      "index": 9,
+      "name": "John Doe",
+      "email": "user@example.com",
+      "password": "$2a$10$MioTCLc/u1rtvvOU5TG0muyF.WEeNfMpujkEp2AqgRuE6JdBf2/ei",
+      "createdTime": "2025-02-17 19:43:54",
+      "updateTime": null
+    },
+    {
+      "index": 10,
+      "name": "John Doe",
+      "email": "user@example.com",
+      "password": "$2a$10$Ye2dgEzPKoOupk9w7IH4hO1k/BYAsrDCFsNawCUQ.MMvq5vpjqkmi",
+      "createdTime": "2025-02-17 19:44:10",
+      "updateTime": null
+    },
+    {
+      "index": 11,
+      "name": "Doni",
+      "email": "zwol10@naver.com",
+      "password": "$2a$10$zwn2YEN4cLURUoW0JnfWVOZaF7ikxD39Q0p/1AjOerLJ/etkv9EUu",
+      "createdTime": "2025-02-17 19:50:31",
+      "updateTime": null
+    },
+    {
+      "index": 13,
+      "name": "Doni",
+      "email": "zwol12@naver.com",
+      "password": "$2a$10$T6VVJqOiPBlz0gOvEyG8WO6YVXthGmW31ILU0fVikhWjtwckhMO16",
+      "createdTime": "2025-02-17 22:42:28",
+      "updateTime": null
+    },
+    {
+      "index": 14,
+      "name": "zodi",
+      "email": "gganj123@naver.com",
+      "password": "$2a$10$GAJchwHOlISLn3Rua.cJsuklcW2vj4pmqs35.j/lJRR88NuNu8ZUq",
+      "createdTime": "2025-02-17 22:49:54",
+      "updateTime": null
+    },
+    {
+      "index": 15,
+      "name": "zodi",
+      "email": "gganj1234@naver.com",
+      "password": "$2a$10$L.cUH/b9C8/asI6FdpIDlOp/kH7GsAKIk5HEDAL8slWFe5RXvplOu",
+      "createdTime": "2025-02-17 22:52:21",
+      "updateTime": null
+    },
+    {
+      "index": 16,
+      "name": "zodi",
+      "email": "gg1234@naver.com",
+      "password": "$2a$10$zfkp3m8wlP8CTz/rXIAGVuR0J4N9GdDWj9UGesLBtuAJe2jtZ972e",
+      "createdTime": "2025-02-17 22:55:30",
+      "updateTime": null
+    },
+    {
+      "index": 17,
+      "name": "zodi",
+      "email": "gg1234@naver.com",
+      "password": "$2a$10$ROQwEs5XgSUJiT5PeclJwOinYjclznS5wwjyHU5ONhaYBgMUDRsR.",
+      "createdTime": "2025-02-17 23:00:40",
+      "updateTime": null
+    },
+    {
+      "index": 18,
+      "name": "zodi",
+      "email": "gg1234@naver.com",
+      "password": "$2a$10$9nS7.Y1Y6o2iVJ5HqiL8Uun4PqV4MThX1Gd7y8b0e4yvROp.5yFb6",
+      "createdTime": "2025-02-17 23:00:44",
+      "updateTime": null
+    },
+    {
+      "index": 12,
+      "name": "John Do",
+      "email": "user@example.com",
+      "password": "$2a$10$XzKtoTFS5vw4NHdJ8V8j5uCbxCtdna4obRlfVRduzW3LE8oA3R6CG",
+      "createdTime": "2025-02-17 22:36:43",
+      "updateTime": null
+    }
+  ],
+  "error": null
+}
+[ 2025-02-18 08:00:18 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 18
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 08:00:18 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    18
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 08:00:18 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT EXISTS(SELECT 1 FROM user_mst WHERE index = $1) AS \"exists\"",
+  "values": [
+    18
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 08:00:18 AM ] [ Test Server ]  -  Error:  존재하지 않는 유저입니다. 
+{
+  "stack": "Error: 존재하지 않는 유저입니다.\n    at deleteUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:139:39)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-18 08:00:18 AM ] [ Test Server ]  -  Response /api/users/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "존재하지 않는 유저입니다.",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "존재하지 않는 유저입니다.",
+    "stack": "Error: 존재하지 않는 유저입니다.\n    at deleteUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:139:39)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-18 08:01:52 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 18
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 08:01:52 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    18
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 08:01:52 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT EXISTS(SELECT 1 FROM user_mst WHERE index = $1) AS \"exists\"",
+  "values": [
+    18
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 08:01:52 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " DELETE FROM user_mst WHERE index = $1",
+  "values": [
+    18
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 08:01:52 AM ] [ Test Server ]  -  Error:  탈퇴에 실패하였습니다. 
+{
+  "stack": "Error: 탈퇴에 실패하였습니다.\n    at deleteUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:151:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-18 08:01:52 AM ] [ Test Server ]  -  Response /api/users/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "탈퇴에 실패하였습니다.",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "탈퇴에 실패하였습니다.",
+    "stack": "Error: 탈퇴에 실패하였습니다.\n    at deleteUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:151:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-18 08:02:06 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-18 08:02:06 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-18 08:02:06 AM ] [ Test Server ]  -  Response /api/users/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 7,
+      "name": "이름3",
+      "email": "daehyeon3@heredotcorp.com",
+      "password": "$2a$10$q7aX5wwpjiKPqKiBMw2fqehpzKWv1FJlwhZGiYVhchER38tKEzmvy",
+      "createdTime": "2025-02-14 12:56:47",
+      "updateTime": null
+    },
+    {
+      "index": 8,
+      "name": "이름3",
+      "email": "daehyeon3@heredotcorp.com",
+      "password": "$2a$10$gP70kkRxZiiLix.PKyNBCeZom84z11QGU55AdG4jpyapddviHdqnq",
+      "createdTime": "2025-02-14 13:36:37",
+      "updateTime": null
+    },
+    {
+      "index": 9,
+      "name": "John Doe",
+      "email": "user@example.com",
+      "password": "$2a$10$MioTCLc/u1rtvvOU5TG0muyF.WEeNfMpujkEp2AqgRuE6JdBf2/ei",
+      "createdTime": "2025-02-17 19:43:54",
+      "updateTime": null
+    },
+    {
+      "index": 10,
+      "name": "John Doe",
+      "email": "user@example.com",
+      "password": "$2a$10$Ye2dgEzPKoOupk9w7IH4hO1k/BYAsrDCFsNawCUQ.MMvq5vpjqkmi",
+      "createdTime": "2025-02-17 19:44:10",
+      "updateTime": null
+    },
+    {
+      "index": 11,
+      "name": "Doni",
+      "email": "zwol10@naver.com",
+      "password": "$2a$10$zwn2YEN4cLURUoW0JnfWVOZaF7ikxD39Q0p/1AjOerLJ/etkv9EUu",
+      "createdTime": "2025-02-17 19:50:31",
+      "updateTime": null
+    },
+    {
+      "index": 13,
+      "name": "Doni",
+      "email": "zwol12@naver.com",
+      "password": "$2a$10$T6VVJqOiPBlz0gOvEyG8WO6YVXthGmW31ILU0fVikhWjtwckhMO16",
+      "createdTime": "2025-02-17 22:42:28",
+      "updateTime": null
+    },
+    {
+      "index": 14,
+      "name": "zodi",
+      "email": "gganj123@naver.com",
+      "password": "$2a$10$GAJchwHOlISLn3Rua.cJsuklcW2vj4pmqs35.j/lJRR88NuNu8ZUq",
+      "createdTime": "2025-02-17 22:49:54",
+      "updateTime": null
+    },
+    {
+      "index": 15,
+      "name": "zodi",
+      "email": "gganj1234@naver.com",
+      "password": "$2a$10$L.cUH/b9C8/asI6FdpIDlOp/kH7GsAKIk5HEDAL8slWFe5RXvplOu",
+      "createdTime": "2025-02-17 22:52:21",
+      "updateTime": null
+    },
+    {
+      "index": 16,
+      "name": "zodi",
+      "email": "gg1234@naver.com",
+      "password": "$2a$10$zfkp3m8wlP8CTz/rXIAGVuR0J4N9GdDWj9UGesLBtuAJe2jtZ972e",
+      "createdTime": "2025-02-17 22:55:30",
+      "updateTime": null
+    },
+    {
+      "index": 17,
+      "name": "zodi",
+      "email": "gg1234@naver.com",
+      "password": "$2a$10$ROQwEs5XgSUJiT5PeclJwOinYjclznS5wwjyHU5ONhaYBgMUDRsR.",
+      "createdTime": "2025-02-17 23:00:40",
+      "updateTime": null
+    },
+    {
+      "index": 12,
+      "name": "John Do",
+      "email": "user@example.com",
+      "password": "$2a$10$XzKtoTFS5vw4NHdJ8V8j5uCbxCtdna4obRlfVRduzW3LE8oA3R6CG",
+      "createdTime": "2025-02-17 22:36:43",
+      "updateTime": null
+    }
+  ],
+  "error": null
+}
+[ 2025-02-18 08:02:42 AM ] [ Test Server ]  -  Response /api/users/login 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "userId": "17",
+      "email": "user@example.com",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxNyIsImlhdCI6MTczOTgzMzM2MiwiZXhwIjoxNzM5OTE5NzYyLCJhdWQiOiJhdWRpZW5jZSIsImlzcyI6Imlzc3VlciJ9.2vCC261tutWNN2EAmDn8KvdolenTOsC9gBOmHuPLAKk",
+      "message": "로그인 되었습니다."
+    }
+  ],
+  "error": null
+}
+[ 2025-02-18 08:03:01 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 17
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 08:03:01 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    17
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 08:03:01 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT EXISTS(SELECT 1 FROM user_mst WHERE index = $1) AS \"exists\"",
+  "values": [
+    17
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 08:03:01 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " DELETE FROM user_mst WHERE index = $1",
+  "values": [
+    17
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 08:03:01 AM ] [ Test Server ]  -  Error:  탈퇴에 실패하였습니다. 
+{
+  "stack": "Error: 탈퇴에 실패하였습니다.\n    at deleteUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:151:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-18 08:03:01 AM ] [ Test Server ]  -  Response /api/users/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "탈퇴에 실패하였습니다.",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "탈퇴에 실패하였습니다.",
+    "stack": "Error: 탈퇴에 실패하였습니다.\n    at deleteUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:151:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-18 08:04:19 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 17
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 08:04:19 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    17
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 08:04:32 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-18 08:04:32 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-18 08:04:32 AM ] [ Test Server ]  -  Response /api/users/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 7,
+      "name": "이름3",
+      "email": "daehyeon3@heredotcorp.com",
+      "password": "$2a$10$q7aX5wwpjiKPqKiBMw2fqehpzKWv1FJlwhZGiYVhchER38tKEzmvy",
+      "createdTime": "2025-02-14 12:56:47",
+      "updateTime": null
+    },
+    {
+      "index": 8,
+      "name": "이름3",
+      "email": "daehyeon3@heredotcorp.com",
+      "password": "$2a$10$gP70kkRxZiiLix.PKyNBCeZom84z11QGU55AdG4jpyapddviHdqnq",
+      "createdTime": "2025-02-14 13:36:37",
+      "updateTime": null
+    },
+    {
+      "index": 9,
+      "name": "John Doe",
+      "email": "user@example.com",
+      "password": "$2a$10$MioTCLc/u1rtvvOU5TG0muyF.WEeNfMpujkEp2AqgRuE6JdBf2/ei",
+      "createdTime": "2025-02-17 19:43:54",
+      "updateTime": null
+    },
+    {
+      "index": 10,
+      "name": "John Doe",
+      "email": "user@example.com",
+      "password": "$2a$10$Ye2dgEzPKoOupk9w7IH4hO1k/BYAsrDCFsNawCUQ.MMvq5vpjqkmi",
+      "createdTime": "2025-02-17 19:44:10",
+      "updateTime": null
+    },
+    {
+      "index": 11,
+      "name": "Doni",
+      "email": "zwol10@naver.com",
+      "password": "$2a$10$zwn2YEN4cLURUoW0JnfWVOZaF7ikxD39Q0p/1AjOerLJ/etkv9EUu",
+      "createdTime": "2025-02-17 19:50:31",
+      "updateTime": null
+    },
+    {
+      "index": 13,
+      "name": "Doni",
+      "email": "zwol12@naver.com",
+      "password": "$2a$10$T6VVJqOiPBlz0gOvEyG8WO6YVXthGmW31ILU0fVikhWjtwckhMO16",
+      "createdTime": "2025-02-17 22:42:28",
+      "updateTime": null
+    },
+    {
+      "index": 14,
+      "name": "zodi",
+      "email": "gganj123@naver.com",
+      "password": "$2a$10$GAJchwHOlISLn3Rua.cJsuklcW2vj4pmqs35.j/lJRR88NuNu8ZUq",
+      "createdTime": "2025-02-17 22:49:54",
+      "updateTime": null
+    },
+    {
+      "index": 15,
+      "name": "zodi",
+      "email": "gganj1234@naver.com",
+      "password": "$2a$10$L.cUH/b9C8/asI6FdpIDlOp/kH7GsAKIk5HEDAL8slWFe5RXvplOu",
+      "createdTime": "2025-02-17 22:52:21",
+      "updateTime": null
+    },
+    {
+      "index": 16,
+      "name": "zodi",
+      "email": "gg1234@naver.com",
+      "password": "$2a$10$zfkp3m8wlP8CTz/rXIAGVuR0J4N9GdDWj9UGesLBtuAJe2jtZ972e",
+      "createdTime": "2025-02-17 22:55:30",
+      "updateTime": null
+    },
+    {
+      "index": 12,
+      "name": "John Do",
+      "email": "user@example.com",
+      "password": "$2a$10$XzKtoTFS5vw4NHdJ8V8j5uCbxCtdna4obRlfVRduzW3LE8oA3R6CG",
+      "createdTime": "2025-02-17 22:36:43",
+      "updateTime": null
+    }
+  ],
+  "error": null
+}
