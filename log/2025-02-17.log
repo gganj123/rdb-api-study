@@ -1,0 +1,421 @@
+[ 2025-02-17 04:32:49 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM posts;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-17 04:32:49 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM posts;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-17 04:32:49 PM ] [ Test Server ]  -  undefined 
+{
+  "length": 104,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "42P01",
+  "position": "15",
+  "file": "parse_relation.c",
+  "line": "1449",
+  "routine": "parserOpenTable"
+}
+[Body]
+undefined
+[ 2025-02-17 04:32:50 PM ] [ Test Server ]  -  Error:  relation "posts" does not exist 
+{
+  "length": 104,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "42P01",
+  "position": "15",
+  "file": "parse_relation.c",
+  "line": "1449",
+  "routine": "parserOpenTable",
+  "stack": "error: relation \"posts\" does not exist\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findMany (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:176:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findAllPosts (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:19:19)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findAllPosts (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:25:21)"
+}
+[Body]
+undefined
+[ 2025-02-17 04:32:50 PM ] [ Test Server ]  -  Response /api/posts/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "relation \"posts\" does not exist",
+  "data": null,
+  "error": {
+    "name": "error",
+    "message": "relation \"posts\" does not exist",
+    "stack": "error: relation \"posts\" does not exist\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findMany (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:176:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findAllPosts (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:19:19)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findAllPosts (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:25:21)"
+  }
+}
+[ 2025-02-17 04:34:07 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-17 04:34:07 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-17 04:34:07 PM ] [ Test Server ]  -  Error:  ResponseData.fromData is not a function 
+{
+  "stack": "TypeError: ResponseData.fromData is not a function\n    at findAllUsers (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:50:37)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-17 04:34:07 PM ] [ Test Server ]  -  Response /api/users/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "ResponseData.fromData is not a function",
+  "data": null,
+  "error": {
+    "name": "TypeError",
+    "message": "ResponseData.fromData is not a function",
+    "stack": "TypeError: ResponseData.fromData is not a function\n    at findAllUsers (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:50:37)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-17 05:04:10 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM posts;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-17 05:04:10 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM posts;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-17 05:04:10 PM ] [ Test Server ]  -  undefined 
+{
+  "length": 104,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "42P01",
+  "position": "15",
+  "file": "parse_relation.c",
+  "line": "1449",
+  "routine": "parserOpenTable"
+}
+[Body]
+undefined
+[ 2025-02-17 05:04:10 PM ] [ Test Server ]  -  Error:  relation "posts" does not exist 
+{
+  "length": 104,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "42P01",
+  "position": "15",
+  "file": "parse_relation.c",
+  "line": "1449",
+  "routine": "parserOpenTable",
+  "stack": "error: relation \"posts\" does not exist\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findMany (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:176:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findAllPosts (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:19:19)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findAllPosts (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:25:21)"
+}
+[Body]
+undefined
+[ 2025-02-17 05:04:10 PM ] [ Test Server ]  -  Response /api/posts/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "relation \"posts\" does not exist",
+  "data": null,
+  "error": {
+    "name": "error",
+    "message": "relation \"posts\" does not exist",
+    "stack": "error: relation \"posts\" does not exist\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findMany (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:176:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findAllPosts (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:19:19)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findAllPosts (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:25:21)"
+  }
+}
+[ 2025-02-17 05:04:35 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM posts;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-17 05:04:35 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM posts;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-17 05:04:35 PM ] [ Test Server ]  -  undefined 
+{
+  "length": 104,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "42P01",
+  "position": "15",
+  "file": "parse_relation.c",
+  "line": "1449",
+  "routine": "parserOpenTable"
+}
+[Body]
+undefined
+[ 2025-02-17 05:04:35 PM ] [ Test Server ]  -  Error:  relation "posts" does not exist 
+{
+  "length": 104,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "42P01",
+  "position": "15",
+  "file": "parse_relation.c",
+  "line": "1449",
+  "routine": "parserOpenTable",
+  "stack": "error: relation \"posts\" does not exist\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findMany (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:176:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findAllPosts (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:19:19)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findAllPosts (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:25:21)"
+}
+[Body]
+undefined
+[ 2025-02-17 05:04:35 PM ] [ Test Server ]  -  Response /api/posts/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "relation \"posts\" does not exist",
+  "data": null,
+  "error": {
+    "name": "error",
+    "message": "relation \"posts\" does not exist",
+    "stack": "error: relation \"posts\" does not exist\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findMany (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:176:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findAllPosts (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:19:19)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findAllPosts (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:25:21)"
+  }
+}
+[ 2025-02-17 05:06:10 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-17 05:06:10 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-17 05:06:10 PM ] [ Test Server ]  -  Error:  ResponseData.fromData is not a function 
+{
+  "stack": "TypeError: ResponseData.fromData is not a function\n    at findAllUsers (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:50:37)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-17 05:06:10 PM ] [ Test Server ]  -  Response /api/users/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "ResponseData.fromData is not a function",
+  "data": null,
+  "error": {
+    "name": "TypeError",
+    "message": "ResponseData.fromData is not a function",
+    "stack": "TypeError: ResponseData.fromData is not a function\n    at findAllUsers (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:50:37)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-17 05:09:43 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-17 05:09:43 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-17 05:09:43 PM ] [ Test Server ]  -  Error:  ResponseData.fromData is not a function 
+{
+  "stack": "TypeError: ResponseData.fromData is not a function\n    at findAllUsers (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:50:37)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-17 05:09:43 PM ] [ Test Server ]  -  Response /api/users/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "ResponseData.fromData is not a function",
+  "data": null,
+  "error": {
+    "name": "TypeError",
+    "message": "ResponseData.fromData is not a function",
+    "stack": "TypeError: ResponseData.fromData is not a function\n    at findAllUsers (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:50:37)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-17 06:47:48 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-17 06:47:48 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-17 06:47:48 PM ] [ Test Server ]  -  Error:  ResponseData.fromData is not a function 
+{
+  "stack": "TypeError: ResponseData.fromData is not a function\n    at findAllUsers (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:50:37)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-17 06:47:48 PM ] [ Test Server ]  -  Response /api/users/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "ResponseData.fromData is not a function",
+  "data": null,
+  "error": {
+    "name": "TypeError",
+    "message": "ResponseData.fromData is not a function",
+    "stack": "TypeError: ResponseData.fromData is not a function\n    at findAllUsers (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:50:37)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-17 07:19:27 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-17 07:19:27 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-17 07:19:27 PM ] [ Test Server ]  -  Error:  ResponseData.fromData is not a function 
+{
+  "stack": "TypeError: ResponseData.fromData is not a function\n    at findAllUsers (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:50:37)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-17 07:19:27 PM ] [ Test Server ]  -  Response /api/users/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "ResponseData.fromData is not a function",
+  "data": null,
+  "error": {
+    "name": "TypeError",
+    "message": "ResponseData.fromData is not a function",
+    "stack": "TypeError: ResponseData.fromData is not a function\n    at findAllUsers (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:50:37)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-17 07:29:52 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-17 07:29:52 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-17 07:29:52 PM ] [ Test Server ]  -  Response /api/users/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 7,
+      "name": "이름3",
+      "email": "daehyeon3@heredotcorp.com",
+      "password": "$2a$10$q7aX5wwpjiKPqKiBMw2fqehpzKWv1FJlwhZGiYVhchER38tKEzmvy",
+      "createdTime": "2025-02-14 12:56:47",
+      "updateTime": null
+    },
+    {
+      "index": 8,
+      "name": "이름3",
+      "email": "daehyeon3@heredotcorp.com",
+      "password": "$2a$10$gP70kkRxZiiLix.PKyNBCeZom84z11QGU55AdG4jpyapddviHdqnq",
+      "createdTime": "2025-02-14 13:36:37",
+      "updateTime": null
+    }
+  ],
+  "error": null
+}

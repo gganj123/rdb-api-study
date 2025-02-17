@@ -3,7 +3,9 @@
 ## 설치
 
 ### npm 사용시
+
 npm 을 사용하고 계신다면 `package.json` 파일에서 아래 코드를
+
 ```json
 {
   "dependencies": {
@@ -17,6 +19,7 @@ npm 을 사용하고 계신다면 `package.json` 파일에서 아래 코드를
 ```
 
 다음으로 변경
+
 ```json
 {
   "dependencies": {
@@ -28,18 +31,22 @@ npm 을 사용하고 계신다면 `package.json` 파일에서 아래 코드를
   }
 }
 ```
+
 이후 `npm install`을 실행해서 패키지들을 설치하시면 됩니다.
 
 ### pnpm 사용시
+
 pnpm을 사용하고 계신다면 `pnpm install`을 실행해서 패키지들을 설치하시면 됩니다.
 
 ## 서버 실행방법
+
 ### npm 사용시
+
 `npm run dev` 명령어를 실행하시면 됩니다.
 
 ### pnpm 사용시
-`pnpm dev` 명령어를 실행하시면 됩니다.
 
+`pnpm dev` 명령어를 실행하시면 됩니다.
 
 ## 데이터베이스 연결 설정
 
@@ -48,10 +55,10 @@ pnpm을 사용하고 계신다면 `pnpm install`을 실행해서 패키지들을
 ```js
 /// Pool 인스턴스 생성
 const pool = new Pool({
-  user: 'postgres',
-  host: 'localhost',
-  database: 'postgres',
-  password: 'postgres',
+  user: "postgres",
+  host: "localhost",
+  database: "postgres",
+  password: "postgres",
   port: 5432,
   max: 100,
   min: 10,
@@ -66,8 +73,8 @@ const pool = new Pool({
 - `password`: new123!@#
 - `port`: 5432
 
-
 ## 쿼리 작성 방법
+
 ORM을 사용하지 않고 Raw 쿼리를 사용하고 있기 때문에, 쿼리빌더를 자체적으로 구현하였습니다.
 베이스는 `AbstractQuery`이며 각 디비별로 확장하여 사용합니다. 현재 회사는 PostgreSQL을 사용하고 있기 때문에 `PgQueryBuilder`를 구현하여 사용합니다.
 `PgQueryBuilder`의 인스턴스를 생성해서 사용할 필요는 없습니다. 모든 Mapper 클래스 (DB와 직접적으로 통신하는 부분)은 `BaseMapper`를 상속받아 사용합니다.
@@ -76,9 +83,7 @@ ORM을 사용하지 않고 Raw 쿼리를 사용하고 있기 때문에, 쿼리�
 ```js
 class UserMapper extends BaseMapper {
   findAllUsers() {
-    return this.exec(async query =>
-      query.SELECT('*').FROM('users').findMany()
-    )
+    return this.exec(async (query) => query.SELECT("*").FROM("users").findMany());
   }
 }
 ```
@@ -109,13 +114,10 @@ class UserMapper extends BaseMapper {
 - `deleteUser` 함수는 유저를 삭제합니다.
 - `existsUserById` 함수는 유저가 존재하는지 확인합니다.
 
-
 ```js
 class UserMapper extends BaseMapper {
   findAllUsers() {
-    return this.exec(async query =>
-      query.SELECT('*').FROM('users').findMany()
-    )
+    return this.exec(async (query) => query.SELECT("*").FROM("users").findMany());
   }
 }
 ```
@@ -125,7 +127,6 @@ class UserMapper extends BaseMapper {
 `Service` 클래스는 비즈니스 로직을 작성하는 클래스입니다.
 `Mapper` 클래스와 같이 함수형 규칙을 따릅니다.
 데이터를 가공하거나 조합하는 로직은 모두 `Service` 클래스에 작성합니다.
-
 
 ```js
 class UserService {
@@ -154,7 +155,6 @@ class UserService {
 `Controller` 클래스에는 반드시 `try catch` 블록이 있어야합니다. 그리고 service에서 반환되는 값이 있으면 반드기 `ResponseData` 인스턴스로 만들어야하고, `sendResponse` 함수를 사용해야합니다.
 에러가 발생하면 `sendErrorResponse` 함수를 사용해야합니다. `ResponseData` 참고해서 어떤 정적 메소드가 있는지 확인해주세요
 
-
 ```js
 class UserController {
   constructor() {
@@ -163,13 +163,13 @@ class UserController {
 
   findAllUsers = async (req, res) => {
     try {
-      const users = await this.userService.findAllUsers()
-      const response = ResponseData.fromData(users)
-      sendResponse(res, response)
+      const users = await this.userService.findAllUsers();
+      const response = ResponseData.fromData(users);
+      sendResponse(res, response);
     } catch (error) {
-      sendErrorResponse(res, error)
+      sendErrorResponse(res, error);
     }
-  }
+  };
 }
 ```
 
@@ -178,11 +178,13 @@ class UserController {
 미리 작성한 예제를 참고해서 만들어주세요.
 
 ## 예외 처리 방법
+
 비즈니스 로직을 작성하다가 예외를 발생시켜야 할때가 있습니다. 예) 유저가 존재하지 않는 경우, 잘못된 파라미터가 들어온 경우 등등
 이럴때는 `Error.js` 파일을 참고해서 적절한 예외를 발생시키면 됩니다.
+
 ```js
 // 예시
-throw new NotFoundError({ message: ResponseMessage.userNotFound, customMessage: '유저가 존재하지 않습니다.' })
+throw new NotFoundError({ message: ResponseMessage.userNotFound, customMessage: "유저가 존재하지 않습니다." });
 ```
 
 ## 권장사항

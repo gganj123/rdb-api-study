@@ -1,6 +1,6 @@
 import { createTransactionalService } from "../../database/TransactionProxy.js";
-import { PostMapper } from "./PostMapper";
-import { PostInfo } from "./models/PostInfo";
+import { PostMapper } from "./PostMapper.js";
+import { PostInfo } from "./models/PostInfo.js";
 
 class _PostService {
   /**@type {PostMapper} */

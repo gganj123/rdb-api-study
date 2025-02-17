@@ -47,7 +47,7 @@ export class UserController {
   findAllUsers = async (req, res) => {
     try {
       const users = await this.userService.findAllUsers();
-      const response = ResponseData.fromData(users);
+      const response = ResponseData.data(users);
       sendResponse(res, response);
     } catch (error) {
       sendErrorResponse(res, error);
@@ -64,7 +64,7 @@ export class UserController {
       if (!user) {
         return sendErrorResponse(res, new Error("해당 userId의 사용자가 없습니다."));
       }
-      const response = ResponseData.fromData(user);
+      const response = ResponseData.data(user);
       sendResponse(res, response);
     } catch (error) {
       sendErrorResponse(res, error);
@@ -81,7 +81,7 @@ export class UserController {
       if (!user) {
         return sendErrorResponse(res, new Error("해당 email의 사용자가 없습니다."));
       }
-      const response = ResponseData.fromData(user);
+      const response = ResponseData.data(user);
       sendResponse(res, response);
     } catch (error) {
       sendErrorResponse(res, error);
@@ -103,7 +103,7 @@ export class UserController {
 
       const updateCount = await this.userService.updateUser(userId, email, name);
       if (updateCount > 0) {
-        const response = ResponseData.fromData({
+        const response = ResponseData.data({
           userId,
           email,
           name,
@@ -135,7 +135,7 @@ export class UserController {
       const deletedUser = await this.userService.deleteUser(userId);
 
       if (deletedUser > 0) {
-        const response = ResponseData.fromData({
+        const response = ResponseData.data({
           userId,
           message: "회원이 탈퇴되었습니다.",
         });

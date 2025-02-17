@@ -68,7 +68,7 @@ export const localAuth = (req, res, next) =>
       if (user) {
         //로그인 성공 시 토큰 제공하기
         const token = generateJwt(user.userId);
-        const response = ResponseData.fromData({
+        const response = ResponseData.data({
           userId: user.userId,
           email: user.email,
           token: token,

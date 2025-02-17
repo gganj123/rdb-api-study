@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { PostController } from "../modules/post/PostController";
+import { PostController } from "../modules/post/PostController.js";
 
 /**
  * 포스트 라우터

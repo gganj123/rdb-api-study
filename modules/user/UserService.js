@@ -2,7 +2,7 @@ import bcrypt from "bcryptjs";
 import { createTransactionalService } from "../../database/TransactionProxy.js";
 import { UserCreateDto, UserDto } from "./models/UserDto.js";
 import { UserMapper } from "./UserMapper.js";
-import { UserMst } from "./models/UserMst";
+import { UserMst } from "./models/UserMst.js";
 class _UserService {
   /** @type {UserMapper} */
   userMapper;
