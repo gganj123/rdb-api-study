@@ -6,7 +6,7 @@ import { jwtStrategy } from "./Jwt.js";
 // 예제 사용자 DB
 const users = [
   {
-    userId: "10",
+    userId: "9",
     email: "user@example.com",
     password: bcrypt.hashSync("securePassword123!", 10),
   },
@@ -23,10 +23,14 @@ passport.use(
     async (email, password, done) => {
       try {
         const user = users.find((u) => u.email === email);
-        if (!user) return done(null, false, { message: "이메일이 존재하지 않습니다." });
+        if (!user)
+          return done(null, false, { message: "이메일이 존재하지 않습니다." });
 
         const isMatch = await bcrypt.compare(password, user.password);
-        if (!isMatch) return done(null, false, { message: "비밀번호가 일치하지 않습니다." });
+        if (!isMatch)
+          return done(null, false, {
+            message: "비밀번호가 일치하지 않습니다.",
+          });
 
         return done(null, user);
       } catch (error) {

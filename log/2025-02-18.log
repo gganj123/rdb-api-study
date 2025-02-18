@@ -5953,3 +5953,1049 @@ undefined
   ],
   "error": null
 }
+[ 2025-02-18 08:42:08 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM posts;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-18 08:42:08 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM posts;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-18 08:42:08 AM ] [ Test Server ]  -  undefined 
+{
+  "length": 104,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "42P01",
+  "position": "15",
+  "file": "parse_relation.c",
+  "line": "1449",
+  "routine": "parserOpenTable"
+}
+[Body]
+undefined
+[ 2025-02-18 08:42:08 AM ] [ Test Server ]  -  Error:  relation "posts" does not exist 
+{
+  "length": 104,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "42P01",
+  "position": "15",
+  "file": "parse_relation.c",
+  "line": "1449",
+  "routine": "parserOpenTable",
+  "stack": "error: relation \"posts\" does not exist\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findMany (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:175:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findAllPosts (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:19:19)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findAllPosts (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:25:21)"
+}
+[Body]
+undefined
+[ 2025-02-18 08:42:08 AM ] [ Test Server ]  -  Response /api/posts/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "relation \"posts\" does not exist",
+  "data": null,
+  "error": {
+    "name": "error",
+    "message": "relation \"posts\" does not exist",
+    "stack": "error: relation \"posts\" does not exist\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findMany (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:175:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findAllPosts (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:19:19)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findAllPosts (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:25:21)"
+  }
+}
+[ 2025-02-18 08:43:07 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-18 08:43:07 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-18 08:43:07 AM ] [ Test Server ]  -  Response /api/users/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 7,
+      "name": "이름3",
+      "email": "daehyeon3@heredotcorp.com",
+      "password": "$2a$10$q7aX5wwpjiKPqKiBMw2fqehpzKWv1FJlwhZGiYVhchER38tKEzmvy",
+      "createdTime": "2025-02-14 12:56:47",
+      "updateTime": null
+    },
+    {
+      "index": 8,
+      "name": "이름3",
+      "email": "daehyeon3@heredotcorp.com",
+      "password": "$2a$10$gP70kkRxZiiLix.PKyNBCeZom84z11QGU55AdG4jpyapddviHdqnq",
+      "createdTime": "2025-02-14 13:36:37",
+      "updateTime": null
+    },
+    {
+      "index": 9,
+      "name": "John Doe",
+      "email": "user@example.com",
+      "password": "$2a$10$MioTCLc/u1rtvvOU5TG0muyF.WEeNfMpujkEp2AqgRuE6JdBf2/ei",
+      "createdTime": "2025-02-17 19:43:54",
+      "updateTime": null
+    }
+  ],
+  "error": null
+}
+[ 2025-02-18 09:06:26 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-18 09:06:26 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-18 09:06:26 AM ] [ Test Server ]  -  Response /api/users/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 7,
+      "name": "이름3",
+      "email": "daehyeon3@heredotcorp.com",
+      "password": "$2a$10$q7aX5wwpjiKPqKiBMw2fqehpzKWv1FJlwhZGiYVhchER38tKEzmvy",
+      "createdTime": "2025-02-14 12:56:47",
+      "updateTime": null
+    },
+    {
+      "index": 8,
+      "name": "이름3",
+      "email": "daehyeon3@heredotcorp.com",
+      "password": "$2a$10$gP70kkRxZiiLix.PKyNBCeZom84z11QGU55AdG4jpyapddviHdqnq",
+      "createdTime": "2025-02-14 13:36:37",
+      "updateTime": null
+    },
+    {
+      "index": 9,
+      "name": "John Doe",
+      "email": "user@example.com",
+      "password": "$2a$10$MioTCLc/u1rtvvOU5TG0muyF.WEeNfMpujkEp2AqgRuE6JdBf2/ei",
+      "createdTime": "2025-02-17 19:43:54",
+      "updateTime": null
+    }
+  ],
+  "error": null
+}
+[ 2025-02-18 09:06:40 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM posts;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-18 09:06:40 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM posts;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-18 09:06:40 AM ] [ Test Server ]  -  undefined 
+{
+  "length": 104,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "42P01",
+  "position": "15",
+  "file": "parse_relation.c",
+  "line": "1449",
+  "routine": "parserOpenTable"
+}
+[Body]
+undefined
+[ 2025-02-18 09:06:40 AM ] [ Test Server ]  -  Error:  relation "posts" does not exist 
+{
+  "length": 104,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "42P01",
+  "position": "15",
+  "file": "parse_relation.c",
+  "line": "1449",
+  "routine": "parserOpenTable",
+  "stack": "error: relation \"posts\" does not exist\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findMany (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:175:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findAllPosts (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:19:19)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findAllPosts (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:25:21)"
+}
+[Body]
+undefined
+[ 2025-02-18 09:06:40 AM ] [ Test Server ]  -  Response /api/posts/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "relation \"posts\" does not exist",
+  "data": null,
+  "error": {
+    "name": "error",
+    "message": "relation \"posts\" does not exist",
+    "stack": "error: relation \"posts\" does not exist\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findMany (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:175:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findAllPosts (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:19:19)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findAllPosts (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:25:21)"
+  }
+}
+[ 2025-02-18 09:24:05 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM posts;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-18 09:24:05 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM posts;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-18 09:24:05 AM ] [ Test Server ]  -  undefined 
+{
+  "length": 104,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "42P01",
+  "position": "15",
+  "file": "parse_relation.c",
+  "line": "1449",
+  "routine": "parserOpenTable"
+}
+[Body]
+undefined
+[ 2025-02-18 09:24:05 AM ] [ Test Server ]  -  Error:  relation "posts" does not exist 
+{
+  "length": 104,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "42P01",
+  "position": "15",
+  "file": "parse_relation.c",
+  "line": "1449",
+  "routine": "parserOpenTable",
+  "stack": "error: relation \"posts\" does not exist\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findMany (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:175:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findAllPosts (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:20:19)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findAllPosts (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:50:21)"
+}
+[Body]
+undefined
+[ 2025-02-18 09:24:05 AM ] [ Test Server ]  -  Response /api/posts/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "relation \"posts\" does not exist",
+  "data": null,
+  "error": {
+    "name": "error",
+    "message": "relation \"posts\" does not exist",
+    "stack": "error: relation \"posts\" does not exist\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findMany (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:175:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findAllPosts (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:20:19)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findAllPosts (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:50:21)"
+  }
+}
+[ 2025-02-18 09:32:12 AM ] [ Test Server ]  -  Response /api/posts/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 401,
+  "message": "token is invalid",
+  "data": null,
+  "error": null
+}
+[ 2025-02-18 09:32:24 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-18 09:32:24 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-18 09:32:24 AM ] [ Test Server ]  -  Response /api/users/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 7,
+      "name": "이름3",
+      "email": "daehyeon3@heredotcorp.com",
+      "password": "$2a$10$q7aX5wwpjiKPqKiBMw2fqehpzKWv1FJlwhZGiYVhchER38tKEzmvy",
+      "createdTime": "2025-02-14 12:56:47",
+      "updateTime": null
+    },
+    {
+      "index": 8,
+      "name": "이름3",
+      "email": "daehyeon3@heredotcorp.com",
+      "password": "$2a$10$gP70kkRxZiiLix.PKyNBCeZom84z11QGU55AdG4jpyapddviHdqnq",
+      "createdTime": "2025-02-14 13:36:37",
+      "updateTime": null
+    },
+    {
+      "index": 9,
+      "name": "John Doe",
+      "email": "user@example.com",
+      "password": "$2a$10$MioTCLc/u1rtvvOU5TG0muyF.WEeNfMpujkEp2AqgRuE6JdBf2/ei",
+      "createdTime": "2025-02-17 19:43:54",
+      "updateTime": null
+    }
+  ],
+  "error": null
+}
+[ 2025-02-18 09:32:29 AM ] [ Test Server ]  -  Response /api/users/login 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "userId": "9",
+      "email": "user@example.com",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI5IiwiaWF0IjoxNzM5ODM4NzQ5LCJleHAiOjE3Mzk5MjUxNDksImF1ZCI6ImF1ZGllbmNlIiwiaXNzIjoiaXNzdWVyIn0.aMCALRdI662MfKEKvFEmjlYrgwI1gxtPtD1dJ8glIPk",
+      "message": "로그인 되었습니다."
+    }
+  ],
+  "error": null
+}
+[ 2025-02-18 09:32:46 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 09:32:46 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 09:32:46 AM ] [ Test Server ]  -  Error:  createdId is not defined 
+{
+  "stack": "ReferenceError: createdId is not defined\n    at _PostService.createPost (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:37:66)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:58\n    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:34\n    at transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async creaetePost (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:40:27)"
+}
+[Body]
+undefined
+[ 2025-02-18 09:32:46 AM ] [ Test Server ]  -  Response /api/posts/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "createdId is not defined",
+  "data": null,
+  "error": {
+    "name": "ReferenceError",
+    "message": "createdId is not defined",
+    "stack": "ReferenceError: createdId is not defined\n    at _PostService.createPost (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:37:66)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:58\n    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:34\n    at transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async creaetePost (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:40:27)"
+  }
+}
+[ 2025-02-18 09:33:14 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 09:33:14 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 09:33:14 AM ] [ Test Server ]  -  Query: Create Post 
+{
+  "query": "INSERT INTO public.post_info (title,content,createdId) VALUES ('undefined', 'undefined', 'undefined') RETURNING *;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-18 09:33:14 AM ] [ Test Server ]  -  Raw Query: Create Post 
+{
+  "text": "INSERT INTO public.post_info (title,content,createdId) VALUES ('undefined', 'undefined', 'undefined') RETURNING *;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-18 09:33:19 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 09:33:19 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 09:33:19 AM ] [ Test Server ]  -  Query: Create Post 
+{
+  "query": "INSERT INTO public.post_info (title,content,createdId) VALUES ('undefined', 'undefined', 'undefined') RETURNING *;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-18 09:33:19 AM ] [ Test Server ]  -  Raw Query: Create Post 
+{
+  "text": "INSERT INTO public.post_info (title,content,createdId) VALUES ('undefined', 'undefined', 'undefined') RETURNING *;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-18 09:34:30 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 09:34:30 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 09:34:30 AM ] [ Test Server ]  -  Query: Create Post 
+{
+  "query": "INSERT INTO public.post_info (title,content,created_id) VALUES ('undefined', 'undefined', 'undefined') RETURNING *;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-18 09:34:30 AM ] [ Test Server ]  -  Raw Query: Create Post 
+{
+  "text": "INSERT INTO public.post_info (title,content,created_id) VALUES ('undefined', 'undefined', 'undefined') RETURNING *;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-18 09:35:32 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 09:35:32 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 09:35:32 AM ] [ Test Server ]  -  Query: Create Post 
+{
+  "query": "INSERT INTO public.post_info (title,content,created_id) VALUES ('undefined', 'undefined', 'undefined') RETURNING *;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-18 09:35:32 AM ] [ Test Server ]  -  Raw Query: Create Post 
+{
+  "text": "INSERT INTO public.post_info (title,content,created_id) VALUES ('undefined', 'undefined', 'undefined') RETURNING *;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-18 09:37:05 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 09:37:05 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 09:37:05 AM ] [ Test Server ]  -  Query: Create Post 
+{
+  "query": "INSERT INTO public.post_info (title,content,created_id) VALUES ('undefined', 'undefined', 'undefined') RETURNING *;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-18 09:37:05 AM ] [ Test Server ]  -  Raw Query: Create Post 
+{
+  "text": "INSERT INTO public.post_info (title,content,created_id) VALUES ('undefined', 'undefined', 'undefined') RETURNING *;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-18 09:37:05 AM ] [ Test Server ]  -  undefined 
+{
+  "length": 119,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "position": "91",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe"
+}
+[Body]
+undefined
+[ 2025-02-18 09:37:05 AM ] [ Test Server ]  -  Error:  invalid input syntax for type integer: "undefined" 
+{
+  "length": 119,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "position": "91",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe",
+  "stack": "error: invalid input syntax for type integer: \"undefined\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:226:32)\n    at async file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostMapper.js:24:22\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.createPost (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:37:25)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async creaetePost (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:40:27)"
+}
+[Body]
+undefined
+[ 2025-02-18 09:37:05 AM ] [ Test Server ]  -  Response /api/posts/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "invalid input syntax for type integer: \"undefined\"",
+  "data": null,
+  "error": {
+    "name": "error",
+    "message": "invalid input syntax for type integer: \"undefined\"",
+    "stack": "error: invalid input syntax for type integer: \"undefined\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:226:32)\n    at async file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostMapper.js:24:22\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.createPost (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:37:25)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async creaetePost (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:40:27)"
+  }
+}
+[ 2025-02-18 09:57:34 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 09:57:34 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 09:57:34 AM ] [ Test Server ]  -  Query: Create Post 
+{
+  "query": "INSERT INTO public.post_info (title,content,created_id) VALUES ('게시글 테스트', '게시되었습니다.', 'undefined') RETURNING *;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-18 09:57:34 AM ] [ Test Server ]  -  Raw Query: Create Post 
+{
+  "text": "INSERT INTO public.post_info (title,content,created_id) VALUES ('게시글 테스트', '게시되었습니다.', 'undefined') RETURNING *;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-18 09:57:34 AM ] [ Test Server ]  -  undefined 
+{
+  "length": 119,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "position": "88",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe"
+}
+[Body]
+undefined
+[ 2025-02-18 09:57:34 AM ] [ Test Server ]  -  Error:  invalid input syntax for type integer: "undefined" 
+{
+  "length": 119,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "position": "88",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe",
+  "stack": "error: invalid input syntax for type integer: \"undefined\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:226:32)\n    at async file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostMapper.js:24:22\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.createPost (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:37:25)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async creaetePost (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:40:27)"
+}
+[Body]
+undefined
+[ 2025-02-18 09:57:34 AM ] [ Test Server ]  -  Response /api/posts/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "invalid input syntax for type integer: \"undefined\"",
+  "data": null,
+  "error": {
+    "name": "error",
+    "message": "invalid input syntax for type integer: \"undefined\"",
+    "stack": "error: invalid input syntax for type integer: \"undefined\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:226:32)\n    at async file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostMapper.js:24:22\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.createPost (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:37:25)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async creaetePost (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:40:27)"
+  }
+}
+[ 2025-02-18 10:00:41 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 10:00:41 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 10:00:41 AM ] [ Test Server ]  -  Query: Create Post 
+{
+  "query": "INSERT INTO public.post_info (title,content,created_id) VALUES ('게시글 테스트', '게시되었습니다.', '9') RETURNING *;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-18 10:00:41 AM ] [ Test Server ]  -  Raw Query: Create Post 
+{
+  "text": "INSERT INTO public.post_info (title,content,created_id) VALUES ('게시글 테스트', '게시되었습니다.', '9') RETURNING *;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-18 10:00:41 AM ] [ Test Server ]  -  Response /api/posts/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 1,
+      "title": "게시글 테스트",
+      "content": "게시되었습니다.",
+      "createdId": 9,
+      "createdTime": "2025-02-18T01:00:43.000Z",
+      "updateTime": null
+    }
+  ],
+  "error": null
+}
+[ 2025-02-18 10:00:51 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM posts;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-18 10:00:51 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM posts;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-18 10:00:52 AM ] [ Test Server ]  -  undefined 
+{
+  "length": 104,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "42P01",
+  "position": "15",
+  "file": "parse_relation.c",
+  "line": "1449",
+  "routine": "parserOpenTable"
+}
+[Body]
+undefined
+[ 2025-02-18 10:00:52 AM ] [ Test Server ]  -  Error:  relation "posts" does not exist 
+{
+  "length": 104,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "42P01",
+  "position": "15",
+  "file": "parse_relation.c",
+  "line": "1449",
+  "routine": "parserOpenTable",
+  "stack": "error: relation \"posts\" does not exist\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findMany (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:175:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findAllPosts (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:20:19)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findAllPosts (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:55:21)"
+}
+[Body]
+undefined
+[ 2025-02-18 10:00:52 AM ] [ Test Server ]  -  Response /api/posts/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "relation \"posts\" does not exist",
+  "data": null,
+  "error": {
+    "name": "error",
+    "message": "relation \"posts\" does not exist",
+    "stack": "error: relation \"posts\" does not exist\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findMany (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:175:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findAllPosts (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:20:19)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findAllPosts (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:55:21)"
+  }
+}
+[ 2025-02-18 10:00:53 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM posts;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-18 10:00:53 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM posts;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-18 10:00:53 AM ] [ Test Server ]  -  undefined 
+{
+  "length": 104,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "42P01",
+  "position": "15",
+  "file": "parse_relation.c",
+  "line": "1449",
+  "routine": "parserOpenTable"
+}
+[Body]
+undefined
+[ 2025-02-18 10:00:53 AM ] [ Test Server ]  -  Error:  relation "posts" does not exist 
+{
+  "length": 104,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "42P01",
+  "position": "15",
+  "file": "parse_relation.c",
+  "line": "1449",
+  "routine": "parserOpenTable",
+  "stack": "error: relation \"posts\" does not exist\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findMany (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:175:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findAllPosts (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:20:19)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findAllPosts (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:55:21)"
+}
+[Body]
+undefined
+[ 2025-02-18 10:00:53 AM ] [ Test Server ]  -  Response /api/posts/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "relation \"posts\" does not exist",
+  "data": null,
+  "error": {
+    "name": "error",
+    "message": "relation \"posts\" does not exist",
+    "stack": "error: relation \"posts\" does not exist\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findMany (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:175:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findAllPosts (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:20:19)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findAllPosts (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:55:21)"
+  }
+}
+[ 2025-02-18 10:02:03 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 10:02:03 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 10:02:03 AM ] [ Test Server ]  -  Query: Create Post 
+{
+  "query": "INSERT INTO public.post_info (title,content,created_id) VALUES ('두번째 테스트', '게시가 되었습니다.', '9') RETURNING *;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-18 10:02:03 AM ] [ Test Server ]  -  Raw Query: Create Post 
+{
+  "text": "INSERT INTO public.post_info (title,content,created_id) VALUES ('두번째 테스트', '게시가 되었습니다.', '9') RETURNING *;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-18 10:02:03 AM ] [ Test Server ]  -  Response /api/posts/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 2,
+      "title": "두번째 테스트",
+      "content": "게시가 되었습니다.",
+      "createdId": 9,
+      "createdTime": "2025-02-18T01:02:05.000Z",
+      "updateTime": null
+    }
+  ],
+  "error": null
+}
+[ 2025-02-18 10:02:13 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM posts;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-18 10:02:13 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM posts;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-18 10:02:13 AM ] [ Test Server ]  -  undefined 
+{
+  "length": 104,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "42P01",
+  "position": "15",
+  "file": "parse_relation.c",
+  "line": "1449",
+  "routine": "parserOpenTable"
+}
+[Body]
+undefined
+[ 2025-02-18 10:02:13 AM ] [ Test Server ]  -  Error:  relation "posts" does not exist 
+{
+  "length": 104,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "42P01",
+  "position": "15",
+  "file": "parse_relation.c",
+  "line": "1449",
+  "routine": "parserOpenTable",
+  "stack": "error: relation \"posts\" does not exist\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findMany (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:175:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findAllPosts (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:20:19)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findAllPosts (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:55:21)"
+}
+[Body]
+undefined
+[ 2025-02-18 10:02:13 AM ] [ Test Server ]  -  Response /api/posts/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "relation \"posts\" does not exist",
+  "data": null,
+  "error": {
+    "name": "error",
+    "message": "relation \"posts\" does not exist",
+    "stack": "error: relation \"posts\" does not exist\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findMany (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:175:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findAllPosts (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:20:19)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findAllPosts (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:55:21)"
+  }
+}
+[ 2025-02-18 10:02:43 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM post_info;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-18 10:02:43 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM post_info;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-18 10:02:43 AM ] [ Test Server ]  -  Response /api/posts/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 1,
+      "title": "게시글 테스트",
+      "content": "게시되었습니다.",
+      "createdTime": "2025-02-18 10:00:43",
+      "updateTime": null,
+      "createdId": 9,
+      "updateId": null
+    },
+    {
+      "index": 2,
+      "title": "두번째 테스트",
+      "content": "게시가 되었습니다.",
+      "createdTime": "2025-02-18 10:02:05",
+      "updateTime": null,
+      "createdId": 9,
+      "updateId": null
+    }
+  ],
+  "error": null
+}

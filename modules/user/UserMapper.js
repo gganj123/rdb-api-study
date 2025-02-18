@@ -7,7 +7,9 @@ export class UserMapper extends BaseMapper {
    * @returns {Promise<UserMst[]>}
    */
   findAllUsers() {
-    return this.exec(async (query) => query.SELECT("*").FROM("user_mst").findMany());
+    return this.exec(async (query) =>
+      query.SELECT("*").FROM("user_mst").findMany()
+    );
   }
 
   /**
@@ -34,7 +36,12 @@ export class UserMapper extends BaseMapper {
    */
   findById(userId) {
     return this.exec(async (query) =>
-      query.SELECT("*").FROM("user_mst").WHERE(`index = :userId`).addParam("userId", userId).findOne()
+      query
+        .SELECT("*")
+        .FROM("user_mst")
+        .WHERE(`index = :userId`)
+        .addParam("userId", userId)
+        .findOne()
     );
   }
 
@@ -48,7 +55,12 @@ export class UserMapper extends BaseMapper {
    */
   findByEmail(email) {
     return this.exec(async (query) =>
-      query.SELECT("*").FROM("user_mst").WHERE(`email = :email`).addParam("email", email).findOne()
+      query
+        .SELECT("*")
+        .FROM("user_mst")
+        .WHERE(`email = :email`)
+        .addParam("email", email)
+        .findOne()
     );
   }
 
@@ -63,7 +75,9 @@ export class UserMapper extends BaseMapper {
     console.log("맵퍼 업데이트 파라미터", userId, email, name);
     return this.exec(async (query) => {
       const result = await query
-        .rawQuery(`UPDATE user_mst SET email = :email, name = :name WHERE index = :userId`)
+        .rawQuery(
+          `UPDATE user_mst SET email = :email, name = :name WHERE index = :userId`
+        )
         .addParam("email", email)
         .addParam("name", name)
         .addParam("userId", userId)
@@ -101,7 +115,9 @@ export class UserMapper extends BaseMapper {
     return this.exec(async (query) => {
       console.log("exist:", userId);
       const result = await query
-        .rawQuery(`SELECT EXISTS(SELECT 1 FROM user_mst WHERE index = :userId) AS "exists"`)
+        .rawQuery(
+          `SELECT EXISTS(SELECT 1 FROM user_mst WHERE index = :userId) AS "exists"`
+        )
         .addParam("userId", userId)
         .rawFindOne();
       console.log("exist mapper result", result);

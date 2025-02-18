@@ -1,4 +1,5 @@
 import { BaseMapper } from "../../util/types/BaseMapper.js";
+import { PostCreateDto } from "./models/PostDto.js";
 
 export class PostMapper extends BaseMapper {
   /**
@@ -6,7 +7,31 @@ export class PostMapper extends BaseMapper {
    * @returns {Promise<PostInfo[]}
    */
   findAllPosts() {
-    return this.exec(async (query) => query.SELECT("*").FROM("posts").findMany());
+    return this.exec(async (query) =>
+      query.SELECT("*").FROM("post_info").findMany()
+    );
+  }
+
+  /**
+   * 게시물 생성
+   * @param {PostCreateDto} Post
+   * @returns {Promise<PostInfo>}
+   */
+
+  createPost({ post, createdId }) {
+    console.log("맵퍼 데이터값", post, createdId);
+    return this.exec(async (query) => {
+      const result = query
+        .setName("Create Post")
+        .INSERT("public.post_info")
+        .INSERT_FIELDS("title,content,created_id")
+        .INSERT_VALUES(post.title, post.content, createdId)
+        .RETURNING("*")
+        .exec();
+
+      console.log("🟢 Post 생성 결과:", result);
+      return result;
+    });
   }
 
   /**
@@ -16,6 +41,8 @@ export class PostMapper extends BaseMapper {
    */
 
   findPostById(postId) {
-    return this.exec(async (query) => query.SELECT("*").FROM("posts").WHERE("index", "=", postId).findOne());
+    return this.exec(async (query) =>
+      query.SELECT("*").FROM("posts").WHERE("index", "=", postId).findOne()
+    );
   }
 }

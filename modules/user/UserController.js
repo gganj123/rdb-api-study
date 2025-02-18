@@ -62,7 +62,10 @@ export class UserController {
       }
       const user = await this.userService.findById(userId);
       if (!user) {
-        return sendErrorResponse(res, new Error("해당 userId의 사용자가 없습니다."));
+        return sendErrorResponse(
+          res,
+          new Error("해당 userId의 사용자가 없습니다.")
+        );
       }
       const response = ResponseData.data(user);
       sendResponse(res, response);
@@ -79,7 +82,10 @@ export class UserController {
       }
       const user = await this.userService.findByEmail(email);
       if (!user) {
-        return sendErrorResponse(res, new Error("해당 email의 사용자가 없습니다."));
+        return sendErrorResponse(
+          res,
+          new Error("해당 email의 사용자가 없습니다.")
+        );
       }
       const response = ResponseData.data(user);
       sendResponse(res, response);
@@ -95,7 +101,10 @@ export class UserController {
       const { email, name } = req.body;
       console.log("컨트롤러 이메일,네임", email, name);
       if (!email || !name) {
-        return sendErrorResponse(res, new Error("이름과 이메일을 모두 입력해주세요."));
+        return sendErrorResponse(
+          res,
+          new Error("이름과 이메일을 모두 입력해주세요.")
+        );
       }
 
       // const existUser = await this.userService.existUserById(userId);
@@ -103,7 +112,11 @@ export class UserController {
       //   return sendErrorResponse(res, new Error("존재하지 않는 유저입니다."));
       // }
 
-      const updateCount = await this.userService.updateUser({ userId, email, name });
+      const updateCount = await this.userService.updateUser({
+        userId,
+        email,
+        name,
+      });
       //객체로 안묶는 실수..
       console.log("서비스로 전달:", { userId, email, name });
 
@@ -164,8 +177,14 @@ export class UserController {
       }
       const existUser = await this.userService.existUserById(userId);
       const response = existUser
-        ? ResponseData.data({ message: "사용자가 존재합니다.", data: existUser })
-        : ResponseData.data({ message: "존재하지 않는 사용자입니다.", data: null });
+        ? ResponseData.data({
+            message: "사용자가 존재합니다.",
+            data: existUser,
+          })
+        : ResponseData.data({
+            message: "존재하지 않는 사용자입니다.",
+            data: null,
+          });
 
       sendResponse(res, response);
     } catch (error) {
