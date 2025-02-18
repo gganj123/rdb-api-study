@@ -60,21 +60,46 @@ export class PostController {
     }
   };
 
-  findPostById = async (req, res) => {
+  findPostByPostId = async (req, res) => {
     try {
-      const { postId } = req.params;
-      if (!postId || isNaN(Number(postId))) {
-        return sendErrorResponse(res, new Error("postId를 확인해주세요."));
-      }
-      const post = await this.postService.findPostById(postId);
+      const postId = req.params.postId;
+      console.log("컨트롤러 포스트ID", postId);
+
+      const post = await this.postService.findPostByPostId(postId);
 
       if (!post) {
         return sendErrorResponse(
           res,
-          new Error(`${postId}를 찾을 수 없습니다.`)
+          new Error("해당 postId의 게시물이 없습니다.")
         );
       }
-      sendResponse(res, post);
+
+      const response = ResponseData.data(post);
+      sendResponse(res, response);
+    } catch (error) {
+      sendErrorResponse(res, error);
+    }
+  };
+
+  findPostByUserId = async (req, res) => {
+    try {
+      const userId = req.user?.index;
+      console.log("컨트롤러 유저아이디값", userId);
+      if (!userId || isNaN(Number(userId))) {
+        return sendErrorResponse(res, new Error("userId를 확인해주세요."));
+      }
+
+      const posts = await this.postService.findPostByUserId(userId);
+
+      if (!posts) {
+        return sendErrorResponse(
+          res,
+          new Error("해당 유저의 게시물들이 없습니다.")
+        );
+      }
+
+      const response = ResponseData.data(posts);
+      sendResponse(res, response);
     } catch (error) {
       sendErrorResponse(res, error);
     }

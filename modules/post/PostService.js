@@ -12,21 +12,6 @@ class _PostService {
   }
 
   /**
-   * 모든 게시물 조회
-   * @returns {Promise<PostInfo[]>}
-   */
-
-  async findAllPosts() {
-    const posts = await this.postMapper.findAllPosts();
-    return posts;
-  }
-
-  async findPostById(postId) {
-    const post = await this.postMapper.findPostById(postId);
-    return post;
-  }
-
-  /**
    * 게시물 생성
    *
    * @async
@@ -36,6 +21,32 @@ class _PostService {
   async createPost({ post, createdId }) {
     const createdPost = await this.postMapper.createPost({ post, createdId });
     return new PostDto(createdPost);
+  }
+
+  /**
+   * 모든 게시물 조회
+   * @returns {Promise<PostInfo[]>}
+   */
+
+  async findAllPosts() {
+    const posts = await this.postMapper.findAllPosts();
+    return posts;
+  }
+
+  /** postId로 게시물 찾기
+   *
+   * @param {Number} postId
+   * @returns {Promise<PostInfo>}
+   */
+
+  async findPostByPostId(postId) {
+    const post = await this.postMapper.findPostByPostId(postId);
+    return post;
+  }
+
+  async findPostByUserId(userId) {
+    const userPosts = await this.postMapper.findPostByUserId(userId);
+    return userPosts;
   }
 }
 /**

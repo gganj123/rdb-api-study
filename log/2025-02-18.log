@@ -6999,3 +6999,2306 @@ undefined
   ],
   "error": null
 }
+[ 2025-02-18 10:10:55 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM posts WHERE index;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-18 10:10:55 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM posts WHERE index;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-18 10:10:55 AM ] [ Test Server ]  -  undefined 
+{
+  "length": 104,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "42P01",
+  "position": "15",
+  "file": "parse_relation.c",
+  "line": "1449",
+  "routine": "parserOpenTable"
+}
+[Body]
+undefined
+[ 2025-02-18 10:10:55 AM ] [ Test Server ]  -  Error:  relation "posts" does not exist 
+{
+  "length": 104,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "42P01",
+  "position": "15",
+  "file": "parse_relation.c",
+  "line": "1449",
+  "routine": "parserOpenTable",
+  "stack": "error: relation \"posts\" does not exist\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findOne (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:209:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findPostById (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:25:18)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findPostById (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:69:20)"
+}
+[Body]
+undefined
+[ 2025-02-18 10:10:55 AM ] [ Test Server ]  -  Response /api/posts/1 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "relation \"posts\" does not exist",
+  "data": null,
+  "error": {
+    "name": "error",
+    "message": "relation \"posts\" does not exist",
+    "stack": "error: relation \"posts\" does not exist\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findOne (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:209:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findPostById (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:25:18)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findPostById (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:69:20)"
+  }
+}
+[ 2025-02-18 10:29:00 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM post_info WHERE index = :postId;",
+  "params": {
+    "postId": "1"
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 10:29:00 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM post_info WHERE index = $1;",
+  "values": [
+    "1"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 10:29:00 AM ] [ Test Server ]  -  Response /api/posts/1 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{}
+[ 2025-02-18 10:29:21 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM post_info;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-18 10:29:21 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM post_info;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-18 10:29:21 AM ] [ Test Server ]  -  Response /api/posts/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 1,
+      "title": "게시글 테스트",
+      "content": "게시되었습니다.",
+      "createdTime": "2025-02-18 10:00:43",
+      "updateTime": null,
+      "createdId": 9,
+      "updateId": null
+    },
+    {
+      "index": 2,
+      "title": "두번째 테스트",
+      "content": "게시가 되었습니다.",
+      "createdTime": "2025-02-18 10:02:05",
+      "updateTime": null,
+      "createdId": 9,
+      "updateId": null
+    }
+  ],
+  "error": null
+}
+[ 2025-02-18 10:31:26 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM post_info WHERE \"index\" = :postId;",
+  "params": {
+    "postId": "1"
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 10:31:26 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM post_info WHERE \"index\" = $1;",
+  "values": [
+    "1"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 10:31:26 AM ] [ Test Server ]  -  Response /api/posts/1 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{}
+[ 2025-02-18 10:35:22 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM post_info WHERE index = :postId;",
+  "params": {
+    "postId": "1"
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 10:35:22 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM post_info WHERE index = $1;",
+  "values": [
+    "1"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 10:35:22 AM ] [ Test Server ]  -  Response /api/posts/1 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 1,
+      "title": "게시글 테스트",
+      "content": "게시되었습니다.",
+      "createdTime": "2025-02-18 10:00:43",
+      "updateTime": null,
+      "createdId": 9,
+      "updateId": null
+    }
+  ],
+  "error": null
+}
+[ 2025-02-18 10:35:27 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM post_info WHERE index = :postId;",
+  "params": {
+    "postId": "2"
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 10:35:27 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM post_info WHERE index = $1;",
+  "values": [
+    "2"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 10:35:27 AM ] [ Test Server ]  -  Response /api/posts/2 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 2,
+      "title": "두번째 테스트",
+      "content": "게시가 되었습니다.",
+      "createdTime": "2025-02-18 10:02:05",
+      "updateTime": null,
+      "createdId": 9,
+      "updateId": null
+    }
+  ],
+  "error": null
+}
+[ 2025-02-18 10:40:48 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM post_info WHERE index = :postId;",
+  "params": {
+    "postId": "userId"
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 10:40:48 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM post_info WHERE index = $1;",
+  "values": [
+    "userId"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 10:40:48 AM ] [ Test Server ]  -  undefined 
+{
+  "length": 149,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe"
+}
+[Body]
+undefined
+[ 2025-02-18 10:40:48 AM ] [ Test Server ]  -  Error:  invalid input syntax for type integer: "userId" 
+{
+  "length": 149,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe",
+  "stack": "error: invalid input syntax for type integer: \"userId\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findOne (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:209:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:43:18)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:68:20)"
+}
+[Body]
+undefined
+[ 2025-02-18 10:40:48 AM ] [ Test Server ]  -  Response /api/posts/userId 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "invalid input syntax for type integer: \"userId\"",
+  "data": null,
+  "error": {
+    "name": "error",
+    "message": "invalid input syntax for type integer: \"userId\"",
+    "stack": "error: invalid input syntax for type integer: \"userId\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findOne (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:209:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:43:18)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:68:20)"
+  }
+}
+[ 2025-02-18 10:41:32 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM post_info WHERE index = :postId;",
+  "params": {
+    "postId": "userId"
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 10:41:32 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM post_info WHERE index = $1;",
+  "values": [
+    "userId"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 10:41:32 AM ] [ Test Server ]  -  undefined 
+{
+  "length": 149,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe"
+}
+[Body]
+undefined
+[ 2025-02-18 10:41:32 AM ] [ Test Server ]  -  Error:  invalid input syntax for type integer: "userId" 
+{
+  "length": 149,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe",
+  "stack": "error: invalid input syntax for type integer: \"userId\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findOne (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:209:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:43:18)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:68:20)"
+}
+[Body]
+undefined
+[ 2025-02-18 10:41:32 AM ] [ Test Server ]  -  Response /api/posts/userId 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "invalid input syntax for type integer: \"userId\"",
+  "data": null,
+  "error": {
+    "name": "error",
+    "message": "invalid input syntax for type integer: \"userId\"",
+    "stack": "error: invalid input syntax for type integer: \"userId\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findOne (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:209:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:43:18)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:68:20)"
+  }
+}
+[ 2025-02-18 11:16:21 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM post_info WHERE index = :postId;",
+  "params": {
+    "postId": "userId"
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 11:16:21 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM post_info WHERE index = $1;",
+  "values": [
+    "userId"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 11:16:21 AM ] [ Test Server ]  -  undefined 
+{
+  "length": 149,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe"
+}
+[Body]
+undefined
+[ 2025-02-18 11:16:21 AM ] [ Test Server ]  -  Error:  invalid input syntax for type integer: "userId" 
+{
+  "length": 149,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe",
+  "stack": "error: invalid input syntax for type integer: \"userId\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findOne (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:209:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:43:18)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:68:20)"
+}
+[Body]
+undefined
+[ 2025-02-18 11:16:21 AM ] [ Test Server ]  -  Response /api/posts/userId 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "invalid input syntax for type integer: \"userId\"",
+  "data": null,
+  "error": {
+    "name": "error",
+    "message": "invalid input syntax for type integer: \"userId\"",
+    "stack": "error: invalid input syntax for type integer: \"userId\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findOne (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:209:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:43:18)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:68:20)"
+  }
+}
+[ 2025-02-18 11:16:30 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM post_info WHERE index = :postId;",
+  "params": {
+    "postId": "userId"
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 11:16:30 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM post_info WHERE index = $1;",
+  "values": [
+    "userId"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 11:16:30 AM ] [ Test Server ]  -  undefined 
+{
+  "length": 149,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe"
+}
+[Body]
+undefined
+[ 2025-02-18 11:16:30 AM ] [ Test Server ]  -  Error:  invalid input syntax for type integer: "userId" 
+{
+  "length": 149,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe",
+  "stack": "error: invalid input syntax for type integer: \"userId\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findOne (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:209:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:43:18)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:68:20)"
+}
+[Body]
+undefined
+[ 2025-02-18 11:16:30 AM ] [ Test Server ]  -  Response /api/posts/userId 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "invalid input syntax for type integer: \"userId\"",
+  "data": null,
+  "error": {
+    "name": "error",
+    "message": "invalid input syntax for type integer: \"userId\"",
+    "stack": "error: invalid input syntax for type integer: \"userId\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findOne (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:209:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:43:18)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:68:20)"
+  }
+}
+[ 2025-02-18 11:21:21 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM post_info WHERE index = :postId;",
+  "params": {
+    "postId": "userId"
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 11:21:21 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM post_info WHERE index = $1;",
+  "values": [
+    "userId"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 11:21:21 AM ] [ Test Server ]  -  undefined 
+{
+  "length": 149,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe"
+}
+[Body]
+undefined
+[ 2025-02-18 11:21:21 AM ] [ Test Server ]  -  Error:  invalid input syntax for type integer: "userId" 
+{
+  "length": 149,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe",
+  "stack": "error: invalid input syntax for type integer: \"userId\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findOne (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:209:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:43:18)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:68:20)"
+}
+[Body]
+undefined
+[ 2025-02-18 11:21:21 AM ] [ Test Server ]  -  Response /api/posts/userId 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "invalid input syntax for type integer: \"userId\"",
+  "data": null,
+  "error": {
+    "name": "error",
+    "message": "invalid input syntax for type integer: \"userId\"",
+    "stack": "error: invalid input syntax for type integer: \"userId\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findOne (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:209:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:43:18)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:68:20)"
+  }
+}
+[ 2025-02-18 11:23:33 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM post_info WHERE index = :postId;",
+  "params": {
+    "postId": "userId"
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 11:23:33 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM post_info WHERE index = $1;",
+  "values": [
+    "userId"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 11:23:33 AM ] [ Test Server ]  -  undefined 
+{
+  "length": 149,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe"
+}
+[Body]
+undefined
+[ 2025-02-18 11:23:33 AM ] [ Test Server ]  -  Error:  invalid input syntax for type integer: "userId" 
+{
+  "length": 149,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe",
+  "stack": "error: invalid input syntax for type integer: \"userId\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findOne (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:209:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:43:18)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:68:20)"
+}
+[Body]
+undefined
+[ 2025-02-18 11:23:33 AM ] [ Test Server ]  -  Response /api/posts/userId 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "invalid input syntax for type integer: \"userId\"",
+  "data": null,
+  "error": {
+    "name": "error",
+    "message": "invalid input syntax for type integer: \"userId\"",
+    "stack": "error: invalid input syntax for type integer: \"userId\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findOne (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:209:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:43:18)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:68:20)"
+  }
+}
+[ 2025-02-18 11:23:35 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM post_info WHERE index = :postId;",
+  "params": {
+    "postId": "userId"
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 11:23:35 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM post_info WHERE index = $1;",
+  "values": [
+    "userId"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 11:23:35 AM ] [ Test Server ]  -  undefined 
+{
+  "length": 149,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe"
+}
+[Body]
+undefined
+[ 2025-02-18 11:23:35 AM ] [ Test Server ]  -  Error:  invalid input syntax for type integer: "userId" 
+{
+  "length": 149,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe",
+  "stack": "error: invalid input syntax for type integer: \"userId\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findOne (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:209:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:43:18)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:68:20)"
+}
+[Body]
+undefined
+[ 2025-02-18 11:23:35 AM ] [ Test Server ]  -  Response /api/posts/userId 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "invalid input syntax for type integer: \"userId\"",
+  "data": null,
+  "error": {
+    "name": "error",
+    "message": "invalid input syntax for type integer: \"userId\"",
+    "stack": "error: invalid input syntax for type integer: \"userId\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findOne (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:209:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:43:18)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:68:20)"
+  }
+}
+[ 2025-02-18 11:23:56 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM post_info WHERE index = :postId;",
+  "params": {
+    "postId": "userId"
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 11:23:56 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM post_info WHERE index = $1;",
+  "values": [
+    "userId"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 11:23:56 AM ] [ Test Server ]  -  undefined 
+{
+  "length": 149,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe"
+}
+[Body]
+undefined
+[ 2025-02-18 11:23:56 AM ] [ Test Server ]  -  Error:  invalid input syntax for type integer: "userId" 
+{
+  "length": 149,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe",
+  "stack": "error: invalid input syntax for type integer: \"userId\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findOne (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:209:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:43:18)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:68:20)"
+}
+[Body]
+undefined
+[ 2025-02-18 11:23:56 AM ] [ Test Server ]  -  Response /api/posts/userId 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "invalid input syntax for type integer: \"userId\"",
+  "data": null,
+  "error": {
+    "name": "error",
+    "message": "invalid input syntax for type integer: \"userId\"",
+    "stack": "error: invalid input syntax for type integer: \"userId\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findOne (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:209:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:43:18)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:68:20)"
+  }
+}
+[ 2025-02-18 11:26:28 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM post_info WHERE index = :postId;",
+  "params": {
+    "postId": "userId"
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 11:26:28 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM post_info WHERE index = $1;",
+  "values": [
+    "userId"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 11:26:28 AM ] [ Test Server ]  -  undefined 
+{
+  "length": 149,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe"
+}
+[Body]
+undefined
+[ 2025-02-18 11:26:28 AM ] [ Test Server ]  -  Error:  invalid input syntax for type integer: "userId" 
+{
+  "length": 149,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe",
+  "stack": "error: invalid input syntax for type integer: \"userId\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findOne (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:209:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:43:18)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:68:20)"
+}
+[Body]
+undefined
+[ 2025-02-18 11:26:28 AM ] [ Test Server ]  -  Response /api/posts/userId 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "invalid input syntax for type integer: \"userId\"",
+  "data": null,
+  "error": {
+    "name": "error",
+    "message": "invalid input syntax for type integer: \"userId\"",
+    "stack": "error: invalid input syntax for type integer: \"userId\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findOne (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:209:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:43:18)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:68:20)"
+  }
+}
+[ 2025-02-18 11:27:19 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM post_info WHERE index = :postId;",
+  "params": {
+    "postId": "userId"
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 11:27:19 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM post_info WHERE index = $1;",
+  "values": [
+    "userId"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 11:27:19 AM ] [ Test Server ]  -  undefined 
+{
+  "length": 149,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe"
+}
+[Body]
+undefined
+[ 2025-02-18 11:27:19 AM ] [ Test Server ]  -  Error:  invalid input syntax for type integer: "userId" 
+{
+  "length": 149,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe",
+  "stack": "error: invalid input syntax for type integer: \"userId\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findOne (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:209:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:43:18)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:68:20)"
+}
+[Body]
+undefined
+[ 2025-02-18 11:27:19 AM ] [ Test Server ]  -  Response /api/posts/userId 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "invalid input syntax for type integer: \"userId\"",
+  "data": null,
+  "error": {
+    "name": "error",
+    "message": "invalid input syntax for type integer: \"userId\"",
+    "stack": "error: invalid input syntax for type integer: \"userId\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findOne (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:209:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:43:18)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:68:20)"
+  }
+}
+[ 2025-02-18 11:31:17 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM post_info WHERE index = :postId;",
+  "params": {
+    "postId": "userId"
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 11:31:17 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM post_info WHERE index = $1;",
+  "values": [
+    "userId"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 11:31:17 AM ] [ Test Server ]  -  undefined 
+{
+  "length": 149,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe"
+}
+[Body]
+undefined
+[ 2025-02-18 11:31:17 AM ] [ Test Server ]  -  Error:  invalid input syntax for type integer: "userId" 
+{
+  "length": 149,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe",
+  "stack": "error: invalid input syntax for type integer: \"userId\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findOne (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:209:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:43:18)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:68:20)"
+}
+[Body]
+undefined
+[ 2025-02-18 11:31:17 AM ] [ Test Server ]  -  Response /api/posts/userId 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "invalid input syntax for type integer: \"userId\"",
+  "data": null,
+  "error": {
+    "name": "error",
+    "message": "invalid input syntax for type integer: \"userId\"",
+    "stack": "error: invalid input syntax for type integer: \"userId\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findOne (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:209:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:43:18)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:68:20)"
+  }
+}
+[ 2025-02-18 11:35:31 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM post_info WHERE index = :postId;",
+  "params": {
+    "postId": "userId"
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 11:35:31 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM post_info WHERE index = $1;",
+  "values": [
+    "userId"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 11:35:31 AM ] [ Test Server ]  -  undefined 
+{
+  "length": 149,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe"
+}
+[Body]
+undefined
+[ 2025-02-18 11:35:31 AM ] [ Test Server ]  -  Error:  invalid input syntax for type integer: "userId" 
+{
+  "length": 149,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe",
+  "stack": "error: invalid input syntax for type integer: \"userId\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findOne (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:209:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:43:18)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:68:20)"
+}
+[Body]
+undefined
+[ 2025-02-18 11:35:31 AM ] [ Test Server ]  -  Response /api/posts/userId 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "invalid input syntax for type integer: \"userId\"",
+  "data": null,
+  "error": {
+    "name": "error",
+    "message": "invalid input syntax for type integer: \"userId\"",
+    "stack": "error: invalid input syntax for type integer: \"userId\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findOne (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:209:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:43:18)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:68:20)"
+  }
+}
+[ 2025-02-18 11:37:49 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM post_info WHERE index = :postId;",
+  "params": {
+    "postId": "userId"
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 11:37:49 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM post_info WHERE index = $1;",
+  "values": [
+    "userId"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 11:37:49 AM ] [ Test Server ]  -  undefined 
+{
+  "length": 149,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe"
+}
+[Body]
+undefined
+[ 2025-02-18 11:37:49 AM ] [ Test Server ]  -  Error:  invalid input syntax for type integer: "userId" 
+{
+  "length": 149,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe",
+  "stack": "error: invalid input syntax for type integer: \"userId\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findOne (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:209:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:43:18)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:68:20)"
+}
+[Body]
+undefined
+[ 2025-02-18 11:37:49 AM ] [ Test Server ]  -  Response /api/posts/userId 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "invalid input syntax for type integer: \"userId\"",
+  "data": null,
+  "error": {
+    "name": "error",
+    "message": "invalid input syntax for type integer: \"userId\"",
+    "stack": "error: invalid input syntax for type integer: \"userId\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findOne (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:209:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:43:18)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:68:20)"
+  }
+}
+[ 2025-02-18 11:37:50 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM post_info WHERE index = :postId;",
+  "params": {
+    "postId": "userId"
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 11:37:50 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM post_info WHERE index = $1;",
+  "values": [
+    "userId"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 11:37:50 AM ] [ Test Server ]  -  undefined 
+{
+  "length": 149,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe"
+}
+[Body]
+undefined
+[ 2025-02-18 11:37:50 AM ] [ Test Server ]  -  Error:  invalid input syntax for type integer: "userId" 
+{
+  "length": 149,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe",
+  "stack": "error: invalid input syntax for type integer: \"userId\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findOne (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:209:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:43:18)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:68:20)"
+}
+[Body]
+undefined
+[ 2025-02-18 11:37:50 AM ] [ Test Server ]  -  Response /api/posts/userId 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "invalid input syntax for type integer: \"userId\"",
+  "data": null,
+  "error": {
+    "name": "error",
+    "message": "invalid input syntax for type integer: \"userId\"",
+    "stack": "error: invalid input syntax for type integer: \"userId\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findOne (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:209:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:43:18)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:68:20)"
+  }
+}
+[ 2025-02-18 11:39:07 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM post_info WHERE index = :postId;",
+  "params": {
+    "postId": "userId"
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 11:39:07 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM post_info WHERE index = $1;",
+  "values": [
+    "userId"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 11:39:07 AM ] [ Test Server ]  -  undefined 
+{
+  "length": 149,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe"
+}
+[Body]
+undefined
+[ 2025-02-18 11:39:07 AM ] [ Test Server ]  -  Error:  invalid input syntax for type integer: "userId" 
+{
+  "length": 149,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe",
+  "stack": "error: invalid input syntax for type integer: \"userId\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findOne (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:209:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:43:18)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:68:20)"
+}
+[Body]
+undefined
+[ 2025-02-18 11:39:07 AM ] [ Test Server ]  -  Response /api/posts/userId 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "invalid input syntax for type integer: \"userId\"",
+  "data": null,
+  "error": {
+    "name": "error",
+    "message": "invalid input syntax for type integer: \"userId\"",
+    "stack": "error: invalid input syntax for type integer: \"userId\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findOne (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:209:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:43:18)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:68:20)"
+  }
+}
+[ 2025-02-18 11:39:12 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM post_info WHERE index = :postId;",
+  "params": {
+    "postId": "userId"
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 11:39:12 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM post_info WHERE index = $1;",
+  "values": [
+    "userId"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 11:39:12 AM ] [ Test Server ]  -  undefined 
+{
+  "length": 149,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe"
+}
+[Body]
+undefined
+[ 2025-02-18 11:39:12 AM ] [ Test Server ]  -  Error:  invalid input syntax for type integer: "userId" 
+{
+  "length": 149,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe",
+  "stack": "error: invalid input syntax for type integer: \"userId\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findOne (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:209:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:43:18)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:68:20)"
+}
+[Body]
+undefined
+[ 2025-02-18 11:39:12 AM ] [ Test Server ]  -  Response /api/posts/userId 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "invalid input syntax for type integer: \"userId\"",
+  "data": null,
+  "error": {
+    "name": "error",
+    "message": "invalid input syntax for type integer: \"userId\"",
+    "stack": "error: invalid input syntax for type integer: \"userId\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findOne (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:209:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:43:18)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:68:20)"
+  }
+}
+[ 2025-02-18 11:41:11 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM post_info WHERE index = :postId;",
+  "params": {
+    "postId": "userId"
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 11:41:11 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM post_info WHERE index = $1;",
+  "values": [
+    "userId"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 11:41:11 AM ] [ Test Server ]  -  undefined 
+{
+  "length": 149,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe"
+}
+[Body]
+undefined
+[ 2025-02-18 11:41:11 AM ] [ Test Server ]  -  Error:  invalid input syntax for type integer: "userId" 
+{
+  "length": 149,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe",
+  "stack": "error: invalid input syntax for type integer: \"userId\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findOne (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:209:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:43:18)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:68:20)"
+}
+[Body]
+undefined
+[ 2025-02-18 11:41:11 AM ] [ Test Server ]  -  Response /api/posts/userId 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "invalid input syntax for type integer: \"userId\"",
+  "data": null,
+  "error": {
+    "name": "error",
+    "message": "invalid input syntax for type integer: \"userId\"",
+    "stack": "error: invalid input syntax for type integer: \"userId\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findOne (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:209:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:43:18)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:68:20)"
+  }
+}
+[ 2025-02-18 11:41:44 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM post_info WHERE index = :postId;",
+  "params": {
+    "postId": "userId"
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 11:41:44 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM post_info WHERE index = $1;",
+  "values": [
+    "userId"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 11:41:44 AM ] [ Test Server ]  -  undefined 
+{
+  "length": 149,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe"
+}
+[Body]
+undefined
+[ 2025-02-18 11:41:44 AM ] [ Test Server ]  -  Error:  invalid input syntax for type integer: "userId" 
+{
+  "length": 149,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe",
+  "stack": "error: invalid input syntax for type integer: \"userId\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findOne (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:209:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:43:18)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:68:20)"
+}
+[Body]
+undefined
+[ 2025-02-18 11:41:44 AM ] [ Test Server ]  -  Response /api/posts/userId 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "invalid input syntax for type integer: \"userId\"",
+  "data": null,
+  "error": {
+    "name": "error",
+    "message": "invalid input syntax for type integer: \"userId\"",
+    "stack": "error: invalid input syntax for type integer: \"userId\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findOne (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:209:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:43:18)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:68:20)"
+  }
+}
+[ 2025-02-18 11:41:53 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM post_info WHERE index = :postId;",
+  "params": {
+    "postId": "userId"
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 11:41:53 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM post_info WHERE index = $1;",
+  "values": [
+    "userId"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 11:41:53 AM ] [ Test Server ]  -  undefined 
+{
+  "length": 149,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe"
+}
+[Body]
+undefined
+[ 2025-02-18 11:41:53 AM ] [ Test Server ]  -  Error:  invalid input syntax for type integer: "userId" 
+{
+  "length": 149,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe",
+  "stack": "error: invalid input syntax for type integer: \"userId\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findOne (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:209:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:43:18)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:68:20)"
+}
+[Body]
+undefined
+[ 2025-02-18 11:41:53 AM ] [ Test Server ]  -  Response /api/posts/userId 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "invalid input syntax for type integer: \"userId\"",
+  "data": null,
+  "error": {
+    "name": "error",
+    "message": "invalid input syntax for type integer: \"userId\"",
+    "stack": "error: invalid input syntax for type integer: \"userId\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findOne (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:209:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:43:18)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:68:20)"
+  }
+}
+[ 2025-02-18 11:43:49 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM post_info WHERE index = :postId;",
+  "params": {
+    "postId": "userId"
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 11:43:49 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM post_info WHERE index = $1;",
+  "values": [
+    "userId"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 11:43:49 AM ] [ Test Server ]  -  undefined 
+{
+  "length": 149,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe"
+}
+[Body]
+undefined
+[ 2025-02-18 11:43:49 AM ] [ Test Server ]  -  Error:  invalid input syntax for type integer: "userId" 
+{
+  "length": 149,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe",
+  "stack": "error: invalid input syntax for type integer: \"userId\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findOne (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:209:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:43:18)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:68:20)"
+}
+[Body]
+undefined
+[ 2025-02-18 11:43:49 AM ] [ Test Server ]  -  Response /api/posts/userId 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "invalid input syntax for type integer: \"userId\"",
+  "data": null,
+  "error": {
+    "name": "error",
+    "message": "invalid input syntax for type integer: \"userId\"",
+    "stack": "error: invalid input syntax for type integer: \"userId\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findOne (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:209:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:43:18)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:68:20)"
+  }
+}
+[ 2025-02-18 11:45:45 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM post_info WHERE index = :postId;",
+  "params": {
+    "postId": "userId"
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 11:45:45 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM post_info WHERE index = $1;",
+  "values": [
+    "userId"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 11:45:45 AM ] [ Test Server ]  -  undefined 
+{
+  "length": 149,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe"
+}
+[Body]
+undefined
+[ 2025-02-18 11:45:45 AM ] [ Test Server ]  -  Error:  invalid input syntax for type integer: "userId" 
+{
+  "length": 149,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe",
+  "stack": "error: invalid input syntax for type integer: \"userId\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findOne (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:209:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:43:18)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:68:20)"
+}
+[Body]
+undefined
+[ 2025-02-18 11:45:45 AM ] [ Test Server ]  -  Response /api/posts/userId 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "invalid input syntax for type integer: \"userId\"",
+  "data": null,
+  "error": {
+    "name": "error",
+    "message": "invalid input syntax for type integer: \"userId\"",
+    "stack": "error: invalid input syntax for type integer: \"userId\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findOne (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:209:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:43:18)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:68:20)"
+  }
+}
+[ 2025-02-18 11:47:55 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM post_info WHERE index = :postId;",
+  "params": {
+    "postId": "userId"
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 11:47:55 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM post_info WHERE index = $1;",
+  "values": [
+    "userId"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 11:47:55 AM ] [ Test Server ]  -  undefined 
+{
+  "length": 149,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe"
+}
+[Body]
+undefined
+[ 2025-02-18 11:47:55 AM ] [ Test Server ]  -  Error:  invalid input syntax for type integer: "userId" 
+{
+  "length": 149,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe",
+  "stack": "error: invalid input syntax for type integer: \"userId\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findOne (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:209:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:43:18)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:68:20)"
+}
+[Body]
+undefined
+[ 2025-02-18 11:47:55 AM ] [ Test Server ]  -  Response /api/posts/userId 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "invalid input syntax for type integer: \"userId\"",
+  "data": null,
+  "error": {
+    "name": "error",
+    "message": "invalid input syntax for type integer: \"userId\"",
+    "stack": "error: invalid input syntax for type integer: \"userId\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findOne (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:209:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:43:18)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:68:20)"
+  }
+}
+[ 2025-02-18 11:49:16 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM post_info WHERE index = :postId;",
+  "params": {
+    "postId": "userId"
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 11:49:16 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM post_info WHERE index = $1;",
+  "values": [
+    "userId"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 11:49:16 AM ] [ Test Server ]  -  undefined 
+{
+  "length": 149,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe"
+}
+[Body]
+undefined
+[ 2025-02-18 11:49:16 AM ] [ Test Server ]  -  Error:  invalid input syntax for type integer: "userId" 
+{
+  "length": 149,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe",
+  "stack": "error: invalid input syntax for type integer: \"userId\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findOne (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:209:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:43:18)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:68:20)"
+}
+[Body]
+undefined
+[ 2025-02-18 11:49:16 AM ] [ Test Server ]  -  Response /api/posts/userId 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "invalid input syntax for type integer: \"userId\"",
+  "data": null,
+  "error": {
+    "name": "error",
+    "message": "invalid input syntax for type integer: \"userId\"",
+    "stack": "error: invalid input syntax for type integer: \"userId\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findOne (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:209:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:43:18)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:68:20)"
+  }
+}
+[ 2025-02-18 11:49:24 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM post_info WHERE index = :postId;",
+  "params": {
+    "postId": "userId"
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 11:49:24 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM post_info WHERE index = $1;",
+  "values": [
+    "userId"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 11:49:24 AM ] [ Test Server ]  -  undefined 
+{
+  "length": 149,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe"
+}
+[Body]
+undefined
+[ 2025-02-18 11:49:24 AM ] [ Test Server ]  -  Error:  invalid input syntax for type integer: "userId" 
+{
+  "length": 149,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe",
+  "stack": "error: invalid input syntax for type integer: \"userId\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findOne (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:209:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:43:18)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:68:20)"
+}
+[Body]
+undefined
+[ 2025-02-18 11:49:24 AM ] [ Test Server ]  -  Response /api/posts/userId 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "invalid input syntax for type integer: \"userId\"",
+  "data": null,
+  "error": {
+    "name": "error",
+    "message": "invalid input syntax for type integer: \"userId\"",
+    "stack": "error: invalid input syntax for type integer: \"userId\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findOne (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:209:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:43:18)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:68:20)"
+  }
+}
+[ 2025-02-18 11:49:34 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM post_info WHERE index = :postId;",
+  "params": {
+    "postId": "userId"
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 11:49:34 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM post_info WHERE index = $1;",
+  "values": [
+    "userId"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 11:49:34 AM ] [ Test Server ]  -  undefined 
+{
+  "length": 149,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe"
+}
+[Body]
+undefined
+[ 2025-02-18 11:49:34 AM ] [ Test Server ]  -  Error:  invalid input syntax for type integer: "userId" 
+{
+  "length": 149,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe",
+  "stack": "error: invalid input syntax for type integer: \"userId\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findOne (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:209:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:43:18)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:68:20)"
+}
+[Body]
+undefined
+[ 2025-02-18 11:49:34 AM ] [ Test Server ]  -  Response /api/posts/userId 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "invalid input syntax for type integer: \"userId\"",
+  "data": null,
+  "error": {
+    "name": "error",
+    "message": "invalid input syntax for type integer: \"userId\"",
+    "stack": "error: invalid input syntax for type integer: \"userId\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findOne (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:209:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:43:18)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:68:20)"
+  }
+}
+[ 2025-02-18 11:49:36 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM post_info WHERE index = :postId;",
+  "params": {
+    "postId": "userId"
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 11:49:36 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM post_info WHERE index = $1;",
+  "values": [
+    "userId"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 11:49:36 AM ] [ Test Server ]  -  undefined 
+{
+  "length": 149,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe"
+}
+[Body]
+undefined
+[ 2025-02-18 11:49:36 AM ] [ Test Server ]  -  Error:  invalid input syntax for type integer: "userId" 
+{
+  "length": 149,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe",
+  "stack": "error: invalid input syntax for type integer: \"userId\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findOne (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:209:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:43:18)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:68:20)"
+}
+[Body]
+undefined
+[ 2025-02-18 11:49:36 AM ] [ Test Server ]  -  Response /api/posts/userId 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "invalid input syntax for type integer: \"userId\"",
+  "data": null,
+  "error": {
+    "name": "error",
+    "message": "invalid input syntax for type integer: \"userId\"",
+    "stack": "error: invalid input syntax for type integer: \"userId\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findOne (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:209:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:43:18)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:68:20)"
+  }
+}
+[ 2025-02-18 11:50:07 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM post_info WHERE index = :postId;",
+  "params": {
+    "postId": "userId"
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 11:50:07 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM post_info WHERE index = $1;",
+  "values": [
+    "userId"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 11:50:07 AM ] [ Test Server ]  -  undefined 
+{
+  "length": 149,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe"
+}
+[Body]
+undefined
+[ 2025-02-18 11:50:07 AM ] [ Test Server ]  -  Error:  invalid input syntax for type integer: "userId" 
+{
+  "length": 149,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe",
+  "stack": "error: invalid input syntax for type integer: \"userId\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findOne (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:209:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:43:18)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:68:20)"
+}
+[Body]
+undefined
+[ 2025-02-18 11:50:07 AM ] [ Test Server ]  -  Response /api/posts/userId 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "invalid input syntax for type integer: \"userId\"",
+  "data": null,
+  "error": {
+    "name": "error",
+    "message": "invalid input syntax for type integer: \"userId\"",
+    "stack": "error: invalid input syntax for type integer: \"userId\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findOne (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:209:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:43:18)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:68:20)"
+  }
+}
+[ 2025-02-18 11:51:44 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM post_info WHERE index = :postId;",
+  "params": {
+    "postId": "userId"
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 11:51:44 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM post_info WHERE index = $1;",
+  "values": [
+    "userId"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 11:51:44 AM ] [ Test Server ]  -  undefined 
+{
+  "length": 149,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe"
+}
+[Body]
+undefined
+[ 2025-02-18 11:51:44 AM ] [ Test Server ]  -  Error:  invalid input syntax for type integer: "userId" 
+{
+  "length": 149,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe",
+  "stack": "error: invalid input syntax for type integer: \"userId\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findOne (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:209:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:43:18)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:68:20)"
+}
+[Body]
+undefined
+[ 2025-02-18 11:51:44 AM ] [ Test Server ]  -  Response /api/posts/userId 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "invalid input syntax for type integer: \"userId\"",
+  "data": null,
+  "error": {
+    "name": "error",
+    "message": "invalid input syntax for type integer: \"userId\"",
+    "stack": "error: invalid input syntax for type integer: \"userId\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findOne (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:209:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:43:18)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:68:20)"
+  }
+}
+[ 2025-02-18 11:51:58 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM post_info WHERE index = :postId;",
+  "params": {
+    "postId": "userId"
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 11:51:58 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM post_info WHERE index = $1;",
+  "values": [
+    "userId"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 11:51:58 AM ] [ Test Server ]  -  undefined 
+{
+  "length": 149,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe"
+}
+[Body]
+undefined
+[ 2025-02-18 11:51:58 AM ] [ Test Server ]  -  Error:  invalid input syntax for type integer: "userId" 
+{
+  "length": 149,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe",
+  "stack": "error: invalid input syntax for type integer: \"userId\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findOne (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:209:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:43:18)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:68:20)"
+}
+[Body]
+undefined
+[ 2025-02-18 11:51:58 AM ] [ Test Server ]  -  Response /api/posts/userId 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "invalid input syntax for type integer: \"userId\"",
+  "data": null,
+  "error": {
+    "name": "error",
+    "message": "invalid input syntax for type integer: \"userId\"",
+    "stack": "error: invalid input syntax for type integer: \"userId\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findOne (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:209:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:43:18)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findPostByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:68:20)"
+  }
+}
+[ 2025-02-18 11:52:58 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 11:52:58 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 11:52:58 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM post_info WHERE createdId = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 11:52:58 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM post_info WHERE createdId = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 11:52:58 AM ] [ Test Server ]  -  undefined 
+{
+  "length": 176,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "42703",
+  "hint": "Perhaps you meant to reference the column \"post_info.created_id\".",
+  "position": "31",
+  "file": "parse_relation.c",
+  "line": "3729",
+  "routine": "errorMissingColumn"
+}
+[Body]
+undefined
+[ 2025-02-18 11:52:58 AM ] [ Test Server ]  -  Error:  column "createdid" does not exist 
+{
+  "length": 176,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "42703",
+  "hint": "Perhaps you meant to reference the column \"post_info.created_id\".",
+  "position": "31",
+  "file": "parse_relation.c",
+  "line": "3729",
+  "routine": "errorMissingColumn",
+  "stack": "error: column \"createdid\" does not exist\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findMany (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:175:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findPostByUserId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:48:23)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findPostByUserId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:92:21)"
+}
+[Body]
+undefined
+[ 2025-02-18 11:52:58 AM ] [ Test Server ]  -  Response /api/posts/userId 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "column \"createdid\" does not exist",
+  "data": null,
+  "error": {
+    "name": "error",
+    "message": "column \"createdid\" does not exist",
+    "stack": "error: column \"createdid\" does not exist\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findMany (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:175:32)\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.findPostByUserId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:48:23)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findPostByUserId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:92:21)"
+  }
+}
+[ 2025-02-18 11:53:17 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM post_info WHERE index = :postId;",
+  "params": {
+    "postId": "2"
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 11:53:17 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM post_info WHERE index = $1;",
+  "values": [
+    "2"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 11:53:17 AM ] [ Test Server ]  -  Response /api/posts/postId/2 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 2,
+      "title": "두번째 테스트",
+      "content": "게시가 되었습니다.",
+      "createdTime": "2025-02-18 10:02:05",
+      "updateTime": null,
+      "createdId": 9,
+      "updateId": null
+    }
+  ],
+  "error": null
+}
+[ 2025-02-18 11:53:55 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 11:53:55 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 11:53:55 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM post_info WHERE created_id = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 11:53:55 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM post_info WHERE created_id = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 11:53:55 AM ] [ Test Server ]  -  Response /api/posts/userId 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 1,
+      "title": "게시글 테스트",
+      "content": "게시되었습니다.",
+      "createdTime": "2025-02-18 10:00:43",
+      "updateTime": null,
+      "createdId": 9,
+      "updateId": null
+    },
+    {
+      "index": 2,
+      "title": "두번째 테스트",
+      "content": "게시가 되었습니다.",
+      "createdTime": "2025-02-18 10:02:05",
+      "updateTime": null,
+      "createdId": 9,
+      "updateId": null
+    }
+  ],
+  "error": null
+}

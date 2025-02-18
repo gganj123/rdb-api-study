@@ -40,9 +40,25 @@ export class PostMapper extends BaseMapper {
    * @returns {Promise<PostInfo}
    */
 
-  findPostById(postId) {
+  findPostByPostId(postId) {
     return this.exec(async (query) =>
-      query.SELECT("*").FROM("posts").WHERE("index", "=", postId).findOne()
+      query
+        .SELECT("*")
+        .FROM("post_info")
+        .WHERE(`index = :postId`)
+        .addParam("postId", postId)
+        .findOne()
+    );
+  }
+
+  findPostByUserId(userId) {
+    return this.exec(async (query) =>
+      query
+        .SELECT("*")
+        .FROM("post_info")
+        .WHERE(`created_id = :userId`)
+        .addParam("userId", userId)
+        .findMany()
     );
   }
 }
