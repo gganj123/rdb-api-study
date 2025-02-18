@@ -17,6 +17,8 @@ export function postRoutes(app) {
   router.get("/", postController.findAllPosts);
   router.get("/postId/:postId", postController.findPostByPostId);
   router.get("/userId", jwtAuth, postController.findPostByUserId);
+  router.post("/postId/:postId", jwtAuth, postController.updatePost);
+  router.delete("/postId/:postId", jwtAuth, postController.deletePost);
 
   app.use("/posts", router);
 }

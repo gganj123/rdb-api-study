@@ -48,6 +48,36 @@ class _PostService {
     const userPosts = await this.postMapper.findPostByUserId(userId);
     return userPosts;
   }
+
+  /**
+   * 게시글 수정
+   * @param {number} postId
+   * @param {number} userid
+   * @param {string} title
+   * @param {string} content
+   * @returns {Promise<number>}
+   */
+  async updatePost({ postId, userId, title, content }) {
+    console.log("서비스post", postId, userId, title, content);
+    const result = await this.postMapper.updatePost(
+      postId,
+      userId,
+      title,
+      content
+    );
+    return result;
+  }
+
+  /**
+   * 게시글 삭제
+   * @param {number} postId
+   * @param {number} userId
+   * @returns {Promise<number>}
+   */
+  async deletePost({ postId, userId }) {
+    const deletePost = await this.postMapper.deletePost(postId, userId);
+    return deletePost;
+  }
 }
 /**
  *  @type {typeof _PostService}

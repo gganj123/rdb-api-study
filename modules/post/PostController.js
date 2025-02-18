@@ -104,4 +104,71 @@ export class PostController {
       sendErrorResponse(res, error);
     }
   };
+
+  updatePost = async (req, res) => {
+    try {
+      const postId = req.params.postId;
+      const userId = req.user?.index;
+      const { title, content } = req.body;
+
+      if (!title || !content) {
+        return sendErrorResponse(
+          res,
+          new Error("제목과 내용을 모두 입력해주세요.")
+        );
+      }
+
+      const updateCount = await this.postService.updatePost({
+        postId,
+        userId,
+        title,
+        content,
+      });
+      console.log("updateCountPost", updateCount);
+      if (updateCount > 0) {
+        const response = ResponseData.data({
+          postId,
+          userId,
+          title,
+          content,
+          message: "게시글이 수정되었습니다.",
+        });
+        return sendResponse(res, response);
+      } else {
+        return sendErrorResponse(
+          res,
+          new Error("게시글 수정을 실패하였습니다.")
+        );
+      }
+    } catch (error) {
+      sendErrorResponse(res, error);
+    }
+  };
+
+  deletePost = async (req, res) => {
+    try {
+      const postId = req.params.postId;
+      const userId = req.user?.index;
+
+      if (!userId || isNaN(Number(userId))) {
+        return sendErrorResponse(res, new Error("userId를 확인해주세요."));
+      }
+
+      const deletePost = await this.postService.deletePost({ postId, userId });
+      console.log("컨트롤러 게시물 삭제 값", deletePost);
+
+      if (deletePost > 0) {
+        const response = ResponseData.data({
+          postId,
+          userId,
+          meessage: "게시물이 삭제되었습니다.",
+        });
+        sendResponse(res, response);
+      } else {
+        sendErrorResponse(res, new Error("게시물삭제에 실패하였습니다."));
+      }
+    } catch (error) {
+      sendErrorResponse(res, error);
+    }
+  };
 }

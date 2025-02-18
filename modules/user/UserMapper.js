@@ -105,6 +105,7 @@ export class UserMapper extends BaseMapper {
       return result || 0;
     });
   }
+
   /**
    * 유저 존재 여부 확인
    * 회원탈퇴나 유저정보수정 시 존재여부 확인으로 확실한 에러메세지를 보낼 수 있다.

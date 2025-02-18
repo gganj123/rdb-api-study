@@ -9302,3 +9302,357 @@ undefined
   ],
   "error": null
 }
+[ 2025-02-18 12:18:28 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 12:18:28 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 12:18:28 PM ] [ Test Server ]  -  Error:  email is not defined 
+{
+  "stack": "ReferenceError: email is not defined\n    at PostMapper.updatePost (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostMapper.js:66:44)\n    at _PostService.updatePost (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:62:42)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:58\n    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:34\n    at transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async updatePost (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:121:27)"
+}
+[Body]
+undefined
+[ 2025-02-18 12:18:28 PM ] [ Test Server ]  -  Response /api/posts/postId/1 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "email is not defined",
+  "data": null,
+  "error": {
+    "name": "ReferenceError",
+    "message": "email is not defined",
+    "stack": "ReferenceError: email is not defined\n    at PostMapper.updatePost (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostMapper.js:66:44)\n    at _PostService.updatePost (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:62:42)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:58\n    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:34\n    at transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async updatePost (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:121:27)"
+  }
+}
+[ 2025-02-18 12:19:34 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 12:19:34 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 12:19:34 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " UPDATE user_mst SET title = $4, content = $1 WHERE index = $2 AND created_id = $3",
+  "values": [
+    "수정된 내용",
+    "1",
+    9,
+    "수정된 게시글"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 12:19:34 PM ] [ Test Server ]  -  undefined 
+{
+  "length": 178,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "42703",
+  "hint": "Perhaps you meant to reference the column \"user_mst.created_time\".",
+  "position": "68",
+  "file": "parse_relation.c",
+  "line": "3729",
+  "routine": "errorMissingColumn"
+}
+[Body]
+undefined
+[ 2025-02-18 12:19:34 PM ] [ Test Server ]  -  Error:  column "created_id" does not exist 
+{
+  "length": 178,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "42703",
+  "hint": "Perhaps you meant to reference the column \"user_mst.created_time\".",
+  "position": "68",
+  "file": "parse_relation.c",
+  "line": "3729",
+  "routine": "errorMissingColumn",
+  "stack": "error: column \"created_id\" does not exist\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.rawExec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:279:32)\n    at async file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostMapper.js:68:22\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.updatePost (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:62:20)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async updatePost (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:121:27)"
+}
+[Body]
+undefined
+[ 2025-02-18 12:19:34 PM ] [ Test Server ]  -  Response /api/posts/postId/1 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "column \"created_id\" does not exist",
+  "data": null,
+  "error": {
+    "name": "error",
+    "message": "column \"created_id\" does not exist",
+    "stack": "error: column \"created_id\" does not exist\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.rawExec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:279:32)\n    at async file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostMapper.js:68:22\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.updatePost (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:62:20)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async updatePost (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:121:27)"
+  }
+}
+[ 2025-02-18 12:21:13 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 12:21:13 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 12:21:13 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " UPDATE post_info SET title = $4, content = $1 WHERE index = $2 AND created_id = $3",
+  "values": [
+    "수정된 내용",
+    "1",
+    9,
+    "수정된 게시글"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 12:21:13 PM ] [ Test Server ]  -  Response /api/posts/postId/1 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "postId": "1",
+      "userId": 9,
+      "title": "수정된 게시글",
+      "content": "수정된 내용",
+      "message": "게시글이 수정되었습니다."
+    }
+  ],
+  "error": null
+}
+[ 2025-02-18 12:21:17 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM post_info;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-18 12:21:17 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM post_info;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-18 12:21:17 PM ] [ Test Server ]  -  Response /api/posts/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 2,
+      "title": "두번째 테스트",
+      "content": "게시가 되었습니다.",
+      "createdTime": "2025-02-18 10:02:05",
+      "updateTime": null,
+      "createdId": 9,
+      "updateId": null
+    },
+    {
+      "index": 1,
+      "title": "수정된 게시글",
+      "content": "수정된 내용",
+      "createdTime": "2025-02-18 10:00:43",
+      "updateTime": null,
+      "createdId": 9,
+      "updateId": null
+    }
+  ],
+  "error": null
+}
+[ 2025-02-18 12:38:16 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 12:38:16 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 12:38:16 PM ] [ Test Server ]  -  undefined
+[ 2025-02-18 12:38:16 PM ] [ Test Server ]  -  Error:  userId is not defined 
+{
+  "stack": "ReferenceError: userId is not defined\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostMapper.js:111:29\n    at PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:20)\n    at PostMapper.deletePost (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostMapper.js:105:17)\n    at _PostService.deletePost (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:78:46)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:58\n    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:34\n    at transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async deletePost (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:157:26)"
+}
+[Body]
+undefined
+[ 2025-02-18 12:38:16 PM ] [ Test Server ]  -  Response /api/posts/postId/2 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "userId is not defined",
+  "data": null,
+  "error": {
+    "name": "ReferenceError",
+    "message": "userId is not defined",
+    "stack": "ReferenceError: userId is not defined\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostMapper.js:111:29\n    at PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:20)\n    at PostMapper.deletePost (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostMapper.js:105:17)\n    at _PostService.deletePost (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:78:46)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:58\n    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:34\n    at transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async deletePost (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:157:26)"
+  }
+}
+[ 2025-02-18 12:39:25 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 12:39:25 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 12:39:25 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " DELETE FROM post_info WHERE index = $1 AND created_id = $2",
+  "values": [
+    "2",
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 12:39:25 PM ] [ Test Server ]  -  Response /api/posts/postId/2 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "postId": "2",
+      "userId": 9,
+      "meessage": "게시물이 삭제되었습니다."
+    }
+  ],
+  "error": null
+}
+[ 2025-02-18 12:39:28 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM post_info;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-18 12:39:28 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM post_info;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-18 12:39:28 PM ] [ Test Server ]  -  Response /api/posts/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 1,
+      "title": "수정된 게시글",
+      "content": "수정된 내용",
+      "createdTime": "2025-02-18 10:00:43",
+      "updateTime": null,
+      "createdId": 9,
+      "updateId": null
+    }
+  ],
+  "error": null
+}

@@ -36,7 +36,7 @@ export class PostMapper extends BaseMapper {
 
   /**
    * 특정 Id로 게시물 조회
-   * @param {number} postsId
+   * @param {number} postId
    * @returns {Promise<PostInfo}
    */
 
@@ -51,6 +51,12 @@ export class PostMapper extends BaseMapper {
     );
   }
 
+  /**
+   * 특정 Id로 게시물 조회
+   * @param {number} userId
+   * @returns {Promise<PostInfo[]}
+   */
+
   findPostByUserId(userId) {
     return this.exec(async (query) =>
       query
@@ -60,5 +66,53 @@ export class PostMapper extends BaseMapper {
         .addParam("userId", userId)
         .findMany()
     );
+  }
+
+  /**
+   * 게시글 수정
+   * @param {number} postId
+   * @param {number} userId
+   * @param {string} title
+   * @param {string} content
+   * @returns {Promise<number>}
+   */
+  updatePost(postId, userId, title, content) {
+    console.log("맵퍼 업데이트포스트 파라미터", postId, userId, title, content);
+    return this.exec(async (query) => {
+      const result = await query
+        .rawQuery(
+          `UPDATE post_info SET title = :title, content = :content WHERE index = :postId AND created_id = :userId`
+        )
+        .addParam("title", title)
+        .addParam("content", content)
+        .addParam("postId", postId)
+        .addParam("userId", userId)
+        .rawExec();
+
+      // 수정 결과 디버깅 출력
+      console.log("UPDATE post결과:", result);
+      return result;
+    });
+  }
+
+  /**
+   * 게시글 삭제
+   * @param {number} postId
+   * @param {number} userId
+   * @returns {Promise<number>}
+   */
+  deletePost(postId, userId) {
+    return this.exec(async (query) => {
+      const result = await query
+        .rawQuery(
+          `DELETE FROM post_info WHERE index = :postId AND created_id = :userId`
+        )
+        .addParam("postId", postId)
+        .addParam("userId", userId)
+        .rawExec();
+      console.log("삭제 맵퍼post 결과값", result);
+
+      return result || 0;
+    });
   }
 }
