@@ -16,7 +16,7 @@ class _PostService {
    *
    * @async
    * @param {PostCreateDto} post
-   * @returns {Promist<PostInfo>}
+   * @returns {Promise<PostInfo>}
    */
   async createPost({ post, createdId }) {
     const createdPost = await this.postMapper.createPost({ post, createdId });

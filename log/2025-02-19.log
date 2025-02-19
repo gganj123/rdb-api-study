@@ -1,0 +1,3591 @@
+[ 2025-02-19 11:28:53 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM comment_info;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-19 11:28:53 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM comment_info;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-19 11:28:53 AM ] [ Test Server ]  -  Response /api/comments/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": null,
+  "error": null
+}
+[ 2025-02-19 11:28:57 AM ] [ Test Server ]  -  Response /api/comments/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 401,
+  "message": "token is invalid",
+  "data": null,
+  "error": null
+}
+[ 2025-02-19 11:29:07 AM ] [ Test Server ]  -  Response /api/users/login 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "userId": "9",
+      "email": "user@example.com",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI5IiwiaWF0IjoxNzM5OTMyMTQ3LCJleHAiOjE3NDAwMTg1NDcsImF1ZCI6ImF1ZGllbmNlIiwiaXNzIjoiaXNzdWVyIn0.2pH3YI44y7clILwHFDFaIaCVUySa4Wvce6K4pI00tq4",
+      "message": "로그인 되었습니다."
+    }
+  ],
+  "error": null
+}
+[ 2025-02-19 11:29:15 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-19 11:29:15 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-19 11:29:15 AM ] [ Test Server ]  -  Query: Create Comment 
+{
+  "query": "INSERT INTO public.comment_info (content, post_id, created_id) VALUES ('첫 댓글입니다.', '1', '9') RETURNING *;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-19 11:29:15 AM ] [ Test Server ]  -  Raw Query: Create Comment 
+{
+  "text": "INSERT INTO public.comment_info (content, post_id, created_id) VALUES ('첫 댓글입니다.', '1', '9') RETURNING *;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-19 11:29:15 AM ] [ Test Server ]  -  undefined 
+{
+  "length": 132,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "42703",
+  "position": "43",
+  "file": "parse_target.c",
+  "line": "1066",
+  "routine": "checkInsertTargets"
+}
+[Body]
+undefined
+[ 2025-02-19 11:29:15 AM ] [ Test Server ]  -  Error:  column "post_id" of relation "comment_info" does not exist 
+{
+  "length": 132,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "42703",
+  "position": "43",
+  "file": "parse_target.c",
+  "line": "1066",
+  "routine": "checkInsertTargets",
+  "stack": "error: column \"post_id\" of relation \"comment_info\" does not exist\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:226:32)\n    at async CommentMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _CommentService.createComment (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentService.js:22:28)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async createComment (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:42:30)"
+}
+[Body]
+undefined
+[ 2025-02-19 11:29:15 AM ] [ Test Server ]  -  Response /api/comments/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "column \"post_id\" of relation \"comment_info\" does not exist",
+  "data": null,
+  "error": {
+    "name": "error",
+    "message": "column \"post_id\" of relation \"comment_info\" does not exist",
+    "stack": "error: column \"post_id\" of relation \"comment_info\" does not exist\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:226:32)\n    at async CommentMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _CommentService.createComment (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentService.js:22:28)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async createComment (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:42:30)"
+  }
+}
+[ 2025-02-19 01:49:32 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-19 01:49:32 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-19 01:49:32 PM ] [ Test Server ]  -  Query: Create Comment 
+{
+  "query": "INSERT INTO public.comment_info (content, post_id, created_id) VALUES ('첫 댓글입니다.', '1', '9') RETURNING *;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-19 01:49:32 PM ] [ Test Server ]  -  Raw Query: Create Comment 
+{
+  "text": "INSERT INTO public.comment_info (content, post_id, created_id) VALUES ('첫 댓글입니다.', '1', '9') RETURNING *;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-19 01:49:32 PM ] [ Test Server ]  -  undefined 
+{
+  "length": 290,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "23502",
+  "detail": "Failing row contains (1, 첫 댓글입니다., null, 9, null, 2025-02-19 13:49:34.055729+09, null, 1).",
+  "schema": "public",
+  "table": "comment_info",
+  "column": "post_index",
+  "file": "execMain.c",
+  "line": "2003",
+  "routine": "ExecConstraints"
+}
+[Body]
+undefined
+[ 2025-02-19 01:49:32 PM ] [ Test Server ]  -  Error:  null value in column "post_index" of relation "comment_info" violates not-null constraint 
+{
+  "length": 290,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "23502",
+  "detail": "Failing row contains (1, 첫 댓글입니다., null, 9, null, 2025-02-19 13:49:34.055729+09, null, 1).",
+  "schema": "public",
+  "table": "comment_info",
+  "column": "post_index",
+  "file": "execMain.c",
+  "line": "2003",
+  "routine": "ExecConstraints",
+  "stack": "error: null value in column \"post_index\" of relation \"comment_info\" violates not-null constraint\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:226:32)\n    at async CommentMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _CommentService.createComment (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentService.js:22:28)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async createComment (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:42:30)"
+}
+[Body]
+undefined
+[ 2025-02-19 01:49:32 PM ] [ Test Server ]  -  Response /api/comments/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "null value in column \"post_index\" of relation \"comment_info\" violates not-null constraint",
+  "data": null,
+  "error": {
+    "name": "error",
+    "message": "null value in column \"post_index\" of relation \"comment_info\" violates not-null constraint",
+    "stack": "error: null value in column \"post_index\" of relation \"comment_info\" violates not-null constraint\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:226:32)\n    at async CommentMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _CommentService.createComment (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentService.js:22:28)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async createComment (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:42:30)"
+  }
+}
+[ 2025-02-19 01:59:44 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-19 01:59:44 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-19 01:59:44 PM ] [ Test Server ]  -  Query: Create Comment 
+{
+  "query": "INSERT INTO public.comment_info (content, post_id, created_id) VALUES ('첫 댓글입니다.', '1', '9') RETURNING *;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-19 01:59:44 PM ] [ Test Server ]  -  Raw Query: Create Comment 
+{
+  "text": "INSERT INTO public.comment_info (content, post_id, created_id) VALUES ('첫 댓글입니다.', '1', '9') RETURNING *;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-19 01:59:44 PM ] [ Test Server ]  -  Response /api/comments/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 2,
+      "content": "첫 댓글입니다.",
+      "postId": 1,
+      "createdId": 9,
+      "createdTime": "2025-02-19T04:59:45.000Z",
+      "updateTime": null
+    }
+  ],
+  "error": null
+}
+[ 2025-02-19 02:03:21 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-19 02:03:21 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-19 02:03:21 PM ] [ Test Server ]  -  Query: Create Comment 
+{
+  "query": "INSERT INTO public.comment_info (content, post_id, created_id) VALUES ('첫 댓글입니다.', '1', '9') RETURNING *;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-19 02:03:21 PM ] [ Test Server ]  -  Raw Query: Create Comment 
+{
+  "text": "INSERT INTO public.comment_info (content, post_id, created_id) VALUES ('첫 댓글입니다.', '1', '9') RETURNING *;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-19 02:03:21 PM ] [ Test Server ]  -  Response /api/comments/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 3,
+      "content": "첫 댓글입니다.",
+      "postId": 1,
+      "createdId": 9,
+      "createdTime": "2025-02-19T05:03:23.000Z",
+      "updateTime": null
+    }
+  ],
+  "error": null
+}
+[ 2025-02-19 02:03:28 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM comment_info;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-19 02:03:28 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM comment_info;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-19 02:03:28 PM ] [ Test Server ]  -  Response /api/comments/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": null,
+  "error": null
+}
+[ 2025-02-19 02:03:37 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM comment_info;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-19 02:03:37 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM comment_info;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-19 02:03:37 PM ] [ Test Server ]  -  Response /api/comments/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": null,
+  "error": null
+}
+[ 2025-02-19 02:08:13 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM comment_info;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-19 02:08:13 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM comment_info;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-19 02:08:13 PM ] [ Test Server ]  -  Response /api/comments/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": null,
+  "error": null
+}
+[ 2025-02-19 02:09:04 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM comment_info;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-19 02:09:04 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM comment_info;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-19 02:09:04 PM ] [ Test Server ]  -  Response /api/comments/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": null,
+  "error": null
+}
+[ 2025-02-19 02:09:26 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM post_info;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-19 02:09:26 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM post_info;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-19 02:09:26 PM ] [ Test Server ]  -  Response /api/posts/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 1,
+      "title": "수정된 게시글",
+      "content": "수정된 내용",
+      "createdTime": "2025-02-18 10:00:43",
+      "updateTime": null,
+      "createdId": 9,
+      "updateId": null
+    }
+  ],
+  "error": null
+}
+[ 2025-02-19 02:10:49 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM comment_info;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-19 02:10:49 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM comment_info;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-19 02:10:49 PM ] [ Test Server ]  -  Response /api/comments/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 2,
+      "content": "첫 댓글입니다.",
+      "createdId": 9,
+      "updateId": null,
+      "createdTime": "2025-02-19 13:59:45",
+      "updateTime": null,
+      "postId": 1
+    },
+    {
+      "index": 3,
+      "content": "첫 댓글입니다.",
+      "createdId": 9,
+      "updateId": null,
+      "createdTime": "2025-02-19 14:03:23",
+      "updateTime": null,
+      "postId": 1
+    }
+  ],
+  "error": null
+}
+[ 2025-02-19 02:26:08 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-19 02:26:08 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-19 02:26:08 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM comment_info WHERE create_id = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-19 02:26:08 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM comment_info WHERE create_id = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-19 02:26:08 PM ] [ Test Server ]  -  undefined 
+{
+  "length": 179,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "42703",
+  "hint": "Perhaps you meant to reference the column \"comment_info.created_id\".",
+  "position": "34",
+  "file": "parse_relation.c",
+  "line": "3729",
+  "routine": "errorMissingColumn"
+}
+[Body]
+undefined
+[ 2025-02-19 02:26:08 PM ] [ Test Server ]  -  Error:  column "create_id" does not exist 
+{
+  "length": 179,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "42703",
+  "hint": "Perhaps you meant to reference the column \"comment_info.created_id\".",
+  "position": "34",
+  "file": "parse_relation.c",
+  "line": "3729",
+  "routine": "errorMissingColumn",
+  "stack": "error: column \"create_id\" does not exist\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findMany (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:175:32)\n    at async CommentMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _CommentService.findCommentByUserId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentService.js:45:21)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findCommentByUserId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:80:24)"
+}
+[Body]
+undefined
+[ 2025-02-19 02:26:08 PM ] [ Test Server ]  -  Response /api/comments/userId 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "column \"create_id\" does not exist",
+  "data": null,
+  "error": {
+    "name": "error",
+    "message": "column \"create_id\" does not exist",
+    "stack": "error: column \"create_id\" does not exist\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findMany (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:175:32)\n    at async CommentMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _CommentService.findCommentByUserId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentService.js:45:21)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findCommentByUserId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:80:24)"
+  }
+}
+[ 2025-02-19 02:26:26 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-19 02:26:26 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-19 02:26:26 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM comment_info WHERE created_id = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-19 02:26:26 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM comment_info WHERE created_id = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-19 02:26:26 PM ] [ Test Server ]  -  Error:  posts is not defined 
+{
+  "stack": "ReferenceError: posts is not defined\n    at findCommentByUserId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:82:7)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-19 02:26:26 PM ] [ Test Server ]  -  Response /api/comments/userId 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "posts is not defined",
+  "data": null,
+  "error": {
+    "name": "ReferenceError",
+    "message": "posts is not defined",
+    "stack": "ReferenceError: posts is not defined\n    at findCommentByUserId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:82:7)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-19 02:26:57 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-19 02:26:57 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-19 02:26:57 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM comment_info WHERE created_id = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-19 02:26:57 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM comment_info WHERE created_id = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-19 02:26:57 PM ] [ Test Server ]  -  Response /api/comments/userId 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 2,
+      "content": "첫 댓글입니다.",
+      "createdId": 9,
+      "updateId": null,
+      "createdTime": "2025-02-19 13:59:45",
+      "updateTime": null,
+      "postId": 1
+    },
+    {
+      "index": 3,
+      "content": "첫 댓글입니다.",
+      "createdId": 9,
+      "updateId": null,
+      "createdTime": "2025-02-19 14:03:23",
+      "updateTime": null,
+      "postId": 1
+    }
+  ],
+  "error": null
+}
+[ 2025-02-19 02:27:47 PM ] [ Test Server ]  -  Response /api/users/login 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "userId": "9",
+      "email": "user@example.com",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI5IiwiaWF0IjoxNzM5OTQyODY3LCJleHAiOjE3NDAwMjkyNjcsImF1ZCI6ImF1ZGllbmNlIiwiaXNzIjoiaXNzdWVyIn0.FrgOGP6IhqBWnTwZ-25Qg0cX-5ynNJj8bFqEgrv-Lrk",
+      "message": "로그인 되었습니다."
+    }
+  ],
+  "error": null
+}
+[ 2025-02-19 02:28:00 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-19 02:28:00 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-19 02:28:00 PM ] [ Test Server ]  -  Response /api/users/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 7,
+      "name": "이름3",
+      "email": "daehyeon3@heredotcorp.com",
+      "password": "$2a$10$q7aX5wwpjiKPqKiBMw2fqehpzKWv1FJlwhZGiYVhchER38tKEzmvy",
+      "createdTime": "2025-02-14 12:56:47",
+      "updateTime": null
+    },
+    {
+      "index": 8,
+      "name": "이름3",
+      "email": "daehyeon3@heredotcorp.com",
+      "password": "$2a$10$gP70kkRxZiiLix.PKyNBCeZom84z11QGU55AdG4jpyapddviHdqnq",
+      "createdTime": "2025-02-14 13:36:37",
+      "updateTime": null
+    },
+    {
+      "index": 9,
+      "name": "John Doe",
+      "email": "user@example.com",
+      "password": "$2a$10$MioTCLc/u1rtvvOU5TG0muyF.WEeNfMpujkEp2AqgRuE6JdBf2/ei",
+      "createdTime": "2025-02-17 19:43:54",
+      "updateTime": null
+    }
+  ],
+  "error": null
+}
+[ 2025-02-19 02:29:29 PM ] [ Test Server ]  -  Response /api/users/login 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "userId": "8",
+      "email": "user@example.com",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI4IiwiaWF0IjoxNzM5OTQyOTY5LCJleHAiOjE3NDAwMjkzNjksImF1ZCI6ImF1ZGllbmNlIiwiaXNzIjoiaXNzdWVyIn0.mOoCmaNyRr_t5tgSQGE-ATr-SIxfKmhHbLYUV04m4VE",
+      "message": "로그인 되었습니다."
+    }
+  ],
+  "error": null
+}
+[ 2025-02-19 02:30:50 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 8
+  }
+}
+[Body]
+undefined
+[ 2025-02-19 02:30:50 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    8
+  ]
+}
+[Body]
+undefined
+[ 2025-02-19 02:30:50 PM ] [ Test Server ]  -  Query: Create Comment 
+{
+  "query": "INSERT INTO public.comment_info (content, post_id, created_id) VALUES ('첫 댓글입니다.', '1', '8') RETURNING *;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-19 02:30:50 PM ] [ Test Server ]  -  Raw Query: Create Comment 
+{
+  "text": "INSERT INTO public.comment_info (content, post_id, created_id) VALUES ('첫 댓글입니다.', '1', '8') RETURNING *;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-19 02:30:50 PM ] [ Test Server ]  -  Response /api/comments/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 4,
+      "content": "첫 댓글입니다.",
+      "postId": 1,
+      "createdId": 8,
+      "createdTime": "2025-02-19T05:30:52.000Z",
+      "updateTime": null
+    }
+  ],
+  "error": null
+}
+[ 2025-02-19 02:31:07 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 8
+  }
+}
+[Body]
+undefined
+[ 2025-02-19 02:31:07 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    8
+  ]
+}
+[Body]
+undefined
+[ 2025-02-19 02:31:07 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM comment_info WHERE created_id = :userId;",
+  "params": {
+    "userId": 8
+  }
+}
+[Body]
+undefined
+[ 2025-02-19 02:31:07 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM comment_info WHERE created_id = $1;",
+  "values": [
+    8
+  ]
+}
+[Body]
+undefined
+[ 2025-02-19 02:31:07 PM ] [ Test Server ]  -  Response /api/comments/userId 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 4,
+      "content": "첫 댓글입니다.",
+      "createdId": 8,
+      "updateId": null,
+      "createdTime": "2025-02-19 14:30:52",
+      "updateTime": null,
+      "postId": 1
+    }
+  ],
+  "error": null
+}
+[ 2025-02-19 02:31:49 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-19 02:31:49 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-19 02:31:49 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM comment_info WHERE created_id = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-19 02:31:49 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM comment_info WHERE created_id = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-19 02:31:49 PM ] [ Test Server ]  -  Response /api/comments/userId 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 2,
+      "content": "첫 댓글입니다.",
+      "createdId": 9,
+      "updateId": null,
+      "createdTime": "2025-02-19 13:59:45",
+      "updateTime": null,
+      "postId": 1
+    },
+    {
+      "index": 3,
+      "content": "첫 댓글입니다.",
+      "createdId": 9,
+      "updateId": null,
+      "createdTime": "2025-02-19 14:03:23",
+      "updateTime": null,
+      "postId": 1
+    }
+  ],
+  "error": null
+}
+[ 2025-02-19 02:45:02 PM ] [ Test Server ]  -  Error:  userId is not defined 
+{
+  "stack": "ReferenceError: userId is not defined\n    at findCommentByCommentId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:117:7)\n    at Layer.handle [as handle_request] (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/route.js:149:13)\n    at Route.dispatch (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/route.js:119:3)\n    at Layer.handle [as handle_request] (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/layer.js:95:5)\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:284:15\n    at Function.process_params (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:346:12)\n    at next (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:280:10)\n    at Function.handle (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:175:3)\n    at router (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:47:12)"
+}
+[Body]
+undefined
+[ 2025-02-19 02:45:02 PM ] [ Test Server ]  -  Response /api/comments/commentId 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "userId is not defined",
+  "data": null,
+  "error": {
+    "name": "ReferenceError",
+    "message": "userId is not defined",
+    "stack": "ReferenceError: userId is not defined\n    at findCommentByCommentId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:117:7)\n    at Layer.handle [as handle_request] (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/route.js:149:13)\n    at Route.dispatch (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/route.js:119:3)\n    at Layer.handle [as handle_request] (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/layer.js:95:5)\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:284:15\n    at Function.process_params (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:346:12)\n    at next (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:280:10)\n    at Function.handle (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:175:3)\n    at router (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:47:12)"
+  }
+}
+[ 2025-02-19 02:45:06 PM ] [ Test Server ]  -  Error:  userId is not defined 
+{
+  "stack": "ReferenceError: userId is not defined\n    at findCommentByCommentId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:117:7)\n    at Layer.handle [as handle_request] (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/route.js:149:13)\n    at Route.dispatch (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/route.js:119:3)\n    at Layer.handle [as handle_request] (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/layer.js:95:5)\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:284:15\n    at Function.process_params (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:346:12)\n    at next (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:280:10)\n    at Function.handle (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:175:3)\n    at router (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:47:12)"
+}
+[Body]
+undefined
+[ 2025-02-19 02:45:06 PM ] [ Test Server ]  -  Response /api/comments/commentId 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "userId is not defined",
+  "data": null,
+  "error": {
+    "name": "ReferenceError",
+    "message": "userId is not defined",
+    "stack": "ReferenceError: userId is not defined\n    at findCommentByCommentId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:117:7)\n    at Layer.handle [as handle_request] (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/route.js:149:13)\n    at Route.dispatch (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/route.js:119:3)\n    at Layer.handle [as handle_request] (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/layer.js:95:5)\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:284:15\n    at Function.process_params (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:346:12)\n    at next (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:280:10)\n    at Function.handle (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:175:3)\n    at router (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:47:12)"
+  }
+}
+[ 2025-02-19 02:45:34 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM comment_info WHERE created_id = :userId;",
+  "params": {
+    "userId": {
+      "commentId": 1
+    }
+  }
+}
+[Body]
+undefined
+[ 2025-02-19 02:45:34 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM comment_info WHERE created_id = $1;",
+  "values": [
+    {
+      "commentId": 1
+    }
+  ]
+}
+[Body]
+undefined
+[ 2025-02-19 02:45:34 PM ] [ Test Server ]  -  undefined 
+{
+  "length": 158,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe"
+}
+[Body]
+undefined
+[ 2025-02-19 02:45:34 PM ] [ Test Server ]  -  Error:  invalid input syntax for type integer: "{"commentId":1}" 
+{
+  "length": 158,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe",
+  "stack": "error: invalid input syntax for type integer: \"{\"commentId\":1}\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findMany (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:175:32)\n    at async CommentMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _CommentService.findCommentByUserId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentService.js:67:21)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findCommentByCommentId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:117:23)"
+}
+[Body]
+undefined
+[ 2025-02-19 02:45:34 PM ] [ Test Server ]  -  Response /api/comments/commentId 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "invalid input syntax for type integer: \"{\"commentId\":1}\"",
+  "data": null,
+  "error": {
+    "name": "error",
+    "message": "invalid input syntax for type integer: \"{\"commentId\":1}\"",
+    "stack": "error: invalid input syntax for type integer: \"{\"commentId\":1}\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findMany (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:175:32)\n    at async CommentMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _CommentService.findCommentByUserId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentService.js:67:21)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findCommentByCommentId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:117:23)"
+  }
+}
+[ 2025-02-19 02:45:41 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM comment_info WHERE created_id = :userId;",
+  "params": {
+    "userId": {
+      "commentId": "1"
+    }
+  }
+}
+[Body]
+undefined
+[ 2025-02-19 02:45:41 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM comment_info WHERE created_id = $1;",
+  "values": [
+    {
+      "commentId": "1"
+    }
+  ]
+}
+[Body]
+undefined
+[ 2025-02-19 02:45:41 PM ] [ Test Server ]  -  undefined 
+{
+  "length": 160,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe"
+}
+[Body]
+undefined
+[ 2025-02-19 02:45:41 PM ] [ Test Server ]  -  Error:  invalid input syntax for type integer: "{"commentId":"1"}" 
+{
+  "length": 160,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe",
+  "stack": "error: invalid input syntax for type integer: \"{\"commentId\":\"1\"}\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findMany (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:175:32)\n    at async CommentMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _CommentService.findCommentByUserId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentService.js:67:21)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findCommentByCommentId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:117:23)"
+}
+[Body]
+undefined
+[ 2025-02-19 02:45:41 PM ] [ Test Server ]  -  Response /api/comments/commentId 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "invalid input syntax for type integer: \"{\"commentId\":\"1\"}\"",
+  "data": null,
+  "error": {
+    "name": "error",
+    "message": "invalid input syntax for type integer: \"{\"commentId\":\"1\"}\"",
+    "stack": "error: invalid input syntax for type integer: \"{\"commentId\":\"1\"}\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findMany (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:175:32)\n    at async CommentMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _CommentService.findCommentByUserId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentService.js:67:21)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findCommentByCommentId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:117:23)"
+  }
+}
+[ 2025-02-19 02:46:43 PM ] [ Test Server ]  -  Error:  this.commentService.findCommentByCommentId is not a function 
+{
+  "stack": "TypeError: this.commentService.findCommentByCommentId is not a function\n    at findCommentByCommentId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:117:49)\n    at Layer.handle [as handle_request] (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/route.js:149:13)\n    at Route.dispatch (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/route.js:119:3)\n    at Layer.handle [as handle_request] (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/layer.js:95:5)\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:284:15\n    at Function.process_params (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:346:12)\n    at next (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:280:10)\n    at Function.handle (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:175:3)\n    at router (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:47:12)"
+}
+[Body]
+undefined
+[ 2025-02-19 02:46:43 PM ] [ Test Server ]  -  Response /api/comments/commentId 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "this.commentService.findCommentByCommentId is not a function",
+  "data": null,
+  "error": {
+    "name": "TypeError",
+    "message": "this.commentService.findCommentByCommentId is not a function",
+    "stack": "TypeError: this.commentService.findCommentByCommentId is not a function\n    at findCommentByCommentId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:117:49)\n    at Layer.handle [as handle_request] (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/route.js:149:13)\n    at Route.dispatch (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/route.js:119:3)\n    at Layer.handle [as handle_request] (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/layer.js:95:5)\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:284:15\n    at Function.process_params (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:346:12)\n    at next (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:280:10)\n    at Function.handle (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:175:3)\n    at router (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:47:12)"
+  }
+}
+[ 2025-02-19 02:47:07 PM ] [ Test Server ]  -  Error:  this.commentService.findCommentByCommentId is not a function 
+{
+  "stack": "TypeError: this.commentService.findCommentByCommentId is not a function\n    at findCommentByCommentId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:117:49)\n    at Layer.handle [as handle_request] (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/route.js:149:13)\n    at Route.dispatch (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/route.js:119:3)\n    at Layer.handle [as handle_request] (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/layer.js:95:5)\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:284:15\n    at Function.process_params (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:346:12)\n    at next (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:280:10)\n    at Function.handle (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:175:3)\n    at router (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:47:12)"
+}
+[Body]
+undefined
+[ 2025-02-19 02:47:07 PM ] [ Test Server ]  -  Response /api/comments/commentId 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "this.commentService.findCommentByCommentId is not a function",
+  "data": null,
+  "error": {
+    "name": "TypeError",
+    "message": "this.commentService.findCommentByCommentId is not a function",
+    "stack": "TypeError: this.commentService.findCommentByCommentId is not a function\n    at findCommentByCommentId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:117:49)\n    at Layer.handle [as handle_request] (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/route.js:149:13)\n    at Route.dispatch (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/route.js:119:3)\n    at Layer.handle [as handle_request] (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/layer.js:95:5)\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:284:15\n    at Function.process_params (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:346:12)\n    at next (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:280:10)\n    at Function.handle (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:175:3)\n    at router (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:47:12)"
+  }
+}
+[ 2025-02-19 02:47:33 PM ] [ Test Server ]  -  Error:  this.commentService.findCommentByCommentId is not a function 
+{
+  "stack": "TypeError: this.commentService.findCommentByCommentId is not a function\n    at findCommentByCommentId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:117:49)\n    at Layer.handle [as handle_request] (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/route.js:149:13)\n    at Route.dispatch (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/route.js:119:3)\n    at Layer.handle [as handle_request] (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/layer.js:95:5)\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:284:15\n    at Function.process_params (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:346:12)\n    at next (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:280:10)\n    at Function.handle (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:175:3)\n    at router (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:47:12)"
+}
+[Body]
+undefined
+[ 2025-02-19 02:47:33 PM ] [ Test Server ]  -  Response /api/comments/commentId 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "this.commentService.findCommentByCommentId is not a function",
+  "data": null,
+  "error": {
+    "name": "TypeError",
+    "message": "this.commentService.findCommentByCommentId is not a function",
+    "stack": "TypeError: this.commentService.findCommentByCommentId is not a function\n    at findCommentByCommentId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:117:49)\n    at Layer.handle [as handle_request] (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/route.js:149:13)\n    at Route.dispatch (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/route.js:119:3)\n    at Layer.handle [as handle_request] (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/layer.js:95:5)\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:284:15\n    at Function.process_params (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:346:12)\n    at next (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:280:10)\n    at Function.handle (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:175:3)\n    at router (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/index.js:47:12)"
+  }
+}
+[ 2025-02-19 02:48:01 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM comment_info WHERE index = :commentId;",
+  "params": {
+    "commentId": {
+      "commentId": "1"
+    }
+  }
+}
+[Body]
+undefined
+[ 2025-02-19 02:48:01 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM comment_info WHERE index = $1;",
+  "values": [
+    {
+      "commentId": "1"
+    }
+  ]
+}
+[Body]
+undefined
+[ 2025-02-19 02:48:01 PM ] [ Test Server ]  -  undefined 
+{
+  "length": 160,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe"
+}
+[Body]
+undefined
+[ 2025-02-19 02:48:01 PM ] [ Test Server ]  -  Error:  invalid input syntax for type integer: "{"commentId":"1"}" 
+{
+  "length": 160,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe",
+  "stack": "error: invalid input syntax for type integer: \"{\"commentId\":\"1\"}\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findOne (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:209:32)\n    at async CommentMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _CommentService.findCommentByCommentId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentService.js:67:21)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findCommentByCommentId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:117:23)"
+}
+[Body]
+undefined
+[ 2025-02-19 02:48:01 PM ] [ Test Server ]  -  Response /api/comments/commentId 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "invalid input syntax for type integer: \"{\"commentId\":\"1\"}\"",
+  "data": null,
+  "error": {
+    "name": "error",
+    "message": "invalid input syntax for type integer: \"{\"commentId\":\"1\"}\"",
+    "stack": "error: invalid input syntax for type integer: \"{\"commentId\":\"1\"}\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findOne (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:209:32)\n    at async CommentMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _CommentService.findCommentByCommentId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentService.js:67:21)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findCommentByCommentId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:117:23)"
+  }
+}
+[ 2025-02-19 02:48:24 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM comment_info WHERE index = :commentId;",
+  "params": {
+    "commentId": {
+      "commentId": 1
+    }
+  }
+}
+[Body]
+undefined
+[ 2025-02-19 02:48:24 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM comment_info WHERE index = $1;",
+  "values": [
+    {
+      "commentId": 1
+    }
+  ]
+}
+[Body]
+undefined
+[ 2025-02-19 02:48:24 PM ] [ Test Server ]  -  undefined 
+{
+  "length": 158,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe"
+}
+[Body]
+undefined
+[ 2025-02-19 02:48:24 PM ] [ Test Server ]  -  Error:  invalid input syntax for type integer: "{"commentId":1}" 
+{
+  "length": 158,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe",
+  "stack": "error: invalid input syntax for type integer: \"{\"commentId\":1}\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findOne (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:209:32)\n    at async CommentMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _CommentService.findCommentByCommentId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentService.js:67:21)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findCommentByCommentId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:117:23)"
+}
+[Body]
+undefined
+[ 2025-02-19 02:48:24 PM ] [ Test Server ]  -  Response /api/comments/commentId 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "invalid input syntax for type integer: \"{\"commentId\":1}\"",
+  "data": null,
+  "error": {
+    "name": "error",
+    "message": "invalid input syntax for type integer: \"{\"commentId\":1}\"",
+    "stack": "error: invalid input syntax for type integer: \"{\"commentId\":1}\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findOne (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:209:32)\n    at async CommentMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _CommentService.findCommentByCommentId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentService.js:67:21)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async findCommentByCommentId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:117:23)"
+  }
+}
+[ 2025-02-19 02:48:41 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM comment_info WHERE index = :commentId;",
+  "params": {
+    "commentId": 1
+  }
+}
+[Body]
+undefined
+[ 2025-02-19 02:48:41 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM comment_info WHERE index = $1;",
+  "values": [
+    1
+  ]
+}
+[Body]
+undefined
+[ 2025-02-19 02:48:41 PM ] [ Test Server ]  -  Error:  해당 유저의 게시물들이 없습니다. 
+{
+  "stack": "Error: 해당 유저의 게시물들이 없습니다.\n    at findCommentByCommentId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:124:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-19 02:48:41 PM ] [ Test Server ]  -  Response /api/comments/commentId 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "해당 유저의 게시물들이 없습니다.",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "해당 유저의 게시물들이 없습니다.",
+    "stack": "Error: 해당 유저의 게시물들이 없습니다.\n    at findCommentByCommentId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:124:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-19 02:49:51 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 8
+  }
+}
+[Body]
+undefined
+[ 2025-02-19 02:49:51 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    8
+  ]
+}
+[Body]
+undefined
+[ 2025-02-19 02:49:51 PM ] [ Test Server ]  -  Query: Create Post 
+{
+  "query": "INSERT INTO public.post_info (title,content,created_id) VALUES ('세번째 테스트', '완전 게시가 되었습니다.', '8') RETURNING *;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-19 02:49:51 PM ] [ Test Server ]  -  Raw Query: Create Post 
+{
+  "text": "INSERT INTO public.post_info (title,content,created_id) VALUES ('세번째 테스트', '완전 게시가 되었습니다.', '8') RETURNING *;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-19 02:49:51 PM ] [ Test Server ]  -  Response /api/posts/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 3,
+      "title": "세번째 테스트",
+      "content": "완전 게시가 되었습니다.",
+      "createdId": 8,
+      "createdTime": "2025-02-19T05:49:53.000Z",
+      "updateTime": null
+    }
+  ],
+  "error": null
+}
+[ 2025-02-19 02:50:00 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM comment_info WHERE index = :commentId;",
+  "params": {
+    "commentId": 1
+  }
+}
+[Body]
+undefined
+[ 2025-02-19 02:50:00 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM comment_info WHERE index = $1;",
+  "values": [
+    1
+  ]
+}
+[Body]
+undefined
+[ 2025-02-19 02:50:00 PM ] [ Test Server ]  -  Error:  해당 유저의 게시물들이 없습니다. 
+{
+  "stack": "Error: 해당 유저의 게시물들이 없습니다.\n    at findCommentByCommentId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:121:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-19 02:50:00 PM ] [ Test Server ]  -  Response /api/comments/commentId 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "해당 유저의 게시물들이 없습니다.",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "해당 유저의 게시물들이 없습니다.",
+    "stack": "Error: 해당 유저의 게시물들이 없습니다.\n    at findCommentByCommentId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:121:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-19 02:50:11 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM comment_info WHERE index = :commentId;",
+  "params": {
+    "commentId": 1
+  }
+}
+[Body]
+undefined
+[ 2025-02-19 02:50:11 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM comment_info WHERE index = $1;",
+  "values": [
+    1
+  ]
+}
+[Body]
+undefined
+[ 2025-02-19 02:50:11 PM ] [ Test Server ]  -  Error:  해당 댓글이 없습니다. 
+{
+  "stack": "Error: 해당 댓글이 없습니다.\n    at findCommentByCommentId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:121:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-19 02:50:11 PM ] [ Test Server ]  -  Response /api/comments/commentId 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "해당 댓글이 없습니다.",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "해당 댓글이 없습니다.",
+    "stack": "Error: 해당 댓글이 없습니다.\n    at findCommentByCommentId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:121:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-19 02:50:31 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM comment_info;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-19 02:50:31 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM comment_info;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-19 02:50:31 PM ] [ Test Server ]  -  Response /api/comments/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 2,
+      "content": "첫 댓글입니다.",
+      "createdId": 9,
+      "updateId": null,
+      "createdTime": "2025-02-19 13:59:45",
+      "updateTime": null,
+      "postId": 1
+    },
+    {
+      "index": 3,
+      "content": "첫 댓글입니다.",
+      "createdId": 9,
+      "updateId": null,
+      "createdTime": "2025-02-19 14:03:23",
+      "updateTime": null,
+      "postId": 1
+    },
+    {
+      "index": 4,
+      "content": "첫 댓글입니다.",
+      "createdId": 8,
+      "updateId": null,
+      "createdTime": "2025-02-19 14:30:52",
+      "updateTime": null,
+      "postId": 1
+    }
+  ],
+  "error": null
+}
+[ 2025-02-19 02:50:52 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM comment_info WHERE index = :commentId;",
+  "params": {
+    "commentId": 2
+  }
+}
+[Body]
+undefined
+[ 2025-02-19 02:50:52 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM comment_info WHERE index = $1;",
+  "values": [
+    2
+  ]
+}
+[Body]
+undefined
+[ 2025-02-19 02:50:52 PM ] [ Test Server ]  -  Response /api/comments/commentId 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 2,
+      "content": "첫 댓글입니다.",
+      "createdId": 9,
+      "updateId": null,
+      "createdTime": "2025-02-19 13:59:45",
+      "updateTime": null,
+      "postId": 1
+    }
+  ],
+  "error": null
+}
+[ 2025-02-19 02:50:56 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM comment_info WHERE index = :commentId;",
+  "params": {
+    "commentId": 3
+  }
+}
+[Body]
+undefined
+[ 2025-02-19 02:50:56 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM comment_info WHERE index = $1;",
+  "values": [
+    3
+  ]
+}
+[Body]
+undefined
+[ 2025-02-19 02:50:56 PM ] [ Test Server ]  -  Response /api/comments/commentId 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 3,
+      "content": "첫 댓글입니다.",
+      "createdId": 9,
+      "updateId": null,
+      "createdTime": "2025-02-19 14:03:23",
+      "updateTime": null,
+      "postId": 1
+    }
+  ],
+  "error": null
+}
+[ 2025-02-19 02:50:59 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM comment_info WHERE index = :commentId;",
+  "params": {
+    "commentId": 4
+  }
+}
+[Body]
+undefined
+[ 2025-02-19 02:50:59 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM comment_info WHERE index = $1;",
+  "values": [
+    4
+  ]
+}
+[Body]
+undefined
+[ 2025-02-19 02:50:59 PM ] [ Test Server ]  -  Response /api/comments/commentId 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 4,
+      "content": "첫 댓글입니다.",
+      "createdId": 8,
+      "updateId": null,
+      "createdTime": "2025-02-19 14:30:52",
+      "updateTime": null,
+      "postId": 1
+    }
+  ],
+  "error": null
+}
+[ 2025-02-19 02:51:03 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM comment_info WHERE index = :commentId;",
+  "params": {
+    "commentId": 5
+  }
+}
+[Body]
+undefined
+[ 2025-02-19 02:51:03 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM comment_info WHERE index = $1;",
+  "values": [
+    5
+  ]
+}
+[Body]
+undefined
+[ 2025-02-19 02:51:03 PM ] [ Test Server ]  -  Error:  해당 댓글이 없습니다. 
+{
+  "stack": "Error: 해당 댓글이 없습니다.\n    at findCommentByCommentId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:121:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-19 02:51:03 PM ] [ Test Server ]  -  Response /api/comments/commentId 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "해당 댓글이 없습니다.",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "해당 댓글이 없습니다.",
+    "stack": "Error: 해당 댓글이 없습니다.\n    at findCommentByCommentId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:121:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-19 02:51:06 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM comment_info WHERE index = :commentId;",
+  "params": {
+    "commentId": 4
+  }
+}
+[Body]
+undefined
+[ 2025-02-19 02:51:06 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM comment_info WHERE index = $1;",
+  "values": [
+    4
+  ]
+}
+[Body]
+undefined
+[ 2025-02-19 02:51:06 PM ] [ Test Server ]  -  Response /api/comments/commentId 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 4,
+      "content": "첫 댓글입니다.",
+      "createdId": 8,
+      "updateId": null,
+      "createdTime": "2025-02-19 14:30:52",
+      "updateTime": null,
+      "postId": 1
+    }
+  ],
+  "error": null
+}
+[ 2025-02-19 02:51:37 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM comment_info WHERE created_id = :userId;",
+  "params": {
+    "userId": "1"
+  }
+}
+[Body]
+undefined
+[ 2025-02-19 02:51:37 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM comment_info WHERE created_id = $1;",
+  "values": [
+    "1"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-19 02:51:37 PM ] [ Test Server ]  -  Error:  해당 게시글의 댓글이 없습니다. 
+{
+  "stack": "Error: 해당 게시글의 댓글이 없습니다.\n    at findCommentByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:99:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-19 02:51:37 PM ] [ Test Server ]  -  Response /api/comments/1 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "해당 게시글의 댓글이 없습니다.",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "해당 게시글의 댓글이 없습니다.",
+    "stack": "Error: 해당 게시글의 댓글이 없습니다.\n    at findCommentByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:99:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-19 02:51:45 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM comment_info;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-19 02:51:45 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM comment_info;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-19 02:51:45 PM ] [ Test Server ]  -  Response /api/comments/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 2,
+      "content": "첫 댓글입니다.",
+      "createdId": 9,
+      "updateId": null,
+      "createdTime": "2025-02-19 13:59:45",
+      "updateTime": null,
+      "postId": 1
+    },
+    {
+      "index": 3,
+      "content": "첫 댓글입니다.",
+      "createdId": 9,
+      "updateId": null,
+      "createdTime": "2025-02-19 14:03:23",
+      "updateTime": null,
+      "postId": 1
+    },
+    {
+      "index": 4,
+      "content": "첫 댓글입니다.",
+      "createdId": 8,
+      "updateId": null,
+      "createdTime": "2025-02-19 14:30:52",
+      "updateTime": null,
+      "postId": 1
+    }
+  ],
+  "error": null
+}
+[ 2025-02-19 02:52:01 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM comment_info;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-19 02:52:01 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM comment_info;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-19 02:52:01 PM ] [ Test Server ]  -  Response /api/comments/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 2,
+      "content": "첫 댓글입니다.",
+      "createdId": 9,
+      "updateId": null,
+      "createdTime": "2025-02-19 13:59:45",
+      "updateTime": null,
+      "postId": 1
+    },
+    {
+      "index": 3,
+      "content": "첫 댓글입니다.",
+      "createdId": 9,
+      "updateId": null,
+      "createdTime": "2025-02-19 14:03:23",
+      "updateTime": null,
+      "postId": 1
+    },
+    {
+      "index": 4,
+      "content": "첫 댓글입니다.",
+      "createdId": 8,
+      "updateId": null,
+      "createdTime": "2025-02-19 14:30:52",
+      "updateTime": null,
+      "postId": 1
+    }
+  ],
+  "error": null
+}
+[ 2025-02-19 02:52:13 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM comment_info WHERE created_id = :userId;",
+  "params": {
+    "userId": "1"
+  }
+}
+[Body]
+undefined
+[ 2025-02-19 02:52:13 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM comment_info WHERE created_id = $1;",
+  "values": [
+    "1"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-19 02:52:13 PM ] [ Test Server ]  -  Error:  해당 게시글의 댓글이 없습니다. 
+{
+  "stack": "Error: 해당 게시글의 댓글이 없습니다.\n    at findCommentByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:99:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-19 02:52:13 PM ] [ Test Server ]  -  Response /api/comments/1 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "해당 게시글의 댓글이 없습니다.",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "해당 게시글의 댓글이 없습니다.",
+    "stack": "Error: 해당 게시글의 댓글이 없습니다.\n    at findCommentByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:99:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-19 02:53:00 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM comment_info WHERE created_id = :userId;",
+  "params": {
+    "userId": "1"
+  }
+}
+[Body]
+undefined
+[ 2025-02-19 02:53:00 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM comment_info WHERE created_id = $1;",
+  "values": [
+    "1"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-19 02:53:00 PM ] [ Test Server ]  -  Error:  해당 게시글의 댓글이 없습니다. 
+{
+  "stack": "Error: 해당 게시글의 댓글이 없습니다.\n    at findCommentByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:99:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-19 02:53:00 PM ] [ Test Server ]  -  Response /api/comments/1 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "해당 게시글의 댓글이 없습니다.",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "해당 게시글의 댓글이 없습니다.",
+    "stack": "Error: 해당 게시글의 댓글이 없습니다.\n    at findCommentByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:99:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-19 02:53:02 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM comment_info WHERE created_id = :userId;",
+  "params": {
+    "userId": "1"
+  }
+}
+[Body]
+undefined
+[ 2025-02-19 02:53:02 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM comment_info WHERE created_id = $1;",
+  "values": [
+    "1"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-19 02:53:02 PM ] [ Test Server ]  -  Error:  해당 게시글의 댓글이 없습니다. 
+{
+  "stack": "Error: 해당 게시글의 댓글이 없습니다.\n    at findCommentByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:99:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-19 02:53:02 PM ] [ Test Server ]  -  Response /api/comments/1 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "해당 게시글의 댓글이 없습니다.",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "해당 게시글의 댓글이 없습니다.",
+    "stack": "Error: 해당 게시글의 댓글이 없습니다.\n    at findCommentByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:99:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-19 02:53:03 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM comment_info WHERE created_id = :userId;",
+  "params": {
+    "userId": "1"
+  }
+}
+[Body]
+undefined
+[ 2025-02-19 02:53:03 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM comment_info WHERE created_id = $1;",
+  "values": [
+    "1"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-19 02:53:03 PM ] [ Test Server ]  -  Error:  해당 게시글의 댓글이 없습니다. 
+{
+  "stack": "Error: 해당 게시글의 댓글이 없습니다.\n    at findCommentByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:99:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-19 02:53:03 PM ] [ Test Server ]  -  Response /api/comments/1 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "해당 게시글의 댓글이 없습니다.",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "해당 게시글의 댓글이 없습니다.",
+    "stack": "Error: 해당 게시글의 댓글이 없습니다.\n    at findCommentByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:99:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-19 02:53:03 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM comment_info WHERE created_id = :userId;",
+  "params": {
+    "userId": "1"
+  }
+}
+[Body]
+undefined
+[ 2025-02-19 02:53:03 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM comment_info WHERE created_id = $1;",
+  "values": [
+    "1"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-19 02:53:03 PM ] [ Test Server ]  -  Error:  해당 게시글의 댓글이 없습니다. 
+{
+  "stack": "Error: 해당 게시글의 댓글이 없습니다.\n    at findCommentByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:99:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-19 02:53:03 PM ] [ Test Server ]  -  Response /api/comments/1 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "해당 게시글의 댓글이 없습니다.",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "해당 게시글의 댓글이 없습니다.",
+    "stack": "Error: 해당 게시글의 댓글이 없습니다.\n    at findCommentByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:99:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-19 02:53:11 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM comment_info WHERE created_id = :userId;",
+  "params": {
+    "userId": "1"
+  }
+}
+[Body]
+undefined
+[ 2025-02-19 02:53:11 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM comment_info WHERE created_id = $1;",
+  "values": [
+    "1"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-19 02:53:11 PM ] [ Test Server ]  -  Error:  해당 게시글의 댓글이 없습니다. 
+{
+  "stack": "Error: 해당 게시글의 댓글이 없습니다.\n    at findCommentByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:99:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-19 02:53:11 PM ] [ Test Server ]  -  Response /api/comments/1 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "해당 게시글의 댓글이 없습니다.",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "해당 게시글의 댓글이 없습니다.",
+    "stack": "Error: 해당 게시글의 댓글이 없습니다.\n    at findCommentByPostId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:99:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-19 02:54:03 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM comment_info WHERE post_id = :postId;",
+  "params": {
+    "postId": "1"
+  }
+}
+[Body]
+undefined
+[ 2025-02-19 02:54:03 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM comment_info WHERE post_id = $1;",
+  "values": [
+    "1"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-19 02:54:03 PM ] [ Test Server ]  -  Response /api/comments/1 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 2,
+      "content": "첫 댓글입니다.",
+      "createdId": 9,
+      "updateId": null,
+      "createdTime": "2025-02-19 13:59:45",
+      "updateTime": null,
+      "postId": 1
+    }
+  ],
+  "error": null
+}
+[ 2025-02-19 03:14:54 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-19 03:14:54 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-19 03:14:54 PM ] [ Test Server ]  -  Error:  bad request 
+{
+  "statusCode": 400,
+  "customMessage": "postId필드가 누락되었습니다.",
+  "name": "ValidationError",
+  "stack": "ValidationError: bad request\n    at createComment (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:37:15)\n    at Layer.handle [as handle_request] (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/route.js:149:13)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/util/Middlewares.js:121:7\n    at strategy.success (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:222:18)\n    at verified (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport-jwt/lib/strategy.js:115:41)\n    at JwtStrategy._verify (file:///Users/gganj123/Desktop/study/rdb-api-study/util/Jwt.js:58:14)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-19 03:14:54 PM ] [ Test Server ]  -  Response /api/comments/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 400,
+  "message": "bad request",
+  "data": null,
+  "error": {
+    "name": "ValidationError",
+    "message": "postId필드가 누락되었습니다.",
+    "stack": "ValidationError: bad request\n    at createComment (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:37:15)\n    at Layer.handle [as handle_request] (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/layer.js:95:5)\n    at next (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/express/lib/router/route.js:149:13)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/util/Middlewares.js:121:7\n    at strategy.success (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport/lib/middleware/authenticate.js:222:18)\n    at verified (/Users/gganj123/Desktop/study/rdb-api-study/node_modules/passport-jwt/lib/strategy.js:115:41)\n    at JwtStrategy._verify (file:///Users/gganj123/Desktop/study/rdb-api-study/util/Jwt.js:58:14)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-19 03:19:40 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM comment_info WHERE index = :commentId;",
+  "params": {
+    "commentId": "1"
+  }
+}
+[Body]
+undefined
+[ 2025-02-19 03:19:40 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM comment_info WHERE index = $1;",
+  "values": [
+    "1"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-19 03:19:40 PM ] [ Test Server ]  -  Error:  해당 댓글이 없습니다. 
+{
+  "stack": "Error: 해당 댓글이 없습니다.\n    at findCommentByCommentId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:119:39)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-19 03:19:40 PM ] [ Test Server ]  -  Response /api/comments/commentId/1 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "해당 댓글이 없습니다.",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "해당 댓글이 없습니다.",
+    "stack": "Error: 해당 댓글이 없습니다.\n    at findCommentByCommentId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:119:39)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-19 03:19:53 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM comment_info WHERE index = :commentId;",
+  "params": {
+    "commentId": "2"
+  }
+}
+[Body]
+undefined
+[ 2025-02-19 03:19:53 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM comment_info WHERE index = $1;",
+  "values": [
+    "2"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-19 03:19:53 PM ] [ Test Server ]  -  Response /api/comments/commentId/2 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 2,
+      "content": "첫 댓글입니다.",
+      "createdId": 9,
+      "updateId": null,
+      "createdTime": "2025-02-19 13:59:45",
+      "updateTime": null,
+      "postId": 1
+    }
+  ],
+  "error": null
+}
+[ 2025-02-19 03:20:01 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-19 03:20:01 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-19 03:20:01 PM ] [ Test Server ]  -  undefined
+[ 2025-02-19 03:20:01 PM ] [ Test Server ]  -  Error:  query.rawQuery(...).addParam(...).addParam(...).addParam(...).rqwExec is not a function 
+{
+  "stack": "TypeError: query.rawQuery(...).addParam(...).addParam(...).addParam(...).rqwExec is not a function\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentMapper.js:103:10\n    at CommentMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:20)\n    at CommentMapper.updateComment (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentMapper.js:95:17)\n    at _CommentService.updateCommnet (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentService.js:80:45)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:58\n    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:34\n    at transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async updateComment (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:145:27)"
+}
+[Body]
+undefined
+[ 2025-02-19 03:20:01 PM ] [ Test Server ]  -  Response /api/comments/update/2 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "query.rawQuery(...).addParam(...).addParam(...).addParam(...).rqwExec is not a function",
+  "data": null,
+  "error": {
+    "name": "TypeError",
+    "message": "query.rawQuery(...).addParam(...).addParam(...).addParam(...).rqwExec is not a function",
+    "stack": "TypeError: query.rawQuery(...).addParam(...).addParam(...).addParam(...).rqwExec is not a function\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentMapper.js:103:10\n    at CommentMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:20)\n    at CommentMapper.updateComment (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentMapper.js:95:17)\n    at _CommentService.updateCommnet (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentService.js:80:45)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:58\n    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:34\n    at transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async updateComment (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:145:27)"
+  }
+}
+[ 2025-02-19 03:20:22 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-19 03:20:22 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-19 03:20:22 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " UPDATE comment_info SET content = $2 WHERE createdId = $3 AND index = $1",
+  "values": [
+    "1",
+    "수정된 게시글입니다.",
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-19 03:20:22 PM ] [ Test Server ]  -  undefined 
+{
+  "length": 179,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "42703",
+  "hint": "Perhaps you meant to reference the column \"comment_info.created_id\".",
+  "position": "45",
+  "file": "parse_relation.c",
+  "line": "3729",
+  "routine": "errorMissingColumn"
+}
+[Body]
+undefined
+[ 2025-02-19 03:20:22 PM ] [ Test Server ]  -  Error:  column "createdid" does not exist 
+{
+  "length": 179,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "42703",
+  "hint": "Perhaps you meant to reference the column \"comment_info.created_id\".",
+  "position": "45",
+  "file": "parse_relation.c",
+  "line": "3729",
+  "routine": "errorMissingColumn",
+  "stack": "error: column \"createdid\" does not exist\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.rawExec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:279:32)\n    at async file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentMapper.js:96:22\n    at async CommentMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _CommentService.updateCommnet (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentService.js:80:20)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async updateComment (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:145:27)"
+}
+[Body]
+undefined
+[ 2025-02-19 03:20:22 PM ] [ Test Server ]  -  Response /api/comments/update/2 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "column \"createdid\" does not exist",
+  "data": null,
+  "error": {
+    "name": "error",
+    "message": "column \"createdid\" does not exist",
+    "stack": "error: column \"createdid\" does not exist\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.rawExec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:279:32)\n    at async file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentMapper.js:96:22\n    at async CommentMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _CommentService.updateCommnet (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentService.js:80:20)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async updateComment (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:145:27)"
+  }
+}
+[ 2025-02-19 03:20:38 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-19 03:20:38 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-19 03:20:38 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " UPDATE comment_info SET content = $2 WHERE created_Id = $3 AND index = $1",
+  "values": [
+    "1",
+    "수정된 게시글입니다.",
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-19 03:20:38 PM ] [ Test Server ]  -  Error:  게시글 수정을 실패하였습니다. 
+{
+  "stack": "Error: 게시글 수정을 실패하였습니다.\n    at updateComment (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:163:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-19 03:20:38 PM ] [ Test Server ]  -  Response /api/comments/update/2 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "게시글 수정을 실패하였습니다.",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "게시글 수정을 실패하였습니다.",
+    "stack": "Error: 게시글 수정을 실패하였습니다.\n    at updateComment (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:163:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-19 03:21:28 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-19 03:21:28 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-19 03:21:28 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " UPDATE comment_info SET content = $2 WHERE created_Id = $3 AND index = $1",
+  "values": [
+    "2",
+    {
+      "content": "수정된 게시글입니다."
+    },
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-19 03:21:28 PM ] [ Test Server ]  -  Response /api/comments/update/2 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "commentId": "2",
+      "userId": 9,
+      "content": {
+        "content": "수정된 게시글입니다."
+      },
+      "message": "댓글이 수정되었습니다."
+    }
+  ],
+  "error": null
+}
+[ 2025-02-19 03:21:32 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM comment_info;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-19 03:21:32 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM comment_info;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-19 03:21:32 PM ] [ Test Server ]  -  Response /api/comments/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 3,
+      "content": "첫 댓글입니다.",
+      "createdId": 9,
+      "updateId": null,
+      "createdTime": "2025-02-19 14:03:23",
+      "updateTime": null,
+      "postId": 1
+    },
+    {
+      "index": 4,
+      "content": "첫 댓글입니다.",
+      "createdId": 8,
+      "updateId": null,
+      "createdTime": "2025-02-19 14:30:52",
+      "updateTime": null,
+      "postId": 1
+    },
+    {
+      "index": 2,
+      "content": "{\"content\":\"수정된 게시글입니다.\"}",
+      "createdId": 9,
+      "updateId": null,
+      "createdTime": "2025-02-19 13:59:45",
+      "updateTime": null,
+      "postId": 1
+    }
+  ],
+  "error": null
+}
+[ 2025-02-19 03:21:54 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM post_info;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-19 03:21:54 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM post_info;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-19 03:21:54 PM ] [ Test Server ]  -  Response /api/posts/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 1,
+      "title": "수정된 게시글",
+      "content": "수정된 내용",
+      "createdTime": "2025-02-18 10:00:43",
+      "updateTime": null,
+      "createdId": 9,
+      "updateId": null
+    },
+    {
+      "index": 3,
+      "title": "세번째 테스트",
+      "content": "완전 게시가 되었습니다.",
+      "createdTime": "2025-02-19 14:49:53",
+      "updateTime": null,
+      "createdId": 8,
+      "updateId": null
+    }
+  ],
+  "error": null
+}
+[ 2025-02-19 03:22:22 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-19 03:22:22 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-19 03:22:22 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " UPDATE comment_info SET content = $2 WHERE created_Id = $3 AND index = $1",
+  "values": [
+    "2",
+    {
+      "content": "수정된 게시글입니다."
+    },
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-19 03:22:22 PM ] [ Test Server ]  -  Response /api/comments/update/2 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "commentId": "2",
+      "userId": 9,
+      "content": {
+        "content": "수정된 게시글입니다."
+      },
+      "message": "댓글이 수정되었습니다."
+    }
+  ],
+  "error": null
+}
+[ 2025-02-19 03:22:34 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM comment_info;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-19 03:22:34 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM comment_info;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-19 03:22:34 PM ] [ Test Server ]  -  Response /api/comments/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 3,
+      "content": "첫 댓글입니다.",
+      "createdId": 9,
+      "updateId": null,
+      "createdTime": "2025-02-19 14:03:23",
+      "updateTime": null,
+      "postId": 1
+    },
+    {
+      "index": 4,
+      "content": "첫 댓글입니다.",
+      "createdId": 8,
+      "updateId": null,
+      "createdTime": "2025-02-19 14:30:52",
+      "updateTime": null,
+      "postId": 1
+    },
+    {
+      "index": 2,
+      "content": "{\"content\":\"수정된 게시글입니다.\"}",
+      "createdId": 9,
+      "updateId": null,
+      "createdTime": "2025-02-19 13:59:45",
+      "updateTime": null,
+      "postId": 1
+    }
+  ],
+  "error": null
+}
+[ 2025-02-19 03:23:04 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM comment_info;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-19 03:23:04 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM comment_info;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-19 03:23:04 PM ] [ Test Server ]  -  Response /api/comments/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 3,
+      "content": "첫 댓글입니다.",
+      "createdId": 9,
+      "updateId": null,
+      "createdTime": "2025-02-19 14:03:23",
+      "updateTime": null,
+      "postId": 1
+    },
+    {
+      "index": 4,
+      "content": "첫 댓글입니다.",
+      "createdId": 8,
+      "updateId": null,
+      "createdTime": "2025-02-19 14:30:52",
+      "updateTime": null,
+      "postId": 1
+    },
+    {
+      "index": 2,
+      "content": "{\"content\":\"수정된 게시글입니다.\"}",
+      "createdId": 9,
+      "updateId": null,
+      "createdTime": "2025-02-19 13:59:45",
+      "updateTime": null,
+      "postId": 1
+    }
+  ],
+  "error": null
+}
+[ 2025-02-19 03:23:08 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-19 03:23:08 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-19 03:23:08 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " UPDATE comment_info SET content = $2 WHERE created_Id = $3 AND index = $1",
+  "values": [
+    "2",
+    "수정된 게시글입니다.",
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-19 03:23:08 PM ] [ Test Server ]  -  Response /api/comments/update/2 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "commentId": "2",
+      "userId": 9,
+      "content": "수정된 게시글입니다.",
+      "message": "댓글이 수정되었습니다."
+    }
+  ],
+  "error": null
+}
+[ 2025-02-19 03:23:12 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM comment_info;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-19 03:23:12 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM comment_info;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-19 03:23:12 PM ] [ Test Server ]  -  Response /api/comments/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 3,
+      "content": "첫 댓글입니다.",
+      "createdId": 9,
+      "updateId": null,
+      "createdTime": "2025-02-19 14:03:23",
+      "updateTime": null,
+      "postId": 1
+    },
+    {
+      "index": 4,
+      "content": "첫 댓글입니다.",
+      "createdId": 8,
+      "updateId": null,
+      "createdTime": "2025-02-19 14:30:52",
+      "updateTime": null,
+      "postId": 1
+    },
+    {
+      "index": 2,
+      "content": "수정된 게시글입니다.",
+      "createdId": 9,
+      "updateId": null,
+      "createdTime": "2025-02-19 13:59:45",
+      "updateTime": null,
+      "postId": 1
+    }
+  ],
+  "error": null
+}
+[ 2025-02-19 03:46:40 PM ] [ Test Server ]  -  Response /api/comments/delete/3 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 401,
+  "message": "token is invalid",
+  "data": null,
+  "error": null
+}
+[ 2025-02-19 03:46:54 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-19 03:46:54 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-19 03:46:54 PM ] [ Test Server ]  -  Error:  게시물삭제에 실패하였습니다. 
+{
+  "stack": "Error: 게시물삭제에 실패하였습니다.\n    at deleteComment (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:194:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-19 03:46:54 PM ] [ Test Server ]  -  Response /api/comments/delete/3 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "게시물삭제에 실패하였습니다.",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "게시물삭제에 실패하였습니다.",
+    "stack": "Error: 게시물삭제에 실패하였습니다.\n    at deleteComment (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:194:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-19 03:47:09 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-19 03:47:09 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-19 03:47:09 PM ] [ Test Server ]  -  Error:  게시물삭제에 실패하였습니다. 
+{
+  "stack": "Error: 게시물삭제에 실패하였습니다.\n    at deleteComment (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:194:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-19 03:47:09 PM ] [ Test Server ]  -  Response /api/comments/delete/3 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "게시물삭제에 실패하였습니다.",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "게시물삭제에 실패하였습니다.",
+    "stack": "Error: 게시물삭제에 실패하였습니다.\n    at deleteComment (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:194:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-19 03:47:28 PM ] [ Test Server ]  -  Response /api/users/login 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "userId": "9",
+      "email": "user@example.com",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI5IiwiaWF0IjoxNzM5OTQ3NjQ4LCJleHAiOjE3NDAwMzQwNDgsImF1ZCI6ImF1ZGllbmNlIiwiaXNzIjoiaXNzdWVyIn0.i8XRM3PswUUxDR6GARK0u3uAgrd3SWJu6vb2mXEH5WY",
+      "message": "로그인 되었습니다."
+    }
+  ],
+  "error": null
+}
+[ 2025-02-19 03:47:36 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-19 03:47:36 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-19 03:47:36 PM ] [ Test Server ]  -  Error:  게시물삭제에 실패하였습니다. 
+{
+  "stack": "Error: 게시물삭제에 실패하였습니다.\n    at deleteComment (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:194:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-19 03:47:36 PM ] [ Test Server ]  -  Response /api/comments/delete/3 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "게시물삭제에 실패하였습니다.",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "게시물삭제에 실패하였습니다.",
+    "stack": "Error: 게시물삭제에 실패하였습니다.\n    at deleteComment (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:194:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-19 03:47:58 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM comment_info;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-19 03:47:58 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM comment_info;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-19 03:47:58 PM ] [ Test Server ]  -  Response /api/comments/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 3,
+      "content": "첫 댓글입니다.",
+      "createdId": 9,
+      "updateId": null,
+      "createdTime": "2025-02-19 14:03:23",
+      "updateTime": null,
+      "postId": 1
+    },
+    {
+      "index": 4,
+      "content": "첫 댓글입니다.",
+      "createdId": 8,
+      "updateId": null,
+      "createdTime": "2025-02-19 14:30:52",
+      "updateTime": null,
+      "postId": 1
+    },
+    {
+      "index": 2,
+      "content": "수정된 게시글입니다.",
+      "createdId": 9,
+      "updateId": null,
+      "createdTime": "2025-02-19 13:59:45",
+      "updateTime": null,
+      "postId": 1
+    }
+  ],
+  "error": null
+}
+[ 2025-02-19 03:48:28 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-19 03:48:28 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-19 03:48:28 PM ] [ Test Server ]  -  Error:  게시물삭제에 실패하였습니다. 
+{
+  "stack": "Error: 게시물삭제에 실패하였습니다.\n    at deleteComment (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:194:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-19 03:48:28 PM ] [ Test Server ]  -  Response /api/comments/delete/3 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "게시물삭제에 실패하였습니다.",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "게시물삭제에 실패하였습니다.",
+    "stack": "Error: 게시물삭제에 실패하였습니다.\n    at deleteComment (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:194:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-19 03:49:22 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-19 03:49:22 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-19 03:49:22 PM ] [ Test Server ]  -  Error:  게시물삭제에 실패하였습니다. 
+{
+  "stack": "Error: 게시물삭제에 실패하였습니다.\n    at deleteComment (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:194:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-19 03:49:22 PM ] [ Test Server ]  -  Response /api/comments/delete/3 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "게시물삭제에 실패하였습니다.",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "게시물삭제에 실패하였습니다.",
+    "stack": "Error: 게시물삭제에 실패하였습니다.\n    at deleteComment (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:194:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-19 03:49:47 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-19 03:49:47 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-19 03:49:47 PM ] [ Test Server ]  -  Error:  게시물삭제에 실패하였습니다. 
+{
+  "stack": "Error: 게시물삭제에 실패하였습니다.\n    at deleteComment (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:194:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-19 03:49:47 PM ] [ Test Server ]  -  Response /api/comments/delete/3 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "게시물삭제에 실패하였습니다.",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "게시물삭제에 실패하였습니다.",
+    "stack": "Error: 게시물삭제에 실패하였습니다.\n    at deleteComment (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:194:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-19 03:49:48 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-19 03:49:48 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-19 03:49:48 PM ] [ Test Server ]  -  Error:  게시물삭제에 실패하였습니다. 
+{
+  "stack": "Error: 게시물삭제에 실패하였습니다.\n    at deleteComment (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:194:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-19 03:49:48 PM ] [ Test Server ]  -  Response /api/comments/delete/3 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "게시물삭제에 실패하였습니다.",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "게시물삭제에 실패하였습니다.",
+    "stack": "Error: 게시물삭제에 실패하였습니다.\n    at deleteComment (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:194:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-19 03:50:39 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-19 03:50:39 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-19 03:50:39 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " DELETE FROM comment_info WHERE index = $1 AND created_id = $2",
+  "values": [
+    "3",
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-19 03:50:39 PM ] [ Test Server ]  -  Response /api/comments/delete/3 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "commentId": "3",
+      "userId": 9,
+      "meessage": "댓글이 삭제되었습니다."
+    }
+  ],
+  "error": null
+}
+[ 2025-02-19 03:50:44 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM comment_info;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-19 03:50:44 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM comment_info;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-19 03:50:44 PM ] [ Test Server ]  -  Response /api/comments/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 4,
+      "content": "첫 댓글입니다.",
+      "createdId": 8,
+      "updateId": null,
+      "createdTime": "2025-02-19 14:30:52",
+      "updateTime": null,
+      "postId": 1
+    },
+    {
+      "index": 2,
+      "content": "수정된 게시글입니다.",
+      "createdId": 9,
+      "updateId": null,
+      "createdTime": "2025-02-19 13:59:45",
+      "updateTime": null,
+      "postId": 1
+    }
+  ],
+  "error": null
+}

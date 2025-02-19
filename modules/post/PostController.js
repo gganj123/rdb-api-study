@@ -110,7 +110,9 @@ export class PostController {
       const postId = req.params.postId;
       const userId = req.user?.index;
       const { title, content } = req.body;
-
+      if (!userId || isNaN(Number(userId))) {
+        return sendErrorResponse(res, new Error("userId를 확인해주세요."));
+      }
       if (!title || !content) {
         return sendErrorResponse(
           res,

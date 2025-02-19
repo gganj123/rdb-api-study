@@ -9,6 +9,7 @@ import { PgDBManager } from "./database/DatabaseManager.js";
 import { userRoutes } from "./routes/UserRoutes.js";
 import { postRoutes } from "./routes/PostRoutes.js";
 import "./util/passportConfig.js";
+import { commentRoutes } from "./routes/CommentRoutes.js";
 // dotenv
 config();
 
@@ -33,6 +34,7 @@ const apiRouter = Router();
 // 유저 라우터
 userRoutes(apiRouter);
 postRoutes(apiRouter);
+commentRoutes(apiRouter);
 
 app.use("/api", apiRouter);
 app.use(passport.initialize());

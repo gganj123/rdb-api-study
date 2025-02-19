@@ -9656,3 +9656,738 @@ undefined
   ],
   "error": null
 }
+[ 2025-02-18 03:46:37 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 03:46:37 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 03:46:37 PM ] [ Test Server ]  -  Query: Create Comment 
+{
+  "query": "INSERT INTO public.comment_info (content,post_id,created_id) VALUES ('undefined', '1', '9') RETURNING *;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-18 03:46:37 PM ] [ Test Server ]  -  Raw Query: Create Comment 
+{
+  "text": "INSERT INTO public.comment_info (content,post_id,created_id) VALUES ('undefined', '1', '9') RETURNING *;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-18 03:46:37 PM ] [ Test Server ]  -  undefined 
+{
+  "length": 132,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "42703",
+  "position": "42",
+  "file": "parse_target.c",
+  "line": "1066",
+  "routine": "checkInsertTargets"
+}
+[Body]
+undefined
+[ 2025-02-18 03:46:37 PM ] [ Test Server ]  -  Error:  column "post_id" of relation "comment_info" does not exist 
+{
+  "length": 132,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "42703",
+  "position": "42",
+  "file": "parse_target.c",
+  "line": "1066",
+  "routine": "checkInsertTargets",
+  "stack": "error: column \"post_id\" of relation \"comment_info\" does not exist\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:226:32)\n    at async CommentMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _CommentService.createComment (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentService.js:22:28)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async createComment (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:42:30)"
+}
+[Body]
+undefined
+[ 2025-02-18 03:46:37 PM ] [ Test Server ]  -  Response /api/comments/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "column \"post_id\" of relation \"comment_info\" does not exist",
+  "data": null,
+  "error": {
+    "name": "error",
+    "message": "column \"post_id\" of relation \"comment_info\" does not exist",
+    "stack": "error: column \"post_id\" of relation \"comment_info\" does not exist\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:226:32)\n    at async CommentMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _CommentService.createComment (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentService.js:22:28)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async createComment (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:42:30)"
+  }
+}
+[ 2025-02-18 03:49:02 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 03:49:02 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 03:49:02 PM ] [ Test Server ]  -  Error:  content is not defined 
+{
+  "stack": "ReferenceError: content is not defined\n    at _CommentService.createComment (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentService.js:23:7)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:58\n    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:34\n    at transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async createComment (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:42:30)"
+}
+[Body]
+undefined
+[ 2025-02-18 03:49:02 PM ] [ Test Server ]  -  Response /api/comments/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "content is not defined",
+  "data": null,
+  "error": {
+    "name": "ReferenceError",
+    "message": "content is not defined",
+    "stack": "ReferenceError: content is not defined\n    at _CommentService.createComment (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentService.js:23:7)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:58\n    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:34\n    at transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async createComment (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:42:30)"
+  }
+}
+[ 2025-02-18 03:49:11 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 03:49:11 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 03:49:11 PM ] [ Test Server ]  -  Query: Create Comment 
+{
+  "query": "INSERT INTO public.comment_info (content,post_id,created_id) VALUES ('첫 댓글입니다.', '1', '9') RETURNING *;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-18 03:49:11 PM ] [ Test Server ]  -  Raw Query: Create Comment 
+{
+  "text": "INSERT INTO public.comment_info (content,post_id,created_id) VALUES ('첫 댓글입니다.', '1', '9') RETURNING *;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-18 03:49:11 PM ] [ Test Server ]  -  undefined 
+{
+  "length": 132,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "42703",
+  "position": "42",
+  "file": "parse_target.c",
+  "line": "1066",
+  "routine": "checkInsertTargets"
+}
+[Body]
+undefined
+[ 2025-02-18 03:49:11 PM ] [ Test Server ]  -  Error:  column "post_id" of relation "comment_info" does not exist 
+{
+  "length": 132,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "42703",
+  "position": "42",
+  "file": "parse_target.c",
+  "line": "1066",
+  "routine": "checkInsertTargets",
+  "stack": "error: column \"post_id\" of relation \"comment_info\" does not exist\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:226:32)\n    at async CommentMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _CommentService.createComment (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentService.js:22:28)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async createComment (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:42:30)"
+}
+[Body]
+undefined
+[ 2025-02-18 03:49:11 PM ] [ Test Server ]  -  Response /api/comments/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "column \"post_id\" of relation \"comment_info\" does not exist",
+  "data": null,
+  "error": {
+    "name": "error",
+    "message": "column \"post_id\" of relation \"comment_info\" does not exist",
+    "stack": "error: column \"post_id\" of relation \"comment_info\" does not exist\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:226:32)\n    at async CommentMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _CommentService.createComment (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentService.js:22:28)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async createComment (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:42:30)"
+  }
+}
+[ 2025-02-18 04:01:34 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 04:01:34 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 04:01:34 PM ] [ Test Server ]  -  Query: Create Comment 
+{
+  "query": "INSERT INTO public.comment_inf (content, post_id, created_id) VALUES ('첫 댓글입니다.', '1', '9') RETURNING *;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-18 04:01:34 PM ] [ Test Server ]  -  Raw Query: Create Comment 
+{
+  "text": "INSERT INTO public.comment_inf (content, post_id, created_id) VALUES ('첫 댓글입니다.', '1', '9') RETURNING *;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-18 04:01:34 PM ] [ Test Server ]  -  undefined 
+{
+  "length": 117,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "42P01",
+  "position": "13",
+  "file": "parse_relation.c",
+  "line": "1428",
+  "routine": "parserOpenTable"
+}
+[Body]
+undefined
+[ 2025-02-18 04:01:34 PM ] [ Test Server ]  -  Error:  relation "public.comment_inf" does not exist 
+{
+  "length": 117,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "42P01",
+  "position": "13",
+  "file": "parse_relation.c",
+  "line": "1428",
+  "routine": "parserOpenTable",
+  "stack": "error: relation \"public.comment_inf\" does not exist\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:226:32)\n    at async CommentMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _CommentService.createComment (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentService.js:22:28)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async createComment (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:42:30)"
+}
+[Body]
+undefined
+[ 2025-02-18 04:01:34 PM ] [ Test Server ]  -  Response /api/comments/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "relation \"public.comment_inf\" does not exist",
+  "data": null,
+  "error": {
+    "name": "error",
+    "message": "relation \"public.comment_inf\" does not exist",
+    "stack": "error: relation \"public.comment_inf\" does not exist\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:226:32)\n    at async CommentMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _CommentService.createComment (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentService.js:22:28)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async createComment (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:42:30)"
+  }
+}
+[ 2025-02-18 04:01:38 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 04:01:38 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 04:01:38 PM ] [ Test Server ]  -  Query: Create Comment 
+{
+  "query": "INSERT INTO public.comment_inf (content, post_id, created_id) VALUES ('첫 댓글입니다.', '1', '9') RETURNING *;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-18 04:01:38 PM ] [ Test Server ]  -  Raw Query: Create Comment 
+{
+  "text": "INSERT INTO public.comment_inf (content, post_id, created_id) VALUES ('첫 댓글입니다.', '1', '9') RETURNING *;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-18 04:01:38 PM ] [ Test Server ]  -  undefined 
+{
+  "length": 117,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "42P01",
+  "position": "13",
+  "file": "parse_relation.c",
+  "line": "1428",
+  "routine": "parserOpenTable"
+}
+[Body]
+undefined
+[ 2025-02-18 04:01:38 PM ] [ Test Server ]  -  Error:  relation "public.comment_inf" does not exist 
+{
+  "length": 117,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "42P01",
+  "position": "13",
+  "file": "parse_relation.c",
+  "line": "1428",
+  "routine": "parserOpenTable",
+  "stack": "error: relation \"public.comment_inf\" does not exist\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:226:32)\n    at async CommentMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _CommentService.createComment (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentService.js:22:28)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async createComment (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:42:30)"
+}
+[Body]
+undefined
+[ 2025-02-18 04:01:38 PM ] [ Test Server ]  -  Response /api/comments/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "relation \"public.comment_inf\" does not exist",
+  "data": null,
+  "error": {
+    "name": "error",
+    "message": "relation \"public.comment_inf\" does not exist",
+    "stack": "error: relation \"public.comment_inf\" does not exist\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:226:32)\n    at async CommentMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _CommentService.createComment (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentService.js:22:28)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async createComment (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:42:30)"
+  }
+}
+[ 2025-02-18 04:05:01 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 04:05:01 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 04:05:01 PM ] [ Test Server ]  -  Query: Create Comment 
+{
+  "query": "INSERT INTO public.comment_infoma (content, post_id, created_id) VALUES ('첫 댓글입니다.', '1', '9') RETURNING *;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-18 04:05:01 PM ] [ Test Server ]  -  Raw Query: Create Comment 
+{
+  "text": "INSERT INTO public.comment_infoma (content, post_id, created_id) VALUES ('첫 댓글입니다.', '1', '9') RETURNING *;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-18 04:05:01 PM ] [ Test Server ]  -  undefined 
+{
+  "length": 120,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "42P01",
+  "position": "13",
+  "file": "parse_relation.c",
+  "line": "1428",
+  "routine": "parserOpenTable"
+}
+[Body]
+undefined
+[ 2025-02-18 04:05:01 PM ] [ Test Server ]  -  Error:  relation "public.comment_infoma" does not exist 
+{
+  "length": 120,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "42P01",
+  "position": "13",
+  "file": "parse_relation.c",
+  "line": "1428",
+  "routine": "parserOpenTable",
+  "stack": "error: relation \"public.comment_infoma\" does not exist\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:226:32)\n    at async CommentMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _CommentService.createComment (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentService.js:22:28)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async createComment (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:42:30)"
+}
+[Body]
+undefined
+[ 2025-02-18 04:05:01 PM ] [ Test Server ]  -  Response /api/comments/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "relation \"public.comment_infoma\" does not exist",
+  "data": null,
+  "error": {
+    "name": "error",
+    "message": "relation \"public.comment_infoma\" does not exist",
+    "stack": "error: relation \"public.comment_infoma\" does not exist\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:226:32)\n    at async CommentMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _CommentService.createComment (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentService.js:22:28)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async createComment (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:42:30)"
+  }
+}
+[ 2025-02-18 04:05:46 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM post_info;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-18 04:05:46 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM post_info;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-18 04:05:46 PM ] [ Test Server ]  -  Response /api/posts/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 1,
+      "title": "수정된 게시글",
+      "content": "수정된 내용",
+      "createdTime": "2025-02-18 10:00:43",
+      "updateTime": null,
+      "createdId": 9,
+      "updateId": null
+    }
+  ],
+  "error": null
+}
+[ 2025-02-18 04:06:13 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 04:06:13 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 04:06:13 PM ] [ Test Server ]  -  Query: Create Comment 
+{
+  "query": "INSERT INTO public.comment_infoma (content, post_id, created_id) VALUES ('첫 댓글입니다.', '1', '9') RETURNING *;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-18 04:06:13 PM ] [ Test Server ]  -  Raw Query: Create Comment 
+{
+  "text": "INSERT INTO public.comment_infoma (content, post_id, created_id) VALUES ('첫 댓글입니다.', '1', '9') RETURNING *;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-18 04:06:13 PM ] [ Test Server ]  -  undefined 
+{
+  "length": 120,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "42P01",
+  "position": "13",
+  "file": "parse_relation.c",
+  "line": "1428",
+  "routine": "parserOpenTable"
+}
+[Body]
+undefined
+[ 2025-02-18 04:06:13 PM ] [ Test Server ]  -  Error:  relation "public.comment_infoma" does not exist 
+{
+  "length": 120,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "42P01",
+  "position": "13",
+  "file": "parse_relation.c",
+  "line": "1428",
+  "routine": "parserOpenTable",
+  "stack": "error: relation \"public.comment_infoma\" does not exist\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:226:32)\n    at async CommentMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _CommentService.createComment (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentService.js:22:28)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async createComment (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:42:30)"
+}
+[Body]
+undefined
+[ 2025-02-18 04:06:13 PM ] [ Test Server ]  -  Response /api/comments/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "relation \"public.comment_infoma\" does not exist",
+  "data": null,
+  "error": {
+    "name": "error",
+    "message": "relation \"public.comment_infoma\" does not exist",
+    "stack": "error: relation \"public.comment_infoma\" does not exist\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:226:32)\n    at async CommentMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _CommentService.createComment (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentService.js:22:28)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async createComment (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:42:30)"
+  }
+}
+[ 2025-02-18 04:08:01 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 04:08:01 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 04:08:01 PM ] [ Test Server ]  -  Query: Create Comment 
+{
+  "query": "INSERT INTO public.comment_info (content, post_id, created_id) VALUES ('첫 댓글입니다.', '1', '9') RETURNING *;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-18 04:08:01 PM ] [ Test Server ]  -  Raw Query: Create Comment 
+{
+  "text": "INSERT INTO public.comment_info (content, post_id, created_id) VALUES ('첫 댓글입니다.', '1', '9') RETURNING *;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-18 04:08:01 PM ] [ Test Server ]  -  undefined 
+{
+  "length": 132,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "42703",
+  "position": "43",
+  "file": "parse_target.c",
+  "line": "1066",
+  "routine": "checkInsertTargets"
+}
+[Body]
+undefined
+[ 2025-02-18 04:08:01 PM ] [ Test Server ]  -  Error:  column "post_id" of relation "comment_info" does not exist 
+{
+  "length": 132,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "42703",
+  "position": "43",
+  "file": "parse_target.c",
+  "line": "1066",
+  "routine": "checkInsertTargets",
+  "stack": "error: column \"post_id\" of relation \"comment_info\" does not exist\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:226:32)\n    at async CommentMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _CommentService.createComment (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentService.js:22:28)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async createComment (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:42:30)"
+}
+[Body]
+undefined
+[ 2025-02-18 04:08:01 PM ] [ Test Server ]  -  Response /api/comments/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "column \"post_id\" of relation \"comment_info\" does not exist",
+  "data": null,
+  "error": {
+    "name": "error",
+    "message": "column \"post_id\" of relation \"comment_info\" does not exist",
+    "stack": "error: column \"post_id\" of relation \"comment_info\" does not exist\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:226:32)\n    at async CommentMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _CommentService.createComment (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentService.js:22:28)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async createComment (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:42:30)"
+  }
+}
+[ 2025-02-18 04:23:31 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM comment_info;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-18 04:23:31 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM comment_info;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-18 04:23:31 PM ] [ Test Server ]  -  Response /api/comments/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": null,
+  "error": null
+}
+[ 2025-02-18 04:23:44 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-18 04:23:44 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-18 04:23:44 PM ] [ Test Server ]  -  Query: Create Comment 
+{
+  "query": "INSERT INTO public.comment_info (content, post_id, created_id) VALUES ('첫 댓글입니다.', '1', '9') RETURNING *;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-18 04:23:44 PM ] [ Test Server ]  -  Raw Query: Create Comment 
+{
+  "text": "INSERT INTO public.comment_info (content, post_id, created_id) VALUES ('첫 댓글입니다.', '1', '9') RETURNING *;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-18 04:23:44 PM ] [ Test Server ]  -  undefined 
+{
+  "length": 132,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "42703",
+  "position": "43",
+  "file": "parse_target.c",
+  "line": "1066",
+  "routine": "checkInsertTargets"
+}
+[Body]
+undefined
+[ 2025-02-18 04:23:44 PM ] [ Test Server ]  -  Error:  column "post_id" of relation "comment_info" does not exist 
+{
+  "length": 132,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "42703",
+  "position": "43",
+  "file": "parse_target.c",
+  "line": "1066",
+  "routine": "checkInsertTargets",
+  "stack": "error: column \"post_id\" of relation \"comment_info\" does not exist\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:226:32)\n    at async CommentMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _CommentService.createComment (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentService.js:22:28)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async createComment (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:42:30)"
+}
+[Body]
+undefined
+[ 2025-02-18 04:23:44 PM ] [ Test Server ]  -  Response /api/comments/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "column \"post_id\" of relation \"comment_info\" does not exist",
+  "data": null,
+  "error": {
+    "name": "error",
+    "message": "column \"post_id\" of relation \"comment_info\" does not exist",
+    "stack": "error: column \"post_id\" of relation \"comment_info\" does not exist\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:226:32)\n    at async CommentMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _CommentService.createComment (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentService.js:22:28)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async createComment (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/comment/CommentController.js:42:30)"
+  }
+}

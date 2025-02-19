@@ -1,12 +1,14 @@
-import { CreatedUpdateTimeId } from '../../../util/types/Common'
+import { CreatedUpdateTimeId } from "../../../util/types/Common.js";
 export class CommentInfo extends CreatedUpdateTimeId {
   /** @type {number} */
-  index
+  index;
 
   /** @type {string} */
-  content
+  content;
 
   /** @type {number} */
-  postIndex
+  postId;
 
+  /** @type {number} */
+  createdId;
 }

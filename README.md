@@ -83,7 +83,9 @@ ORM을 사용하지 않고 Raw 쿼리를 사용하고 있기 때문에, 쿼리�
 ```js
 class UserMapper extends BaseMapper {
   findAllUsers() {
-    return this.exec(async (query) => query.SELECT("*").FROM("users").findMany());
+    return this.exec(async (query) =>
+      query.SELECT("*").FROM("users").findMany()
+    );
   }
 }
 ```
@@ -117,7 +119,9 @@ class UserMapper extends BaseMapper {
 ```js
 class UserMapper extends BaseMapper {
   findAllUsers() {
-    return this.exec(async (query) => query.SELECT("*").FROM("users").findMany());
+    return this.exec(async (query) =>
+      query.SELECT("*").FROM("users").findMany()
+    );
   }
 }
 ```
@@ -184,7 +188,10 @@ class UserController {
 
 ```js
 // 예시
-throw new NotFoundError({ message: ResponseMessage.userNotFound, customMessage: "유저가 존재하지 않습니다." });
+throw new NotFoundError({
+  message: ResponseMessage.userNotFound,
+  customMessage: "유저가 존재하지 않습니다.",
+});
 ```
 
 ## 권장사항

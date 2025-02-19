@@ -29,7 +29,6 @@ export class PostMapper extends BaseMapper {
         .RETURNING("*")
         .exec();
 
-      console.log("🟢 Post 생성 결과:", result);
       return result;
     });
   }
