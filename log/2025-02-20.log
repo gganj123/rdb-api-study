@@ -1,0 +1,6146 @@
+[ 2025-02-20 07:42:38 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 07:42:38 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 07:42:38 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM post_info WHERE index = $1 AND created_id = $2",
+  "values": [
+    "1",
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 07:42:38 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "DELETE FROM bookmark_info WHERE index = ?;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-20 07:42:38 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "DELETE FROM bookmark_info WHERE index = ?;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 07:42:38 AM ] [ Test Server ]  -  undefined 
+{
+  "length": 90,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "42601",
+  "position": "42",
+  "file": "scan.l",
+  "line": "1241",
+  "routine": "scanner_yyerror"
+}
+[Body]
+undefined
+[ 2025-02-20 07:42:38 AM ] [ Test Server ]  -  Error:  syntax error at or near ";" 
+{
+  "length": 90,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "42601",
+  "position": "42",
+  "file": "scan.l",
+  "line": "1241",
+  "routine": "scanner_yyerror",
+  "stack": "error: syntax error at or near \";\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:226:32)\n    at async BookmarkMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _BookmarkService.toggleBookmark (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/bookmark/bookmarkService.js:36:7)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async toggleBookmark (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/bookmark/BookmarkController.js:42:24)"
+}
+[Body]
+undefined
+[ 2025-02-20 07:42:38 AM ] [ Test Server ]  -  Response /api/bookmarks/toggle/1 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "syntax error at or near \";\"",
+  "data": null,
+  "error": {
+    "name": "error",
+    "message": "syntax error at or near \";\"",
+    "stack": "error: syntax error at or near \";\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:226:32)\n    at async BookmarkMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _BookmarkService.toggleBookmark (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/bookmark/bookmarkService.js:36:7)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async toggleBookmark (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/bookmark/BookmarkController.js:42:24)"
+  }
+}
+[ 2025-02-20 07:43:14 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 07:43:14 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 07:43:14 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "DELETE FROM bookmark_info WHERE index = ?;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-20 07:43:14 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "DELETE FROM bookmark_info WHERE index = ?;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 07:43:14 AM ] [ Test Server ]  -  undefined 
+{
+  "length": 90,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "42601",
+  "position": "42",
+  "file": "scan.l",
+  "line": "1241",
+  "routine": "scanner_yyerror"
+}
+[Body]
+undefined
+[ 2025-02-20 07:43:14 AM ] [ Test Server ]  -  Error:  syntax error at or near ";" 
+{
+  "length": 90,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "42601",
+  "position": "42",
+  "file": "scan.l",
+  "line": "1241",
+  "routine": "scanner_yyerror",
+  "stack": "error: syntax error at or near \";\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:226:32)\n    at async BookmarkMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _BookmarkService.toggleBookmark (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/bookmark/bookmarkService.js:36:7)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async toggleBookmark (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/bookmark/BookmarkController.js:42:24)"
+}
+[Body]
+undefined
+[ 2025-02-20 07:43:14 AM ] [ Test Server ]  -  Response /api/bookmarks/toggle/1 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "syntax error at or near \";\"",
+  "data": null,
+  "error": {
+    "name": "error",
+    "message": "syntax error at or near \";\"",
+    "stack": "error: syntax error at or near \";\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:226:32)\n    at async BookmarkMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _BookmarkService.toggleBookmark (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/bookmark/bookmarkService.js:36:7)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async toggleBookmark (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/bookmark/BookmarkController.js:42:24)"
+  }
+}
+[ 2025-02-20 07:43:26 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 07:43:26 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 07:43:26 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM post_info WHERE index = $1 AND created_id = $2",
+  "values": [
+    "1",
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 07:43:26 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "DELETE FROM bookmark_info WHERE index = ?;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-20 07:43:26 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "DELETE FROM bookmark_info WHERE index = ?;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 07:43:26 AM ] [ Test Server ]  -  undefined 
+{
+  "length": 90,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "42601",
+  "position": "42",
+  "file": "scan.l",
+  "line": "1241",
+  "routine": "scanner_yyerror"
+}
+[Body]
+undefined
+[ 2025-02-20 07:43:26 AM ] [ Test Server ]  -  Error:  syntax error at or near ";" 
+{
+  "length": 90,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "42601",
+  "position": "42",
+  "file": "scan.l",
+  "line": "1241",
+  "routine": "scanner_yyerror",
+  "stack": "error: syntax error at or near \";\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:226:32)\n    at async BookmarkMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _BookmarkService.toggleBookmark (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/bookmark/bookmarkService.js:36:7)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async toggleBookmark (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/bookmark/BookmarkController.js:42:24)"
+}
+[Body]
+undefined
+[ 2025-02-20 07:43:26 AM ] [ Test Server ]  -  Response /api/bookmarks/toggle/1 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "syntax error at or near \";\"",
+  "data": null,
+  "error": {
+    "name": "error",
+    "message": "syntax error at or near \";\"",
+    "stack": "error: syntax error at or near \";\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:226:32)\n    at async BookmarkMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _BookmarkService.toggleBookmark (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/bookmark/bookmarkService.js:36:7)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async toggleBookmark (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/bookmark/BookmarkController.js:42:24)"
+  }
+}
+[ 2025-02-20 07:45:50 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 07:45:50 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 07:45:50 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM post_info WHERE post_id = $1 AND created_id = $2",
+  "values": [
+    "1",
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 07:45:50 AM ] [ Test Server ]  -  undefined 
+{
+  "length": 107,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "42703",
+  "position": "32",
+  "file": "parse_relation.c",
+  "line": "3722",
+  "routine": "errorMissingColumn"
+}
+[Body]
+undefined
+[ 2025-02-20 07:45:50 AM ] [ Test Server ]  -  Error:  column "post_id" does not exist 
+{
+  "length": 107,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "42703",
+  "position": "32",
+  "file": "parse_relation.c",
+  "line": "3722",
+  "routine": "errorMissingColumn",
+  "stack": "error: column \"post_id\" does not exist\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.rawFindOne (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:262:32)\n    at async file:///Users/gganj123/Desktop/study/rdb-api-study/modules/bookmark/BookmarkMapper.js:23:22\n    at async BookmarkMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _BookmarkService.toggleBookmark (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/bookmark/bookmarkService.js:30:30)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async toggleBookmark (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/bookmark/BookmarkController.js:42:24)"
+}
+[Body]
+undefined
+[ 2025-02-20 07:45:50 AM ] [ Test Server ]  -  Response /api/bookmarks/toggle/1 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "column \"post_id\" does not exist",
+  "data": null,
+  "error": {
+    "name": "error",
+    "message": "column \"post_id\" does not exist",
+    "stack": "error: column \"post_id\" does not exist\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.rawFindOne (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:262:32)\n    at async file:///Users/gganj123/Desktop/study/rdb-api-study/modules/bookmark/BookmarkMapper.js:23:22\n    at async BookmarkMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _BookmarkService.toggleBookmark (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/bookmark/bookmarkService.js:30:30)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async toggleBookmark (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/bookmark/BookmarkController.js:42:24)"
+  }
+}
+[ 2025-02-20 07:48:00 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 07:48:00 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 07:48:00 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM bookmark_info WHERE post_id = $1 AND created_id = $2",
+  "values": [
+    "1",
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 07:48:00 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "INSERT INTO bookmark_info (created_id, post_id) VALUES ('9', '1');",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-20 07:48:00 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "INSERT INTO bookmark_info (created_id, post_id) VALUES ('9', '1');",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 07:48:00 AM ] [ Test Server ]  -  Response /api/bookmarks/toggle/1 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "message": "북마크가 추가되었습니다.",
+      "isBookmarked": true
+    }
+  ],
+  "error": null
+}
+[ 2025-02-20 07:48:47 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 07:48:47 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 07:48:47 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM bookmark_info WHERE post_id = $1 AND created_id = $2",
+  "values": [
+    "1",
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 07:48:47 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "DELETE FROM bookmark_info WHERE index = ?;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-20 07:48:47 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "DELETE FROM bookmark_info WHERE index = ?;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 07:48:47 AM ] [ Test Server ]  -  undefined 
+{
+  "length": 90,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "42601",
+  "position": "42",
+  "file": "scan.l",
+  "line": "1241",
+  "routine": "scanner_yyerror"
+}
+[Body]
+undefined
+[ 2025-02-20 07:48:47 AM ] [ Test Server ]  -  Error:  syntax error at or near ";" 
+{
+  "length": 90,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "42601",
+  "position": "42",
+  "file": "scan.l",
+  "line": "1241",
+  "routine": "scanner_yyerror",
+  "stack": "error: syntax error at or near \";\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:226:32)\n    at async BookmarkMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _BookmarkService.toggleBookmark (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/bookmark/bookmarkService.js:36:7)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async toggleBookmark (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/bookmark/BookmarkController.js:42:24)"
+}
+[Body]
+undefined
+[ 2025-02-20 07:48:47 AM ] [ Test Server ]  -  Response /api/bookmarks/toggle/1 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "syntax error at or near \";\"",
+  "data": null,
+  "error": {
+    "name": "error",
+    "message": "syntax error at or near \";\"",
+    "stack": "error: syntax error at or near \";\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:226:32)\n    at async BookmarkMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _BookmarkService.toggleBookmark (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/bookmark/bookmarkService.js:36:7)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async toggleBookmark (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/bookmark/BookmarkController.js:42:24)"
+  }
+}
+[ 2025-02-20 07:50:32 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 07:50:32 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 07:50:32 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM bookmark_info WHERE post_id = $1 AND created_id = $2",
+  "values": [
+    "1",
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 07:50:32 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "DELETE FROM bookmark_info WHERE index = :bookmarkId;",
+  "params": {
+    "bookmarkId": 1
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 07:50:32 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "DELETE FROM bookmark_info WHERE index = $1;",
+  "values": [
+    1
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 07:50:32 AM ] [ Test Server ]  -  Response /api/bookmarks/toggle/1 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "message": "북마크가 삭제되었습니다.",
+      "isBookmarked": false
+    }
+  ],
+  "error": null
+}
+[ 2025-02-20 07:50:34 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 07:50:34 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 07:50:34 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM bookmark_info WHERE post_id = $1 AND created_id = $2",
+  "values": [
+    "1",
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 07:50:34 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "INSERT INTO bookmark_info (created_id, post_id) VALUES ('9', '1');",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-20 07:50:34 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "INSERT INTO bookmark_info (created_id, post_id) VALUES ('9', '1');",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 07:50:34 AM ] [ Test Server ]  -  Response /api/bookmarks/toggle/1 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "message": "북마크가 추가되었습니다.",
+      "isBookmarked": true
+    }
+  ],
+  "error": null
+}
+[ 2025-02-20 07:50:35 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 07:50:35 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 07:50:35 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM bookmark_info WHERE post_id = $1 AND created_id = $2",
+  "values": [
+    "1",
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 07:50:35 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "DELETE FROM bookmark_info WHERE index = :bookmarkId;",
+  "params": {
+    "bookmarkId": 2
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 07:50:35 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "DELETE FROM bookmark_info WHERE index = $1;",
+  "values": [
+    2
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 07:50:35 AM ] [ Test Server ]  -  Response /api/bookmarks/toggle/1 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "message": "북마크가 삭제되었습니다.",
+      "isBookmarked": false
+    }
+  ],
+  "error": null
+}
+[ 2025-02-20 07:50:38 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 07:50:38 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 07:50:38 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM bookmark_info WHERE post_id = $1 AND created_id = $2",
+  "values": [
+    "1",
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 07:50:38 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "INSERT INTO bookmark_info (created_id, post_id) VALUES ('9', '1');",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-20 07:50:38 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "INSERT INTO bookmark_info (created_id, post_id) VALUES ('9', '1');",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 07:50:38 AM ] [ Test Server ]  -  Response /api/bookmarks/toggle/1 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "message": "북마크가 추가되었습니다.",
+      "isBookmarked": true
+    }
+  ],
+  "error": null
+}
+[ 2025-02-20 07:50:44 AM ] [ Test Server ]  -  Response /api/bookmarks/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {}
+  ],
+  "error": null
+}
+[ 2025-02-20 07:50:44 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM bookmark_info;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-20 07:50:44 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM bookmark_info;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 07:50:46 AM ] [ Test Server ]  -  Response /api/bookmarks/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {}
+  ],
+  "error": null
+}
+[ 2025-02-20 07:50:47 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM bookmark_info;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-20 07:50:47 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM bookmark_info;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 07:52:58 AM ] [ Test Server ]  -  Response /api/bookmarks/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {}
+  ],
+  "error": null
+}
+[ 2025-02-20 07:52:58 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM bookmark_info;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-20 07:52:58 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM bookmark_info;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 07:56:32 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 07:56:32 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 07:56:32 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM bookmark_info WHERE post_id = $1 AND created_id = $2",
+  "values": [
+    "1",
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 07:56:32 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "DELETE FROM bookmark_info WHERE index = :bookmarkId;",
+  "params": {
+    "bookmarkId": 3
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 07:56:32 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "DELETE FROM bookmark_info WHERE index = $1;",
+  "values": [
+    3
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 07:56:32 AM ] [ Test Server ]  -  Response /api/bookmarks/toggle/1 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "message": "북마크가 삭제되었습니다.",
+      "isBookmarked": false
+    }
+  ],
+  "error": null
+}
+[ 2025-02-20 07:56:33 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 07:56:33 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 07:56:33 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM bookmark_info WHERE post_id = $1 AND created_id = $2",
+  "values": [
+    "1",
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 07:56:33 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "INSERT INTO bookmark_info (created_id, post_id) VALUES ('9', '1');",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-20 07:56:33 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "INSERT INTO bookmark_info (created_id, post_id) VALUES ('9', '1');",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 07:56:33 AM ] [ Test Server ]  -  Response /api/bookmarks/toggle/1 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "message": "북마크가 추가되었습니다.",
+      "isBookmarked": true
+    }
+  ],
+  "error": null
+}
+[ 2025-02-20 07:58:31 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 07:58:31 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 07:58:31 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM bookmark_info WHERE post_id = $1 AND created_id = $2",
+  "values": [
+    "1",
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 07:58:31 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "DELETE FROM bookmark_info WHERE index = :bookmarkId;",
+  "params": {
+    "bookmarkId": 4
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 07:58:31 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "DELETE FROM bookmark_info WHERE index = $1;",
+  "values": [
+    4
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 07:58:31 AM ] [ Test Server ]  -  Response /api/bookmarks/toggle/1 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "message": "북마크가 삭제되었습니다.",
+      "isBookmarked": false
+    }
+  ],
+  "error": null
+}
+[ 2025-02-20 07:58:32 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 07:58:32 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 07:58:32 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM bookmark_info WHERE post_id = $1 AND created_id = $2",
+  "values": [
+    "1",
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 07:58:32 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "INSERT INTO bookmark_info (created_id, post_id) VALUES ('9', '1');",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-20 07:58:32 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "INSERT INTO bookmark_info (created_id, post_id) VALUES ('9', '1');",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 07:58:32 AM ] [ Test Server ]  -  Response /api/bookmarks/toggle/1 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "message": "북마크가 추가되었습니다.",
+      "isBookmarked": true
+    }
+  ],
+  "error": null
+}
+[ 2025-02-20 07:58:34 AM ] [ Test Server ]  -  Response /api/bookmarks/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {}
+  ],
+  "error": null
+}
+[ 2025-02-20 07:58:34 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM bookmark_info",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 07:58:35 AM ] [ Test Server ]  -  Response /api/bookmarks/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {}
+  ],
+  "error": null
+}
+[ 2025-02-20 07:58:35 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM bookmark_info",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 07:58:35 AM ] [ Test Server ]  -  Response /api/bookmarks/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {}
+  ],
+  "error": null
+}
+[ 2025-02-20 07:58:35 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM bookmark_info",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 07:58:36 AM ] [ Test Server ]  -  Response /api/bookmarks/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {}
+  ],
+  "error": null
+}
+[ 2025-02-20 07:58:36 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM bookmark_info",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 08:00:29 AM ] [ Test Server ]  -  Response /api/bookmarks/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {}
+  ],
+  "error": null
+}
+[ 2025-02-20 08:00:29 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM bookmark_info",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 08:00:30 AM ] [ Test Server ]  -  Response /api/bookmarks/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {}
+  ],
+  "error": null
+}
+[ 2025-02-20 08:00:30 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM bookmark_info",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 08:00:31 AM ] [ Test Server ]  -  Response /api/bookmarks/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {}
+  ],
+  "error": null
+}
+[ 2025-02-20 08:00:31 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM bookmark_info",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 08:00:35 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 08:00:35 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:00:35 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM bookmark_info WHERE post_id = $1 AND created_id = $2",
+  "values": [
+    "1",
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:00:35 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "DELETE FROM bookmark_info WHERE index = :bookmarkId;",
+  "params": {
+    "bookmarkId": 5
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 08:00:35 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "DELETE FROM bookmark_info WHERE index = $1;",
+  "values": [
+    5
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:00:35 AM ] [ Test Server ]  -  Response /api/bookmarks/toggle/1 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "message": "북마크가 삭제되었습니다.",
+      "isBookmarked": false
+    }
+  ],
+  "error": null
+}
+[ 2025-02-20 08:00:36 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 08:00:36 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:00:36 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM bookmark_info WHERE post_id = $1 AND created_id = $2",
+  "values": [
+    "1",
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:00:36 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "INSERT INTO bookmark_info (created_id, post_id) VALUES ('9', '1');",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-20 08:00:36 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "INSERT INTO bookmark_info (created_id, post_id) VALUES ('9', '1');",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 08:00:36 AM ] [ Test Server ]  -  Response /api/bookmarks/toggle/1 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "message": "북마크가 추가되었습니다.",
+      "isBookmarked": true
+    }
+  ],
+  "error": null
+}
+[ 2025-02-20 08:00:38 AM ] [ Test Server ]  -  Response /api/bookmarks/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {}
+  ],
+  "error": null
+}
+[ 2025-02-20 08:00:38 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM bookmark_info",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 08:00:39 AM ] [ Test Server ]  -  Response /api/bookmarks/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {}
+  ],
+  "error": null
+}
+[ 2025-02-20 08:00:39 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM bookmark_info",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 08:01:28 AM ] [ Test Server ]  -  Response /api/bookmarks/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {}
+  ],
+  "error": null
+}
+[ 2025-02-20 08:01:28 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM bookmark_info",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 08:01:31 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 08:01:31 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:01:31 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM bookmark_info WHERE post_id = $1 AND created_id = $2",
+  "values": [
+    "1",
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:01:31 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "DELETE FROM bookmark_info WHERE index = :bookmarkId;",
+  "params": {
+    "bookmarkId": 6
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 08:01:31 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "DELETE FROM bookmark_info WHERE index = $1;",
+  "values": [
+    6
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:01:31 AM ] [ Test Server ]  -  Response /api/bookmarks/toggle/1 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "message": "북마크가 삭제되었습니다.",
+      "isBookmarked": false
+    }
+  ],
+  "error": null
+}
+[ 2025-02-20 08:01:33 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 08:01:33 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:01:33 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM bookmark_info WHERE post_id = $1 AND created_id = $2",
+  "values": [
+    "1",
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:01:33 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "INSERT INTO bookmark_info (created_id, post_id) VALUES ('9', '1');",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-20 08:01:33 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "INSERT INTO bookmark_info (created_id, post_id) VALUES ('9', '1');",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 08:01:33 AM ] [ Test Server ]  -  Response /api/bookmarks/toggle/1 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "message": "북마크가 추가되었습니다.",
+      "isBookmarked": true
+    }
+  ],
+  "error": null
+}
+[ 2025-02-20 08:01:38 AM ] [ Test Server ]  -  Response /api/bookmarks/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {}
+  ],
+  "error": null
+}
+[ 2025-02-20 08:01:38 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM bookmark_info",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 08:01:59 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 08:01:59 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:01:59 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM bookmark_info WHERE post_id = $1 AND created_id = $2",
+  "values": [
+    "1",
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:01:59 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "DELETE FROM bookmark_info WHERE index = :bookmarkId;",
+  "params": {
+    "bookmarkId": 7
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 08:01:59 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "DELETE FROM bookmark_info WHERE index = $1;",
+  "values": [
+    7
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:01:59 AM ] [ Test Server ]  -  Response /api/bookmarks/toggle/1 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "message": "북마크가 삭제되었습니다.",
+      "isBookmarked": false
+    }
+  ],
+  "error": null
+}
+[ 2025-02-20 08:02:02 AM ] [ Test Server ]  -  Response /api/bookmarks/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {}
+  ],
+  "error": null
+}
+[ 2025-02-20 08:02:02 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM bookmark_info",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 08:02:05 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 08:02:05 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:02:05 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM bookmark_info WHERE post_id = $1 AND created_id = $2",
+  "values": [
+    "1",
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:02:05 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "INSERT INTO bookmark_info (created_id, post_id) VALUES ('9', '1');",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-20 08:02:05 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "INSERT INTO bookmark_info (created_id, post_id) VALUES ('9', '1');",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 08:02:05 AM ] [ Test Server ]  -  Response /api/bookmarks/toggle/1 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "message": "북마크가 추가되었습니다.",
+      "isBookmarked": true
+    }
+  ],
+  "error": null
+}
+[ 2025-02-20 08:02:07 AM ] [ Test Server ]  -  Response /api/bookmarks/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {}
+  ],
+  "error": null
+}
+[ 2025-02-20 08:02:07 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM bookmark_info",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 08:02:45 AM ] [ Test Server ]  -  Response /api/bookmarks/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {}
+  ],
+  "error": null
+}
+[ 2025-02-20 08:02:45 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM bookmark_info;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-20 08:02:45 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM bookmark_info;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 08:02:45 AM ] [ Test Server ]  -  Response /api/bookmarks/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {}
+  ],
+  "error": null
+}
+[ 2025-02-20 08:02:45 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM bookmark_info;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-20 08:02:45 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM bookmark_info;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 08:04:52 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 08:04:52 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:04:52 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM bookmark_info WHERE post_id = $1 AND created_id = $2",
+  "values": [
+    "1",
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:04:52 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "DELETE FROM bookmark_info WHERE index = :bookmarkId;",
+  "params": {
+    "bookmarkId": 8
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 08:04:52 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "DELETE FROM bookmark_info WHERE index = $1;",
+  "values": [
+    8
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:04:53 AM ] [ Test Server ]  -  Response /api/bookmarks/toggle/1 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "message": "북마크가 삭제되었습니다.",
+      "isBookmarked": false
+    }
+  ],
+  "error": null
+}
+[ 2025-02-20 08:04:53 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 08:04:53 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:04:53 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM bookmark_info WHERE post_id = $1 AND created_id = $2",
+  "values": [
+    "1",
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:04:53 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "INSERT INTO bookmark_info (created_id, post_id) VALUES ('9', '1');",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-20 08:04:53 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "INSERT INTO bookmark_info (created_id, post_id) VALUES ('9', '1');",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 08:04:53 AM ] [ Test Server ]  -  Response /api/bookmarks/toggle/1 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "message": "북마크가 추가되었습니다.",
+      "isBookmarked": true
+    }
+  ],
+  "error": null
+}
+[ 2025-02-20 08:04:55 AM ] [ Test Server ]  -  Response /api/bookmarks/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {}
+  ],
+  "error": null
+}
+[ 2025-02-20 08:04:55 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM bookmark_info;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-20 08:04:55 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM bookmark_info;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 08:04:56 AM ] [ Test Server ]  -  Response /api/bookmarks/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {}
+  ],
+  "error": null
+}
+[ 2025-02-20 08:04:56 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM bookmark_info;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-20 08:04:56 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM bookmark_info;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 08:09:00 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 08:09:00 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:09:00 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM bookmark_info WHERE post_id = $1 AND created_id = $2",
+  "values": [
+    "1",
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:09:00 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "DELETE FROM bookmark_info WHERE index = :bookmarkId;",
+  "params": {
+    "bookmarkId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 08:09:00 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "DELETE FROM bookmark_info WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:09:00 AM ] [ Test Server ]  -  Response /api/bookmarks/toggle/1 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "message": "북마크가 삭제되었습니다.",
+      "isBookmarked": false
+    }
+  ],
+  "error": null
+}
+[ 2025-02-20 08:09:01 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 08:09:01 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:09:01 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM bookmark_info WHERE post_id = $1 AND created_id = $2",
+  "values": [
+    "1",
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:09:01 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "INSERT INTO bookmark_info (created_id, post_id) VALUES ('9', '1');",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-20 08:09:01 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "INSERT INTO bookmark_info (created_id, post_id) VALUES ('9', '1');",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 08:09:01 AM ] [ Test Server ]  -  Response /api/bookmarks/toggle/1 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "message": "북마크가 추가되었습니다.",
+      "isBookmarked": true
+    }
+  ],
+  "error": null
+}
+[ 2025-02-20 08:10:36 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 08:10:36 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:10:36 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM bookmark_info WHERE post_id = $1 AND created_id = $2",
+  "values": [
+    "1",
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:10:36 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "DELETE FROM bookmark_info WHERE index = :bookmarkId;",
+  "params": {
+    "bookmarkId": 10
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 08:10:36 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "DELETE FROM bookmark_info WHERE index = $1;",
+  "values": [
+    10
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:10:36 AM ] [ Test Server ]  -  Response /api/bookmarks/toggle/1 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "message": "북마크가 삭제되었습니다.",
+      "isBookmarked": false
+    }
+  ],
+  "error": null
+}
+[ 2025-02-20 08:10:41 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 08:10:41 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:10:41 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM bookmark_info WHERE post_id = $1 AND created_id = $2",
+  "values": [
+    "1",
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:10:41 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "INSERT INTO bookmark_info (created_id, post_id) VALUES ('9', '1');",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-20 08:10:41 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "INSERT INTO bookmark_info (created_id, post_id) VALUES ('9', '1');",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 08:10:41 AM ] [ Test Server ]  -  Response /api/bookmarks/toggle/1 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "message": "북마크가 추가되었습니다.",
+      "isBookmarked": true
+    }
+  ],
+  "error": null
+}
+[ 2025-02-20 08:11:04 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 08:11:04 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:11:04 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM bookmark_info WHERE post_id = $1 AND created_id = $2",
+  "values": [
+    "1",
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:11:04 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "DELETE FROM bookmark_info WHERE index = :bookmarkId;",
+  "params": {
+    "bookmarkId": 11
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 08:11:04 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "DELETE FROM bookmark_info WHERE index = $1;",
+  "values": [
+    11
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:11:04 AM ] [ Test Server ]  -  Response /api/bookmarks/toggle/1 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "message": "북마크가 삭제되었습니다.",
+      "isBookmarked": false
+    }
+  ],
+  "error": null
+}
+[ 2025-02-20 08:11:05 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 08:11:05 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:11:05 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM bookmark_info WHERE post_id = $1 AND created_id = $2",
+  "values": [
+    "1",
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:11:05 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "INSERT INTO bookmark_info (created_id, post_id) VALUES ('9', '1');",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-20 08:11:05 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "INSERT INTO bookmark_info (created_id, post_id) VALUES ('9', '1');",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 08:11:05 AM ] [ Test Server ]  -  Response /api/bookmarks/toggle/1 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "message": "북마크가 추가되었습니다.",
+      "isBookmarked": true
+    }
+  ],
+  "error": null
+}
+[ 2025-02-20 08:12:36 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 08:12:36 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:12:36 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM bookmark_info WHERE post_id = $1 AND created_id = $2",
+  "values": [
+    "1",
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:12:36 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "DELETE FROM bookmark_info WHERE index = :bookmarkId;",
+  "params": {
+    "bookmarkId": 12
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 08:12:36 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "DELETE FROM bookmark_info WHERE index = $1;",
+  "values": [
+    12
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:12:36 AM ] [ Test Server ]  -  Response /api/bookmarks/toggle/1 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "message": "북마크가 삭제되었습니다.",
+      "isBookmarked": false
+    }
+  ],
+  "error": null
+}
+[ 2025-02-20 08:12:37 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 08:12:37 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:12:37 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM bookmark_info WHERE post_id = $1 AND created_id = $2",
+  "values": [
+    "1",
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:12:37 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "INSERT INTO bookmark_info (created_id, post_id) VALUES ('9', '1');",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-20 08:12:37 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "INSERT INTO bookmark_info (created_id, post_id) VALUES ('9', '1');",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 08:12:37 AM ] [ Test Server ]  -  Response /api/bookmarks/toggle/1 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "message": "북마크가 추가되었습니다.",
+      "isBookmarked": true
+    }
+  ],
+  "error": null
+}
+[ 2025-02-20 08:13:01 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 08:13:01 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:13:01 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM bookmark_info WHERE post_id = $1 AND created_id = $2",
+  "values": [
+    "1",
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:13:01 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "DELETE FROM bookmark_info WHERE index = :bookmarkId;",
+  "params": {
+    "bookmarkId": 13
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 08:13:01 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "DELETE FROM bookmark_info WHERE index = $1;",
+  "values": [
+    13
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:13:01 AM ] [ Test Server ]  -  Response /api/bookmarks/toggle/1 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "message": "북마크가 삭제되었습니다.",
+      "isBookmarked": false
+    }
+  ],
+  "error": null
+}
+[ 2025-02-20 08:13:02 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 08:13:02 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:13:02 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM bookmark_info WHERE post_id = $1 AND created_id = $2",
+  "values": [
+    "1",
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:13:02 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "INSERT INTO bookmark_info (created_id, post_id) VALUES ('9', '1') RETURNING *;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-20 08:13:02 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "INSERT INTO bookmark_info (created_id, post_id) VALUES ('9', '1') RETURNING *;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 08:13:02 AM ] [ Test Server ]  -  Response /api/bookmarks/toggle/1 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "message": "북마크가 추가되었습니다.",
+      "isBookmarked": true
+    }
+  ],
+  "error": null
+}
+[ 2025-02-20 08:13:09 AM ] [ Test Server ]  -  Response /api/bookmarks/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {}
+  ],
+  "error": null
+}
+[ 2025-02-20 08:13:09 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM bookmark_info;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-20 08:13:09 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM bookmark_info;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 08:13:09 AM ] [ Test Server ]  -  Response /api/bookmarks/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {}
+  ],
+  "error": null
+}
+[ 2025-02-20 08:13:09 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM bookmark_info;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-20 08:13:09 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM bookmark_info;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 08:13:10 AM ] [ Test Server ]  -  Response /api/bookmarks/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {}
+  ],
+  "error": null
+}
+[ 2025-02-20 08:13:10 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM bookmark_info;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-20 08:13:10 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM bookmark_info;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 08:13:48 AM ] [ Test Server ]  -  Response /api/bookmarks/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {}
+  ],
+  "error": null
+}
+[ 2025-02-20 08:13:49 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM bookmark_info;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-20 08:13:49 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM bookmark_info;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 08:13:49 AM ] [ Test Server ]  -  Response /api/bookmarks/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {}
+  ],
+  "error": null
+}
+[ 2025-02-20 08:13:49 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM bookmark_info;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-20 08:13:49 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM bookmark_info;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 08:13:51 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 08:13:51 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:13:51 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM bookmark_info WHERE post_id = $1 AND created_id = $2",
+  "values": [
+    "1",
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:13:51 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "DELETE FROM bookmark_info WHERE index = :bookmarkId;",
+  "params": {
+    "bookmarkId": 14
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 08:13:51 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "DELETE FROM bookmark_info WHERE index = $1;",
+  "values": [
+    14
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:13:51 AM ] [ Test Server ]  -  Response /api/bookmarks/toggle/1 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "message": "북마크가 삭제되었습니다.",
+      "isBookmarked": false
+    }
+  ],
+  "error": null
+}
+[ 2025-02-20 08:13:52 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 08:13:52 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:13:52 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM bookmark_info WHERE post_id = $1 AND created_id = $2",
+  "values": [
+    "1",
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:13:52 AM ] [ Test Server ]  -  Query: Create Bookmark 
+{
+  "query": "INSERT INTO bookmark_info (created_id, post_id) VALUES ('9', '1') RETURNING *;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-20 08:13:52 AM ] [ Test Server ]  -  Raw Query: Create Bookmark 
+{
+  "text": "INSERT INTO bookmark_info (created_id, post_id) VALUES ('9', '1') RETURNING *;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 08:13:52 AM ] [ Test Server ]  -  Response /api/bookmarks/toggle/1 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "message": "북마크가 추가되었습니다.",
+      "isBookmarked": true
+    }
+  ],
+  "error": null
+}
+[ 2025-02-20 08:13:53 AM ] [ Test Server ]  -  Response /api/bookmarks/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {}
+  ],
+  "error": null
+}
+[ 2025-02-20 08:13:53 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM bookmark_info;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-20 08:13:53 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM bookmark_info;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 08:13:54 AM ] [ Test Server ]  -  Response /api/bookmarks/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {}
+  ],
+  "error": null
+}
+[ 2025-02-20 08:13:54 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM bookmark_info;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-20 08:13:54 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM bookmark_info;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 08:15:42 AM ] [ Test Server ]  -  Response /api/bookmarks/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {}
+  ],
+  "error": null
+}
+[ 2025-02-20 08:15:42 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM bookmark_info",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 08:15:43 AM ] [ Test Server ]  -  Response /api/bookmarks/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {}
+  ],
+  "error": null
+}
+[ 2025-02-20 08:15:43 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM bookmark_info",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 08:16:00 AM ] [ Test Server ]  -  Response /api/bookmarks/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {}
+  ],
+  "error": null
+}
+[ 2025-02-20 08:16:00 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM bookmark_info",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 08:17:24 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 08:17:24 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:17:24 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM bookmark_info WHERE post_id = $1 AND created_id = $2",
+  "values": [
+    "1",
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:17:24 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "DELETE FROM bookmark_info WHERE index = :bookmarkId;",
+  "params": {
+    "bookmarkId": 15
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 08:17:24 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "DELETE FROM bookmark_info WHERE index = $1;",
+  "values": [
+    15
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:17:24 AM ] [ Test Server ]  -  Response /api/bookmarks/toggle/1 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "message": "북마크가 삭제되었습니다.",
+      "isBookmarked": false
+    }
+  ],
+  "error": null
+}
+[ 2025-02-20 08:17:24 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 08:17:24 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:17:24 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM bookmark_info WHERE post_id = $1 AND created_id = $2",
+  "values": [
+    "1",
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:17:25 AM ] [ Test Server ]  -  Query: Create Bookmark 
+{
+  "query": "INSERT INTO bookmark_info (created_id, post_id) VALUES ('9', '1') RETURNING *;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-20 08:17:25 AM ] [ Test Server ]  -  Raw Query: Create Bookmark 
+{
+  "text": "INSERT INTO bookmark_info (created_id, post_id) VALUES ('9', '1') RETURNING *;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 08:17:25 AM ] [ Test Server ]  -  Response /api/bookmarks/toggle/1 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "message": "북마크가 추가되었습니다.",
+      "isBookmarked": true
+    }
+  ],
+  "error": null
+}
+[ 2025-02-20 08:17:27 AM ] [ Test Server ]  -  Response /api/bookmarks/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {}
+  ],
+  "error": null
+}
+[ 2025-02-20 08:17:27 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM bookmark_info",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 08:17:45 AM ] [ Test Server ]  -  Response /api/bookmarks/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {}
+  ],
+  "error": null
+}
+[ 2025-02-20 08:17:45 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM bookmark_info",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 08:21:58 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 08:21:58 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:21:58 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM bookmark_info WHERE post_id = $1 AND created_id = $2",
+  "values": [
+    "1",
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:21:58 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "DELETE FROM bookmark_info WHERE index = :bookmarkId;",
+  "params": {
+    "bookmarkId": 16
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 08:21:58 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "DELETE FROM bookmark_info WHERE index = $1;",
+  "values": [
+    16
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:21:58 AM ] [ Test Server ]  -  Response /api/bookmarks/toggle/1 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "message": "북마크가 삭제되었습니다.",
+      "isBookmarked": false
+    }
+  ],
+  "error": null
+}
+[ 2025-02-20 08:21:59 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 08:21:59 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:21:59 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM bookmark_info WHERE post_id = $1 AND created_id = $2",
+  "values": [
+    "1",
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:21:59 AM ] [ Test Server ]  -  Query: Create Bookmark 
+{
+  "query": "INSERT INTO bookmark_info (created_id, post_id) VALUES ('9', '1') RETURNING *;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-20 08:21:59 AM ] [ Test Server ]  -  Raw Query: Create Bookmark 
+{
+  "text": "INSERT INTO bookmark_info (created_id, post_id) VALUES ('9', '1') RETURNING *;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 08:21:59 AM ] [ Test Server ]  -  Response /api/bookmarks/toggle/1 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "message": "북마크가 추가되었습니다.",
+      "isBookmarked": true
+    }
+  ],
+  "error": null
+}
+[ 2025-02-20 08:22:09 AM ] [ Test Server ]  -  Response /api/bookmarks/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {}
+  ],
+  "error": null
+}
+[ 2025-02-20 08:22:09 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM bookmark_info",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 08:22:09 AM ] [ Test Server ]  -  Response /api/bookmarks/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {}
+  ],
+  "error": null
+}
+[ 2025-02-20 08:22:09 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM bookmark_info",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 08:23:52 AM ] [ Test Server ]  -  Response /api/bookmarks/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {}
+  ],
+  "error": null
+}
+[ 2025-02-20 08:23:52 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM bookmark_info",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 08:26:28 AM ] [ Test Server ]  -  Response /api/bookmarks/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {}
+  ],
+  "error": null
+}
+[ 2025-02-20 08:26:28 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM bookmark_info",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 08:26:31 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 08:26:31 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:26:31 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM bookmark_info WHERE post_id = $1 AND created_id = $2",
+  "values": [
+    "1",
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:26:31 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "DELETE FROM bookmark_info WHERE index = :bookmarkId;",
+  "params": {
+    "bookmarkId": 17
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 08:26:31 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "DELETE FROM bookmark_info WHERE index = $1;",
+  "values": [
+    17
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:26:31 AM ] [ Test Server ]  -  Response /api/bookmarks/toggle/1 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "message": "북마크가 삭제되었습니다.",
+      "isBookmarked": false
+    }
+  ],
+  "error": null
+}
+[ 2025-02-20 08:26:32 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 08:26:32 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:26:32 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM bookmark_info WHERE post_id = $1 AND created_id = $2",
+  "values": [
+    "1",
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:26:32 AM ] [ Test Server ]  -  Query: Create Bookmark 
+{
+  "query": "INSERT INTO bookmark_info (created_id, post_id) VALUES ('9', '1') RETURNING *;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-20 08:26:32 AM ] [ Test Server ]  -  Raw Query: Create Bookmark 
+{
+  "text": "INSERT INTO bookmark_info (created_id, post_id) VALUES ('9', '1') RETURNING *;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 08:26:32 AM ] [ Test Server ]  -  Response /api/bookmarks/toggle/1 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "message": "북마크가 추가되었습니다.",
+      "isBookmarked": true
+    }
+  ],
+  "error": null
+}
+[ 2025-02-20 08:26:34 AM ] [ Test Server ]  -  Response /api/bookmarks/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {}
+  ],
+  "error": null
+}
+[ 2025-02-20 08:26:34 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM bookmark_info",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 08:26:35 AM ] [ Test Server ]  -  Response /api/bookmarks/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {}
+  ],
+  "error": null
+}
+[ 2025-02-20 08:26:35 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM bookmark_info",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 08:26:36 AM ] [ Test Server ]  -  Response /api/bookmarks/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {}
+  ],
+  "error": null
+}
+[ 2025-02-20 08:26:36 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM bookmark_info",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 08:26:36 AM ] [ Test Server ]  -  Response /api/bookmarks/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {}
+  ],
+  "error": null
+}
+[ 2025-02-20 08:26:36 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM bookmark_info",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 08:27:41 AM ] [ Test Server ]  -  Response /api/bookmarks/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {}
+  ],
+  "error": null
+}
+[ 2025-02-20 08:27:41 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM bookmark_info",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 08:28:17 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM bookmark_info",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 08:28:17 AM ] [ Test Server ]  -  Response /api/bookmarks/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 18,
+      "createdId": 9,
+      "postId": 1,
+      "createdTime": "2025-02-20 08:26:34"
+    }
+  ],
+  "error": null
+}
+[ 2025-02-20 08:28:28 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 08:28:28 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:28:28 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM bookmark_info WHERE post_id = $1 AND created_id = $2",
+  "values": [
+    "1",
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:28:28 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "DELETE FROM bookmark_info WHERE index = :bookmarkId;",
+  "params": {
+    "bookmarkId": 18
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 08:28:28 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "DELETE FROM bookmark_info WHERE index = $1;",
+  "values": [
+    18
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:28:28 AM ] [ Test Server ]  -  Response /api/bookmarks/toggle/1 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "message": "북마크가 삭제되었습니다.",
+      "isBookmarked": false
+    }
+  ],
+  "error": null
+}
+[ 2025-02-20 08:28:30 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM bookmark_info",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 08:28:30 AM ] [ Test Server ]  -  Response /api/bookmarks/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": null,
+  "error": null
+}
+[ 2025-02-20 08:28:36 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 08:28:36 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:28:36 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM bookmark_info WHERE post_id = $1 AND created_id = $2",
+  "values": [
+    "1",
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:28:36 AM ] [ Test Server ]  -  Query: Create Bookmark 
+{
+  "query": "INSERT INTO bookmark_info (created_id, post_id) VALUES ('9', '1') RETURNING *;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-20 08:28:36 AM ] [ Test Server ]  -  Raw Query: Create Bookmark 
+{
+  "text": "INSERT INTO bookmark_info (created_id, post_id) VALUES ('9', '1') RETURNING *;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 08:28:36 AM ] [ Test Server ]  -  Response /api/bookmarks/toggle/1 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "message": "북마크가 추가되었습니다.",
+      "isBookmarked": true
+    }
+  ],
+  "error": null
+}
+[ 2025-02-20 08:30:09 AM ] [ Test Server ]  -  Response /api/users/login 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "userId": "9",
+      "email": "user@example.com",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI5IiwiaWF0IjoxNzQwMDA3ODA5LCJleHAiOjE3NDAwOTQyMDksImF1ZCI6ImF1ZGllbmNlIiwiaXNzIjoiaXNzdWVyIn0.Cc_6cj6GUxzMdpQqeq-D39jVk6JrIBQHeiHfVHe8Ug8",
+      "message": "로그인 되었습니다."
+    }
+  ],
+  "error": null
+}
+[ 2025-02-20 08:30:33 AM ] [ Test Server ]  -  Response /api/users/login 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "userId": "8",
+      "email": "user@example.com",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI4IiwiaWF0IjoxNzQwMDA3ODMzLCJleHAiOjE3NDAwOTQyMzMsImF1ZCI6ImF1ZGllbmNlIiwiaXNzIjoiaXNzdWVyIn0.OUh01Zb0XMxoV4_0t1BV8jgeBHaRddZfpgAUoxit3EU",
+      "message": "로그인 되었습니다."
+    }
+  ],
+  "error": null
+}
+[ 2025-02-20 08:30:48 AM ] [ Test Server ]  -  Response /api/users/login 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "userId": "7",
+      "email": "user@example.com",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI3IiwiaWF0IjoxNzQwMDA3ODQ4LCJleHAiOjE3NDAwOTQyNDgsImF1ZCI6ImF1ZGllbmNlIiwiaXNzIjoiaXNzdWVyIn0._0PgyOuME5lEEOyVM5PjMN9HdzwctIQzdJkVKVuzshs",
+      "message": "로그인 되었습니다."
+    }
+  ],
+  "error": null
+}
+[ 2025-02-20 08:31:55 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 7
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 08:31:55 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    7
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:31:55 AM ] [ Test Server ]  -  Query: Create Post 
+{
+  "query": "INSERT INTO public.post_info (title,content,created_id) VALUES ('세번째 테스트', '북마크용 게시가 되었습니다.', '7') RETURNING *;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-20 08:31:55 AM ] [ Test Server ]  -  Raw Query: Create Post 
+{
+  "text": "INSERT INTO public.post_info (title,content,created_id) VALUES ('세번째 테스트', '북마크용 게시가 되었습니다.', '7') RETURNING *;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 08:31:55 AM ] [ Test Server ]  -  Response /api/posts/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 4,
+      "title": "세번째 테스트",
+      "content": "북마크용 게시가 되었습니다.",
+      "createdId": 7,
+      "createdTime": "2025-02-19T23:31:57.000Z",
+      "updateTime": null
+    }
+  ],
+  "error": null
+}
+[ 2025-02-20 08:32:23 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 8
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 08:32:23 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    8
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:32:23 AM ] [ Test Server ]  -  Query: Create Post 
+{
+  "query": "INSERT INTO public.post_info (title,content,created_id) VALUES ('세번째 테스트', '유저8 게시가 되었습니다.', '8') RETURNING *;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-20 08:32:23 AM ] [ Test Server ]  -  Raw Query: Create Post 
+{
+  "text": "INSERT INTO public.post_info (title,content,created_id) VALUES ('세번째 테스트', '유저8 게시가 되었습니다.', '8') RETURNING *;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 08:32:23 AM ] [ Test Server ]  -  Response /api/posts/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 5,
+      "title": "세번째 테스트",
+      "content": "유저8 게시가 되었습니다.",
+      "createdId": 8,
+      "createdTime": "2025-02-19T23:32:25.000Z",
+      "updateTime": null
+    }
+  ],
+  "error": null
+}
+[ 2025-02-20 08:32:46 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM post_info;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-20 08:32:46 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM post_info;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 08:32:46 AM ] [ Test Server ]  -  Response /api/posts/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 1,
+      "title": "수정된 게시글",
+      "content": "수정된 내용",
+      "createdTime": "2025-02-18 10:00:43",
+      "updateTime": null,
+      "createdId": 9,
+      "updateId": null
+    },
+    {
+      "index": 3,
+      "title": "세번째 테스트",
+      "content": "완전 게시가 되었습니다.",
+      "createdTime": "2025-02-19 14:49:53",
+      "updateTime": null,
+      "createdId": 8,
+      "updateId": null
+    },
+    {
+      "index": 4,
+      "title": "세번째 테스트",
+      "content": "북마크용 게시가 되었습니다.",
+      "createdTime": "2025-02-20 08:31:57",
+      "updateTime": null,
+      "createdId": 7,
+      "updateId": null
+    },
+    {
+      "index": 5,
+      "title": "세번째 테스트",
+      "content": "유저8 게시가 되었습니다.",
+      "createdTime": "2025-02-20 08:32:25",
+      "updateTime": null,
+      "createdId": 8,
+      "updateId": null
+    }
+  ],
+  "error": null
+}
+[ 2025-02-20 08:32:53 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 08:32:53 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:32:53 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM bookmark_info WHERE post_id = $1 AND created_id = $2",
+  "values": [
+    "4",
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:32:53 AM ] [ Test Server ]  -  Query: Create Bookmark 
+{
+  "query": "INSERT INTO bookmark_info (created_id, post_id) VALUES ('9', '4') RETURNING *;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-20 08:32:53 AM ] [ Test Server ]  -  Raw Query: Create Bookmark 
+{
+  "text": "INSERT INTO bookmark_info (created_id, post_id) VALUES ('9', '4') RETURNING *;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 08:32:53 AM ] [ Test Server ]  -  Response /api/bookmarks/toggle/4 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "message": "북마크가 추가되었습니다.",
+      "isBookmarked": true
+    }
+  ],
+  "error": null
+}
+[ 2025-02-20 08:32:56 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 08:32:56 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:32:56 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM bookmark_info WHERE post_id = $1 AND created_id = $2",
+  "values": [
+    "5",
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:32:56 AM ] [ Test Server ]  -  Query: Create Bookmark 
+{
+  "query": "INSERT INTO bookmark_info (created_id, post_id) VALUES ('9', '5') RETURNING *;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-20 08:32:56 AM ] [ Test Server ]  -  Raw Query: Create Bookmark 
+{
+  "text": "INSERT INTO bookmark_info (created_id, post_id) VALUES ('9', '5') RETURNING *;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 08:32:56 AM ] [ Test Server ]  -  Response /api/bookmarks/toggle/5 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "message": "북마크가 추가되었습니다.",
+      "isBookmarked": true
+    }
+  ],
+  "error": null
+}
+[ 2025-02-20 08:33:06 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 8
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 08:33:06 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    8
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:33:06 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM bookmark_info WHERE post_id = $1 AND created_id = $2",
+  "values": [
+    "5",
+    8
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:33:06 AM ] [ Test Server ]  -  Query: Create Bookmark 
+{
+  "query": "INSERT INTO bookmark_info (created_id, post_id) VALUES ('8', '5') RETURNING *;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-20 08:33:06 AM ] [ Test Server ]  -  Raw Query: Create Bookmark 
+{
+  "text": "INSERT INTO bookmark_info (created_id, post_id) VALUES ('8', '5') RETURNING *;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 08:33:06 AM ] [ Test Server ]  -  Response /api/bookmarks/toggle/5 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "message": "북마크가 추가되었습니다.",
+      "isBookmarked": true
+    }
+  ],
+  "error": null
+}
+[ 2025-02-20 08:42:02 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 8
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 08:42:02 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    8
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:42:02 AM ] [ Test Server ]  -  Response /api/bookmarks/userId 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {}
+  ],
+  "error": null
+}
+[ 2025-02-20 08:42:02 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM bookmark_id WHERE created = :userId;",
+  "params": {
+    "userId": 8
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 08:42:02 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM bookmark_id WHERE created = $1;",
+  "values": [
+    8
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:42:54 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 8
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 08:42:54 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    8
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:42:54 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM bookmark_info WHERE post_id = $1 AND created_id = $2",
+  "values": [
+    "5",
+    8
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:42:54 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "DELETE FROM bookmark_info WHERE index = :bookmarkId;",
+  "params": {
+    "bookmarkId": 22
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 08:42:54 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "DELETE FROM bookmark_info WHERE index = $1;",
+  "values": [
+    22
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:42:54 AM ] [ Test Server ]  -  Response /api/bookmarks/toggle/5 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "message": "북마크가 삭제되었습니다.",
+      "isBookmarked": false
+    }
+  ],
+  "error": null
+}
+[ 2025-02-20 08:42:57 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 8
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 08:42:57 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    8
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:42:57 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM bookmark_info WHERE post_id = $1 AND created_id = $2",
+  "values": [
+    "5",
+    8
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:42:57 AM ] [ Test Server ]  -  Query: Create Bookmark 
+{
+  "query": "INSERT INTO bookmark_info (created_id, post_id) VALUES ('8', '5') RETURNING *;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-20 08:42:57 AM ] [ Test Server ]  -  Raw Query: Create Bookmark 
+{
+  "text": "INSERT INTO bookmark_info (created_id, post_id) VALUES ('8', '5') RETURNING *;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 08:42:57 AM ] [ Test Server ]  -  Response /api/bookmarks/toggle/5 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "message": "북마크가 추가되었습니다.",
+      "isBookmarked": true
+    }
+  ],
+  "error": null
+}
+[ 2025-02-20 08:43:00 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 8
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 08:43:00 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    8
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:43:00 AM ] [ Test Server ]  -  Response /api/bookmarks/userId 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {}
+  ],
+  "error": null
+}
+[ 2025-02-20 08:43:00 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM bookmark_info WHERE created = :userId;",
+  "params": {
+    "userId": 8
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 08:43:00 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM bookmark_info WHERE created = $1;",
+  "values": [
+    8
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:43:20 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 8
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 08:43:20 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    8
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:43:20 AM ] [ Test Server ]  -  Response /api/bookmarks/userId 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {}
+  ],
+  "error": null
+}
+[ 2025-02-20 08:43:20 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM bookmark_info WHERE created_id = :userId;",
+  "params": {
+    "userId": 8
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 08:43:20 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM bookmark_info WHERE created_id = $1;",
+  "values": [
+    8
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:43:22 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 8
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 08:43:22 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    8
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:43:22 AM ] [ Test Server ]  -  Response /api/bookmarks/userId 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {}
+  ],
+  "error": null
+}
+[ 2025-02-20 08:43:22 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM bookmark_info WHERE created_id = :userId;",
+  "params": {
+    "userId": 8
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 08:43:22 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM bookmark_info WHERE created_id = $1;",
+  "values": [
+    8
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:44:04 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 8
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 08:44:04 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    8
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:44:04 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM bookmark_info WHERE created_id = :userId;",
+  "params": {
+    "userId": 8
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 08:44:04 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM bookmark_info WHERE created_id = $1;",
+  "values": [
+    8
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:44:04 AM ] [ Test Server ]  -  Response /api/bookmarks/userId 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": null,
+  "error": null
+}
+[ 2025-02-20 08:44:05 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 8
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 08:44:05 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    8
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:44:05 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM bookmark_info WHERE created_id = :userId;",
+  "params": {
+    "userId": 8
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 08:44:05 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM bookmark_info WHERE created_id = $1;",
+  "values": [
+    8
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:44:05 AM ] [ Test Server ]  -  Response /api/bookmarks/userId 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": null,
+  "error": null
+}
+[ 2025-02-20 08:44:07 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 8
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 08:44:07 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    8
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:44:07 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM bookmark_info WHERE created_id = :userId;",
+  "params": {
+    "userId": 8
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 08:44:07 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM bookmark_info WHERE created_id = $1;",
+  "values": [
+    8
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:44:07 AM ] [ Test Server ]  -  Response /api/bookmarks/userId 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": null,
+  "error": null
+}
+[ 2025-02-20 08:44:37 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 8
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 08:44:37 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    8
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:44:37 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM bookmark_info WHERE created_id = :userId;",
+  "params": {
+    "userId": 8
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 08:44:37 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM bookmark_info WHERE created_id = $1;",
+  "values": [
+    8
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:44:37 AM ] [ Test Server ]  -  Response /api/bookmarks/userId 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": null,
+  "error": null
+}
+[ 2025-02-20 08:45:24 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 8
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 08:45:24 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    8
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:45:24 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM bookmark_info WHERE created_id = :userId;",
+  "params": {
+    "userId": 8
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 08:45:24 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM bookmark_info WHERE created_id = $1;",
+  "values": [
+    8
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:45:24 AM ] [ Test Server ]  -  Response /api/bookmarks/userId 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 23,
+      "createdId": 8,
+      "postId": 5,
+      "createdTime": "2025-02-20 08:42:58"
+    }
+  ],
+  "error": null
+}
+[ 2025-02-20 08:45:41 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 08:45:41 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:45:41 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM bookmark_info WHERE created_id = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 08:45:41 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM bookmark_info WHERE created_id = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 08:45:41 AM ] [ Test Server ]  -  Response /api/bookmarks/userId 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "index": 19,
+      "createdId": 9,
+      "postId": 1,
+      "createdTime": "2025-02-20 08:28:38"
+    },
+    {
+      "index": 20,
+      "createdId": 9,
+      "postId": 4,
+      "createdTime": "2025-02-20 08:32:55"
+    },
+    {
+      "index": 21,
+      "createdId": 9,
+      "postId": 5,
+      "createdTime": "2025-02-20 08:32:58"
+    }
+  ],
+  "error": null
+}
+[ 2025-02-20 09:00:01 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 09:00:01 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 09:00:01 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT index FROM bookmark_info WHERE post_id AND created_id;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-20 09:00:01 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT index FROM bookmark_info WHERE post_id AND created_id;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 09:00:01 AM ] [ Test Server ]  -  undefined 
+{
+  "length": 127,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "42804",
+  "position": "39",
+  "file": "parse_coerce.c",
+  "line": "1176",
+  "routine": "coerce_to_boolean"
+}
+[Body]
+undefined
+[ 2025-02-20 09:00:01 AM ] [ Test Server ]  -  Error:  argument of AND must be type boolean, not type integer 
+{
+  "length": 127,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "42804",
+  "position": "39",
+  "file": "parse_coerce.c",
+  "line": "1176",
+  "routine": "coerce_to_boolean",
+  "stack": "error: argument of AND must be type boolean, not type integer\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findOne (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:209:32)\n    at async BookmarkMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async BookmarkMapper.isBookmarked (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/bookmark/BookmarkMapper.js:93:22)\n    at async _BookmarkService.isBookmarked (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/bookmark/bookmarkService.js:65:12)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async isBookmarked (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/bookmark/BookmarkController.js:82:28)"
+}
+[Body]
+undefined
+[ 2025-02-20 09:00:01 AM ] [ Test Server ]  -  Response /api/bookmarks/status/1 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "argument of AND must be type boolean, not type integer",
+  "data": null,
+  "error": {
+    "name": "error",
+    "message": "argument of AND must be type boolean, not type integer",
+    "stack": "error: argument of AND must be type boolean, not type integer\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.findOne (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:209:32)\n    at async BookmarkMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async BookmarkMapper.isBookmarked (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/bookmark/BookmarkMapper.js:93:22)\n    at async _BookmarkService.isBookmarked (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/bookmark/bookmarkService.js:65:12)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async isBookmarked (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/bookmark/BookmarkController.js:82:28)"
+  }
+}
+[ 2025-02-20 09:04:17 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 09:04:17 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 09:04:17 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT index FROM bookmark_info WHERE post_id = $1 AND created_id = $2",
+  "values": [
+    "1",
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 09:04:17 AM ] [ Test Server ]  -  Response /api/bookmarks/status/1 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "isBookmarked": true
+    }
+  ],
+  "error": null
+}
+[ 2025-02-20 09:04:19 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 09:04:19 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 09:04:19 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT index FROM bookmark_info WHERE post_id = $1 AND created_id = $2",
+  "values": [
+    "1",
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 09:04:19 AM ] [ Test Server ]  -  Response /api/bookmarks/status/1 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "isBookmarked": true
+    }
+  ],
+  "error": null
+}
+[ 2025-02-20 09:04:23 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 09:04:23 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 09:04:23 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT index FROM bookmark_info WHERE post_id = $1 AND created_id = $2",
+  "values": [
+    "4",
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 09:04:23 AM ] [ Test Server ]  -  Response /api/bookmarks/status/4 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "isBookmarked": true
+    }
+  ],
+  "error": null
+}
+[ 2025-02-20 09:04:26 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 09:04:26 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 09:04:26 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT index FROM bookmark_info WHERE post_id = $1 AND created_id = $2",
+  "values": [
+    "2",
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 09:04:26 AM ] [ Test Server ]  -  Response /api/bookmarks/status/2 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "isBookmarked": false
+    }
+  ],
+  "error": null
+}
+[ 2025-02-20 09:04:28 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 09:04:28 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 09:04:28 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT index FROM bookmark_info WHERE post_id = $1 AND created_id = $2",
+  "values": [
+    "4",
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 09:04:28 AM ] [ Test Server ]  -  Response /api/bookmarks/status/4 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "isBookmarked": true
+    }
+  ],
+  "error": null
+}
+[ 2025-02-20 09:09:36 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 09:09:36 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 09:09:36 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT index FROM bookmark_info WHERE post_id = $1 AND created_id = $2",
+  "values": [
+    "4",
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 09:09:36 AM ] [ Test Server ]  -  Response /api/bookmarks/status/4 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "isBookmarked": true
+    }
+  ],
+  "error": null
+}
+[ 2025-02-20 09:09:37 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 09:09:37 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 09:09:37 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT index FROM bookmark_info WHERE post_id = $1 AND created_id = $2",
+  "values": [
+    "4",
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 09:09:37 AM ] [ Test Server ]  -  Response /api/bookmarks/status/4 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "isBookmarked": true
+    }
+  ],
+  "error": null
+}
+[ 2025-02-20 09:17:33 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT COUNT(*) as count FROM bookmark_info WHERE post_id;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-20 09:17:33 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT COUNT(*) as count FROM bookmark_info WHERE post_id;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 09:17:33 AM ] [ Test Server ]  -  undefined 
+{
+  "length": 129,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "42804",
+  "position": "51",
+  "file": "parse_coerce.c",
+  "line": "1176",
+  "routine": "coerce_to_boolean"
+}
+[Body]
+undefined
+[ 2025-02-20 09:18:04 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT COUNT(*) as count FROM bookmark_info WHERE post_id;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-20 09:18:04 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT COUNT(*) as count FROM bookmark_info WHERE post_id;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 09:18:04 AM ] [ Test Server ]  -  undefined 
+{
+  "length": 129,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "42804",
+  "position": "51",
+  "file": "parse_coerce.c",
+  "line": "1176",
+  "routine": "coerce_to_boolean"
+}
+[Body]
+undefined
+[ 2025-02-20 09:20:28 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT COUNT(*) as count FROM bookmark_info WHERE post_id = :postId;",
+  "params": {
+    "postId": 1
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 09:20:28 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT COUNT(*) as count FROM bookmark_info WHERE post_id = $1;",
+  "values": [
+    1
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 09:20:28 AM ] [ Test Server ]  -  Response /api/bookmarks/count/1 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "bookmarkCount": 0
+    }
+  ],
+  "error": null
+}
+[ 2025-02-20 09:20:34 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT COUNT(*) as count FROM bookmark_info WHERE post_id = :postId;",
+  "params": {
+    "postId": 4
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 09:20:34 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT COUNT(*) as count FROM bookmark_info WHERE post_id = $1;",
+  "values": [
+    4
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 09:20:34 AM ] [ Test Server ]  -  Response /api/bookmarks/count/4 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "bookmarkCount": 0
+    }
+  ],
+  "error": null
+}
+[ 2025-02-20 09:20:37 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT COUNT(*) as count FROM bookmark_info WHERE post_id = :postId;",
+  "params": {
+    "postId": 5
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 09:20:37 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT COUNT(*) as count FROM bookmark_info WHERE post_id = $1;",
+  "values": [
+    5
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 09:20:37 AM ] [ Test Server ]  -  Response /api/bookmarks/count/5 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "bookmarkCount": 0
+    }
+  ],
+  "error": null
+}
+[ 2025-02-20 09:21:07 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT COUNT(*) as count FROM bookmark_info WHERE post_id = :postId;",
+  "params": {
+    "postId": 5
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 09:21:07 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT COUNT(*) as count FROM bookmark_info WHERE post_id = $1;",
+  "values": [
+    5
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 09:21:07 AM ] [ Test Server ]  -  Response /api/bookmarks/count/5 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "bookmarkCount": 0
+    }
+  ],
+  "error": null
+}
+[ 2025-02-20 09:21:30 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT COUNT(*) as count FROM bookmark_info WHERE post_id = :postId;",
+  "params": {
+    "postId": 5
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 09:21:30 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT COUNT(*) as count FROM bookmark_info WHERE post_id = $1;",
+  "values": [
+    5
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 09:21:30 AM ] [ Test Server ]  -  Response /api/bookmarks/count/5 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "bookmarkCount": 0
+    }
+  ],
+  "error": null
+}
+[ 2025-02-20 09:21:32 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT COUNT(*) as count FROM bookmark_info WHERE post_id = :postId;",
+  "params": {
+    "postId": 5
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 09:21:32 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT COUNT(*) as count FROM bookmark_info WHERE post_id = $1;",
+  "values": [
+    5
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 09:21:32 AM ] [ Test Server ]  -  Response /api/bookmarks/count/5 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "bookmarkCount": 0
+    }
+  ],
+  "error": null
+}
+[ 2025-02-20 09:23:03 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT COUNT(*) as count FROM bookmark_info WHERE post_id = :postId;",
+  "params": {
+    "postId": 5
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 09:23:03 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT COUNT(*) as count FROM bookmark_info WHERE post_id = $1;",
+  "values": [
+    5
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 09:23:03 AM ] [ Test Server ]  -  Response /api/bookmarks/count/5 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "bookmarkCount": 0
+    }
+  ],
+  "error": null
+}
+[ 2025-02-20 09:24:00 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT COUNT(*) as count FROM bookmark_info WHERE post_id = :postId;",
+  "params": {
+    "postId": 5
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 09:24:00 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT COUNT(*) as count FROM bookmark_info WHERE post_id = $1;",
+  "values": [
+    5
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 09:24:00 AM ] [ Test Server ]  -  Response /api/bookmarks/count/5 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "bookmarkCount": "2"
+    }
+  ],
+  "error": null
+}
+[ 2025-02-20 09:24:19 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT COUNT(*) as count FROM bookmark_info WHERE post_id = :postId;",
+  "params": {
+    "postId": 5
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 09:24:19 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT COUNT(*) as count FROM bookmark_info WHERE post_id = $1;",
+  "values": [
+    5
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 09:24:19 AM ] [ Test Server ]  -  Response /api/bookmarks/count/5 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "bookmarkCount": "2"
+    }
+  ],
+  "error": null
+}
+[ 2025-02-20 09:24:35 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT COUNT(*) as count FROM bookmark_info WHERE post_id = :postId;",
+  "params": {
+    "postId": 5
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 09:24:35 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT COUNT(*) as count FROM bookmark_info WHERE post_id = $1;",
+  "values": [
+    5
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 09:24:35 AM ] [ Test Server ]  -  Response /api/bookmarks/count/5 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "bookmarkCount": "2"
+    }
+  ],
+  "error": null
+}
+[ 2025-02-20 09:24:54 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT COUNT(*) as count FROM bookmark_info WHERE post_id = :postId;",
+  "params": {
+    "postId": 4
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 09:24:54 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT COUNT(*) as count FROM bookmark_info WHERE post_id = $1;",
+  "values": [
+    4
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 09:24:54 AM ] [ Test Server ]  -  Response /api/bookmarks/count/4 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "bookmarkCount": "1"
+    }
+  ],
+  "error": null
+}
+[ 2025-02-20 09:24:56 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT COUNT(*) as count FROM bookmark_info WHERE post_id = :postId;",
+  "params": {
+    "postId": 1
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 09:24:56 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT COUNT(*) as count FROM bookmark_info WHERE post_id = $1;",
+  "values": [
+    1
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 09:24:56 AM ] [ Test Server ]  -  Response /api/bookmarks/count/1 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "bookmarkCount": "1"
+    }
+  ],
+  "error": null
+}
+[ 2025-02-20 09:24:57 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT COUNT(*) as count FROM bookmark_info WHERE post_id = :postId;",
+  "params": {
+    "postId": 1
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 09:24:57 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT COUNT(*) as count FROM bookmark_info WHERE post_id = $1;",
+  "values": [
+    1
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 09:24:57 AM ] [ Test Server ]  -  Response /api/bookmarks/count/1 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "bookmarkCount": "1"
+    }
+  ],
+  "error": null
+}
+[ 2025-02-20 09:24:59 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT COUNT(*) as count FROM bookmark_info WHERE post_id = :postId;",
+  "params": {
+    "postId": 4
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 09:24:59 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT COUNT(*) as count FROM bookmark_info WHERE post_id = $1;",
+  "values": [
+    4
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 09:24:59 AM ] [ Test Server ]  -  Response /api/bookmarks/count/4 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "bookmarkCount": "1"
+    }
+  ],
+  "error": null
+}
+[ 2025-02-20 09:25:01 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT COUNT(*) as count FROM bookmark_info WHERE post_id = :postId;",
+  "params": {
+    "postId": 5
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 09:25:01 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT COUNT(*) as count FROM bookmark_info WHERE post_id = $1;",
+  "values": [
+    5
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 09:25:01 AM ] [ Test Server ]  -  Response /api/bookmarks/count/5 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "bookmarkCount": "2"
+    }
+  ],
+  "error": null
+}
+[ 2025-02-20 09:47:57 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "DELETE FROM bookmark_info WHERE post_id = :postId RETURNING *;",
+  "params": {
+    "postId": "4"
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 09:47:57 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "DELETE FROM bookmark_info WHERE post_id = $1 RETURNING *;",
+  "values": [
+    "4"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 09:47:57 AM ] [ Test Server ]  -  Response /api/bookmarks/postId/4 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "result": {
+        "message": "삭제할 북마크가 없습니다.",
+        "deletedCount": 0
+      }
+    }
+  ],
+  "error": null
+}
+[ 2025-02-20 09:48:02 AM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "DELETE FROM bookmark_info WHERE post_id = :postId RETURNING *;",
+  "params": {
+    "postId": "5"
+  }
+}
+[Body]
+undefined
+[ 2025-02-20 09:48:02 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "DELETE FROM bookmark_info WHERE post_id = $1 RETURNING *;",
+  "values": [
+    "5"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-20 09:48:02 AM ] [ Test Server ]  -  Response /api/bookmarks/postId/5 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "result": {
+        "message": "북마크가 삭제되었습니다.",
+        "deletedCount": 2
+      }
+    }
+  ],
+  "error": null
+}
+[ 2025-02-20 09:48:06 AM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM bookmark_info",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-20 09:48:06 AM ] [ Test Server ]  -  Response /api/bookmarks/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "bookmarks": [
+        {
+          "index": 19,
+          "createdId": 9,
+          "postId": 1,
+          "createdTime": "2025-02-20 08:28:38"
+        }
+      ]
+    }
+  ],
+  "error": null
+}

@@ -36,7 +36,7 @@ export class UserController {
         });
       }
       const createdUser = await this.userService.createUser(user);
-      const response = ResponseData.data(createdUser);
+      const response = ResponseData.data({ createdUser });
 
       sendResponse(res, response);
     } catch (e) {
@@ -47,7 +47,7 @@ export class UserController {
   findAllUsers = async (req, res) => {
     try {
       const users = await this.userService.findAllUsers();
-      const response = ResponseData.data(users);
+      const response = ResponseData.data({ users });
       sendResponse(res, response);
     } catch (error) {
       sendErrorResponse(res, error);
@@ -67,7 +67,7 @@ export class UserController {
           new Error("해당 userId의 사용자가 없습니다.")
         );
       }
-      const response = ResponseData.data(user);
+      const response = ResponseData.data({ user });
       sendResponse(res, response);
     } catch (error) {
       sendErrorResponse(res, error);
@@ -87,7 +87,7 @@ export class UserController {
           new Error("해당 email의 사용자가 없습니다.")
         );
       }
-      const response = ResponseData.data(user);
+      const response = ResponseData.data({ user });
       sendResponse(res, response);
     } catch (error) {
       sendErrorResponse(res, error);

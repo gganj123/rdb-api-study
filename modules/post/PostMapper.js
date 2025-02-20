@@ -4,7 +4,7 @@ import { PostCreateDto } from "./models/PostDto.js";
 export class PostMapper extends BaseMapper {
   /**
    * 모든 게시물 조회
-   * @returns {Promise<PostInfo[]}
+   * @returns {Promise<PostInfo[]>}
    */
   findAllPosts() {
     return this.exec(async (query) =>

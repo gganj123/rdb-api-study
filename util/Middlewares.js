@@ -105,14 +105,20 @@ export const jwtAuth = (req, res, next) =>
 
       if (info) {
         if (info instanceof TokenExpiredError) {
-          const response = new ResponseData({ message: ResponseMessage.tokenInvalid, statusCode: 401 });
+          const response = new ResponseData({
+            message: ResponseMessage.tokenInvalid,
+            statusCode: 401,
+          });
           sendResponse(res, response);
           return;
         }
 
         // @ts-ignore
         if (info.message === "No auth token") {
-          const response = new ResponseData({ message: ResponseMessage.tokenInvalid, statusCode: 401 });
+          const response = new ResponseData({
+            message: ResponseMessage.tokenInvalid,
+            statusCode: 401,
+          });
           sendResponse(res, response);
           return;
         }

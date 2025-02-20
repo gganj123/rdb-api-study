@@ -42,7 +42,7 @@ export class PostController {
         post,
         createdId,
       });
-      const response = ResponseData.data(createdPost);
+      const response = ResponseData.data({ createdPost });
 
       sendResponse(res, response);
     } catch (error) {
@@ -53,7 +53,7 @@ export class PostController {
   findAllPosts = async (req, res) => {
     try {
       const posts = await this.postService.findAllPosts();
-      const response = ResponseData.data(posts);
+      const response = ResponseData.data({ posts });
       sendResponse(res, response);
     } catch (error) {
       sendErrorResponse(res, error);
@@ -74,7 +74,7 @@ export class PostController {
         );
       }
 
-      const response = ResponseData.data(post);
+      const response = ResponseData.data({ post });
       sendResponse(res, response);
     } catch (error) {
       sendErrorResponse(res, error);
@@ -98,7 +98,7 @@ export class PostController {
         );
       }
 
-      const response = ResponseData.data(posts);
+      const response = ResponseData.data({ posts });
       sendResponse(res, response);
     } catch (error) {
       sendErrorResponse(res, error);

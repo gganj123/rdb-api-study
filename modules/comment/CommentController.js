@@ -45,7 +45,7 @@ export class CommentController {
         userId,
       });
 
-      const response = ResponseData.data(createdComment);
+      const response = ResponseData.data({ createdComment });
       sendResponse(res, response);
     } catch (error) {
       sendErrorResponse(res, error);
@@ -57,7 +57,7 @@ export class CommentController {
       const comments = await this.commentService.findAllComments();
       console.log("조회된 댓글 목록:", comments); // 데이터 확인
 
-      const response = ResponseData.data(comments);
+      const response = ResponseData.data({ comments });
       sendResponse(res, response);
     } catch (error) {
       sendErrorResponse(res, error);
@@ -80,7 +80,7 @@ export class CommentController {
         );
       }
 
-      const response = ResponseData.data(comments);
+      const response = ResponseData.data({ comments });
       sendResponse(res, response);
     } catch (error) {
       sendErrorResponse(res, error);
@@ -100,7 +100,7 @@ export class CommentController {
         );
       }
 
-      const response = ResponseData.data(comments);
+      const response = ResponseData.data({ comments });
       sendResponse(res, response);
     } catch (error) {
       sendErrorResponse(res, error);
@@ -119,7 +119,7 @@ export class CommentController {
         return sendErrorResponse(res, new Error("해당 댓글이 없습니다."));
       }
 
-      const response = ResponseData.data(comment);
+      const response = ResponseData.data({ comment });
       sendResponse(res, response);
     } catch (error) {
       sendErrorResponse(res, error);
