@@ -1,6 +1,6 @@
 import { sendErrorResponse, sendResponse } from "../../util/Functions.js";
 import { ResponseData } from "../../util/types/ResponseData.js";
-import { BookmarkService } from "./bookmarkService.js";
+import { BookmarkService } from "./BookmarkService.js";
 import { response } from "express";
 
 export class BookmarkController {
@@ -112,12 +112,39 @@ export class BookmarkController {
     }
   };
 
-  deleteBookmarksById = async (req, res) => {
+  deleteBookmarksByPostId = async (req, res) => {
     try {
       const postId = req.params.postId;
 
       const result = await this.bookmarkService.deleteBookmarksByPostId(postId);
       const response = ResponseData.data({ result });
+      sendResponse(res, response);
+    } catch (error) {
+      sendErrorResponse(res, error);
+    }
+  };
+
+  deleteBookmarksByUserId = async (req, res) => {
+    try {
+      const userId = req.user?.index;
+
+      if (!userId || isNaN(Number(userId))) {
+        return sendErrorResponse(res, new Error("userId를 확인해주세요."));
+      }
+
+      const result = await this.bookmarkService.deleteBookmarksByUserId(userId);
+      const response = ResponseData.data({ result });
+      sendResponse(res, response);
+    } catch (error) {
+      sendErrorResponse(res, error);
+    }
+  };
+
+  mostBookmarkedPosts = async (req, res) => {
+    try {
+      const limit = req.params.limit;
+      const posts = await this.bookmarkService.mostBookmarkedPosts(limit);
+      const response = ResponseData.data({ posts });
       sendResponse(res, response);
     } catch (error) {
       sendErrorResponse(res, error);

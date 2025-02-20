@@ -1,3 +1,4 @@
+import { query } from "express";
 import { BaseMapper } from "../../util/types/BaseMapper.js";
 import { BookmarkCreateDto } from "./models/BookmarkDto.js";
 
@@ -39,7 +40,7 @@ export class BookmarkMapper extends BaseMapper {
    * @returns {Promise<void>}
    */
   addBookmark({ postId, userId }) {
-    return this.exec(async (query) =>
+    const result = this.exec(async (query) =>
       query
         .setName("Create Bookmark")
         .INSERT("bookmark_info")
@@ -48,26 +49,34 @@ export class BookmarkMapper extends BaseMapper {
         .RETURNING("*")
         .exec()
     );
+    if (!result) {
+      throw new Error("북마크 추가에 실패했습니다.");
+    }
+    return result;
   }
 
   /**
    * 북마크 삭제
-   * @param {number} bookmarkIndex
+   * @param {number} bookmarkId
    * @returns {Promise<void>}
    */
-  removeBookmark(bookmarkIndex) {
-    return this.exec(async (query) =>
+  deleteBookmark(bookmarkId) {
+    const result = this.exec(async (query) =>
       query
         .DELETE()
         .FROM("bookmark_info")
         .WHERE(`index = :bookmarkId`)
-        .addParam("bookmarkId", bookmarkIndex)
+        .addParam("bookmarkId", bookmarkId)
         .exec()
     );
+    if (!result) {
+      throw new Error("북마크 삭제에 실패했습니다.");
+    }
+    return result;
   }
 
   /**
-   * userId로 게시물 조회
+   * userId로 북마크한 게시물 조회
    * @param {number} userId
    * @returns {Promise<BookmarkInfo[]}
    */
@@ -85,8 +94,8 @@ export class BookmarkMapper extends BaseMapper {
 
   /**
    * 특정 게시글의 북마크 상태 확인
-   * @param {number} postId - 게시글 ID
-   * @param {number} userId - 사용자 ID
+   * @param {number} postId
+   * @param {number} userId
    * @returns {Promise<boolean>}
    */
   isBookmarked({ postId, userId }) {
@@ -125,7 +134,7 @@ export class BookmarkMapper extends BaseMapper {
   /**
    * 게시글의 모든 북마크 삭제
    * @param {number} postId
-   * @return {Promise<{message: string, deletedCount: number}>}
+   * @returns {Promise<{message: string, deletedCount: number}>}
    */
 
   async deleteBookmarksByPostId(postId) {
@@ -144,5 +153,49 @@ export class BookmarkMapper extends BaseMapper {
     return result.length > 0
       ? { message: "북마크가 삭제되었습니다.", deletedCount: result.length }
       : { message: "삭제할 북마크가 없습니다.", deletedCount: 0 };
+  }
+
+  /**유저의 모든 북마크 삭제
+   *  유저의 모든 북마크 삭제
+   * @param {number} userId
+   * @returns {Promise<{message:string,deleteCount:number}}
+   */
+
+  async deleteBookmarksByUserId(userId) {
+    const result = await this.exec(async (query) =>
+      query
+        .DELETE()
+        .FROM(bookmark_info)
+        .WHERE(`created_id = :userId`)
+        .addParam("userId", userId)
+        .RETURNING("*")
+        .exec()
+    );
+
+    return result.length > 0
+      ? { message: "북마크가 삭제되었습니다.", deletedCount: result.length }
+      : { message: "삭제할 북마크가 없습니다.", deletedCount: 0 };
+  }
+
+  /** 북마크가 많은 게시글
+   * @param {number} limit
+   */
+  async mostBookmarkedPosts(limit) {
+    const result = await this.exec(async (query) =>
+      query
+        .SELECT(
+          "p.index AS post_id",
+          "p.title",
+          "p.content",
+          "COUNT(b.index) AS bookmark_count"
+        )
+        .FROM("post_info AS p")
+        .LEFT_JOIN("bookmark_info AS b", "p.index = b.post_id")
+        .GROUP_BY("p.index", "p.title", "p.content")
+        .ORDER_BY("bookmark_count", "DESC")
+        .LIMIT(limit)
+        .findMany()
+    );
+    return result;
   }
 }

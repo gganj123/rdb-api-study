@@ -18,7 +18,13 @@ export function bookmarkRoutes(app) {
   router.get("/userId", jwtAuth, bookmarkController.findBookmarkById);
   router.get("/status/:postId", jwtAuth, bookmarkController.isBookmarked);
   router.get("/count/:postId", bookmarkController.countBookmarksByPostId);
-  router.delete("/postId/:postId", bookmarkController.deleteBookmarksById);
+  router.delete("/postId/:postId", bookmarkController.deleteBookmarksByPostId);
+  router.delete(
+    "/userId/",
+    jwtAuth,
+    bookmarkController.deleteBookmarksByUserId
+  );
+  router.get("/top/:limit", bookmarkController.mostBookmarkedPosts);
 
   app.use("/bookmarks", router);
 }

@@ -23,7 +23,7 @@ class _BookmarkService {
   }
 
   /**
-   * 북마크 추가 또는 삭제 (토글 기능)
+   * 북마크 토글
    * @param {number} postId
    * @param {number} userId
    * @returns {Promise<{ message: string, isBookmarked: boolean }>}
@@ -35,7 +35,7 @@ class _BookmarkService {
     });
 
     if (existingBookmark) {
-      await this.bookmarkMapper.removeBookmark(existingBookmark.index);
+      await this.bookmarkMapper.deleteBookmark(existingBookmark.index);
       return { message: "북마크가 삭제되었습니다.", isBookmarked: false };
     } else {
       const result = await this.bookmarkMapper.addBookmark({ postId, userId });
@@ -62,7 +62,8 @@ class _BookmarkService {
    * @returns {Promise<boolean>}
    */
   async isBookmarked({ postId, userId }) {
-    return await this.bookmarkMapper.isBookmarked({ postId, userId });
+    const bookmark = await this.bookmarkMapper.isBookmarked({ postId, userId });
+    return bookmark;
   }
 
   /**
@@ -71,7 +72,10 @@ class _BookmarkService {
    * @returns {Promise<number>}
    */
   async countBookmarksByPostId(postId) {
-    return await this.bookmarkMapper.countBookmarksByPostId(postId);
+    const bookmarkCount = await this.bookmarkMapper.countBookmarksByPostId(
+      postId
+    );
+    return bookmarkCount;
   }
 
   /**
@@ -80,9 +84,30 @@ class _BookmarkService {
    * @return {Promise<{message: string, deletedCount: number}>}
    */
   async deleteBookmarksByPostId(postId) {
-    return await this.bookmarkMapper.deleteBookmarksByPostId(postId);
+    const bookmark = await this.bookmarkMapper.deleteBookmarksByPostId(postId);
+    return bookmark;
+  }
+
+  /**유저의 모든 북마크 삭제
+   *  유저의 모든 북마크 삭제
+   * @param {number} userId
+   * @returns {Promise<{message:string,deleteCount:number}}
+   */
+  async deleteBookmarksByUserId(userId) {
+    const bookmark = await this.bookmarkMapper.deleteBookmarksByUserId(userId);
+    return bookmark;
+  }
+
+  /** 북마크가 많은 게시글
+   * @param {number} limit
+   */
+
+  async mostBookmarkedPosts(limit) {
+    const posts = await this.bookmarkMapper.mostBookmarkedPosts(limit);
+    return posts;
   }
 }
+
 /**
  * @type {typeof _BookmarkService}
  * @description 트랙잭션 프록시를 적용한 BookmarkService
