@@ -3,7 +3,7 @@ import { LikeController } from "../modules/like/LikeController.js";
 import { jwtAuth } from "../util/Middlewares.js";
 
 /**
- * 북마크 라우터
+ * 좋아요 라우터
  *
  * @export
  * @param {Router} app

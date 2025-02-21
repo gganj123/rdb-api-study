@@ -22,7 +22,7 @@ export class LikeController {
 
   findAllLike = async (req, res) => {
     try {
-      const likes = LikeController.findAllLike();
+      const likes = await this.likeService.findAllLike();
       const response = ResponseData.data({ likes });
       sendResponse(res, response);
     } catch (error) {

@@ -69,7 +69,7 @@ export class BookmarkController {
 
   isBookmarked = async (req, res) => {
     try {
-      const { postId } = req.params.postId;
+      const postId = req.params.postId;
       const userId = req.user?.index;
 
       if (!postId || !userId) {

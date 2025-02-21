@@ -148,11 +148,7 @@ export class BookmarkMapper extends BaseMapper {
         .exec()
     );
 
-    console.log(`삭제된 북마크 개수 ${result.length}`);
-
-    return result.length > 0
-      ? { message: "북마크가 삭제되었습니다.", deletedCount: result.length }
-      : { message: "삭제할 북마크가 없습니다.", deletedCount: 0 };
+    return { message: "게시글의 북마크가 삭제되었습니다." };
   }
 
   /**유저의 모든 북마크 삭제
@@ -172,9 +168,7 @@ export class BookmarkMapper extends BaseMapper {
         .exec()
     );
 
-    return result.length > 0
-      ? { message: "북마크가 삭제되었습니다.", deletedCount: result.length }
-      : { message: "삭제할 북마크가 없습니다.", deletedCount: 0 };
+    return { message: "유저의 북마크가 삭제되었습니다." };
   }
 
   /** 북마크가 많은 게시글
@@ -183,18 +177,20 @@ export class BookmarkMapper extends BaseMapper {
   async mostBookmarkedPosts(limit) {
     const result = await this.exec(async (query) =>
       query
-        .SELECT(
-          "p.index AS post_id",
-          "p.title",
-          "p.content",
-          "COUNT(b.index) AS bookmark_count"
+        .rawQuery(
+          `SELECT 
+            p.index AS post_id, 
+            p.title, 
+            p.content, 
+            COUNT(b.index) AS bookmark_count
+           FROM post_info p
+           LEFT JOIN bookmark_info b ON p.index = b.post_id
+           GROUP BY p.index, p.title, p.content
+           ORDER BY bookmark_count DESC
+           LIMIT :limit`
         )
-        .FROM("post_info AS p")
-        .LEFT_JOIN("bookmark_info AS b", "p.index = b.post_id")
-        .GROUP_BY("p.index", "p.title", "p.content")
-        .ORDER_BY("bookmark_count", "DESC")
-        .LIMIT(limit)
-        .findMany()
+        .addParam("limit", limit)
+        .rawFindMany()
     );
     return result;
   }

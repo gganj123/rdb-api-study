@@ -12,6 +12,7 @@ import "./util/passportConfig.js";
 import { commentRoutes } from "./routes/CommentRoutes.js";
 import { bookmarkRoutes } from "./routes/BookmarkRoutes.js";
 import { likeRouter } from "./routes/LikeRoutes.js";
+import { followRouter } from "./routes/FollowRoutes.js";
 // dotenv
 config();
 
@@ -39,6 +40,7 @@ postRoutes(apiRouter);
 commentRoutes(apiRouter);
 bookmarkRoutes(apiRouter);
 likeRouter(apiRouter);
+followRouter(apiRouter);
 
 app.use("/api", apiRouter);
 app.use(passport.initialize());

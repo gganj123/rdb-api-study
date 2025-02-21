@@ -13,7 +13,7 @@ export class LikeMapper extends BaseMapper {
   }
 
   /**
-   * 특정 좋아요의 북마크 여부 확인
+   * 특정 좋아요 여부 확인
    * @param {number} postId
    * @param {number} userId
    * @returns {Promise<{ index: number } | null>}
@@ -82,6 +82,7 @@ export class LikeMapper extends BaseMapper {
    */
 
   findLikesByUserId(userId) {
+    console.log("맵퍼", userId);
     return this.exec(async (query) =>
       query
         .SELECT("*")
@@ -100,13 +101,14 @@ export class LikeMapper extends BaseMapper {
    */
 
   isLiked({ postId, userId }) {
+    console.log("맵퍼", postId, userId);
     return this.exec(async (query) => {
       const result = await query
         .rawQuery(
-          `SELECT index FROM like_info WHERE post_id = : postId AND created_id = :userId`
+          `SELECT index FROM like_info WHERE post_id = :postId AND created_id = :userId`
         )
-        .addParam("posrId", postId)
-        .addParam("userid", userId)
+        .addParam("postId", postId)
+        .addParam("userId", userId)
         .rawFindOne();
 
       return !!result;
@@ -131,23 +133,25 @@ export class LikeMapper extends BaseMapper {
   }
 
   /** 좋아요가 많은 게시글 순
-   *@param {number} limit
+   * @param {number} limit
    */
-
   async mostLikedPosts(limit) {
-    const result = await this.exec(
-      async (query) =>
-        query.SELECT(
-          "p.index AS post_id",
-          "p.title",
-          "p.content",
-          "COUNT(l.index) AS like_count"
-        ),
-      FROM("post_info AS p")
-        .LEFT_JOIN("like_info AS l", "p.index = l.post_id")
-        .GROUP_BY('bookmark_count,"DESC')
-        .LIMIT(limit)
-        .findMany()
+    const result = await this.exec(async (query) =>
+      query
+        .rawQuery(
+          `SELECT 
+            p.index AS post_id, 
+            p.title, 
+            p.content, 
+            COUNT(l.index) AS like_count
+         FROM post_info AS p
+         LEFT JOIN like_info AS l ON p.index = l.post_id
+         GROUP BY p.index, p.title, p.content
+         ORDER BY like_count DESC
+         LIMIT :limit`
+        )
+        .addParam("limit", limit)
+        .rawFindMany()
     );
     return result;
   }

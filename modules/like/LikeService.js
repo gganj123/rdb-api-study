@@ -34,10 +34,10 @@ class _LikeService {
 
     if (existingLike) {
       await this.likeMapper.deleteLike(existingLike.index);
-      return { message: "좋아요가 삭제되었습니다.", isBookmarked: false };
+      return { message: "좋아요가 삭제되었습니다.", isLiked: false };
     } else {
-      const result = await this.likeMapper.addLike({ postId, userId });
-      return { message: "좋아요가 추가되었습니다.", isBookmarked: true };
+      await this.likeMapper.addLike({ postId, userId });
+      return { message: "좋아요가 추가되었습니다.", isLiked: true };
     }
   }
 
@@ -47,7 +47,7 @@ class _LikeService {
    * @returns {Promise<likeInfo[]}
    */
 
-  async findLikesByUserId({ userId }) {
+  async findLikesByUserId(userId) {
     const likes = await this.likeMapper.findLikesByUserId(userId);
     return likes;
   }
