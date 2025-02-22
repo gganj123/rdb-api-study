@@ -65,6 +65,64 @@ class _FollowService {
     });
     return isFollowed;
   }
+
+  /** 팔로워 수 조회
+   * @param {number} followingId
+   * @returns {Promise<number>}
+   */
+
+  async countFollowers(followingId) {
+    const countFollowers = await this.followMapper.countFollowers(followingId);
+    return countFollowers;
+  }
+
+  /** 팔로잉 수 조회
+   * @param {number} followerId
+   * @returns {Promise<number>}
+   */
+
+  async countFollowing(followerId) {
+    const countFollowing = await this.followMapper.countFollowing(followerId);
+    return countFollowing;
+  }
+
+  /** 많은 팔로우 유저 순
+   * @param {number} limit
+   * @returns {Promise<followingId: number, followersCount: number>[]}
+   */
+
+  async countMostFollowedUser(limit) {
+    const mostFollowedUser = await this.followMapper.countMostFollowedUser(
+      limit
+    );
+    return mostFollowedUser;
+  }
+
+  /** 많은 팔로잉 유저 순
+   * @param {number} limit
+   * @returns {Promise<follower_id : number, following_count: number>[]}
+   */
+
+  async countMostFollowingUser(limit) {
+    const mostFollowingUser = await this.followMapper.countMostFollowingUser(
+      limit
+    );
+    return mostFollowingUser;
+  }
+
+  /** 특정 팔로우 삭제
+   * @param {number} follower_id
+   * @param {number} following_id
+   * @returns {Promise<{message: string}>}
+   */
+
+  async adminDeleteFollow({followerId, followingId}) {
+    const deleteFollow = await this.followMapper.adminDeleteFollow(
+      {followerId,
+      followingId}
+    );
+    return deleteFollow;
+  }
 }
 
 /**

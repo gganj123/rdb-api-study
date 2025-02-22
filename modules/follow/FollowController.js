@@ -85,4 +85,82 @@ export class FollowController {
       sendErrorResponse(res, error);
     }
   };
+
+  countFollowers = async (req, res) => {
+    try {
+      const followingId = req.params.followingId;
+      const countFollower = await this.followService.countFollowers(
+        followingId
+      );
+
+      const response = ResponseData.data({ countFollower });
+      sendResponse(res, response);
+    } catch (error) {
+      sendErrorResponse(res, error);
+    }
+  };
+
+  countFollowing = async (req, res) => {
+    try {
+      const followerId = req.params.followerId;
+      const countFollowing = await this.followService.countFollowing(
+        followerId
+      );
+
+      const response = ResponseData.data({ countFollowing });
+      sendResponse(res, response);
+    } catch (error) {
+      sendErrorResponse(res, error);
+    }
+  };
+
+  countMostFollowedUser = async (req, res) => {
+    try {
+      const limit = req.params.limit;
+      const mostFollowedUser = await this.followService.countMostFollowedUser(
+        limit
+      );
+
+      const response = ResponseData.data({ mostFollowedUser });
+      sendResponse(res, response);
+    } catch (error) {
+      sendErrorResponse(res, error);
+    }
+  };
+
+  countMostFollowingUser = async (req, res) => {
+    try {
+      const limit = req.params.limit;
+      const mostFollowingUser = await this.followService.countMostFollowingUser(
+        limit
+      );
+
+      const response = ResponseData.data({ mostFollowingUser });
+      sendResponse(res, response);
+    } catch (error) {
+      sendErrorResponse(res, error);
+    }
+  };
+
+  adminDeleteFollow = async (req, res) => {
+    try {
+      const followerId = req.params.followerId;
+      const followingId = req.params.followingId;
+      console.log(
+        "삭제 요청 - followerId:",
+        followerId,
+        "followingId:",
+        followingId
+      );
+
+      const deleteFollow = await this.followService.adminDeleteFollow({
+        followerId,
+        followingId,
+      });
+      const response = ResponseData.data({ deleteFollow });
+      sendResponse(res, response);
+    } catch (error) {
+      sendErrorResponse(res, error);
+    }
+  };
 }

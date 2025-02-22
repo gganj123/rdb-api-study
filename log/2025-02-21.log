@@ -6913,3 +6913,356 @@ undefined
   ],
   "error": null
 }
+[ 2025-02-21 08:05:34 PM ] [ Test Server ]  -  Response /api/follows/countfollowers/7 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "countFollower": {}
+    }
+  ],
+  "error": null
+}
+[ 2025-02-21 08:05:34 PM ] [ Test Server ]  -  undefined
+[ 2025-02-21 08:08:23 PM ] [ Test Server ]  -  Response /api/follows/countfollowers/7 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "countFollower": {}
+    }
+  ],
+  "error": null
+}
+[ 2025-02-21 08:08:23 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT COUNT(*) AS follwers_count \n        FROM follow_info \n        WHERE following_id = $1",
+  "values": [
+    "7"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-21 08:08:24 PM ] [ Test Server ]  -  Response /api/follows/countfollowers/7 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "countFollower": {}
+    }
+  ],
+  "error": null
+}
+[ 2025-02-21 08:08:24 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT COUNT(*) AS follwers_count \n        FROM follow_info \n        WHERE following_id = $1",
+  "values": [
+    "7"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-21 08:08:43 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT COUNT(*) AS follwers_count \n        FROM follow_info \n        WHERE following_id = $1",
+  "values": [
+    "7"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-21 08:08:43 PM ] [ Test Server ]  -  Response /api/follows/countfollowers/7 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "countFollower": {
+        "follwersCount": "0"
+      }
+    }
+  ],
+  "error": null
+}
+[ 2025-02-21 08:08:47 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT COUNT(*) AS follwers_count \n        FROM follow_info \n        WHERE following_id = $1",
+  "values": [
+    "8"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-21 08:08:47 PM ] [ Test Server ]  -  Response /api/follows/countfollowers/8 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "countFollower": {
+        "follwersCount": "1"
+      }
+    }
+  ],
+  "error": null
+}
+[ 2025-02-21 08:08:48 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT COUNT(*) AS follwers_count \n        FROM follow_info \n        WHERE following_id = $1",
+  "values": [
+    "9"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-21 08:08:48 PM ] [ Test Server ]  -  Response /api/follows/countfollowers/9 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "countFollower": {
+        "follwersCount": "1"
+      }
+    }
+  ],
+  "error": null
+}
+[ 2025-02-21 08:08:50 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT COUNT(*) AS follwers_count \n        FROM follow_info \n        WHERE following_id = $1",
+  "values": [
+    "1"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-21 08:08:50 PM ] [ Test Server ]  -  Response /api/follows/countfollowers/1 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "countFollower": {
+        "follwersCount": "0"
+      }
+    }
+  ],
+  "error": null
+}
+[ 2025-02-21 08:22:37 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT \n            f.following_id AS followingId, \n            u.name AS followingName\n         FROM follow_info AS f\n         JOIN user_mst AS u ON f.following_id = u.index\n         WHERE f.follower_id = $1",
+  "values": [
+    "7"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-21 08:22:37 PM ] [ Test Server ]  -  Response /api/follows/following/7 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "following": [
+        {
+          "followingid": 8,
+          "followingname": "이름3"
+        },
+        {
+          "followingid": 9,
+          "followingname": "John Doe"
+        }
+      ]
+    }
+  ],
+  "error": null
+}
+[ 2025-02-21 08:22:46 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT COUNT(*) AS following_count FROM follow_info \n        WHERE follower_id = $1",
+  "values": [
+    "7"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-21 08:22:47 PM ] [ Test Server ]  -  Response /api/follows/countfollowing/7 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "countFollowing": {
+        "followingCount": "2"
+      }
+    }
+  ],
+  "error": null
+}
+[ 2025-02-21 08:22:50 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT COUNT(*) AS following_count FROM follow_info \n        WHERE follower_id = $1",
+  "values": [
+    "8"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-21 08:22:50 PM ] [ Test Server ]  -  Response /api/follows/countfollowing/8 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "countFollowing": {
+        "followingCount": "0"
+      }
+    }
+  ],
+  "error": null
+}
+[ 2025-02-21 08:22:53 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT COUNT(*) AS following_count FROM follow_info \n        WHERE follower_id = $1",
+  "values": [
+    "9"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-21 08:22:53 PM ] [ Test Server ]  -  Response /api/follows/countfollowing/9 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "countFollowing": {
+        "followingCount": "0"
+      }
+    }
+  ],
+  "error": null
+}
+[ 2025-02-21 08:22:55 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT COUNT(*) AS following_count FROM follow_info \n        WHERE follower_id = $1",
+  "values": [
+    "7"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-21 08:22:56 PM ] [ Test Server ]  -  Response /api/follows/countfollowing/7 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "countFollowing": {
+        "followingCount": "2"
+      }
+    }
+  ],
+  "error": null
+}

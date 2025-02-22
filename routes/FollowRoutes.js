@@ -16,6 +16,14 @@ export function followRouter(app) {
   router.get("/followers/:followingId", followController.findFollowers);
   router.get("/following/:followerId", followController.findFollowing);
   router.get("/status/:followingId", jwtAuth, followController.isFollowed);
+  router.get("/countfollowers/:followingId", followController.countFollowers);
+  router.get("/countfollowing/:followerId", followController.countFollowing);
+  router.get("/mostfollowers/:limit", followController.countMostFollowedUser);
+  router.get("/mostfollowing/:limit", followController.countMostFollowingUser);
+  router.delete(
+    "/:followerId/:followingId",
+    followController.adminDeleteFollow
+  );
 
   app.use("/follows", router);
 }
