@@ -191,8 +191,39 @@ export class CommentController {
         });
         sendResponse(res, response);
       } else {
-        sendErrorResponse(res, new Error("게시물삭제에 실패하였습니다."));
+        sendErrorResponse(res, new Error("댓글 삭제에 실패하였습니다."));
       }
+    } catch (error) {
+      sendErrorResponse(res, error);
+    }
+  };
+
+  adminDeleteComment = async (req, res) => {
+    try {
+      const commentId = req.params.commentId;
+
+      const result = await this.commentService.adminDeleteComment(commentId);
+
+      if (result > 0) {
+        const response = ResponseData.data({
+          commentId,
+          meessage: "댓글이 삭제되었습니다.",
+        });
+        sendResponse(res, response);
+      } else {
+        sendErrorResponse(res, new Error("댓글 삭제에 실패하였습니다."));
+      }
+    } catch (error) {
+      sendErrorResponse(res, error);
+    }
+  };
+
+  adminCountComments = async (req, res) => {
+    try {
+      const countComment = await this.commentService.adminCountComments();
+      const response = ResponseData.data({ countComment });
+
+      sendResponse(res, response);
     } catch (error) {
       sendErrorResponse(res, error);
     }

@@ -1490,3 +1490,2965 @@ undefined
   ],
   "error": null
 }
+[ 2025-02-22 09:08:32 PM ] [ Test Server ]  -  Response /api/users/login 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "userId": "9",
+      "email": "user@example.com",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI5IiwiaWF0IjoxNzQwMjI2MTEyLCJleHAiOjE3NDAzMTI1MTIsImF1ZCI6ImF1ZGllbmNlIiwiaXNzIjoiaXNzdWVyIn0.qSWzbvGbJnbbjYtt20hRbtrC-SY76DMpAlYgPlMB5O4",
+      "message": "로그인 되었습니다."
+    }
+  ],
+  "error": null
+}
+[ 2025-02-22 09:08:59 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": "9"
+  }
+}
+[Body]
+undefined
+[ 2025-02-22 09:08:59 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    "9"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-22 09:08:59 PM ] [ Test Server ]  -  Response /api/users/id/9 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "user": {
+        "index": 9,
+        "name": "John Doe",
+        "email": "user@example.com",
+        "password": "$2a$10$MioTCLc/u1rtvvOU5TG0muyF.WEeNfMpujkEp2AqgRuE6JdBf2/ei",
+        "createdTime": "2025-02-17 19:43:54",
+        "updateTime": null,
+        "role": "user"
+      }
+    }
+  ],
+  "error": null
+}
+[ 2025-02-22 09:09:06 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": "8"
+  }
+}
+[Body]
+undefined
+[ 2025-02-22 09:09:06 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    "8"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-22 09:09:06 PM ] [ Test Server ]  -  Response /api/users/id/8 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "user": {
+        "index": 8,
+        "name": "이름3",
+        "email": "daehyeon3@heredotcorp.com",
+        "password": "$2a$10$gP70kkRxZiiLix.PKyNBCeZom84z11QGU55AdG4jpyapddviHdqnq",
+        "createdTime": "2025-02-14 13:36:37",
+        "updateTime": null,
+        "role": "user"
+      }
+    }
+  ],
+  "error": null
+}
+[ 2025-02-22 09:09:11 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": "7"
+  }
+}
+[Body]
+undefined
+[ 2025-02-22 09:09:11 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    "7"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-22 09:09:11 PM ] [ Test Server ]  -  Response /api/users/id/7 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "user": {
+        "index": 7,
+        "name": "이름3",
+        "email": "daehyeon3@heredotcorp.com",
+        "password": "$2a$10$q7aX5wwpjiKPqKiBMw2fqehpzKWv1FJlwhZGiYVhchER38tKEzmvy",
+        "createdTime": "2025-02-14 12:56:47",
+        "updateTime": null,
+        "role": "user"
+      }
+    }
+  ],
+  "error": null
+}
+[ 2025-02-22 09:09:49 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-22 09:09:49 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-22 09:09:49 PM ] [ Test Server ]  -  Response /api/users/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "users": [
+        {
+          "index": 7,
+          "name": "이름3",
+          "email": "daehyeon3@heredotcorp.com",
+          "password": "$2a$10$q7aX5wwpjiKPqKiBMw2fqehpzKWv1FJlwhZGiYVhchER38tKEzmvy",
+          "createdTime": "2025-02-14 12:56:47",
+          "updateTime": null,
+          "role": "user"
+        },
+        {
+          "index": 8,
+          "name": "이름3",
+          "email": "daehyeon3@heredotcorp.com",
+          "password": "$2a$10$gP70kkRxZiiLix.PKyNBCeZom84z11QGU55AdG4jpyapddviHdqnq",
+          "createdTime": "2025-02-14 13:36:37",
+          "updateTime": null,
+          "role": "user"
+        },
+        {
+          "index": 9,
+          "name": "John Doe",
+          "email": "user@example.com",
+          "password": "$2a$10$MioTCLc/u1rtvvOU5TG0muyF.WEeNfMpujkEp2AqgRuE6JdBf2/ei",
+          "createdTime": "2025-02-17 19:43:54",
+          "updateTime": null,
+          "role": "user"
+        }
+      ]
+    }
+  ],
+  "error": null
+}
+[ 2025-02-22 09:10:43 PM ] [ Test Server ]  -  Query: Create User 
+{
+  "query": "INSERT INTO public.user_mst (email, password, name) VALUES ('admin@admin.com', '$2a$10$wnxwzST3jVoMm0b6FWc26uOWrQCE11/JlSJbsuj/tEiQIKQW8Xl6m', 'admin') RETURNING *;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-22 09:10:43 PM ] [ Test Server ]  -  Raw Query: Create User 
+{
+  "text": "INSERT INTO public.user_mst (email, password, name) VALUES ('admin@admin.com', '$2a$10$wnxwzST3jVoMm0b6FWc26uOWrQCE11/JlSJbsuj/tEiQIKQW8Xl6m', 'admin') RETURNING *;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-22 09:10:43 PM ] [ Test Server ]  -  Response /api/users/join 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "createdUser": {
+        "index": 20,
+        "email": "admin@admin.com",
+        "name": "admin",
+        "createdTime": "2025-02-22T12:10:44.000Z",
+        "updateTime": null
+      }
+    }
+  ],
+  "error": null
+}
+[ 2025-02-22 09:11:06 PM ] [ Test Server ]  -  Response /api/users/login 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "userId": "10",
+      "email": "user@example.com",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxMCIsImlhdCI6MTc0MDIyNjI2NiwiZXhwIjoxNzQwMzEyNjY2LCJhdWQiOiJhdWRpZW5jZSIsImlzcyI6Imlzc3VlciJ9.co1eG9yMTzOSF-ySw5wtT2OjEiI7N6adyOccrrr9zmo",
+      "message": "로그인 되었습니다."
+    }
+  ],
+  "error": null
+}
+[ 2025-02-22 09:11:19 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": "10"
+  }
+}
+[Body]
+undefined
+[ 2025-02-22 09:11:19 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    "10"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-22 09:11:19 PM ] [ Test Server ]  -  Error:  해당 userId의 사용자가 없습니다. 
+{
+  "stack": "Error: 해당 userId의 사용자가 없습니다.\n    at findById (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:67:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-22 09:11:19 PM ] [ Test Server ]  -  Response /api/users/id/10 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "해당 userId의 사용자가 없습니다.",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "해당 userId의 사용자가 없습니다.",
+    "stack": "Error: 해당 userId의 사용자가 없습니다.\n    at findById (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:67:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-22 09:11:42 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-22 09:11:42 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-22 09:11:42 PM ] [ Test Server ]  -  Response /api/users/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "users": [
+        {
+          "index": 7,
+          "name": "이름3",
+          "email": "daehyeon3@heredotcorp.com",
+          "password": "$2a$10$q7aX5wwpjiKPqKiBMw2fqehpzKWv1FJlwhZGiYVhchER38tKEzmvy",
+          "createdTime": "2025-02-14 12:56:47",
+          "updateTime": null,
+          "role": "user"
+        },
+        {
+          "index": 8,
+          "name": "이름3",
+          "email": "daehyeon3@heredotcorp.com",
+          "password": "$2a$10$gP70kkRxZiiLix.PKyNBCeZom84z11QGU55AdG4jpyapddviHdqnq",
+          "createdTime": "2025-02-14 13:36:37",
+          "updateTime": null,
+          "role": "user"
+        },
+        {
+          "index": 9,
+          "name": "John Doe",
+          "email": "user@example.com",
+          "password": "$2a$10$MioTCLc/u1rtvvOU5TG0muyF.WEeNfMpujkEp2AqgRuE6JdBf2/ei",
+          "createdTime": "2025-02-17 19:43:54",
+          "updateTime": null,
+          "role": "user"
+        },
+        {
+          "index": 20,
+          "name": "admin",
+          "email": "admin@admin.com",
+          "password": "$2a$10$wnxwzST3jVoMm0b6FWc26uOWrQCE11/JlSJbsuj/tEiQIKQW8Xl6m",
+          "createdTime": "2025-02-22 21:10:44",
+          "updateTime": null,
+          "role": "user"
+        }
+      ]
+    }
+  ],
+  "error": null
+}
+[ 2025-02-22 09:11:54 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": "20"
+  }
+}
+[Body]
+undefined
+[ 2025-02-22 09:11:54 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    "20"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-22 09:11:54 PM ] [ Test Server ]  -  Response /api/users/id/20 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "user": {
+        "index": 20,
+        "name": "admin",
+        "email": "admin@admin.com",
+        "password": "$2a$10$wnxwzST3jVoMm0b6FWc26uOWrQCE11/JlSJbsuj/tEiQIKQW8Xl6m",
+        "createdTime": "2025-02-22 21:10:44",
+        "updateTime": null,
+        "role": "user"
+      }
+    }
+  ],
+  "error": null
+}
+[ 2025-02-22 09:12:27 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": "20"
+  }
+}
+[Body]
+undefined
+[ 2025-02-22 09:12:27 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    "20"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-22 09:12:27 PM ] [ Test Server ]  -  Response /api/users/id/20 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "user": {
+        "index": 20,
+        "name": "admin",
+        "email": "admin@admin.com",
+        "password": "$2a$10$wnxwzST3jVoMm0b6FWc26uOWrQCE11/JlSJbsuj/tEiQIKQW8Xl6m",
+        "createdTime": "2025-02-22 21:10:44",
+        "updateTime": null,
+        "role": "admin"
+      }
+    }
+  ],
+  "error": null
+}
+[ 2025-02-22 09:18:36 PM ] [ Test Server ]  -  Response /api/admin/users/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 401,
+  "message": "token is invalid",
+  "data": null,
+  "error": null
+}
+[ 2025-02-22 09:19:51 PM ] [ Test Server ]  -  Response /api/admin/users/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 401,
+  "message": "token is invalid",
+  "data": null,
+  "error": null
+}
+[ 2025-02-22 09:20:33 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 10
+  }
+}
+[Body]
+undefined
+[ 2025-02-22 09:20:33 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    10
+  ]
+}
+[Body]
+undefined
+[ 2025-02-22 09:27:13 PM ] [ Test Server ]  -  Query: Create User 
+{
+  "query": "INSERT INTO public.user_mst (email, password, name) VALUES ('admin@admin.com', '$2a$10$Bslg08gunC7fJ2Ylje.noevijbLwP9ztPf58CH0XlhUTR1ZicXZW2', 'admin') RETURNING *;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-22 09:27:13 PM ] [ Test Server ]  -  Raw Query: Create User 
+{
+  "text": "INSERT INTO public.user_mst (email, password, name) VALUES ('admin@admin.com', '$2a$10$Bslg08gunC7fJ2Ylje.noevijbLwP9ztPf58CH0XlhUTR1ZicXZW2', 'admin') RETURNING *;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-22 09:27:13 PM ] [ Test Server ]  -  Response /api/users/join 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "createdUser": {
+        "index": 21,
+        "email": "admin@admin.com",
+        "name": "admin",
+        "createdTime": "2025-02-22T12:27:15.000Z",
+        "updateTime": null
+      }
+    }
+  ],
+  "error": null
+}
+[ 2025-02-22 09:27:23 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 10
+  }
+}
+[Body]
+undefined
+[ 2025-02-22 09:27:23 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    10
+  ]
+}
+[Body]
+undefined
+[ 2025-02-22 09:28:01 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 10
+  }
+}
+[Body]
+undefined
+[ 2025-02-22 09:28:01 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    10
+  ]
+}
+[Body]
+undefined
+[ 2025-02-22 09:29:25 PM ] [ Test Server ]  -  Response /api/users/login 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "userId": "20",
+      "email": "user@example.com",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIyMCIsImlhdCI6MTc0MDIyNzM2NSwiZXhwIjoxNzQwMzEzNzY1LCJhdWQiOiJhdWRpZW5jZSIsImlzcyI6Imlzc3VlciJ9.0sQxXKfjRdx9pCROgBK28RlzwXtKqTNtRlpXe5pp3Rg",
+      "message": "로그인 되었습니다."
+    }
+  ],
+  "error": null
+}
+[ 2025-02-22 09:29:56 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 20
+  }
+}
+[Body]
+undefined
+[ 2025-02-22 09:29:56 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    20
+  ]
+}
+[Body]
+undefined
+[ 2025-02-22 09:29:56 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-22 09:29:56 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-22 09:29:56 PM ] [ Test Server ]  -  Response /api/admin/users/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "users": [
+        {
+          "index": 7,
+          "name": "이름3",
+          "email": "daehyeon3@heredotcorp.com",
+          "password": "$2a$10$q7aX5wwpjiKPqKiBMw2fqehpzKWv1FJlwhZGiYVhchER38tKEzmvy",
+          "createdTime": "2025-02-14 12:56:47",
+          "updateTime": null,
+          "role": "user"
+        },
+        {
+          "index": 8,
+          "name": "이름3",
+          "email": "daehyeon3@heredotcorp.com",
+          "password": "$2a$10$gP70kkRxZiiLix.PKyNBCeZom84z11QGU55AdG4jpyapddviHdqnq",
+          "createdTime": "2025-02-14 13:36:37",
+          "updateTime": null,
+          "role": "user"
+        },
+        {
+          "index": 9,
+          "name": "John Doe",
+          "email": "user@example.com",
+          "password": "$2a$10$MioTCLc/u1rtvvOU5TG0muyF.WEeNfMpujkEp2AqgRuE6JdBf2/ei",
+          "createdTime": "2025-02-17 19:43:54",
+          "updateTime": null,
+          "role": "user"
+        },
+        {
+          "index": 20,
+          "name": "admin",
+          "email": "admin@admin.com",
+          "password": "$2a$10$wnxwzST3jVoMm0b6FWc26uOWrQCE11/JlSJbsuj/tEiQIKQW8Xl6m",
+          "createdTime": "2025-02-22 21:10:44",
+          "updateTime": null,
+          "role": "admin"
+        },
+        {
+          "index": 21,
+          "name": "admin",
+          "email": "admin@admin.com",
+          "password": "$2a$10$Bslg08gunC7fJ2Ylje.noevijbLwP9ztPf58CH0XlhUTR1ZicXZW2",
+          "createdTime": "2025-02-22 21:27:15",
+          "updateTime": null,
+          "role": "user"
+        }
+      ]
+    }
+  ],
+  "error": null
+}
+[ 2025-02-22 09:30:50 PM ] [ Test Server ]  -  Response /api/users/login 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "userId": "9",
+      "email": "user@example.com",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI5IiwiaWF0IjoxNzQwMjI3NDUwLCJleHAiOjE3NDAzMTM4NTAsImF1ZCI6ImF1ZGllbmNlIiwiaXNzIjoiaXNzdWVyIn0.A98atW5iytghNWhGfLRHx-9UMyaKBGd2V8l5OVc9IrY",
+      "message": "로그인 되었습니다."
+    }
+  ],
+  "error": null
+}
+[ 2025-02-22 09:31:00 PM ] [ Test Server ]  -  Response /api/admin/users/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 401,
+  "message": "token is invalid",
+  "data": null,
+  "error": null
+}
+[ 2025-02-22 09:32:06 PM ] [ Test Server ]  -  Response /api/admin/users/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 401,
+  "message": "token is invalid",
+  "data": null,
+  "error": null
+}
+[ 2025-02-22 09:32:07 PM ] [ Test Server ]  -  Response /api/admin/users/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 401,
+  "message": "token is invalid",
+  "data": null,
+  "error": null
+}
+[ 2025-02-22 09:32:08 PM ] [ Test Server ]  -  Response /api/admin/users/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 401,
+  "message": "token is invalid",
+  "data": null,
+  "error": null
+}
+[ 2025-02-22 09:32:35 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-22 09:32:35 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-22 09:32:35 PM ] [ Test Server ]  -  Response /api/admin/users/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 403,
+  "message": "관리자 권한이 필요합니다.",
+  "data": null,
+  "error": null
+}
+[ 2025-02-22 09:32:47 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 20
+  }
+}
+[Body]
+undefined
+[ 2025-02-22 09:32:47 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    20
+  ]
+}
+[Body]
+undefined
+[ 2025-02-22 09:32:47 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-22 09:32:47 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-22 09:32:47 PM ] [ Test Server ]  -  Response /api/admin/users/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "users": [
+        {
+          "index": 7,
+          "name": "이름3",
+          "email": "daehyeon3@heredotcorp.com",
+          "password": "$2a$10$q7aX5wwpjiKPqKiBMw2fqehpzKWv1FJlwhZGiYVhchER38tKEzmvy",
+          "createdTime": "2025-02-14 12:56:47",
+          "updateTime": null,
+          "role": "user"
+        },
+        {
+          "index": 8,
+          "name": "이름3",
+          "email": "daehyeon3@heredotcorp.com",
+          "password": "$2a$10$gP70kkRxZiiLix.PKyNBCeZom84z11QGU55AdG4jpyapddviHdqnq",
+          "createdTime": "2025-02-14 13:36:37",
+          "updateTime": null,
+          "role": "user"
+        },
+        {
+          "index": 9,
+          "name": "John Doe",
+          "email": "user@example.com",
+          "password": "$2a$10$MioTCLc/u1rtvvOU5TG0muyF.WEeNfMpujkEp2AqgRuE6JdBf2/ei",
+          "createdTime": "2025-02-17 19:43:54",
+          "updateTime": null,
+          "role": "user"
+        },
+        {
+          "index": 20,
+          "name": "admin",
+          "email": "admin@admin.com",
+          "password": "$2a$10$wnxwzST3jVoMm0b6FWc26uOWrQCE11/JlSJbsuj/tEiQIKQW8Xl6m",
+          "createdTime": "2025-02-22 21:10:44",
+          "updateTime": null,
+          "role": "admin"
+        },
+        {
+          "index": 21,
+          "name": "admin",
+          "email": "admin@admin.com",
+          "password": "$2a$10$Bslg08gunC7fJ2Ylje.noevijbLwP9ztPf58CH0XlhUTR1ZicXZW2",
+          "createdTime": "2025-02-22 21:27:15",
+          "updateTime": null,
+          "role": "user"
+        }
+      ]
+    }
+  ],
+  "error": null
+}
+[ 2025-02-22 09:33:37 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " DELETE FROM follow_info \n           WHERE following_id = $1 \n           AND follower_id = $2",
+  "values": [
+    "7",
+    "8"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-22 09:33:37 PM ] [ Test Server ]  -  Response /api/follows/8/7 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "deleteFollow": {
+        "message": "삭제할 팔로우 관계가 없습니다."
+      }
+    }
+  ],
+  "error": null
+}
+[ 2025-02-22 09:33:38 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " DELETE FROM follow_info \n           WHERE following_id = $1 \n           AND follower_id = $2",
+  "values": [
+    "7",
+    "8"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-22 09:33:38 PM ] [ Test Server ]  -  Response /api/follows/8/7 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "deleteFollow": {
+        "message": "삭제할 팔로우 관계가 없습니다."
+      }
+    }
+  ],
+  "error": null
+}
+[ 2025-02-22 09:35:13 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 20
+  }
+}
+[Body]
+undefined
+[ 2025-02-22 09:35:13 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    20
+  ]
+}
+[Body]
+undefined
+[ 2025-02-22 09:35:14 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " DELETE FROM follow_info \n           WHERE following_id = $1 \n           AND follower_id = $2",
+  "values": [
+    "7",
+    "8"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-22 09:35:14 PM ] [ Test Server ]  -  Response /api/admin/follows/8/7 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "deleteFollow": {
+        "message": "삭제할 팔로우 관계가 없습니다."
+      }
+    }
+  ],
+  "error": null
+}
+[ 2025-02-22 09:35:26 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-22 09:35:26 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-22 09:35:26 PM ] [ Test Server ]  -  Response /api/admin/follows/8/7 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 403,
+  "message": "관리자 권한이 필요합니다.",
+  "data": null,
+  "error": null
+}
+[ 2025-02-22 09:35:35 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 20
+  }
+}
+[Body]
+undefined
+[ 2025-02-22 09:35:35 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    20
+  ]
+}
+[Body]
+undefined
+[ 2025-02-22 09:35:36 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " DELETE FROM follow_info \n           WHERE following_id = $1 \n           AND follower_id = $2",
+  "values": [
+    "7",
+    "8"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-22 09:35:36 PM ] [ Test Server ]  -  Response /api/admin/follows/8/7 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "deleteFollow": {
+        "message": "삭제할 팔로우 관계가 없습니다."
+      }
+    }
+  ],
+  "error": null
+}
+[ 2025-02-22 09:38:58 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 20
+  }
+}
+[Body]
+undefined
+[ 2025-02-22 09:38:58 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    20
+  ]
+}
+[Body]
+undefined
+[ 2025-02-22 09:38:58 PM ] [ Test Server ]  -  undefined
+[ 2025-02-22 09:38:58 PM ] [ Test Server ]  -  Error:  bookmark_info is not defined 
+{
+  "stack": "ReferenceError: bookmark_info is not defined\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/modules/bookmark/BookmarkMapper.js:164:15\n    at BookmarkMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:20)\n    at BookmarkMapper.deleteBookmarksByUserId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/bookmark/BookmarkMapper.js:161:31)\n    at _BookmarkService.deleteBookmarksByUserId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/bookmark/BookmarkService.js:97:48)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:58\n    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:34\n    at transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async deleteBookmarksByUserId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/bookmark/BookmarkController.js:135:22)"
+}
+[Body]
+undefined
+[ 2025-02-22 09:38:58 PM ] [ Test Server ]  -  Response /api/admin/bookmarks/userId 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "bookmark_info is not defined",
+  "data": null,
+  "error": {
+    "name": "ReferenceError",
+    "message": "bookmark_info is not defined",
+    "stack": "ReferenceError: bookmark_info is not defined\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/modules/bookmark/BookmarkMapper.js:164:15\n    at BookmarkMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:20)\n    at BookmarkMapper.deleteBookmarksByUserId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/bookmark/BookmarkMapper.js:161:31)\n    at _BookmarkService.deleteBookmarksByUserId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/bookmark/BookmarkService.js:97:48)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:58\n    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:34\n    at transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async deleteBookmarksByUserId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/bookmark/BookmarkController.js:135:22)"
+  }
+}
+[ 2025-02-22 09:39:21 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 20
+  }
+}
+[Body]
+undefined
+[ 2025-02-22 09:39:21 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    20
+  ]
+}
+[Body]
+undefined
+[ 2025-02-22 09:39:21 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT * FROM bookmark_info WHERE post_id = $1 AND created_id = $2",
+  "values": [
+    "5",
+    20
+  ]
+}
+[Body]
+undefined
+[ 2025-02-22 09:39:21 PM ] [ Test Server ]  -  Query: Create Bookmark 
+{
+  "query": "INSERT INTO bookmark_info (created_id, post_id) VALUES ('20', '5') RETURNING *;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-22 09:39:21 PM ] [ Test Server ]  -  Raw Query: Create Bookmark 
+{
+  "text": "INSERT INTO bookmark_info (created_id, post_id) VALUES ('20', '5') RETURNING *;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-22 09:39:21 PM ] [ Test Server ]  -  Response /api/bookmarks/toggle/5 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "bookmark": {
+        "message": "북마크가 추가되었습니다.",
+        "isBookmarked": true
+      }
+    }
+  ],
+  "error": null
+}
+[ 2025-02-22 09:39:28 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 20
+  }
+}
+[Body]
+undefined
+[ 2025-02-22 09:39:28 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    20
+  ]
+}
+[Body]
+undefined
+[ 2025-02-22 09:39:28 PM ] [ Test Server ]  -  undefined
+[ 2025-02-22 09:39:28 PM ] [ Test Server ]  -  Error:  bookmark_info is not defined 
+{
+  "stack": "ReferenceError: bookmark_info is not defined\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/modules/bookmark/BookmarkMapper.js:164:15\n    at BookmarkMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:20)\n    at BookmarkMapper.deleteBookmarksByUserId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/bookmark/BookmarkMapper.js:161:31)\n    at _BookmarkService.deleteBookmarksByUserId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/bookmark/BookmarkService.js:97:48)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:58\n    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:34\n    at transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async deleteBookmarksByUserId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/bookmark/BookmarkController.js:135:22)"
+}
+[Body]
+undefined
+[ 2025-02-22 09:39:28 PM ] [ Test Server ]  -  Response /api/admin/bookmarks/userId 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "bookmark_info is not defined",
+  "data": null,
+  "error": {
+    "name": "ReferenceError",
+    "message": "bookmark_info is not defined",
+    "stack": "ReferenceError: bookmark_info is not defined\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/modules/bookmark/BookmarkMapper.js:164:15\n    at BookmarkMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:20)\n    at BookmarkMapper.deleteBookmarksByUserId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/bookmark/BookmarkMapper.js:161:31)\n    at _BookmarkService.deleteBookmarksByUserId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/bookmark/BookmarkService.js:97:48)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:58\n    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:34\n    at transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async deleteBookmarksByUserId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/bookmark/BookmarkController.js:135:22)"
+  }
+}
+[ 2025-02-22 09:39:29 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 20
+  }
+}
+[Body]
+undefined
+[ 2025-02-22 09:39:29 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    20
+  ]
+}
+[Body]
+undefined
+[ 2025-02-22 09:39:30 PM ] [ Test Server ]  -  undefined
+[ 2025-02-22 09:39:30 PM ] [ Test Server ]  -  Error:  bookmark_info is not defined 
+{
+  "stack": "ReferenceError: bookmark_info is not defined\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/modules/bookmark/BookmarkMapper.js:164:15\n    at BookmarkMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:20)\n    at BookmarkMapper.deleteBookmarksByUserId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/bookmark/BookmarkMapper.js:161:31)\n    at _BookmarkService.deleteBookmarksByUserId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/bookmark/BookmarkService.js:97:48)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:58\n    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:34\n    at transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async deleteBookmarksByUserId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/bookmark/BookmarkController.js:135:22)"
+}
+[Body]
+undefined
+[ 2025-02-22 09:39:30 PM ] [ Test Server ]  -  Response /api/admin/bookmarks/userId 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "bookmark_info is not defined",
+  "data": null,
+  "error": {
+    "name": "ReferenceError",
+    "message": "bookmark_info is not defined",
+    "stack": "ReferenceError: bookmark_info is not defined\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/modules/bookmark/BookmarkMapper.js:164:15\n    at BookmarkMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:20)\n    at BookmarkMapper.deleteBookmarksByUserId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/bookmark/BookmarkMapper.js:161:31)\n    at _BookmarkService.deleteBookmarksByUserId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/bookmark/BookmarkService.js:97:48)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:58\n    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)\n    at file:///Users/gganj123/Desktop/study/rdb-api-study/database/TransactionProxy.js:45:34\n    at transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async deleteBookmarksByUserId (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/bookmark/BookmarkController.js:135:22)"
+  }
+}
+[ 2025-02-22 09:40:49 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 20
+  }
+}
+[Body]
+undefined
+[ 2025-02-22 09:40:49 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    20
+  ]
+}
+[Body]
+undefined
+[ 2025-02-22 09:40:49 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "DELETE FROM bookmark_info WHERE created_id = :userId RETURNING *;",
+  "params": {
+    "userId": 20
+  }
+}
+[Body]
+undefined
+[ 2025-02-22 09:40:49 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "DELETE FROM bookmark_info WHERE created_id = $1 RETURNING *;",
+  "values": [
+    20
+  ]
+}
+[Body]
+undefined
+[ 2025-02-22 09:40:49 PM ] [ Test Server ]  -  Response /api/admin/bookmarks/userId 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "result": {
+        "message": "유저의 북마크가 삭제되었습니다."
+      }
+    }
+  ],
+  "error": null
+}
+[ 2025-02-22 09:40:51 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 20
+  }
+}
+[Body]
+undefined
+[ 2025-02-22 09:40:51 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    20
+  ]
+}
+[Body]
+undefined
+[ 2025-02-22 09:40:51 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "DELETE FROM bookmark_info WHERE created_id = :userId RETURNING *;",
+  "params": {
+    "userId": 20
+  }
+}
+[Body]
+undefined
+[ 2025-02-22 09:40:51 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "DELETE FROM bookmark_info WHERE created_id = $1 RETURNING *;",
+  "values": [
+    20
+  ]
+}
+[Body]
+undefined
+[ 2025-02-22 09:40:51 PM ] [ Test Server ]  -  Response /api/admin/bookmarks/userId 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "result": {
+        "message": "유저의 북마크가 삭제되었습니다."
+      }
+    }
+  ],
+  "error": null
+}
+[ 2025-02-22 09:40:52 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 20
+  }
+}
+[Body]
+undefined
+[ 2025-02-22 09:40:52 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    20
+  ]
+}
+[Body]
+undefined
+[ 2025-02-22 09:40:52 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "DELETE FROM bookmark_info WHERE created_id = :userId RETURNING *;",
+  "params": {
+    "userId": 20
+  }
+}
+[Body]
+undefined
+[ 2025-02-22 09:40:52 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "DELETE FROM bookmark_info WHERE created_id = $1 RETURNING *;",
+  "values": [
+    20
+  ]
+}
+[Body]
+undefined
+[ 2025-02-22 09:40:52 PM ] [ Test Server ]  -  Response /api/admin/bookmarks/userId 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "result": {
+        "message": "유저의 북마크가 삭제되었습니다."
+      }
+    }
+  ],
+  "error": null
+}
+[ 2025-02-22 09:42:00 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 20
+  }
+}
+[Body]
+undefined
+[ 2025-02-22 09:42:00 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    20
+  ]
+}
+[Body]
+undefined
+[ 2025-02-22 09:42:00 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "DELETE FROM bookmark_info WHERE created_id = :userId RETURNING *;",
+  "params": {
+    "userId": "8"
+  }
+}
+[Body]
+undefined
+[ 2025-02-22 09:42:00 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "DELETE FROM bookmark_info WHERE created_id = $1 RETURNING *;",
+  "values": [
+    "8"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-22 09:42:01 PM ] [ Test Server ]  -  Response /api/admin/bookmarks/userId/8 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "result": {
+        "message": "유저의 북마크가 삭제되었습니다."
+      }
+    }
+  ],
+  "error": null
+}
+[ 2025-02-22 09:43:08 PM ] [ Test Server ]  -  Response /api/admin/bookmarks/postId/5 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 401,
+  "message": "token is invalid",
+  "data": null,
+  "error": null
+}
+[ 2025-02-22 09:43:30 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 9
+  }
+}
+[Body]
+undefined
+[ 2025-02-22 09:43:30 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    9
+  ]
+}
+[Body]
+undefined
+[ 2025-02-22 09:43:30 PM ] [ Test Server ]  -  Response /api/admin/bookmarks/postId/5 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 403,
+  "message": "관리자 권한이 필요합니다.",
+  "data": null,
+  "error": null
+}
+[ 2025-02-22 09:43:36 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 20
+  }
+}
+[Body]
+undefined
+[ 2025-02-22 09:43:36 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    20
+  ]
+}
+[Body]
+undefined
+[ 2025-02-22 09:43:36 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "DELETE FROM bookmark_info WHERE post_id = :postId RETURNING *;",
+  "params": {
+    "postId": "5"
+  }
+}
+[Body]
+undefined
+[ 2025-02-22 09:43:36 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "DELETE FROM bookmark_info WHERE post_id = $1 RETURNING *;",
+  "values": [
+    "5"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-22 09:43:36 PM ] [ Test Server ]  -  Response /api/admin/bookmarks/postId/5 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "result": {
+        "message": "게시글의 북마크가 삭제되었습니다."
+      }
+    }
+  ],
+  "error": null
+}
+[ 2025-02-22 09:46:42 PM ] [ Test Server ]  -  Response /api/admin/users/10 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 401,
+  "message": "token is invalid",
+  "data": null,
+  "error": null
+}
+[ 2025-02-22 09:46:53 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 20
+  }
+}
+[Body]
+undefined
+[ 2025-02-22 09:46:53 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    20
+  ]
+}
+[Body]
+undefined
+[ 2025-02-22 09:46:53 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT EXISTS(SELECT 1 FROM user_mst WHERE index = $1) AS \"exists\"",
+  "values": [
+    "10"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-22 09:46:54 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " DELETE FROM user_mst WHERE index = $1",
+  "values": [
+    "10"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-22 09:46:54 PM ] [ Test Server ]  -  Error:  탈퇴에 실패하였습니다. 
+{
+  "stack": "Error: 탈퇴에 실패하였습니다.\n    at adminDeleteUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:195:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-22 09:46:54 PM ] [ Test Server ]  -  Response /api/admin/users/10 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "탈퇴에 실패하였습니다.",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "탈퇴에 실패하였습니다.",
+    "stack": "Error: 탈퇴에 실패하였습니다.\n    at adminDeleteUser (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/user/UserController.js:195:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-22 09:47:54 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 20
+  }
+}
+[Body]
+undefined
+[ 2025-02-22 09:47:54 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    20
+  ]
+}
+[Body]
+undefined
+[ 2025-02-22 09:47:55 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-22 09:47:55 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-22 09:47:55 PM ] [ Test Server ]  -  Response /api/admin/users/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "users": [
+        {
+          "index": 7,
+          "name": "이름3",
+          "email": "daehyeon3@heredotcorp.com",
+          "password": "$2a$10$q7aX5wwpjiKPqKiBMw2fqehpzKWv1FJlwhZGiYVhchER38tKEzmvy",
+          "createdTime": "2025-02-14 12:56:47",
+          "updateTime": null,
+          "role": "user"
+        },
+        {
+          "index": 8,
+          "name": "이름3",
+          "email": "daehyeon3@heredotcorp.com",
+          "password": "$2a$10$gP70kkRxZiiLix.PKyNBCeZom84z11QGU55AdG4jpyapddviHdqnq",
+          "createdTime": "2025-02-14 13:36:37",
+          "updateTime": null,
+          "role": "user"
+        },
+        {
+          "index": 9,
+          "name": "John Doe",
+          "email": "user@example.com",
+          "password": "$2a$10$MioTCLc/u1rtvvOU5TG0muyF.WEeNfMpujkEp2AqgRuE6JdBf2/ei",
+          "createdTime": "2025-02-17 19:43:54",
+          "updateTime": null,
+          "role": "user"
+        },
+        {
+          "index": 20,
+          "name": "admin",
+          "email": "admin@admin.com",
+          "password": "$2a$10$wnxwzST3jVoMm0b6FWc26uOWrQCE11/JlSJbsuj/tEiQIKQW8Xl6m",
+          "createdTime": "2025-02-22 21:10:44",
+          "updateTime": null,
+          "role": "admin"
+        },
+        {
+          "index": 21,
+          "name": "admin",
+          "email": "admin@admin.com",
+          "password": "$2a$10$Bslg08gunC7fJ2Ylje.noevijbLwP9ztPf58CH0XlhUTR1ZicXZW2",
+          "createdTime": "2025-02-22 21:27:15",
+          "updateTime": null,
+          "role": "user"
+        }
+      ]
+    }
+  ],
+  "error": null
+}
+[ 2025-02-22 09:48:03 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 20
+  }
+}
+[Body]
+undefined
+[ 2025-02-22 09:48:03 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    20
+  ]
+}
+[Body]
+undefined
+[ 2025-02-22 09:48:03 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT EXISTS(SELECT 1 FROM user_mst WHERE index = $1) AS \"exists\"",
+  "values": [
+    "21"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-22 09:48:03 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " DELETE FROM user_mst WHERE index = $1",
+  "values": [
+    "21"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-22 09:48:03 PM ] [ Test Server ]  -  Response /api/admin/users/21 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "userId": "21",
+      "message": "회원이 탈퇴되었습니다."
+    }
+  ],
+  "error": null
+}
+[ 2025-02-22 09:48:07 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 20
+  }
+}
+[Body]
+undefined
+[ 2025-02-22 09:48:07 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    20
+  ]
+}
+[Body]
+undefined
+[ 2025-02-22 09:48:07 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-22 09:48:07 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-22 09:48:07 PM ] [ Test Server ]  -  Response /api/admin/users/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "users": [
+        {
+          "index": 7,
+          "name": "이름3",
+          "email": "daehyeon3@heredotcorp.com",
+          "password": "$2a$10$q7aX5wwpjiKPqKiBMw2fqehpzKWv1FJlwhZGiYVhchER38tKEzmvy",
+          "createdTime": "2025-02-14 12:56:47",
+          "updateTime": null,
+          "role": "user"
+        },
+        {
+          "index": 8,
+          "name": "이름3",
+          "email": "daehyeon3@heredotcorp.com",
+          "password": "$2a$10$gP70kkRxZiiLix.PKyNBCeZom84z11QGU55AdG4jpyapddviHdqnq",
+          "createdTime": "2025-02-14 13:36:37",
+          "updateTime": null,
+          "role": "user"
+        },
+        {
+          "index": 9,
+          "name": "John Doe",
+          "email": "user@example.com",
+          "password": "$2a$10$MioTCLc/u1rtvvOU5TG0muyF.WEeNfMpujkEp2AqgRuE6JdBf2/ei",
+          "createdTime": "2025-02-17 19:43:54",
+          "updateTime": null,
+          "role": "user"
+        },
+        {
+          "index": 20,
+          "name": "admin",
+          "email": "admin@admin.com",
+          "password": "$2a$10$wnxwzST3jVoMm0b6FWc26uOWrQCE11/JlSJbsuj/tEiQIKQW8Xl6m",
+          "createdTime": "2025-02-22 21:10:44",
+          "updateTime": null,
+          "role": "admin"
+        }
+      ]
+    }
+  ],
+  "error": null
+}
+[ 2025-02-22 09:55:51 PM ] [ Test Server ]  -  Response /api/posts/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 401,
+  "message": "token is invalid",
+  "data": null,
+  "error": null
+}
+[ 2025-02-22 09:56:15 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 20
+  }
+}
+[Body]
+undefined
+[ 2025-02-22 09:56:15 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    20
+  ]
+}
+[Body]
+undefined
+[ 2025-02-22 09:56:15 PM ] [ Test Server ]  -  Query: Create Post 
+{
+  "query": "INSERT INTO public.post_info (title,content,created_id) VALUES ('좋아요와 북마크', '유저8 게시가 되었습니다.', '20') RETURNING *;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-22 09:56:15 PM ] [ Test Server ]  -  Raw Query: Create Post 
+{
+  "text": "INSERT INTO public.post_info (title,content,created_id) VALUES ('좋아요와 북마크', '유저8 게시가 되었습니다.', '20') RETURNING *;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-22 09:56:15 PM ] [ Test Server ]  -  Response /api/posts/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "createdPost": {
+        "index": 8,
+        "title": "좋아요와 북마크",
+        "content": "유저8 게시가 되었습니다.",
+        "createdId": 20,
+        "createdTime": "2025-02-22T12:56:17.000Z",
+        "updateTime": null
+      }
+    }
+  ],
+  "error": null
+}
+[ 2025-02-22 09:56:24 PM ] [ Test Server ]  -  Response /api/admin/posts/8 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 401,
+  "message": "token is invalid",
+  "data": null,
+  "error": null
+}
+[ 2025-02-22 09:56:31 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 20
+  }
+}
+[Body]
+undefined
+[ 2025-02-22 09:56:31 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    20
+  ]
+}
+[Body]
+undefined
+[ 2025-02-22 09:56:31 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " DELETE FROM post_info WHERE index = $1",
+  "values": [
+    {
+      "postId": "8"
+    }
+  ]
+}
+[Body]
+undefined
+[ 2025-02-22 09:56:31 PM ] [ Test Server ]  -  undefined 
+{
+  "length": 157,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe"
+}
+[Body]
+undefined
+[ 2025-02-22 09:56:31 PM ] [ Test Server ]  -  Error:  invalid input syntax for type integer: "{"postId":"8"}" 
+{
+  "length": 157,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe",
+  "stack": "error: invalid input syntax for type integer: \"{\"postId\":\"8\"}\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.rawExec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:279:32)\n    at async file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostMapper.js:120:22\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.adminDeletePost (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:83:24)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async adminDeletePost (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:181:26)"
+}
+[Body]
+undefined
+[ 2025-02-22 09:56:31 PM ] [ Test Server ]  -  Response /api/admin/posts/8 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "invalid input syntax for type integer: \"{\"postId\":\"8\"}\"",
+  "data": null,
+  "error": {
+    "name": "error",
+    "message": "invalid input syntax for type integer: \"{\"postId\":\"8\"}\"",
+    "stack": "error: invalid input syntax for type integer: \"{\"postId\":\"8\"}\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.rawExec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:279:32)\n    at async file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostMapper.js:120:22\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.adminDeletePost (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:83:24)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async adminDeletePost (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:181:26)"
+  }
+}
+[ 2025-02-22 09:56:49 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM post_info;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-22 09:56:49 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM post_info;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-22 09:56:49 PM ] [ Test Server ]  -  Response /api/posts/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "posts": [
+        {
+          "index": 1,
+          "title": "수정된 게시글",
+          "content": "수정된 내용",
+          "createdTime": "2025-02-18 10:00:43",
+          "updateTime": null,
+          "createdId": 9,
+          "updateId": null
+        },
+        {
+          "index": 3,
+          "title": "세번째 테스트",
+          "content": "완전 게시가 되었습니다.",
+          "createdTime": "2025-02-19 14:49:53",
+          "updateTime": null,
+          "createdId": 8,
+          "updateId": null
+        },
+        {
+          "index": 4,
+          "title": "세번째 테스트",
+          "content": "북마크용 게시가 되었습니다.",
+          "createdTime": "2025-02-20 08:31:57",
+          "updateTime": null,
+          "createdId": 7,
+          "updateId": null
+        },
+        {
+          "index": 5,
+          "title": "세번째 테스트",
+          "content": "유저8 게시가 되었습니다.",
+          "createdTime": "2025-02-20 08:32:25",
+          "updateTime": null,
+          "createdId": 8,
+          "updateId": null
+        },
+        {
+          "index": 6,
+          "title": "세번째 테스트",
+          "content": "유저8 게시가 되었습니다.",
+          "createdTime": "2025-02-21 08:24:16",
+          "updateTime": null,
+          "createdId": 7,
+          "updateId": null
+        },
+        {
+          "index": 7,
+          "title": "좋아요와 북마크",
+          "content": "유저8 게시가 되었습니다.",
+          "createdTime": "2025-02-21 08:24:37",
+          "updateTime": null,
+          "createdId": 7,
+          "updateId": null
+        },
+        {
+          "index": 8,
+          "title": "좋아요와 북마크",
+          "content": "유저8 게시가 되었습니다.",
+          "createdTime": "2025-02-22 21:56:17",
+          "updateTime": null,
+          "createdId": 20,
+          "updateId": null
+        }
+      ]
+    }
+  ],
+  "error": null
+}
+[ 2025-02-22 09:58:06 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 20
+  }
+}
+[Body]
+undefined
+[ 2025-02-22 09:58:06 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    20
+  ]
+}
+[Body]
+undefined
+[ 2025-02-22 09:58:06 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " DELETE FROM post_info WHERE index = $1",
+  "values": [
+    null
+  ]
+}
+[Body]
+undefined
+[ 2025-02-22 09:58:06 PM ] [ Test Server ]  -  undefined 
+{
+  "length": 146,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe"
+}
+[Body]
+undefined
+[ 2025-02-22 09:58:06 PM ] [ Test Server ]  -  Error:  invalid input syntax for type integer: "NaN" 
+{
+  "length": 146,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe",
+  "stack": "error: invalid input syntax for type integer: \"NaN\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.rawExec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:279:32)\n    at async file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostMapper.js:120:22\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.adminDeletePost (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:83:24)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async adminDeletePost (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:181:26)"
+}
+[Body]
+undefined
+[ 2025-02-22 09:58:06 PM ] [ Test Server ]  -  Response /api/admin/posts/8 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "invalid input syntax for type integer: \"NaN\"",
+  "data": null,
+  "error": {
+    "name": "error",
+    "message": "invalid input syntax for type integer: \"NaN\"",
+    "stack": "error: invalid input syntax for type integer: \"NaN\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.rawExec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:279:32)\n    at async file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostMapper.js:120:22\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.adminDeletePost (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:83:24)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async adminDeletePost (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:181:26)"
+  }
+}
+[ 2025-02-22 09:58:08 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 20
+  }
+}
+[Body]
+undefined
+[ 2025-02-22 09:58:08 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    20
+  ]
+}
+[Body]
+undefined
+[ 2025-02-22 09:58:09 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " DELETE FROM post_info WHERE index = $1",
+  "values": [
+    null
+  ]
+}
+[Body]
+undefined
+[ 2025-02-22 09:58:09 PM ] [ Test Server ]  -  undefined 
+{
+  "length": 146,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe"
+}
+[Body]
+undefined
+[ 2025-02-22 09:58:09 PM ] [ Test Server ]  -  Error:  invalid input syntax for type integer: "NaN" 
+{
+  "length": 146,
+  "name": "error",
+  "severity": "ERROR",
+  "code": "22P02",
+  "where": "unnamed portal parameter $1 = '...'",
+  "file": "numutils.c",
+  "line": "617",
+  "routine": "pg_strtoint32_safe",
+  "stack": "error: invalid input syntax for type integer: \"NaN\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.rawExec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:279:32)\n    at async file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostMapper.js:120:22\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.adminDeletePost (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:83:24)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async adminDeletePost (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:181:26)"
+}
+[Body]
+undefined
+[ 2025-02-22 09:58:09 PM ] [ Test Server ]  -  Response /api/admin/posts/8 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "invalid input syntax for type integer: \"NaN\"",
+  "data": null,
+  "error": {
+    "name": "error",
+    "message": "invalid input syntax for type integer: \"NaN\"",
+    "stack": "error: invalid input syntax for type integer: \"NaN\"\n    at /Users/gganj123/Desktop/study/rdb-api-study/node_modules/pg/lib/client.js:535:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async PgQueryBuilder.rawExec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/PgQuey.js:279:32)\n    at async file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostMapper.js:120:22\n    at async PostMapper.exec (file:///Users/gganj123/Desktop/study/rdb-api-study/util/types/BaseMapper.js:32:14)\n    at async _PostService.adminDeletePost (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostService.js:83:24)\n    at async transaction (file:///Users/gganj123/Desktop/study/rdb-api-study/database/DatabaseManager.js:46:20)\n    at async adminDeletePost (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:181:26)"
+  }
+}
+[ 2025-02-22 09:59:06 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 20
+  }
+}
+[Body]
+undefined
+[ 2025-02-22 09:59:06 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    20
+  ]
+}
+[Body]
+undefined
+[ 2025-02-22 09:59:06 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " DELETE FROM post_info WHERE index = $1",
+  "values": [
+    "8"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-22 09:59:06 PM ] [ Test Server ]  -  Error:  userId is not defined 
+{
+  "stack": "ReferenceError: userId is not defined\n    at adminDeletePost (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:187:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-22 09:59:06 PM ] [ Test Server ]  -  Response /api/admin/posts/8 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "userId is not defined",
+  "data": null,
+  "error": {
+    "name": "ReferenceError",
+    "message": "userId is not defined",
+    "stack": "ReferenceError: userId is not defined\n    at adminDeletePost (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:187:11)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-22 09:59:29 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 20
+  }
+}
+[Body]
+undefined
+[ 2025-02-22 09:59:29 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    20
+  ]
+}
+[Body]
+undefined
+[ 2025-02-22 09:59:29 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " DELETE FROM post_info WHERE index = $1",
+  "values": [
+    "8"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-22 09:59:29 PM ] [ Test Server ]  -  Error:  게시물삭제에 실패하였습니다. 
+{
+  "stack": "Error: 게시물삭제에 실패하였습니다.\n    at adminDeletePost (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:191:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+}
+[Body]
+undefined
+[ 2025-02-22 09:59:29 PM ] [ Test Server ]  -  Response /api/admin/posts/8 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 500,
+  "message": "게시물삭제에 실패하였습니다.",
+  "data": null,
+  "error": {
+    "name": "Error",
+    "message": "게시물삭제에 실패하였습니다.",
+    "stack": "Error: 게시물삭제에 실패하였습니다.\n    at adminDeletePost (file:///Users/gganj123/Desktop/study/rdb-api-study/modules/post/PostController.js:191:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}
+[ 2025-02-22 09:59:58 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM post_info;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-22 09:59:58 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM post_info;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-22 10:00:00 PM ] [ Test Server ]  -  Response /api/posts/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "posts": [
+        {
+          "index": 1,
+          "title": "수정된 게시글",
+          "content": "수정된 내용",
+          "createdTime": "2025-02-18 10:00:43",
+          "updateTime": null,
+          "createdId": 9,
+          "updateId": null
+        },
+        {
+          "index": 3,
+          "title": "세번째 테스트",
+          "content": "완전 게시가 되었습니다.",
+          "createdTime": "2025-02-19 14:49:53",
+          "updateTime": null,
+          "createdId": 8,
+          "updateId": null
+        },
+        {
+          "index": 4,
+          "title": "세번째 테스트",
+          "content": "북마크용 게시가 되었습니다.",
+          "createdTime": "2025-02-20 08:31:57",
+          "updateTime": null,
+          "createdId": 7,
+          "updateId": null
+        },
+        {
+          "index": 5,
+          "title": "세번째 테스트",
+          "content": "유저8 게시가 되었습니다.",
+          "createdTime": "2025-02-20 08:32:25",
+          "updateTime": null,
+          "createdId": 8,
+          "updateId": null
+        },
+        {
+          "index": 6,
+          "title": "세번째 테스트",
+          "content": "유저8 게시가 되었습니다.",
+          "createdTime": "2025-02-21 08:24:16",
+          "updateTime": null,
+          "createdId": 7,
+          "updateId": null
+        },
+        {
+          "index": 7,
+          "title": "좋아요와 북마크",
+          "content": "유저8 게시가 되었습니다.",
+          "createdTime": "2025-02-21 08:24:37",
+          "updateTime": null,
+          "createdId": 7,
+          "updateId": null
+        }
+      ]
+    }
+  ],
+  "error": null
+}
+[ 2025-02-22 10:00:05 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 20
+  }
+}
+[Body]
+undefined
+[ 2025-02-22 10:00:05 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    20
+  ]
+}
+[Body]
+undefined
+[ 2025-02-22 10:00:06 PM ] [ Test Server ]  -  Query: Create Post 
+{
+  "query": "INSERT INTO public.post_info (title,content,created_id) VALUES ('좋아요와 북마크', '유저8 게시가 되었습니다.', '20') RETURNING *;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-22 10:00:06 PM ] [ Test Server ]  -  Raw Query: Create Post 
+{
+  "text": "INSERT INTO public.post_info (title,content,created_id) VALUES ('좋아요와 북마크', '유저8 게시가 되었습니다.', '20') RETURNING *;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-22 10:00:06 PM ] [ Test Server ]  -  Response /api/posts/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "createdPost": {
+        "index": 9,
+        "title": "좋아요와 북마크",
+        "content": "유저8 게시가 되었습니다.",
+        "createdId": 20,
+        "createdTime": "2025-02-22T13:00:07.000Z",
+        "updateTime": null
+      }
+    }
+  ],
+  "error": null
+}
+[ 2025-02-22 10:00:12 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 20
+  }
+}
+[Body]
+undefined
+[ 2025-02-22 10:00:12 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    20
+  ]
+}
+[Body]
+undefined
+[ 2025-02-22 10:00:12 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " DELETE FROM post_info WHERE index = $1",
+  "values": [
+    "9"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-22 10:00:12 PM ] [ Test Server ]  -  Response /api/admin/posts/9 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "postId": "9",
+      "meessage": "게시물이 삭제되었습니다."
+    }
+  ],
+  "error": null
+}
+[ 2025-02-22 10:08:37 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 20
+  }
+}
+[Body]
+undefined
+[ 2025-02-22 10:08:37 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    20
+  ]
+}
+[Body]
+undefined
+[ 2025-02-22 10:08:37 PM ] [ Test Server ]  -  Query: Create Comment 
+{
+  "query": "INSERT INTO public.comment_info (content, post_id, created_id) VALUES ('첫 댓글입니다.', '1', '20') RETURNING *;",
+  "params": {}
+}
+[Body]
+undefined
+[ 2025-02-22 10:08:37 PM ] [ Test Server ]  -  Raw Query: Create Comment 
+{
+  "text": "INSERT INTO public.comment_info (content, post_id, created_id) VALUES ('첫 댓글입니다.', '1', '20') RETURNING *;",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-22 10:08:37 PM ] [ Test Server ]  -  Response /api/comments/ 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "createdComment": {
+        "index": 5,
+        "content": "첫 댓글입니다.",
+        "postId": 1,
+        "createdId": 20,
+        "createdTime": "2025-02-22T13:08:39.000Z",
+        "updateTime": null
+      }
+    }
+  ],
+  "error": null
+}
+[ 2025-02-22 10:08:46 PM ] [ Test Server ]  -  Response /api/admin/comments/5 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 401,
+  "message": "token is invalid",
+  "data": null,
+  "error": null
+}
+[ 2025-02-22 10:08:55 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 20
+  }
+}
+[Body]
+undefined
+[ 2025-02-22 10:08:55 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    20
+  ]
+}
+[Body]
+undefined
+[ 2025-02-22 10:08:55 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " DELETE FROM comment_info WHERE index = $1",
+  "values": [
+    "5"
+  ]
+}
+[Body]
+undefined
+[ 2025-02-22 10:08:55 PM ] [ Test Server ]  -  Response /api/admin/comments/5 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "commentId": "5",
+      "meessage": "댓글이 삭제되었습니다."
+    }
+  ],
+  "error": null
+}
+[ 2025-02-22 10:20:10 PM ] [ Test Server ]  -  Response /api/admin/usercount 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 401,
+  "message": "token is invalid",
+  "data": null,
+  "error": null
+}
+[ 2025-02-22 10:20:25 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 20
+  }
+}
+[Body]
+undefined
+[ 2025-02-22 10:20:25 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    20
+  ]
+}
+[Body]
+undefined
+[ 2025-02-22 10:20:25 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT COUNT(*) AS user_count FROM user_mst",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-22 10:20:25 PM ] [ Test Server ]  -  Response /api/admin/usercount 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "countUsers": {
+        "userCount": "4"
+      }
+    }
+  ],
+  "error": null
+}
+[ 2025-02-22 11:46:44 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 20
+  }
+}
+[Body]
+undefined
+[ 2025-02-22 11:46:44 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    20
+  ]
+}
+[Body]
+undefined
+[ 2025-02-22 11:46:44 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT COUNT(*) AS user_count FROM user_mst",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-22 11:46:44 PM ] [ Test Server ]  -  Response /api/admin/usercount 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {
+      "countUsers": {
+        "userCount": "4"
+      }
+    }
+  ],
+  "error": null
+}
+[ 2025-02-22 11:57:38 PM ] [ Test Server ]  -  Response /api/admin/commentcount 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 401,
+  "message": "token is invalid",
+  "data": null,
+  "error": null
+}
+[ 2025-02-22 11:57:58 PM ] [ Test Server ]  -  Query: undefined 
+{
+  "query": "SELECT * FROM user_mst WHERE index = :userId;",
+  "params": {
+    "userId": 20
+  }
+}
+[Body]
+undefined
+[ 2025-02-22 11:57:58 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": "SELECT * FROM user_mst WHERE index = $1;",
+  "values": [
+    20
+  ]
+}
+[Body]
+undefined
+[ 2025-02-22 11:57:58 PM ] [ Test Server ]  -  Raw Query: undefined 
+{
+  "text": " SELECT COUNT('*') AS comment_count FROM comment_info",
+  "values": []
+}
+[Body]
+undefined
+[ 2025-02-22 11:57:58 PM ] [ Test Server ]  -  Response /api/admin/commentcount 
+{
+  "headers": {
+    "x-powered-by": "Express",
+    "access-control-allow-origin": "*"
+  },
+  "statusCode": 200
+}
+[Body]
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [
+    {}
+  ],
+  "error": null
+}

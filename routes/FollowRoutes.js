@@ -8,7 +8,7 @@ import { jwtAuth } from "../util/Middlewares.js";
  * @param {Router} app
  */
 
-export function followRouter(app) {
+export function followRoutes(app) {
   const router = Router();
   const followController = new FollowController();
 
@@ -20,10 +20,7 @@ export function followRouter(app) {
   router.get("/countfollowing/:followerId", followController.countFollowing);
   router.get("/mostfollowers/:limit", followController.countMostFollowedUser);
   router.get("/mostfollowing/:limit", followController.countMostFollowingUser);
-  router.delete(
-    "/:followerId/:followingId",
-    followController.adminDeleteFollow
-  );
+ 
 
   app.use("/follows", router);
 }

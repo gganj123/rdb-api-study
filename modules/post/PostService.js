@@ -78,6 +78,21 @@ class _PostService {
     const deletePost = await this.postMapper.deletePost(postId, userId);
     return deletePost;
   }
+
+  async adminDeletePost(postId) {
+    const deletePost = await this.postMapper.adminDeletePost(postId);
+    return deletePost;
+  }
+
+  /** 모든 유저 수 조회
+   *
+   * @returns {Promise<number>}
+   */
+
+  async adminCountPosts() {
+    const countPosts = await this.postMapper.adminCountPosts();
+    return countPosts;
+  }
 }
 /**
  *  @type {typeof _PostService}

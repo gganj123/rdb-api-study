@@ -71,6 +71,7 @@ export const localAuth = (req, res, next) =>
         const response = ResponseData.data({
           userId: user.userId,
           email: user.email,
+          role: user.role,
           token: token,
           message: "로그인 되었습니다.",
         });
@@ -127,3 +128,16 @@ export const jwtAuth = (req, res, next) =>
       next();
     }
   )(req, res, next);
+
+export const isAdmin = (req, res, next) => {
+  if (!req.user || req.user.role !== "admin") {
+    return sendResponse(
+      res,
+      new ResponseData({
+        message: "관리자 권한이 필요합니다.",
+        statusCode: 403,
+      })
+    );
+  }
+  next();
+};

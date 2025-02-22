@@ -125,4 +125,28 @@ export class CommentMapper extends BaseMapper {
       return result || 0;
     });
   }
+
+  adminDeleteComment(commentId) {
+    console.log("삭제맵퍼 데이터", commentId);
+    return this.exec(async (query) => {
+      const result = await query
+        .rawQuery(`DELETE FROM comment_info WHERE index = :commentId`)
+        .addParam("commentId", commentId)
+        .rawExec();
+      return result || 0;
+    });
+  }
+
+    /** 모든 댓글 수 조회
+   *
+   * @returns {Promise<number>}
+   */
+
+  adminCountComments() {
+    return this.exec(async (query) =>
+      query
+        .rawQuery(`SELECT COUNT('*') AS comment_count FROM comment_info`)
+        .rawFindOne()
+    );
+  }
 }

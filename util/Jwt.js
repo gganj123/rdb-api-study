@@ -21,8 +21,8 @@ const webTokenOption = {
  * @param {string} userId
  * @returns {string}
  */
-export const generateJwt = (userId) => {
-  const payload = { userId };
+export const generateJwt = (userId, role) => {
+  const payload = { userId, role };
 
   return jwt.sign(payload, "secret", webTokenOption);
 };
@@ -36,7 +36,9 @@ export const jwtStrategy = new JwtStrategy(
     algorithms: ["HS256"],
     passReqToCallback: true,
     secretOrKey: "secret",
-    jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken() || ExtractJwt.fromHeader("access_token"),
+    jwtFromRequest:
+      ExtractJwt.fromAuthHeaderAsBearerToken() ||
+      ExtractJwt.fromHeader("access_token"),
     audience: "audience",
     issuer: "issuer",
   },
@@ -44,13 +46,15 @@ export const jwtStrategy = new JwtStrategy(
     try {
       // NOTE: 프로젝트마다 payload의 key값이 다를 수 있음
       const userId = Number(payload.userId);
-
       const userMapper = new UserMapper();
-      console.log("jwt Id :", userId);
+      console.log("jwt Id :", payload);
       const user = await userMapper.findById(userId);
       if (!user) {
         return done(
-          new NotFoundError({ message: ResponseMessage.noUser, customMessage: "존재하지 않는 유저입니다." }),
+          new NotFoundError({
+            message: ResponseMessage.noUser,
+            customMessage: "존재하지 않는 유저입니다.",
+          }),
           false
         );
       }

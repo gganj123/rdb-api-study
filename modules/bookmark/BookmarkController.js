@@ -126,7 +126,7 @@ export class BookmarkController {
 
   deleteBookmarksByUserId = async (req, res) => {
     try {
-      const userId = req.user?.index;
+      const userId = req.params.userId;
 
       if (!userId || isNaN(Number(userId))) {
         return sendErrorResponse(res, new Error("userId를 확인해주세요."));

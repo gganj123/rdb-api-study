@@ -96,7 +96,18 @@ class _CommentService {
     const result = await this.commentMapper.deleteComment(userId, commentId);
     return result;
   }
+
+  async adminDeleteComment(commentId) {
+    const result = await this.commentMapper.adminDeleteComment(commentId);
+    return result;
+  }
+
+  async adminCountComments() {
+    const countComment = await this.commentMapper.adminCountComments();
+    return countComment;
+  }
 }
+
 /**
  *  @type {typeof _CommentService}
  *  @description 트랜잭션 프록시를 적용한 CommentService

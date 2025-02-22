@@ -161,7 +161,7 @@ export class BookmarkMapper extends BaseMapper {
     const result = await this.exec(async (query) =>
       query
         .DELETE()
-        .FROM(bookmark_info)
+        .FROM("bookmark_info")
         .WHERE(`created_id = :userId`)
         .addParam("userId", userId)
         .RETURNING("*")

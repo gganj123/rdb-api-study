@@ -173,4 +173,35 @@ export class PostController {
       sendErrorResponse(res, error);
     }
   };
+
+  adminDeletePost = async (req, res) => {
+    try {
+      const postId = req.params.postId;
+
+      const deletePost = await this.postService.adminDeletePost(postId);
+      console.log("컨트롤러 게시물 삭제 값", deletePost);
+
+      if (deletePost > 0) {
+        const response = ResponseData.data({
+          postId,
+          meessage: "게시물이 삭제되었습니다.",
+        });
+        sendResponse(res, response);
+      } else {
+        sendErrorResponse(res, new Error("게시물삭제에 실패하였습니다."));
+      }
+    } catch (error) {
+      sendErrorResponse(res, error);
+    }
+  };
+
+  adminCountPosts = async (req, res) => {
+    try {
+      const countPosts = await this.postService.adminCountPosts();
+      const response = ResponseData.data(countPosts);
+      sendResponse(res, response);
+    } catch (error) {
+      sendErrorResponse(res, error);
+    }
+  };
 }

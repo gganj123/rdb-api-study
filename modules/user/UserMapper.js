@@ -126,6 +126,15 @@ export class UserMapper extends BaseMapper {
     });
   }
 
+  /** 모든 유저 수 조회
+   *
+   * @returns {Promise<number>}
+   */
+  adminCountUsers() {
+    return this.exec(async (query) =>
+      query.rawQuery(`SELECT COUNT(*) AS user_count FROM user_mst`).rawFindOne()
+    );
+  }
   // changePassword(userId, hashPassword) {
   //   return this.exec(async (query) => {
   //     query.UPDATE("user_mst").SET({ password: hashPassword }).WHERE("index", "=", userId);

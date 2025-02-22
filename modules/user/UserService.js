@@ -93,6 +93,16 @@ class _UserService {
     const result = await this.userMapper.existUserById(userId);
     return result;
   }
+
+  /** 모든 유저 수 조회
+   *
+   * @returns {Promise<number>}
+   */
+
+  async adminCountUsers() {
+    const usersCount = await this.userMapper.adminCountUsers();
+    return usersCount;
+  }
 }
 
 /**

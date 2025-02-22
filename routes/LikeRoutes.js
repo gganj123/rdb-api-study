@@ -9,7 +9,7 @@ import { jwtAuth } from "../util/Middlewares.js";
  * @param {Router} app
  */
 
-export function likeRouter(app) {
+export function likeRoutes(app) {
   const router = Router();
   const likeController = new LikeController();
 

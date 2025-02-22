@@ -114,4 +114,29 @@ export class PostMapper extends BaseMapper {
       return result || 0;
     });
   }
+
+  adminDeletePost(postId) {
+    return this.exec(async (query) => {
+      const result = await query
+        .rawQuery(`DELETE FROM post_info WHERE index = :postId`)
+        .addParam("postId", postId)
+        .rawExec();
+      console.log("삭제 맵퍼post 결과값", result);
+
+      return result || 0;
+    });
+  }
+
+  /** 모든 게시글 수 조회
+   *
+   * @returns {Promise<number>}
+   */
+
+  adminCountPosts() {
+    return this.exec(async (query) =>
+      query
+        .rawQuery(`SELECT COUNT(*) AS post_count FROM post_info`)
+        .rawFindOne()
+    );
+  }
 }

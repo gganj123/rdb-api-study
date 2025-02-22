@@ -168,6 +168,37 @@ export class UserController {
     }
   };
 
+  adminDeleteUser = async (req, res) => {
+    try {
+      const userId = req.params.userId;
+      console.log("딜리트 컨트롤러", userId);
+
+      if (!userId || isNaN(Number(userId))) {
+        return sendErrorResponse(res, new Error("userId를 확인해주세요."));
+      }
+
+      //유효성 검사 강화
+      const existUser = await this.userService.existUserById(userId);
+      if (!existUser) {
+        return sendErrorResponse(res, new Error("존재하지 않는 유저입니다."));
+      }
+
+      const deletedUser = await this.userService.deleteUser(userId);
+      console.log("컨트롤러 회원탈퇴값", deletedUser);
+      if (deletedUser > 0) {
+        const response = ResponseData.data({
+          userId,
+          message: "회원이 탈퇴되었습니다.",
+        });
+        sendResponse(res, response);
+      } else {
+        sendErrorResponse(res, new Error("탈퇴에 실패하였습니다."));
+      }
+    } catch (error) {
+      sendErrorResponse(res, error);
+    }
+  };
+
   existUserById = async (req, res) => {
     try {
       const userId = req.user?.index;
@@ -185,6 +216,17 @@ export class UserController {
             message: "존재하지 않는 사용자입니다.",
             data: null,
           });
+
+      sendResponse(res, response);
+    } catch (error) {
+      sendErrorResponse(res, error);
+    }
+  };
+
+  adminCountUsers = async (req, res) => {
+    try {
+      const countUsers = await this.userService.adminCountUsers();
+      const response = ResponseData.data({ countUsers });
 
       sendResponse(res, response);
     } catch (error) {
